@@ -2,7 +2,7 @@ local AddonName, Addon = ...
 local AceAddon = Addon.Libs.AceAddon
 local Commands = Addon.Commands
 local MinimapIcon = Addon.UI.MinimapIcon
-local PinHelper = Addon.PinHelper
+local PinHelper = Addon.UI.PinHelper
 local UI = Addon.UI
 
 function Commands:Initialize()
