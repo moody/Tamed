@@ -1,0 +1,50 @@
+## Interface: 11306
+## Title: Tamed
+## Author: Dethanyel
+## Version: 1.0.0
+## Notes: A guide to tamed pet abilities.
+## SavedVariables: __TAMED_ADDON_DB__
+# ## X-Curse-Project-ID: project_id
+
+# Libraries
+libs\LibStub.lua
+libs\CallbackHandler-1.0.lua
+libs\AceAddon-3.0.lua
+libs\AceConsole-3.0.lua
+libs\AceDB-3.0.lua
+libs\AceLocale-3.0.lua
+libs\AceGUI-3.0\AceGUI-3.0.xml
+libs\HereBeDragons-2.0.lua
+libs\HereBeDragons-Pins-2.0.lua
+libs\LibDataBroker-1.1.lua
+libs\LibDBIcon-1.0.lua
+libs\DethsColorLib\DethsColorLib.xml
+
+# Locales
+locales\enUS.lua
+locales\deDE.lua
+locales\esES.lua
+locales\esMX.lua
+locales\frFR.lua
+locales\itIT.lua
+locales\koKR.lua
+locales\ptBR.lua
+locales\ruRU.lua
+locales\zhCN.lua
+locales\zhTW.lua
+
+# Data
+data\TameableAbilities.lua
+data\TameableNPCs.lua
+
+# General
+src\_init.lua
+src\commands.lua
+src\db.lua
+
+# UI
+src\ui\minimap_icon.lua
+src\ui\widgets.lua
+src\ui\pin_helper.lua
+src\ui\ability.lua
+src\ui\main.lua
