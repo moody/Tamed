@@ -6,6 +6,8 @@ local L = Addon.Libs.L
 local LDB = Addon.Libs.LDB
 local LDBIcon = Addon.Libs.LDBIcon
 local MinimapIcon = Addon.UI.MinimapIcon
+local PinHelper = Addon.UI.PinHelper
+local UI = Addon.UI
 
 -- Initialize LDB object.
 function MinimapIcon:Initialize()
@@ -16,9 +18,9 @@ function MinimapIcon:Initialize()
 
     OnClick = function(_, button)
       if button == "LeftButton" then
-        Addon.UI:Toggle()
+        UI:Toggle()
       elseif button == "RightButton" then
-        Addon.PinHelper:Clear()
+        PinHelper:Clear()
       end
     end,
 
@@ -28,8 +30,8 @@ function MinimapIcon:Initialize()
         Addon.VERSION
       )
       tooltip:AddLine(" ")
-      tooltip:AddDoubleLine("L.LEFT_CLICK", "L.TOGGLE", nil, nil, nil, 1, 1, 1)
-      tooltip:AddDoubleLine("L.RIGHT_CLICK", "L.CLEAR_PINS", nil, nil, nil, 1, 1, 1)
+      tooltip:AddDoubleLine(L.LEFT_CLICK, L.TOGGLE_UI, nil, nil, nil, 1, 1, 1)
+      tooltip:AddDoubleLine(L.RIGHT_CLICK, L.CLEAR_PINS, nil, nil, nil, 1, 1, 1)
     end,
   })
 
