@@ -71,7 +71,7 @@ function UI:Create()
 
     for i in ipairs(ability.ranks) do
       children[#children+1] = {
-        text = "Rank " .. i,
+        text = ("%s %s"):format(L.RANK, i),
         value = i
       }
     end
@@ -79,7 +79,7 @@ function UI:Create()
     abilities[#abilities+1] = {
       text = ability.name,
       value = id,
-      icon = select(3, _G.GetSpellInfo(ability.ranks[1].spell_id)),
+      icon = ability.icon,
       disabled = true,
       children = children
     }

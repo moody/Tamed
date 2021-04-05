@@ -4,7 +4,6 @@ local L = select(2, ...).Locale
 -- Defaults
 -- ============================================================================
 
-L["ABILITY_WITH_RANK"] = "%s (Rank %s)"
 L["ALL_PET_FAMILIES"] = "All Pet Families"
 L["CLEAR_PINS"] = "Clear Pins"
 L["CLICK_TO_CLEAR"] = "Click to Clear"
@@ -14,6 +13,7 @@ L["LEVEL"] = "Level"
 L["MAP_UNAVAILABLE"] = "Map Unavailable"
 L["NONE"] = "None"
 L["PET_LEVEL"] = "Pet Level"
+L["RANK"] = "Rank"
 L["RIGHT_CLICK"] = "Right-Click"
 L["SHOW_ON_MAP"] = "Show on Map"
 L["TAMEABLE_NPCS"] = "Tameable NPCs"

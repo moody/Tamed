@@ -33,3 +33,10 @@ function Addon.Libs.AceAddon:OnInitialize()
   Addon.UI.MinimapIcon:Initialize()
   Addon.Commands:Initialize()
 end
+
+-- Update TameableAbilities with in-game data.
+for _, ability in pairs(Addon.TameableAbilities) do
+  local name, _, icon = _G.GetSpellInfo(ability.ranks[1].spell_id)
+  ability.name = name
+  ability.icon = icon
+end

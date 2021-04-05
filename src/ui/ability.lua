@@ -7,7 +7,7 @@ local Widgets = Addon.UI.Widgets
 
 function Ability:Create(parent, ability, rankIndex)
   -- Tooltip/heading button.
-  local title = (L.ABILITY_WITH_RANK):format(ability.name, rankIndex)
+  local title = ("%s (%s %s)"):format(ability.name, L.RANK, rankIndex)
   Widgets:Button({
     parent = parent,
     fullWidth = true,
