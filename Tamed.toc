@@ -20,25 +20,13 @@ libs\LibDataBroker-1.1.lua
 libs\LibDBIcon-1.0.lua
 libs\DethsColorLib\DethsColorLib.xml
 
-# Locales
-locales\enUS.lua
-locales\deDE.lua
-locales\esES.lua
-locales\esMX.lua
-locales\frFR.lua
-locales\itIT.lua
-locales\koKR.lua
-locales\ptBR.lua
-locales\ruRU.lua
-locales\zhCN.lua
-locales\zhTW.lua
-
 # Data
 data\TameableAbilities.lua
 data\TameableNPCs.lua
 
 # General
 src\_init.lua
+src\locale.lua
 src\commands.lua
 src\db.lua
 

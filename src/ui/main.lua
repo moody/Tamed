@@ -1,6 +1,6 @@
 local AddonName, Addon = ...
 local AceGUI = Addon.Libs.AceGUI
-local L = Addon.Libs.L
+local L = Addon.Locale
 local pairs = pairs
 local TameableAbilities = Addon.TameableAbilities
 local UI = Addon.UI

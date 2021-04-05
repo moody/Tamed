@@ -1,6 +1,6 @@
 local AddonName, Addon = ...
 local HBDPins = Addon.Libs.HBDPins
-local L = Addon.Libs.L
+local L = Addon.Locale
 local PinHelper = Addon.UI.PinHelper
 
 local pins = {}

@@ -8,7 +8,6 @@ Addon.Libs = {
   DCL = Addon.DethsColorLib,
   HBD = _G.LibStub("HereBeDragons-2.0"),
   HBDPins = _G.LibStub("HereBeDragons-Pins-2.0"),
-  L = _G.LibStub("AceLocale-3.0"):GetLocale(AddonName),
   LDB = _G.LibStub("LibDataBroker-1.1"),
   LDBIcon = _G.LibStub("LibDBIcon-1.0"),
 }
@@ -19,6 +18,7 @@ Addon.Colors = {
 
 Addon.Commands = {}
 Addon.DB = {}
+Addon.Locale = {}
 
 Addon.UI = {
   MinimapIcon = {},

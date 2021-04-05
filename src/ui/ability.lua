@@ -1,7 +1,7 @@
 local _, Addon = ...
 local Ability = Addon.UI.Ability
 local HBDPins = Addon.Libs.HBDPins
-local L = Addon.Libs.L
+local L = Addon.Locale
 local PinHelper = Addon.UI.PinHelper
 local Widgets = Addon.UI.Widgets
 
