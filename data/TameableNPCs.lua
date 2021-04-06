@@ -1961,6 +1961,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 44
   },
   ["521"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 20.0,
@@ -3125,6 +3126,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 10
   },
   ["574"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 86.4,
@@ -3144,6 +3146,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 10
   },
   ["616"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 48.4,
@@ -4017,6 +4020,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 1
   },
   ["728"] = {
+    ["classification"] = "Elite",
     ["coords"] = {
       {
         ["x"] = 47.6,
@@ -4055,6 +4059,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 33
   },
   ["731"] = {
+    ["classification"] = "Elite",
     ["coords"] = {
       {
         ["x"] = 38.2,
@@ -7786,6 +7791,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 33
   },
   ["1112"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 45.6,
@@ -8441,6 +8447,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 1
   },
   ["1130"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 50.8,
@@ -8643,6 +8650,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 1
   },
   ["1132"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 30.8,
@@ -10763,6 +10771,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 40
   },
   ["1225"] = {
+    ["classification"] = "Elite",
     ["coords"] = {
       {
         ["x"] = 37.6,
@@ -17523,6 +17532,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 267
   },
   ["2476"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 53.2,
@@ -20264,6 +20274,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 45
   },
   ["2681"] = {
+    ["classification"] = "Elite",
     ["coords"] = {
       {
         ["x"] = 58.6,
@@ -22803,6 +22814,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 3
   },
   ["2850"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 38.6,
@@ -23827,6 +23839,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 47
   },
   ["2931"] = {
+    ["classification"] = "Rare Elite",
     ["coords"] = {
       {
         ["x"] = 3.6,
@@ -27199,6 +27212,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 215
   },
   ["3068"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 33.8,
@@ -30076,6 +30090,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 17
   },
   ["3581"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 22.4,
@@ -30602,6 +30617,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 148
   },
   ["3630"] = {
+    ["classification"] = "Elite",
     ["coords"] = {
       {
         ["x"] = 46.4,
@@ -30633,6 +30649,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 17
   },
   ["3631"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Cheese, Bread",
     ["family"] = "Wind Serpent",
@@ -30642,6 +30659,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 718
   },
   ["3653"] = {
+    ["classification"] = "",
     ["coords"] = {},
     ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
     ["family"] = "Turtle",
@@ -33562,6 +33580,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 400
   },
   ["4304"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Meat, Fruit",
     ["family"] = "Hyena",
@@ -35454,6 +35473,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 15
   },
   ["4511"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
     ["family"] = "Boar",
@@ -35463,6 +35483,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 491
   },
   ["4512"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
     ["family"] = "Boar",
@@ -35472,6 +35493,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 491
   },
   ["4514"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
     ["family"] = "Boar",
@@ -35481,6 +35503,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 491
   },
   ["4538"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fungus, Fruit",
     ["family"] = "Bat",
@@ -35490,6 +35513,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 491
   },
   ["4539"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fungus, Fruit",
     ["family"] = "Bat",
@@ -38464,6 +38488,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 405
   },
   ["4821"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Bread, Fungus, Fruit",
     ["family"] = "Crab",
@@ -38473,6 +38498,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 719
   },
   ["4822"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Bread, Fungus, Fruit",
     ["family"] = "Crab",
@@ -38482,6 +38508,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 719
   },
   ["4823"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Bread, Fungus, Fruit",
     ["family"] = "Crab",
@@ -38491,6 +38518,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 719
   },
   ["4824"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
     ["family"] = "Turtle",
@@ -38500,6 +38528,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 719
   },
   ["4825"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
     ["family"] = "Turtle",
@@ -38644,6 +38673,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 15
   },
   ["4861"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fungus, Fruit",
     ["family"] = "Bat",
@@ -38653,6 +38683,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 1337
   },
   ["4887"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
     ["family"] = "Turtle",
@@ -38686,6 +38717,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 718
   },
   ["5056"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Cheese, Bread",
     ["family"] = "Wind Serpent",
@@ -39402,6 +39434,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 357
   },
   ["5291"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Cheese, Bread",
     ["family"] = "Wind Serpent",
@@ -39581,6 +39614,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 357
   },
   ["5349"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 41.8,
@@ -39604,6 +39638,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 357
   },
   ["5352"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 57.8,
@@ -39651,6 +39686,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 357
   },
   ["5356"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 76.0,
@@ -41625,6 +41661,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 440
   },
   ["5708"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Cheese, Bread",
     ["family"] = "Wind Serpent",
@@ -41634,6 +41671,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 1477
   },
   ["5756"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Cheese, Bread",
     ["family"] = "Wind Serpent",
@@ -41643,6 +41681,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 718
   },
   ["5823"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 35.0,
@@ -41710,6 +41749,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 14
   },
   ["5937"] = {
+    ["classification"] = "Rare Elite",
     ["coords"] = {
       {
         ["x"] = 66.6,
@@ -42193,6 +42233,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 490
   },
   ["6585"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 68.6,
@@ -42227,6 +42268,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 148
   },
   ["7022"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Meat",
     ["family"] = "Scorpid",
@@ -43321,6 +43363,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 440
   },
   ["8207"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 41.2,
@@ -43404,6 +43447,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 440
   },
   ["8208"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 47.6,
@@ -43451,6 +43495,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 440
   },
   ["8211"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 15.6,
@@ -43514,6 +43559,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 47
   },
   ["8213"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 73.4,
@@ -43625,6 +43671,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 47
   },
   ["8277"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 30.0,
@@ -43756,6 +43803,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 51
   },
   ["8299"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 54.8,
@@ -43863,6 +43911,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 4
   },
   ["8300"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 46.6,
@@ -43938,6 +43987,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 4
   },
   ["8301"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 45.4,
@@ -44097,6 +44147,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 4
   },
   ["8303"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 52.6,
@@ -44180,6 +44231,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 4
   },
   ["8336"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Cheese, Bread",
     ["family"] = "Wind Serpent",
@@ -46531,6 +46583,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 46
   },
   ["10200"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 48.6,
@@ -46634,6 +46687,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 618
   },
   ["10644"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 17.0,
@@ -46701,6 +46755,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 331
   },
   ["11357"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Cheese, Bread",
     ["family"] = "Wind Serpent",
@@ -46710,6 +46765,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 1977
   },
   ["11365"] = {
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Meat, Fish",
     ["family"] = "Cat",
@@ -48444,6 +48500,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 1377
   },
   ["11921"] = {
+    ["classification"] = "Elite",
     ["coords"] = {
       {
         ["x"] = 52.6,
@@ -48471,6 +48528,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 406
   },
   ["14223"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 14.0,
@@ -48578,6 +48636,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 36
   },
   ["14233"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 36.2,
@@ -48653,6 +48712,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 15
   },
   ["14266"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 76.2,
@@ -48688,6 +48748,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 38
   },
   ["14279"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 24.0,
@@ -48815,6 +48876,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 267
   },
   ["14339"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 48.6,
@@ -48842,6 +48904,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 361
   },
   ["14343"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 54.6,
@@ -48881,6 +48944,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 361
   },
   ["14344"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 40.6,
@@ -48916,6 +48980,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 361
   },
   ["14476"] = {
+    ["classification"] = "Rare",
     ["coords"] = {
       {
         ["x"] = 55.4,
