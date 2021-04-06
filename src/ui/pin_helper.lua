@@ -17,9 +17,11 @@ local function onEnter(self)
   -- Show tooltip
   _G.GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
   _G.GameTooltip:SetText(self.npc.name)
-  _G.GameTooltip:AddDoubleLine(L.LEVEL, table.concat(self.npc.level_range, "-"), 1, 1, 1, 1, 1, 1)
+  _G.GameTooltip:AddDoubleLine(L.LEVEL, self.npc.level_range, 1, 1, 1, 1, 1, 1)
+  _G.GameTooltip:AddDoubleLine(L.DIET, self.npc.diet, 1, 1, 1, 1, 1, 1)
+  _G.GameTooltip:AddDoubleLine(L.FAMILY, self.npc.family, 1, 1, 1, 1, 1, 1)
   _G.GameTooltip:AddDoubleLine(L.TYPE, self.npc.type, 1, 1, 1, 1, 1, 1)
-  _G.GameTooltip:AddDoubleLine(L.ZONE, self.npc.location, 1, 1, 1, 1, 1, 1)
+  _G.GameTooltip:AddDoubleLine(L.LOCATION, self.npc.location, 1, 1, 1, 1, 1, 1)
   _G.GameTooltip:AddLine(("<%s>"):format(L.CLICK_TO_CLEAR), 0.6, 0.6, 0.6)
   _G.GameTooltip:Show()
 end

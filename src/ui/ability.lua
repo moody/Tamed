@@ -107,7 +107,21 @@ function Ability:AddNPC(parent, npc)
   -- Level.
   Widgets:Label({
     parent = parent,
-    text = ("%s: %s"):format(L.LEVEL, table.concat(npc.level_range, "-")),
+    text = ("%s: %s"):format(L.LEVEL, npc.level_range),
+    fullWidth = true
+  })
+
+  -- Diet.
+  Widgets:Label({
+    parent = parent,
+    text = ("%s: %s"):format(L.DIET, npc.diet),
+    fullWidth = true
+  })
+
+  -- Family.
+  Widgets:Label({
+    parent = parent,
+    text = ("%s: %s"):format(L.FAMILY, npc.family),
     fullWidth = true
   })
 
@@ -118,10 +132,10 @@ function Ability:AddNPC(parent, npc)
     fullWidth = true
   })
 
-  -- Zone.
+  -- Location.
   Widgets:Label({
     parent = parent,
-    text = ("%s: %s"):format(L.ZONE, npc.location),
+    text = ("%s: %s"):format(L.LOCATION, npc.location),
     fullWidth = true
   })
 

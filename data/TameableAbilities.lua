@@ -2,20 +2,20 @@ local _, Addon = ...
 Addon.TameableAbilities = {
   ["bite"] = {
     ["learned_by"] = {
-      "Bats",
-      "Bears",
-      "Boars",
-      "Carrion Birds",
-      "Cats",
-      "Crocolisks",
-      "Gorillas",
-      "Hyenas",
-      "Raptors",
-      "Spiders",
-      "Tallstriders",
-      "Turtles",
-      "Wind Serpents",
-      "Wolves"
+      "Bat",
+      "Bear",
+      "Boar",
+      "Carrion Bird",
+      "Cat",
+      "Crocolisk",
+      "Gorilla",
+      "Hyena",
+      "Raptor",
+      "Spider",
+      "Tallstrider",
+      "Turtle",
+      "Wind Serpent",
+      "Wolf"
     },
     ["name"] = "Bite",
     ["ranks"] = {
@@ -178,7 +178,7 @@ Addon.TameableAbilities = {
   },
   ["charge"] = {
     ["learned_by"] = {
-      "Boars"
+      "Boar"
     },
     ["name"] = "Charge",
     ["ranks"] = {
@@ -264,13 +264,13 @@ Addon.TameableAbilities = {
   },
   ["claw"] = {
     ["learned_by"] = {
-      "Bears",
-      "Carrion Birds",
-      "Cats",
-      "Crabs",
-      "Owls",
-      "Raptors",
-      "Scorpids"
+      "Bear",
+      "Carrion Bird",
+      "Cat",
+      "Crab",
+      "Owl",
+      "Raptor",
+      "Scorpid"
     },
     ["name"] = "Claw",
     ["ranks"] = {
@@ -478,11 +478,11 @@ Addon.TameableAbilities = {
   },
   ["dash"] = {
     ["learned_by"] = {
-      "Boars",
-      "Cats",
-      "Hyenas",
-      "Tallstriders",
-      "Wolves"
+      "Boar",
+      "Cat",
+      "Hyena",
+      "Tallstrider",
+      "Wolf"
     },
     ["name"] = "Dash",
     ["ranks"] = {
@@ -548,10 +548,10 @@ Addon.TameableAbilities = {
   },
   ["dive"] = {
     ["learned_by"] = {
-      "Bats",
-      "Carrion Birds",
-      "Owls",
-      "Wind Serpents"
+      "Bat",
+      "Carrion Bird",
+      "Owl",
+      "Wind Serpent"
     },
     ["name"] = "Dive",
     ["ranks"] = {
@@ -609,7 +609,7 @@ Addon.TameableAbilities = {
   },
   ["furioushowl"] = {
     ["learned_by"] = {
-      "Wolves"
+      "Wolf"
     },
     ["name"] = "Furious Howl",
     ["ranks"] = {
@@ -664,7 +664,7 @@ Addon.TameableAbilities = {
   },
   ["lightningbreath"] = {
     ["learned_by"] = {
-      "Wind Serpents"
+      "Wind Serpent"
     },
     ["name"] = "Lightning Breath",
     ["ranks"] = {
@@ -737,7 +737,7 @@ Addon.TameableAbilities = {
   },
   ["prowl"] = {
     ["learned_by"] = {
-      "Cats"
+      "Cat"
     },
     ["name"] = "Prowl",
     ["ranks"] = {
@@ -777,7 +777,7 @@ Addon.TameableAbilities = {
   },
   ["scorpidpoison"] = {
     ["learned_by"] = {
-      "Scorpids"
+      "Scorpid"
     },
     ["name"] = "Scorpid Poison",
     ["ranks"] = {
@@ -842,9 +842,9 @@ Addon.TameableAbilities = {
   },
   ["screech"] = {
     ["learned_by"] = {
-      "Bats",
-      "Carrion Birds",
-      "Owls"
+      "Bat",
+      "Carrion Bird",
+      "Owl"
     },
     ["name"] = "Screech",
     ["ranks"] = {
@@ -893,7 +893,7 @@ Addon.TameableAbilities = {
   },
   ["shellshield"] = {
     ["learned_by"] = {
-      "Turtles"
+      "Turtle"
     },
     ["name"] = "Shell Shield",
     ["ranks"] = {
@@ -915,7 +915,7 @@ Addon.TameableAbilities = {
   },
   ["thunderstomp"] = {
     ["learned_by"] = {
-      "Gorillas"
+      "Gorilla"
     },
     ["name"] = "Thunderstomp",
     ["ranks"] = {

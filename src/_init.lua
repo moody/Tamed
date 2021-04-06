@@ -40,3 +40,8 @@ for _, ability in pairs(Addon.TameableAbilities) do
   ability.name = name
   ability.icon = icon
 end
+
+-- Update TameableNPCs with in-game data.
+for _, npc in pairs(Addon.TameableNPCs) do
+  npc.location = _G.C_Map.GetAreaInfo(npc.zone_id)
+end

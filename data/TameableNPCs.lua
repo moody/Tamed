@@ -159,14 +159,13 @@ Addon.TameableNPCs = {
         ["y"] = 71.2
       }
     },
-    ["level_range"] = {
-      5,
-      6
-    },
-    ["location"] = "Elwynn Forest",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "5-6",
     ["name"] = "Forest Spider",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1429
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1429,
+    ["zone_id"] = 12
   },
   ["113"] = {
     ["coords"] = {
@@ -235,14 +234,13 @@ Addon.TameableNPCs = {
         ["y"] = 69.6
       }
     },
-    ["level_range"] = {
-      5,
-      6
-    },
-    ["location"] = "Elwynn Forest",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "5-6",
     ["name"] = "Stonetusk Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1429
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1429,
+    ["zone_id"] = 12
   },
   ["118"] = {
     ["coords"] = {
@@ -627,14 +625,13 @@ Addon.TameableNPCs = {
         ["y"] = 79.8
       }
     },
-    ["level_range"] = {
-      9,
-      10
-    },
-    ["location"] = "Elwynn Forest",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "9-10",
     ["name"] = "Prowler",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1429
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1429,
+    ["zone_id"] = 12
   },
   ["119"] = {
     ["coords"] = {
@@ -663,14 +660,13 @@ Addon.TameableNPCs = {
         ["y"] = 85.6
       }
     },
-    ["level_range"] = {
-      10,
-      11
-    },
-    ["location"] = "Elwynn Forest",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "10-11",
     ["name"] = "Longsnout",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1429
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1429,
+    ["zone_id"] = 12
   },
   ["154"] = {
     ["coords"] = {
@@ -783,14 +779,13 @@ Addon.TameableNPCs = {
         ["y"] = 61.2
       }
     },
-    ["level_range"] = {
-      16,
-      17
-    },
-    ["location"] = "Westfall",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "16-17",
     ["name"] = "Greater Fleshripper",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1436
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1436,
+    ["zone_id"] = 40
   },
   ["157"] = {
     ["coords"] = {
@@ -1151,14 +1146,13 @@ Addon.TameableNPCs = {
         ["y"] = 45.0
       }
     },
-    ["level_range"] = {
-      14,
-      15
-    },
-    ["location"] = "Westfall",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "14-15",
     ["name"] = "Goretusk",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1436
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1436,
+    ["zone_id"] = 40
   },
   ["330"] = {
     ["coords"] = {
@@ -1171,13 +1165,13 @@ Addon.TameableNPCs = {
         ["y"] = 79.4
       }
     },
-    ["level_range"] = {
-      9
-    },
-    ["location"] = "Elwynn Forest",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "9",
     ["name"] = "Princess",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1429
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1429,
+    ["zone_id"] = 12
   },
   ["345"] = {
     ["coords"] = {
@@ -1206,13 +1200,13 @@ Addon.TameableNPCs = {
         ["y"] = 59.2
       }
     },
-    ["level_range"] = {
-      24
-    },
-    ["location"] = "Redridge Mountains",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "24",
     ["name"] = "Bellygrub",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1433
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1433,
+    ["zone_id"] = 44
   },
   ["390"] = {
     ["coords"] = {
@@ -1225,13 +1219,13 @@ Addon.TameableNPCs = {
         ["y"] = 79.6
       }
     },
-    ["level_range"] = {
-      7
-    },
-    ["location"] = "Elwynn Forest",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "7",
     ["name"] = "Porcine Entourage",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1429
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1429,
+    ["zone_id"] = 12
   },
   ["442"] = {
     ["coords"] = {
@@ -1500,14 +1494,13 @@ Addon.TameableNPCs = {
         ["y"] = 76.0
       }
     },
-    ["level_range"] = {
-      15,
-      16
-    },
-    ["location"] = "Redridge Mountains",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "15-16",
     ["name"] = "Tarantula",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1433
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1433,
+    ["zone_id"] = 44
   },
   ["454"] = {
     ["coords"] = {
@@ -1804,14 +1797,13 @@ Addon.TameableNPCs = {
         ["y"] = 24.2
       }
     },
-    ["level_range"] = {
-      12,
-      13
-    },
-    ["location"] = "Westfall",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "12-13",
     ["name"] = "Young Goretusk",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1436
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1436,
+    ["zone_id"] = 40
   },
   ["505"] = {
     ["coords"] = {
@@ -1960,14 +1952,13 @@ Addon.TameableNPCs = {
         ["y"] = 78.0
       }
     },
-    ["level_range"] = {
-      19,
-      20
-    },
-    ["location"] = "Redridge Mountains",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "19-20",
     ["name"] = "Greater Tarantula",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1433
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1433,
+    ["zone_id"] = 44
   },
   ["521"] = {
     ["coords"] = {
@@ -2204,13 +2195,13 @@ Addon.TameableNPCs = {
         ["y"] = 28.0
       }
     },
-    ["level_range"] = {
-      23
-    },
-    ["location"] = "Duskwood",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "23",
     ["name"] = "Lupos",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1431
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1431,
+    ["zone_id"] = 10
   },
   ["524"] = {
     ["coords"] = {
@@ -2571,14 +2562,13 @@ Addon.TameableNPCs = {
         ["y"] = 82.0
       }
     },
-    ["level_range"] = {
-      7,
-      8
-    },
-    ["location"] = "Elwynn Forest",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "7-8",
     ["name"] = "Rockhide Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1429
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1429,
+    ["zone_id"] = 12
   },
   ["547"] = {
     ["coords"] = {
@@ -2867,14 +2857,13 @@ Addon.TameableNPCs = {
         ["y"] = 41.4
       }
     },
-    ["level_range"] = {
-      16,
-      17
-    },
-    ["location"] = "Redridge Mountains",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "16-17",
     ["name"] = "Great Goretusk",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1433
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1433,
+    ["zone_id"] = 44
   },
   ["569"] = {
     ["coords"] = {
@@ -3127,14 +3116,13 @@ Addon.TameableNPCs = {
         ["y"] = 23.2
       }
     },
-    ["level_range"] = {
-      21,
-      22
-    },
-    ["location"] = "Duskwood",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "21-22",
     ["name"] = "Green Recluse",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1431
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1431,
+    ["zone_id"] = 10
   },
   ["574"] = {
     ["coords"] = {
@@ -3147,13 +3135,13 @@ Addon.TameableNPCs = {
         ["y"] = 49.6
       }
     },
-    ["level_range"] = {
-      27
-    },
-    ["location"] = "Duskwood",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "27",
     ["name"] = "Naraxis",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1431
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1431,
+    ["zone_id"] = 10
   },
   ["616"] = {
     ["coords"] = {
@@ -3322,13 +3310,13 @@ Addon.TameableNPCs = {
         ["y"] = 48.2
       }
     },
-    ["level_range"] = {
-      23
-    },
-    ["location"] = "Redridge Mountains",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "23",
     ["name"] = "Chatter",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1433
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1433,
+    ["zone_id"] = 44
   },
   ["628"] = {
     ["coords"] = {
@@ -3505,14 +3493,13 @@ Addon.TameableNPCs = {
         ["y"] = 38.4
       }
     },
-    ["level_range"] = {
-      24,
-      25
-    },
-    ["location"] = "Duskwood",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "24-25",
     ["name"] = "Black Ravager",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1431
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1431,
+    ["zone_id"] = 10
   },
   ["681"] = {
     ["coords"] = {
@@ -3609,14 +3596,13 @@ Addon.TameableNPCs = {
         ["y"] = 8.6
       }
     },
-    ["level_range"] = {
-      30,
-      31
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "30-31",
     ["name"] = "Young Stranglethorn Tiger",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["682"] = {
     ["coords"] = {
@@ -3705,14 +3691,13 @@ Addon.TameableNPCs = {
         ["y"] = 13.6
       }
     },
-    ["level_range"] = {
-      32,
-      33
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "32-33",
     ["name"] = "Stranglethorn Tiger",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["683"] = {
     ["coords"] = {
@@ -3789,14 +3774,13 @@ Addon.TameableNPCs = {
         ["y"] = 12.2
       }
     },
-    ["level_range"] = {
-      30,
-      31
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "30-31",
     ["name"] = "Young Panther",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["684"] = {
     ["coords"] = {
@@ -3953,14 +3937,13 @@ Addon.TameableNPCs = {
         ["y"] = 20.6
       }
     },
-    ["level_range"] = {
-      37,
-      38
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "37-38",
     ["name"] = "Shadowmaw Panther",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["708"] = {
     ["coords"] = {
@@ -4025,13 +4008,13 @@ Addon.TameableNPCs = {
         ["y"] = 72.6
       }
     },
-    ["level_range"] = {
-      3
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "3",
     ["name"] = "Small Crag Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1426
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["728"] = {
     ["coords"] = {
@@ -4048,13 +4031,13 @@ Addon.TameableNPCs = {
         ["y"] = 24.6
       }
     },
-    ["level_range"] = {
-      40
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "40",
     ["name"] = "Bhag'thera",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["729"] = {
     ["coords"] = {
@@ -4063,13 +4046,13 @@ Addon.TameableNPCs = {
         ["y"] = 17.2
       }
     },
-    ["level_range"] = {
-      37
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "37",
     ["name"] = "Sin'Dall",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["731"] = {
     ["coords"] = {
@@ -4082,13 +4065,13 @@ Addon.TameableNPCs = {
         ["y"] = 35.6
       }
     },
-    ["level_range"] = {
-      43
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "43",
     ["name"] = "King Bangalash",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["736"] = {
     ["coords"] = {
@@ -4141,14 +4124,13 @@ Addon.TameableNPCs = {
         ["y"] = 35.6
       }
     },
-    ["level_range"] = {
-      32,
-      33
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "32-33",
     ["name"] = "Panther",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["767"] = {
     ["coords"] = {
@@ -4377,14 +4359,13 @@ Addon.TameableNPCs = {
         ["y"] = 45.4
       }
     },
-    ["level_range"] = {
-      36,
-      37
-    },
-    ["location"] = "Swamp of Sorrows",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "36-37",
     ["name"] = "Swamp Jaguar",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1435
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1435,
+    ["zone_id"] = 8
   },
   ["768"] = {
     ["coords"] = {
@@ -4649,14 +4630,13 @@ Addon.TameableNPCs = {
         ["y"] = 44.6
       }
     },
-    ["level_range"] = {
-      39,
-      40
-    },
-    ["location"] = "Swamp of Sorrows",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "39-40",
     ["name"] = "Shadow Panther",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1435
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1435,
+    ["zone_id"] = 8
   },
   ["769"] = {
     ["coords"] = {
@@ -5525,14 +5505,13 @@ Addon.TameableNPCs = {
         ["y"] = 74.6
       }
     },
-    ["level_range"] = {
-      40,
-      41
-    },
-    ["location"] = "Swamp of Sorrows",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "40-41",
     ["name"] = "Deathstrike Tarantula",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1435
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1435,
+    ["zone_id"] = 8
   },
   ["822"] = {
     ["coords"] = {
@@ -5761,14 +5740,13 @@ Addon.TameableNPCs = {
         ["y"] = 77.8
       }
     },
-    ["level_range"] = {
-      8,
-      9
-    },
-    ["location"] = "Elwynn Forest",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "8-9",
     ["name"] = "Young Forest Bear",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1429
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1429,
+    ["zone_id"] = 12
   },
   ["833"] = {
     ["coords"] = {
@@ -6125,14 +6103,13 @@ Addon.TameableNPCs = {
         ["y"] = 41.2
       }
     },
-    ["level_range"] = {
-      11,
-      12
-    },
-    ["location"] = "Westfall",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "11-12",
     ["name"] = "Coyote Packleader",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1436
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1436,
+    ["zone_id"] = 40
   },
   ["834"] = {
     ["coords"] = {
@@ -6449,14 +6426,13 @@ Addon.TameableNPCs = {
         ["y"] = 41.4
       }
     },
-    ["level_range"] = {
-      10,
-      11
-    },
-    ["location"] = "Westfall",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "10-11",
     ["name"] = "Coyote",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1436
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1436,
+    ["zone_id"] = 40
   },
   ["922"] = {
     ["coords"] = {
@@ -6677,14 +6653,13 @@ Addon.TameableNPCs = {
         ["y"] = 73.6
       }
     },
-    ["level_range"] = {
-      40,
-      41
-    },
-    ["location"] = "Swamp of Sorrows",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "40-41",
     ["name"] = "Silt Crawler",
-    ["type"] = "Crab",
-    ["ui_map_id"] = 1435
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1435,
+    ["zone_id"] = 8
   },
   ["976"] = {
     ["coords"] = {
@@ -6693,14 +6668,13 @@ Addon.TameableNPCs = {
         ["y"] = 9.8
       }
     },
-    ["level_range"] = {
-      32,
-      33
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "32-33",
     ["name"] = "Kurzen War Tiger",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["1087"] = {
     ["coords"] = {
@@ -7461,14 +7435,13 @@ Addon.TameableNPCs = {
         ["y"] = 59.2
       }
     },
-    ["level_range"] = {
-      41,
-      42
-    },
-    ["location"] = "Swamp of Sorrows",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "41-42",
     ["name"] = "Sawtooth Snapper",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1435
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1435,
+    ["zone_id"] = 8
   },
   ["1088"] = {
     ["coords"] = {
@@ -7773,14 +7746,13 @@ Addon.TameableNPCs = {
         ["y"] = 75.0
       }
     },
-    ["level_range"] = {
-      43,
-      44
-    },
-    ["location"] = "Swamp of Sorrows",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "43-44",
     ["name"] = "Monstrous Crawler",
-    ["type"] = "Crab",
-    ["ui_map_id"] = 1435
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1435,
+    ["zone_id"] = 8
   },
   ["1108"] = {
     ["coords"] = {
@@ -7805,14 +7777,13 @@ Addon.TameableNPCs = {
         ["y"] = 17.4
       }
     },
-    ["level_range"] = {
-      32,
-      33
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Gorilla",
+    ["level_range"] = "32-33",
     ["name"] = "Mistvale Gorilla",
-    ["type"] = "Gorilla",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["1112"] = {
     ["coords"] = {
@@ -7841,13 +7812,13 @@ Addon.TameableNPCs = {
         ["y"] = 61.6
       }
     },
-    ["level_range"] = {
-      24
-    },
-    ["location"] = "Wetlands",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "24",
     ["name"] = "Leech Widow",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1437
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1437,
+    ["zone_id"] = 11
   },
   ["1114"] = {
     ["coords"] = {
@@ -7932,14 +7903,13 @@ Addon.TameableNPCs = {
         ["y"] = 38.2
       }
     },
-    ["level_range"] = {
-      37,
-      38
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Gorilla",
+    ["level_range"] = "37-38",
     ["name"] = "Jungle Thunderer",
-    ["type"] = "Gorilla",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["1125"] = {
     ["coords"] = {
@@ -8116,14 +8086,13 @@ Addon.TameableNPCs = {
         ["y"] = 59.0
       }
     },
-    ["level_range"] = {
-      5,
-      6
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "5-6",
     ["name"] = "Crag Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1426
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1126"] = {
     ["coords"] = {
@@ -8292,14 +8261,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.2
       }
     },
-    ["level_range"] = {
-      6,
-      7
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "6-7",
     ["name"] = "Large Crag Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1426
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1127"] = {
     ["coords"] = {
@@ -8464,14 +8432,13 @@ Addon.TameableNPCs = {
         ["y"] = 36.0
       }
     },
-    ["level_range"] = {
-      7,
-      8
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "7-8",
     ["name"] = "Elder Crag Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1426
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1130"] = {
     ["coords"] = {
@@ -8576,13 +8543,13 @@ Addon.TameableNPCs = {
         ["y"] = 59.6
       }
     },
-    ["level_range"] = {
-      12
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "12",
     ["name"] = "Bjarn",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1426
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1131"] = {
     ["coords"] = {
@@ -8667,14 +8634,13 @@ Addon.TameableNPCs = {
         ["y"] = 45.4
       }
     },
-    ["level_range"] = {
-      7,
-      8
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "7-8",
     ["name"] = "Winter Wolf",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1426
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1132"] = {
     ["coords"] = {
@@ -8763,13 +8729,13 @@ Addon.TameableNPCs = {
         ["y"] = 40.2
       }
     },
-    ["level_range"] = {
-      10
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "10",
     ["name"] = "Timber",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1426
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1133"] = {
     ["coords"] = {
@@ -8842,14 +8808,13 @@ Addon.TameableNPCs = {
         ["y"] = 41.4
       }
     },
-    ["level_range"] = {
-      8,
-      9
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "8-9",
     ["name"] = "Starving Winter Wolf",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1426
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1138"] = {
     ["coords"] = {
@@ -8886,14 +8851,13 @@ Addon.TameableNPCs = {
         ["y"] = 45.6
       }
     },
-    ["level_range"] = {
-      6,
-      7
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "6-7",
     ["name"] = "Snow Tracker Wolf",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1426
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1185"] = {
     ["coords"] = {
@@ -9258,14 +9222,13 @@ Addon.TameableNPCs = {
         ["y"] = 39.8
       }
     },
-    ["level_range"] = {
-      17,
-      18
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "17-18",
     ["name"] = "Wood Lurker",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1432
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["1189"] = {
     ["coords"] = {
@@ -9350,14 +9313,13 @@ Addon.TameableNPCs = {
         ["y"] = 43.6
       }
     },
-    ["level_range"] = {
-      16,
-      17
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "16-17",
     ["name"] = "Black Bear Patriarch",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1432
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["1190"] = {
     ["coords"] = {
@@ -9574,14 +9536,13 @@ Addon.TameableNPCs = {
         ["y"] = 29.8
       }
     },
-    ["level_range"] = {
-      10,
-      11
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "10-11",
     ["name"] = "Mountain Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1432
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["1191"] = {
     ["coords"] = {
@@ -9830,14 +9791,13 @@ Addon.TameableNPCs = {
         ["y"] = 75.0
       }
     },
-    ["level_range"] = {
-      14,
-      15
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "14-15",
     ["name"] = "Mangy Mountain Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1432
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["1192"] = {
     ["coords"] = {
@@ -10162,14 +10122,13 @@ Addon.TameableNPCs = {
         ["y"] = 45.0
       }
     },
-    ["level_range"] = {
-      16,
-      17
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "16-17",
     ["name"] = "Elder Mountain Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1432
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["1195"] = {
     ["coords"] = {
@@ -10498,14 +10457,13 @@ Addon.TameableNPCs = {
         ["y"] = 72.6
       }
     },
-    ["level_range"] = {
-      10,
-      11
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "10-11",
     ["name"] = "Forest Lurker",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1432
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["1196"] = {
     ["coords"] = {
@@ -10654,14 +10612,13 @@ Addon.TameableNPCs = {
         ["y"] = 50.2
       }
     },
-    ["level_range"] = {
-      7,
-      8
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "7-8",
     ["name"] = "Ice Claw Bear",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1426
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1199"] = {
     ["coords"] = {
@@ -10730,14 +10687,13 @@ Addon.TameableNPCs = {
         ["y"] = 58.6
       }
     },
-    ["level_range"] = {
-      5,
-      6
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "5-6",
     ["name"] = "Juvenile Snow Leopard",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1426
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1216"] = {
     ["coords"] = {
@@ -10798,14 +10754,13 @@ Addon.TameableNPCs = {
         ["y"] = 88.6
       }
     },
-    ["level_range"] = {
-      17,
-      18
-    },
-    ["location"] = "Westfall",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "17-18",
     ["name"] = "Shore Crawler",
-    ["type"] = "Crab",
-    ["ui_map_id"] = 1436
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1436,
+    ["zone_id"] = 40
   },
   ["1225"] = {
     ["coords"] = {
@@ -10822,13 +10777,13 @@ Addon.TameableNPCs = {
         ["y"] = 61.6
       }
     },
-    ["level_range"] = {
-      20
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "20",
     ["name"] = "Ol' Sooty",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1432
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["1258"] = {
     ["coords"] = {
@@ -11205,14 +11160,13 @@ Addon.TameableNPCs = {
         ["y"] = 40.4
       }
     },
-    ["level_range"] = {
-      25,
-      26
-    },
-    ["location"] = "Duskwood",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "25-26",
     ["name"] = "Black Ravager Mastiff",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1431
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1431,
+    ["zone_id"] = 10
   },
   ["1505"] = {
     ["coords"] = {
@@ -11229,14 +11183,13 @@ Addon.TameableNPCs = {
         ["y"] = 59.2
       }
     },
-    ["level_range"] = {
-      3,
-      4
-    },
-    ["location"] = "Tirisfal Glades",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "3-4",
     ["name"] = "Night Web Spider",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1420
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1420,
+    ["zone_id"] = 85
   },
   ["1509"] = {
     ["coords"] = {
@@ -11293,14 +11246,13 @@ Addon.TameableNPCs = {
         ["y"] = 63.8
       }
     },
-    ["level_range"] = {
-      2,
-      3
-    },
-    ["location"] = "Tirisfal Glades",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "2-3",
     ["name"] = "Ragged Scavenger",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1420
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1420,
+    ["zone_id"] = 85
   },
   ["1553"] = {
     ["coords"] = {
@@ -11773,14 +11725,13 @@ Addon.TameableNPCs = {
         ["y"] = 64.0
       }
     },
-    ["level_range"] = {
-      6,
-      7
-    },
-    ["location"] = "Tirisfal Glades",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Bat",
+    ["level_range"] = "6-7",
     ["name"] = "Greater Duskbat",
-    ["type"] = "Bat",
-    ["ui_map_id"] = 1420
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1420,
+    ["zone_id"] = 85
   },
   ["1555"] = {
     ["coords"] = {
@@ -11865,14 +11816,13 @@ Addon.TameableNPCs = {
         ["y"] = 49.8
       }
     },
-    ["level_range"] = {
-      9,
-      10
-    },
-    ["location"] = "Tirisfal Glades",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "9-10",
     ["name"] = "Vicious Night Web Spider",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1420
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1420,
+    ["zone_id"] = 85
   },
   ["1557"] = {
     ["coords"] = {
@@ -11941,14 +11891,13 @@ Addon.TameableNPCs = {
         ["y"] = 64.4
       }
     },
-    ["level_range"] = {
-      40,
-      41
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Gorilla",
+    ["level_range"] = "40-41",
     ["name"] = "Elder Mistvale Gorilla",
-    ["type"] = "Gorilla",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["1688"] = {
     ["coords"] = {
@@ -11957,13 +11906,13 @@ Addon.TameableNPCs = {
         ["y"] = 58.4
       }
     },
-    ["level_range"] = {
-      5
-    },
-    ["location"] = "Tirisfal Glades",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "5",
     ["name"] = "Night Web Matriarch",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1420
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1420,
+    ["zone_id"] = 85
   },
   ["1689"] = {
     ["coords"] = {
@@ -12056,14 +12005,13 @@ Addon.TameableNPCs = {
         ["y"] = 49.6
       }
     },
-    ["level_range"] = {
-      9,
-      10
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "9-10",
     ["name"] = "Scarred Crag Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1426
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1693"] = {
     ["coords"] = {
@@ -12240,14 +12188,13 @@ Addon.TameableNPCs = {
         ["y"] = 47.6
       }
     },
-    ["level_range"] = {
-      14,
-      15
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "14-15",
     ["name"] = "Loch Crocolisk",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1432
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["1713"] = {
     ["coords"] = {
@@ -12276,14 +12223,13 @@ Addon.TameableNPCs = {
         ["y"] = 55.8
       }
     },
-    ["level_range"] = {
-      42,
-      43
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "42-43",
     ["name"] = "Elder Shadowmaw Panther",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["1765"] = {
     ["coords"] = {
@@ -12356,14 +12302,13 @@ Addon.TameableNPCs = {
         ["y"] = 4.8
       }
     },
-    ["level_range"] = {
-      10,
-      11
-    },
-    ["location"] = "Silverpine Forest",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "10-11",
     ["name"] = "Worg",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1421
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1421,
+    ["zone_id"] = 130
   },
   ["1778"] = {
     ["coords"] = {
@@ -12532,14 +12477,13 @@ Addon.TameableNPCs = {
         ["y"] = 43.0
       }
     },
-    ["level_range"] = {
-      11,
-      12
-    },
-    ["location"] = "Silverpine Forest",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "11-12",
     ["name"] = "Ferocious Grizzled Bear",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1421
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1421,
+    ["zone_id"] = 130
   },
   ["1809"] = {
     ["coords"] = {
@@ -12708,14 +12652,13 @@ Addon.TameableNPCs = {
         ["y"] = 52.2
       }
     },
-    ["level_range"] = {
-      50,
-      52
-    },
-    ["location"] = "Western Plaguelands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "50-52",
     ["name"] = "Carrion Vulture",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1422
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1422,
+    ["zone_id"] = 28
   },
   ["1816"] = {
     ["coords"] = {
@@ -12964,14 +12907,13 @@ Addon.TameableNPCs = {
         ["y"] = 45.0
       }
     },
-    ["level_range"] = {
-      55,
-      56
-    },
-    ["location"] = "Western Plaguelands",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "55-56",
     ["name"] = "Diseased Grizzly",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1422
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1422,
+    ["zone_id"] = 28
   },
   ["1817"] = {
     ["coords"] = {
@@ -13188,14 +13130,13 @@ Addon.TameableNPCs = {
         ["y"] = 69.8
       }
     },
-    ["level_range"] = {
-      53,
-      54
-    },
-    ["location"] = "Western Plaguelands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "53-54",
     ["name"] = "Diseased Wolf",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1422
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1422,
+    ["zone_id"] = 28
   },
   ["1824"] = {
     ["coords"] = {
@@ -13352,14 +13293,13 @@ Addon.TameableNPCs = {
         ["y"] = 45.2
       }
     },
-    ["level_range"] = {
-      54,
-      55
-    },
-    ["location"] = "Western Plaguelands",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "54-55",
     ["name"] = "Plague Lurker",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1422
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1422,
+    ["zone_id"] = 28
   },
   ["1922"] = {
     ["coords"] = {
@@ -13556,14 +13496,13 @@ Addon.TameableNPCs = {
         ["y"] = 67.2
       }
     },
-    ["level_range"] = {
-      7,
-      8
-    },
-    ["location"] = "Elwynn Forest",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "7-8",
     ["name"] = "Gray Forest Wolf",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1429
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1429,
+    ["zone_id"] = 12
   },
   ["1923"] = {
     ["coords"] = {
@@ -13660,14 +13599,13 @@ Addon.TameableNPCs = {
         ["y"] = 80.2
       }
     },
-    ["level_range"] = {
-      16,
-      17
-    },
-    ["location"] = "Silverpine Forest",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "16-17",
     ["name"] = "Bloodsnout Worg",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1421
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1421,
+    ["zone_id"] = 130
   },
   ["1961"] = {
     ["coords"] = {
@@ -13680,13 +13618,13 @@ Addon.TameableNPCs = {
         ["y"] = 36.6
       }
     },
-    ["level_range"] = {
-      11
-    },
-    ["location"] = "Dun Morogh",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "11",
     ["name"] = "Mangeclaw",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1426
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1426,
+    ["zone_id"] = 1
   },
   ["1984"] = {
     ["coords"] = {
@@ -13739,14 +13677,13 @@ Addon.TameableNPCs = {
         ["y"] = 42.0
       }
     },
-    ["level_range"] = {
-      1,
-      2
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "1-2",
     ["name"] = "Young Thistle Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1438
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["1985"] = {
     ["coords"] = {
@@ -13807,14 +13744,13 @@ Addon.TameableNPCs = {
         ["y"] = 38.6
       }
     },
-    ["level_range"] = {
-      2,
-      3
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "2-3",
     ["name"] = "Thistle Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1438
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["1994"] = {
     ["coords"] = {
@@ -13823,13 +13759,13 @@ Addon.TameableNPCs = {
         ["y"] = 26.0
       }
     },
-    ["level_range"] = {
-      5
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "5",
     ["name"] = "Githyiss the Vile",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1438
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["1995"] = {
     ["coords"] = {
@@ -13950,14 +13886,13 @@ Addon.TameableNPCs = {
         ["y"] = 62.0
       }
     },
-    ["level_range"] = {
-      5,
-      6
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat",
+    ["family"] = "Owl",
+    ["level_range"] = "5-6",
     ["name"] = "Strigid Owl",
-    ["type"] = "Owl",
-    ["ui_map_id"] = 1438
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["1997"] = {
     ["coords"] = {
@@ -14022,14 +13957,13 @@ Addon.TameableNPCs = {
         ["y"] = 39.6
       }
     },
-    ["level_range"] = {
-      8,
-      9
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat",
+    ["family"] = "Owl",
+    ["level_range"] = "8-9",
     ["name"] = "Strigid Hunter",
-    ["type"] = "Owl",
-    ["ui_map_id"] = 1438
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["1999"] = {
     ["coords"] = {
@@ -14166,14 +14100,13 @@ Addon.TameableNPCs = {
         ["y"] = 69.8
       }
     },
-    ["level_range"] = {
-      7,
-      8
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "7-8",
     ["name"] = "Webwood Venomfang",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1438
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["2000"] = {
     ["coords"] = {
@@ -14274,14 +14207,13 @@ Addon.TameableNPCs = {
         ["y"] = 44.4
       }
     },
-    ["level_range"] = {
-      8,
-      9
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "8-9",
     ["name"] = "Webwood Silkspinner",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1438
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["2001"] = {
     ["coords"] = {
@@ -14346,14 +14278,13 @@ Addon.TameableNPCs = {
         ["y"] = 25.2
       }
     },
-    ["level_range"] = {
-      10,
-      11
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "10-11",
     ["name"] = "Giant Webwood Spider",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1438
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["2042"] = {
     ["coords"] = {
@@ -14462,14 +14393,13 @@ Addon.TameableNPCs = {
         ["y"] = 55.0
       }
     },
-    ["level_range"] = {
-      5,
-      6
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "5-6",
     ["name"] = "Nightsaber",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1438
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["2070"] = {
     ["coords"] = {
@@ -14802,14 +14732,13 @@ Addon.TameableNPCs = {
         ["y"] = 8.6
       }
     },
-    ["level_range"] = {
-      10,
-      17
-    },
-    ["location"] = "Darkshore",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "10-17",
     ["name"] = "Moonstalker Runt",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1439
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1439,
+    ["zone_id"] = 148
   },
   ["2089"] = {
     ["coords"] = {
@@ -14874,14 +14803,13 @@ Addon.TameableNPCs = {
         ["y"] = 18.8
       }
     },
-    ["level_range"] = {
-      25,
-      26
-    },
-    ["location"] = "Wetlands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "25-26",
     ["name"] = "Giant Wetlands Crocolisk",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1437
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1437,
+    ["zone_id"] = 11
   },
   ["2163"] = {
     ["coords"] = {
@@ -15138,14 +15066,13 @@ Addon.TameableNPCs = {
         ["y"] = 25.2
       }
     },
-    ["level_range"] = {
-      11,
-      12
-    },
-    ["location"] = "Darkshore",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "11-12",
     ["name"] = "Thistle Bear",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1439
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1439,
+    ["zone_id"] = 148
   },
   ["2232"] = {
     ["coords"] = {
@@ -15194,14 +15121,13 @@ Addon.TameableNPCs = {
         ["y"] = 20.4
       }
     },
-    ["level_range"] = {
-      12,
-      14
-    },
-    ["location"] = "Darkshore",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "12-14",
     ["name"] = "Tide Crawler",
-    ["type"] = "Crab",
-    ["ui_map_id"] = 1439
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1439,
+    ["zone_id"] = 148
   },
   ["2237"] = {
     ["coords"] = {
@@ -15398,14 +15324,13 @@ Addon.TameableNPCs = {
         ["y"] = 8.6
       }
     },
-    ["level_range"] = {
-      17,
-      18
-    },
-    ["location"] = "Darkshore",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "17-18",
     ["name"] = "Moonstalker Sire",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1439
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1439,
+    ["zone_id"] = 148
   },
   ["2321"] = {
     ["coords"] = {
@@ -15746,14 +15671,13 @@ Addon.TameableNPCs = {
         ["y"] = 21.6
       }
     },
-    ["level_range"] = {
-      11,
-      13
-    },
-    ["location"] = "Darkshore",
+    ["diet"] = "Cheese, Fungus, Fruit",
+    ["family"] = "Tallstrider",
+    ["level_range"] = "11-13",
     ["name"] = "Foreststrider Fledgling",
-    ["type"] = "Tallstrider",
-    ["ui_map_id"] = 1439
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1439,
+    ["zone_id"] = 148
   },
   ["2323"] = {
     ["coords"] = {
@@ -15910,14 +15834,13 @@ Addon.TameableNPCs = {
         ["y"] = 8.4
       }
     },
-    ["level_range"] = {
-      17,
-      19
-    },
-    ["location"] = "Darkshore",
+    ["diet"] = "Cheese, Fungus, Fruit",
+    ["family"] = "Tallstrider",
+    ["level_range"] = "17-19",
     ["name"] = "Giant Foreststrider",
-    ["type"] = "Tallstrider",
-    ["ui_map_id"] = 1439
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1439,
+    ["zone_id"] = 148
   },
   ["2348"] = {
     ["coords"] = {
@@ -15934,14 +15857,13 @@ Addon.TameableNPCs = {
         ["y"] = 65.4
       }
     },
-    ["level_range"] = {
-      26,
-      27
-    },
-    ["location"] = "Hillsbrad Foothills",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "26-27",
     ["name"] = "Elder Moss Creeper",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1424
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1424,
+    ["zone_id"] = 267
   },
   ["2349"] = {
     ["coords"] = {
@@ -16550,14 +16472,13 @@ Addon.TameableNPCs = {
         ["y"] = 40.6
       }
     },
-    ["level_range"] = {
-      24,
-      25
-    },
-    ["location"] = "Hillsbrad Foothills",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "24-25",
     ["name"] = "Giant Moss Creeper",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1424
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1424,
+    ["zone_id"] = 267
   },
   ["2350"] = {
     ["coords"] = {
@@ -16794,14 +16715,13 @@ Addon.TameableNPCs = {
         ["y"] = 50.0
       }
     },
-    ["level_range"] = {
-      20,
-      21
-    },
-    ["location"] = "Hillsbrad Foothills",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "20-21",
     ["name"] = "Forest Moss Creeper",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1424
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1424,
+    ["zone_id"] = 267
   },
   ["2351"] = {
     ["coords"] = {
@@ -17110,14 +17030,13 @@ Addon.TameableNPCs = {
         ["y"] = 11.4
       }
     },
-    ["level_range"] = {
-      21,
-      22
-    },
-    ["location"] = "Hillsbrad Foothills",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "21-22",
     ["name"] = "Gray Bear",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1424
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1424,
+    ["zone_id"] = 267
   },
   ["2384"] = {
     ["coords"] = {
@@ -17358,14 +17277,13 @@ Addon.TameableNPCs = {
         ["y"] = 40.6
       }
     },
-    ["level_range"] = {
-      23,
-      24
-    },
-    ["location"] = "Hillsbrad Foothills",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "23-24",
     ["name"] = "Starving Mountain Lion",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1424
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1424,
+    ["zone_id"] = 267
   },
   ["2385"] = {
     ["coords"] = {
@@ -17402,14 +17320,13 @@ Addon.TameableNPCs = {
         ["y"] = 65.4
       }
     },
-    ["level_range"] = {
-      27,
-      28
-    },
-    ["location"] = "Hillsbrad Foothills",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "27-28",
     ["name"] = "Feral Mountain Lion",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1424
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1424,
+    ["zone_id"] = 267
   },
   ["2406"] = {
     ["coords"] = {
@@ -17490,14 +17407,13 @@ Addon.TameableNPCs = {
         ["y"] = 74.8
       }
     },
-    ["level_range"] = {
-      32,
-      33
-    },
-    ["location"] = "Alterac Mountains",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "32-33",
     ["name"] = "Mountain Lion",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1416
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1416,
+    ["zone_id"] = 36
   },
   ["2408"] = {
     ["coords"] = {
@@ -17598,14 +17514,13 @@ Addon.TameableNPCs = {
         ["y"] = 12.4
       }
     },
-    ["level_range"] = {
-      30,
-      31
-    },
-    ["location"] = "Hillsbrad Foothills",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "30-31",
     ["name"] = "Snapjaw",
-    ["type"] = "Turtle",
-    ["ui_map_id"] = 1424
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1424,
+    ["zone_id"] = 267
   },
   ["2476"] = {
     ["coords"] = {
@@ -17754,13 +17669,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.6
       }
     },
-    ["level_range"] = {
-      22
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "22",
     ["name"] = "Large Loch Crocolisk",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1432
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["2505"] = {
     ["coords"] = {
@@ -17885,14 +17800,13 @@ Addon.TameableNPCs = {
         ["y"] = 42.0
       }
     },
-    ["level_range"] = {
-      49,
-      50
-    },
-    ["location"] = "The Hinterlands",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "49-50",
     ["name"] = "Saltwater Snapjaw",
-    ["type"] = "Turtle",
-    ["ui_map_id"] = 1425
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1425,
+    ["zone_id"] = 47
   },
   ["2522"] = {
     ["coords"] = {
@@ -17929,13 +17843,13 @@ Addon.TameableNPCs = {
         ["y"] = 82.8
       }
     },
-    ["level_range"] = {
-      50
-    },
-    ["location"] = "Stranglethorn Vale",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "50",
     ["name"] = "Jaguero Stalker",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1434
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1434,
+    ["zone_id"] = 33
   },
   ["2563"] = {
     ["coords"] = {
@@ -18560,14 +18474,13 @@ Addon.TameableNPCs = {
         ["y"] = 46.4
       }
     },
-    ["level_range"] = {
-      32,
-      33
-    },
-    ["location"] = "Arathi Highlands",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "32-33",
     ["name"] = "Plains Creeper",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1417
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1417,
+    ["zone_id"] = 45
   },
   ["2565"] = {
     ["coords"] = {
@@ -18580,14 +18493,13 @@ Addon.TameableNPCs = {
         ["y"] = 32.0
       }
     },
-    ["level_range"] = {
-      35,
-      36
-    },
-    ["location"] = "Arathi Highlands",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "35-36",
     ["name"] = "Giant Plains Creeper",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1417
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1417,
+    ["zone_id"] = 45
   },
   ["2578"] = {
     ["coords"] = {
@@ -19528,14 +19440,13 @@ Addon.TameableNPCs = {
         ["y"] = 49.4
       }
     },
-    ["level_range"] = {
-      31,
-      32
-    },
-    ["location"] = "Arathi Highlands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "31-32",
     ["name"] = "Young Mesa Buzzard",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1417
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1417,
+    ["zone_id"] = 45
   },
   ["2579"] = {
     ["coords"] = {
@@ -20344,14 +20255,13 @@ Addon.TameableNPCs = {
         ["y"] = 64.4
       }
     },
-    ["level_range"] = {
-      34,
-      35
-    },
-    ["location"] = "Arathi Highlands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "34-35",
     ["name"] = "Mesa Buzzard",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1417
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1417,
+    ["zone_id"] = 45
   },
   ["2681"] = {
     ["coords"] = {
@@ -20388,14 +20298,13 @@ Addon.TameableNPCs = {
         ["y"] = 80.0
       }
     },
-    ["level_range"] = {
-      50,
-      51
-    },
-    ["location"] = "The Hinterlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "50-51",
     ["name"] = "Vilebranch Raiding Wolf",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1425
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1425,
+    ["zone_id"] = 47
   },
   ["2727"] = {
     ["coords"] = {
@@ -20692,14 +20601,13 @@ Addon.TameableNPCs = {
         ["y"] = 47.4
       }
     },
-    ["level_range"] = {
-      35,
-      36
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "35-36",
     ["name"] = "Crag Coyote",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2728"] = {
     ["coords"] = {
@@ -21052,14 +20960,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.2
       }
     },
-    ["level_range"] = {
-      37,
-      38
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "37-38",
     ["name"] = "Feral Crag Coyote",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2729"] = {
     ["coords"] = {
@@ -21832,14 +21739,13 @@ Addon.TameableNPCs = {
         ["y"] = 75.2
       }
     },
-    ["level_range"] = {
-      39,
-      40
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "39-40",
     ["name"] = "Elder Crag Coyote",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2730"] = {
     ["coords"] = {
@@ -21884,14 +21790,13 @@ Addon.TameableNPCs = {
         ["y"] = 32.4
       }
     },
-    ["level_range"] = {
-      42,
-      43
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "42-43",
     ["name"] = "Rabid Crag Coyote",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2731"] = {
     ["coords"] = {
@@ -22112,14 +22017,13 @@ Addon.TameableNPCs = {
         ["y"] = 35.6
       }
     },
-    ["level_range"] = {
-      36,
-      37
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "36-37",
     ["name"] = "Ridge Stalker",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2732"] = {
     ["coords"] = {
@@ -22432,14 +22336,13 @@ Addon.TameableNPCs = {
         ["y"] = 70.4
       }
     },
-    ["level_range"] = {
-      38,
-      39
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "38-39",
     ["name"] = "Ridge Huntress",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2734"] = {
     ["coords"] = {
@@ -22760,14 +22663,13 @@ Addon.TameableNPCs = {
         ["y"] = 74.6
       }
     },
-    ["level_range"] = {
-      40,
-      41
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "40-41",
     ["name"] = "Ridge Stalker Patriarch",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2753"] = {
     ["coords"] = {
@@ -22892,13 +22794,13 @@ Addon.TameableNPCs = {
         ["y"] = 56.4
       }
     },
-    ["level_range"] = {
-      38
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "38",
     ["name"] = "Barnabus",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2850"] = {
     ["coords"] = {
@@ -23095,13 +22997,13 @@ Addon.TameableNPCs = {
         ["y"] = 31.2
       }
     },
-    ["level_range"] = {
-      37
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "37",
     ["name"] = "Broken Tooth",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2924"] = {
     ["coords"] = {
@@ -23306,14 +23208,13 @@ Addon.TameableNPCs = {
         ["y"] = 54.0
       }
     },
-    ["level_range"] = {
-      43,
-      44
-    },
-    ["location"] = "The Hinterlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "43-44",
     ["name"] = "Silvermane Wolf",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1425
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1425,
+    ["zone_id"] = 47
   },
   ["2925"] = {
     ["coords"] = {
@@ -23618,14 +23519,13 @@ Addon.TameableNPCs = {
         ["y"] = 60.6
       }
     },
-    ["level_range"] = {
-      45,
-      46
-    },
-    ["location"] = "The Hinterlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "45-46",
     ["name"] = "Silvermane Howler",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1425
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1425,
+    ["zone_id"] = 47
   },
   ["2926"] = {
     ["coords"] = {
@@ -23918,14 +23818,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.0
       }
     },
-    ["level_range"] = {
-      47,
-      48
-    },
-    ["location"] = "The Hinterlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "47-48",
     ["name"] = "Silvermane Stalker",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1425
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1425,
+    ["zone_id"] = 47
   },
   ["2931"] = {
     ["coords"] = {
@@ -24606,13 +24505,13 @@ Addon.TameableNPCs = {
         ["y"] = 64.2
       }
     },
-    ["level_range"] = {
-      55
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "55",
     ["name"] = "Zaricotl",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["2954"] = {
     ["coords"] = {
@@ -24657,14 +24556,13 @@ Addon.TameableNPCs = {
         ["y"] = 78.6
       }
     },
-    ["level_range"] = {
-      4,
-      5
-    },
-    ["location"] = "Mulgore",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "4-5",
     ["name"] = "Bristleback Battleboar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1412
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1412,
+    ["zone_id"] = 215
   },
   ["2957"] = {
     ["coords"] = {
@@ -24873,14 +24771,13 @@ Addon.TameableNPCs = {
         ["y"] = 59.8
       }
     },
-    ["level_range"] = {
-      8,
-      9
-    },
-    ["location"] = "Mulgore",
+    ["diet"] = "Cheese, Fungus, Fruit",
+    ["family"] = "Tallstrider",
+    ["level_range"] = "8-9",
     ["name"] = "Elder Plainstrider",
-    ["type"] = "Tallstrider",
-    ["ui_map_id"] = 1412
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1412,
+    ["zone_id"] = 215
   },
   ["2958"] = {
     ["coords"] = {
@@ -25261,14 +25158,13 @@ Addon.TameableNPCs = {
         ["y"] = 66.2
       }
     },
-    ["level_range"] = {
-      5,
-      6
-    },
-    ["location"] = "Mulgore",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "5-6",
     ["name"] = "Prairie Wolf",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1412
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1412,
+    ["zone_id"] = 215
   },
   ["2959"] = {
     ["coords"] = {
@@ -25941,14 +25837,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.6
       }
     },
-    ["level_range"] = {
-      7,
-      8
-    },
-    ["location"] = "Mulgore",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "7-8",
     ["name"] = "Prairie Stalker",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1412
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1412,
+    ["zone_id"] = 215
   },
   ["2960"] = {
     ["coords"] = {
@@ -26529,14 +26424,13 @@ Addon.TameableNPCs = {
         ["y"] = 64.2
       }
     },
-    ["level_range"] = {
-      9,
-      10
-    },
-    ["location"] = "Mulgore",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "9-10",
     ["name"] = "Prairie Wolf Alpha",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1412
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1412,
+    ["zone_id"] = 215
   },
   ["2966"] = {
     ["coords"] = {
@@ -26621,14 +26515,13 @@ Addon.TameableNPCs = {
         ["y"] = 88.6
       }
     },
-    ["level_range"] = {
-      3,
-      4
-    },
-    ["location"] = "Mulgore",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "3-4",
     ["name"] = "Battleboar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1412
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1412,
+    ["zone_id"] = 215
   },
   ["3035"] = {
     ["coords"] = {
@@ -27297,14 +27190,13 @@ Addon.TameableNPCs = {
         ["y"] = 53.6
       }
     },
-    ["level_range"] = {
-      7,
-      8
-    },
-    ["location"] = "Mulgore",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "7-8",
     ["name"] = "Flatland Cougar",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1412
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1412,
+    ["zone_id"] = 215
   },
   ["3068"] = {
     ["coords"] = {
@@ -27445,13 +27337,13 @@ Addon.TameableNPCs = {
         ["y"] = 43.0
       }
     },
-    ["level_range"] = {
-      9
-    },
-    ["location"] = "Mulgore",
+    ["diet"] = "Cheese, Fungus, Fruit",
+    ["family"] = "Tallstrider",
+    ["level_range"] = "9",
     ["name"] = "Mazzranache",
-    ["type"] = "Tallstrider",
-    ["ui_map_id"] = 1412
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1412,
+    ["zone_id"] = 215
   },
   ["3098"] = {
     ["coords"] = {
@@ -27528,14 +27420,13 @@ Addon.TameableNPCs = {
         ["y"] = 64.8
       }
     },
-    ["level_range"] = {
-      1,
-      2
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "1-2",
     ["name"] = "Mottled Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1411
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3099"] = {
     ["coords"] = {
@@ -28000,14 +27891,13 @@ Addon.TameableNPCs = {
         ["y"] = 48.0
       }
     },
-    ["level_range"] = {
-      6,
-      7
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "6-7",
     ["name"] = "Dire Mottled Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1411
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3100"] = {
     ["coords"] = {
@@ -28364,14 +28254,13 @@ Addon.TameableNPCs = {
         ["y"] = 16.8
       }
     },
-    ["level_range"] = {
-      8,
-      9
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "8-9",
     ["name"] = "Elder Mottled Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1411
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3106"] = {
     ["coords"] = {
@@ -28528,14 +28417,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.6
       }
     },
-    ["level_range"] = {
-      5,
-      6
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "5-6",
     ["name"] = "Pygmy Surf Crawler",
-    ["type"] = "Crab",
-    ["ui_map_id"] = 1411
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3108"] = {
     ["coords"] = {
@@ -28580,14 +28468,13 @@ Addon.TameableNPCs = {
         ["y"] = 17.6
       }
     },
-    ["level_range"] = {
-      9,
-      10
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "9-10",
     ["name"] = "Encrusted Surf Crawler",
-    ["type"] = "Crab",
-    ["ui_map_id"] = 1411
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3110"] = {
     ["coords"] = {
@@ -28680,14 +28567,13 @@ Addon.TameableNPCs = {
         ["y"] = 16.2
       }
     },
-    ["level_range"] = {
-      9,
-      11
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "9-11",
     ["name"] = "Dreadmaw Crocolisk",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1411
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3121"] = {
     ["coords"] = {
@@ -28812,14 +28698,13 @@ Addon.TameableNPCs = {
         ["y"] = 73.2
       }
     },
-    ["level_range"] = {
-      7,
-      8
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "7-8",
     ["name"] = "Durotar Tiger",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1411
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3124"] = {
     ["coords"] = {
@@ -28900,13 +28785,13 @@ Addon.TameableNPCs = {
         ["y"] = 64.8
       }
     },
-    ["level_range"] = {
-      3
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "3",
     ["name"] = "Scorpid Worker",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1411
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3127"] = {
     ["coords"] = {
@@ -29055,14 +28940,13 @@ Addon.TameableNPCs = {
         ["y"] = 14.2
       }
     },
-    ["level_range"] = {
-      9,
-      10
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "9-10",
     ["name"] = "Venomtail Scorpid",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1411
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3225"] = {
     ["coords"] = {
@@ -29111,14 +28995,13 @@ Addon.TameableNPCs = {
         ["y"] = 22.0
       }
     },
-    ["level_range"] = {
-      10,
-      11
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "10-11",
     ["name"] = "Corrupted Mottled Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1411
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3226"] = {
     ["coords"] = {
@@ -29183,14 +29066,13 @@ Addon.TameableNPCs = {
         ["y"] = 14.6
       }
     },
-    ["level_range"] = {
-      10,
-      11
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "10-11",
     ["name"] = "Corrupted Scorpid",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1411
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3241"] = {
     ["coords"] = {
@@ -29223,14 +29105,13 @@ Addon.TameableNPCs = {
         ["y"] = 32.4
       }
     },
-    ["level_range"] = {
-      15,
-      16
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "15-16",
     ["name"] = "Savannah Patriarch",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3245"] = {
     ["coords"] = {
@@ -29467,14 +29348,13 @@ Addon.TameableNPCs = {
         ["y"] = 33.6
       }
     },
-    ["level_range"] = {
-      16,
-      17
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Cheese, Fungus, Fruit",
+    ["family"] = "Tallstrider",
+    ["level_range"] = "16-17",
     ["name"] = "Ornery Plainstrider",
-    ["type"] = "Tallstrider",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3246"] = {
     ["coords"] = {
@@ -29799,14 +29679,13 @@ Addon.TameableNPCs = {
         ["y"] = 34.6
       }
     },
-    ["level_range"] = {
-      12,
-      13
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Cheese, Fungus, Fruit",
+    ["family"] = "Tallstrider",
+    ["level_range"] = "12-13",
     ["name"] = "Fleeting Plainstrider",
-    ["type"] = "Tallstrider",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3247"] = {
     ["coords"] = {
@@ -29879,14 +29758,13 @@ Addon.TameableNPCs = {
         ["y"] = 53.6
       }
     },
-    ["level_range"] = {
-      18,
-      20
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "18-20",
     ["name"] = "Thunderhawk Hatchling",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3249"] = {
     ["coords"] = {
@@ -29963,14 +29841,13 @@ Addon.TameableNPCs = {
         ["y"] = 76.8
       }
     },
-    ["level_range"] = {
-      23,
-      24
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "23-24",
     ["name"] = "Greater Thunderhawk",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3250"] = {
     ["coords"] = {
@@ -30023,14 +29900,13 @@ Addon.TameableNPCs = {
         ["y"] = 68.8
       }
     },
-    ["level_range"] = {
-      20,
-      21
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "20-21",
     ["name"] = "Silithid Creeper",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3252"] = {
     ["coords"] = {
@@ -30067,14 +29943,13 @@ Addon.TameableNPCs = {
         ["y"] = 69.6
       }
     },
-    ["level_range"] = {
-      21,
-      22
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "21-22",
     ["name"] = "Silithid Swarmer",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3281"] = {
     ["coords"] = {
@@ -30083,13 +29958,13 @@ Addon.TameableNPCs = {
         ["y"] = 66.6
       }
     },
-    ["level_range"] = {
-      4
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "4",
     ["name"] = "Sarkoth",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1411
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["3424"] = {
     ["coords"] = {
@@ -30130,14 +30005,13 @@ Addon.TameableNPCs = {
         ["y"] = 60.4
       }
     },
-    ["level_range"] = {
-      20,
-      22
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "20-22",
     ["name"] = "Thunderhawk Cloudscraper",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3461"] = {
     ["coords"] = {
@@ -30166,14 +30040,13 @@ Addon.TameableNPCs = {
         ["y"] = 42.4
       }
     },
-    ["level_range"] = {
-      15,
-      16
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "15-16",
     ["name"] = "Oasis Snapjaw",
-    ["type"] = "Turtle",
-    ["ui_map_id"] = 1413
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3472"] = {
     ["coords"] = {
@@ -30194,13 +30067,13 @@ Addon.TameableNPCs = {
         ["y"] = 79.6
       }
     },
-    ["level_range"] = {
-      25
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "25",
     ["name"] = "Washte Pawne",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3581"] = {
     ["coords"] = {
@@ -30629,13 +30502,13 @@ Addon.TameableNPCs = {
         ["y"] = 56.2
       }
     },
-    ["level_range"] = {
-      50
-    },
-    ["location"] = "Stormwind City",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "50",
     ["name"] = "Sewer Beast",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1453
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1453,
+    ["zone_id"] = 1519
   },
   ["3619"] = {
     ["coords"] = {
@@ -30720,14 +30593,13 @@ Addon.TameableNPCs = {
         ["y"] = 19.8
       }
     },
-    ["level_range"] = {
-      19,
-      20
-    },
-    ["location"] = "Darkshore",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "19-20",
     ["name"] = "Ghost Saber",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1439
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1439,
+    ["zone_id"] = 148
   },
   ["3630"] = {
     ["coords"] = {
@@ -30752,33 +30624,31 @@ Addon.TameableNPCs = {
         ["y"] = 36.6
       }
     },
-    ["level_range"] = {
-      15,
-      16
-    },
-    ["location"] = "The Barrens",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "15-16",
     ["name"] = "Deviate Coiler",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1413
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1413,
+    ["zone_id"] = 17
   },
   ["3631"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      16,
-      17
-    },
-    ["location"] = "Wailing Caverns",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "16-17",
     ["name"] = "Deviate Stinglash",
-    ["type"] = "Wind Serpent"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 718
   },
   ["3653"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      20
-    },
-    ["location"] = "Wailing Caverns",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "20",
     ["name"] = "Kresh",
-    ["type"] = "Turtle"
+    ["type"] = "Tenacity",
+    ["zone_id"] = 718
   },
   ["3809"] = {
     ["coords"] = {
@@ -31123,14 +30993,13 @@ Addon.TameableNPCs = {
         ["y"] = 71.0
       }
     },
-    ["level_range"] = {
-      21,
-      22
-    },
-    ["location"] = "Ashenvale",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "21-22",
     ["name"] = "Ashenvale Bear",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1440
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1440,
+    ["zone_id"] = 331
   },
   ["3810"] = {
     ["coords"] = {
@@ -31267,14 +31136,13 @@ Addon.TameableNPCs = {
         ["y"] = 47.2
       }
     },
-    ["level_range"] = {
-      25,
-      26
-    },
-    ["location"] = "Ashenvale",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "25-26",
     ["name"] = "Elder Ashenvale Bear",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1440
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1440,
+    ["zone_id"] = 331
   },
   ["3812"] = {
     ["coords"] = {
@@ -31383,14 +31251,13 @@ Addon.TameableNPCs = {
         ["y"] = 27.4
       }
     },
-    ["level_range"] = {
-      19,
-      20
-    },
-    ["location"] = "Ashenvale",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "19-20",
     ["name"] = "Clattering Crawler",
-    ["type"] = "Crab",
-    ["ui_map_id"] = 1440
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1440,
+    ["zone_id"] = 331
   },
   ["3821"] = {
     ["coords"] = {
@@ -31503,14 +31370,13 @@ Addon.TameableNPCs = {
         ["y"] = 53.6
       }
     },
-    ["level_range"] = {
-      28,
-      29
-    },
-    ["location"] = "Ashenvale",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "28-29",
     ["name"] = "Wildthorn Lurker",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1440
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1440,
+    ["zone_id"] = 331
   },
   ["3823"] = {
     ["coords"] = {
@@ -31887,14 +31753,13 @@ Addon.TameableNPCs = {
         ["y"] = 73.0
       }
     },
-    ["level_range"] = {
-      19,
-      20
-    },
-    ["location"] = "Ashenvale",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "19-20",
     ["name"] = "Ghostpaw Runner",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1440
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1440,
+    ["zone_id"] = 331
   },
   ["3825"] = {
     ["coords"] = {
@@ -31987,14 +31852,13 @@ Addon.TameableNPCs = {
         ["y"] = 55.4
       }
     },
-    ["level_range"] = {
-      27,
-      28
-    },
-    ["location"] = "Ashenvale",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "27-28",
     ["name"] = "Ghostpaw Alpha",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1440
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1440,
+    ["zone_id"] = 331
   },
   ["4005"] = {
     ["coords"] = {
@@ -32047,14 +31911,13 @@ Addon.TameableNPCs = {
         ["y"] = 88.6
       }
     },
-    ["level_range"] = {
-      16,
-      17
-    },
-    ["location"] = "Stonetalon Mountains",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "16-17",
     ["name"] = "Deepmoss Creeper",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1442
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1442,
+    ["zone_id"] = 406
   },
   ["4006"] = {
     ["coords"] = {
@@ -32103,14 +31966,13 @@ Addon.TameableNPCs = {
         ["y"] = 44.6
       }
     },
-    ["level_range"] = {
-      19,
-      20
-    },
-    ["location"] = "Stonetalon Mountains",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "19-20",
     ["name"] = "Deepmoss Webspinner",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1442
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1442,
+    ["zone_id"] = 406
   },
   ["4067"] = {
     ["coords"] = {
@@ -32191,14 +32053,13 @@ Addon.TameableNPCs = {
         ["y"] = 14.8
       }
     },
-    ["level_range"] = {
-      23,
-      24
-    },
-    ["location"] = "Stonetalon Mountains",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "23-24",
     ["name"] = "Twilight Runner",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1442
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1442,
+    ["zone_id"] = 406
   },
   ["4117"] = {
     ["coords"] = {
@@ -32251,14 +32112,13 @@ Addon.TameableNPCs = {
         ["y"] = 54.8
       }
     },
-    ["level_range"] = {
-      25,
-      26
-    },
-    ["location"] = "Thousand Needles",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "25-26",
     ["name"] = "Cloud Serpent",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1441
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1441,
+    ["zone_id"] = 400
   },
   ["4118"] = {
     ["coords"] = {
@@ -32403,14 +32263,13 @@ Addon.TameableNPCs = {
         ["y"] = 54.8
       }
     },
-    ["level_range"] = {
-      26,
-      28
-    },
-    ["location"] = "Thousand Needles",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "26-28",
     ["name"] = "Venomous Cloud Serpent",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1441
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1441,
+    ["zone_id"] = 400
   },
   ["4119"] = {
     ["coords"] = {
@@ -32475,14 +32334,13 @@ Addon.TameableNPCs = {
         ["y"] = 47.0
       }
     },
-    ["level_range"] = {
-      27,
-      29
-    },
-    ["location"] = "Thousand Needles",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "27-29",
     ["name"] = "Elder Cloud Serpent",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1441
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1441,
+    ["zone_id"] = 400
   },
   ["4126"] = {
     ["coords"] = {
@@ -32583,14 +32441,13 @@ Addon.TameableNPCs = {
         ["y"] = 49.0
       }
     },
-    ["level_range"] = {
-      25,
-      26
-    },
-    ["location"] = "Thousand Needles",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "25-26",
     ["name"] = "Crag Stalker",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1441
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1441,
+    ["zone_id"] = 400
   },
   ["4139"] = {
     ["coords"] = {
@@ -32783,14 +32640,13 @@ Addon.TameableNPCs = {
         ["y"] = 78.2
       }
     },
-    ["level_range"] = {
-      33,
-      34
-    },
-    ["location"] = "Thousand Needles",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "33-34",
     ["name"] = "Scorpid Terror",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1441
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1441,
+    ["zone_id"] = 400
   },
   ["4140"] = {
     ["coords"] = {
@@ -33051,14 +32907,13 @@ Addon.TameableNPCs = {
         ["y"] = 62.8
       }
     },
-    ["level_range"] = {
-      31,
-      32
-    },
-    ["location"] = "Thousand Needles",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "31-32",
     ["name"] = "Scorpid Reaver",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1441
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1441,
+    ["zone_id"] = 400
   },
   ["4143"] = {
     ["coords"] = {
@@ -33263,14 +33118,13 @@ Addon.TameableNPCs = {
         ["y"] = 79.8
       }
     },
-    ["level_range"] = {
-      34,
-      35
-    },
-    ["location"] = "Thousand Needles",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "34-35",
     ["name"] = "Sparkleshell Snapper",
-    ["type"] = "Turtle",
-    ["ui_map_id"] = 1441
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1441,
+    ["zone_id"] = 400
   },
   ["4158"] = {
     ["coords"] = {
@@ -33699,24 +33553,22 @@ Addon.TameableNPCs = {
         ["y"] = 73.6
       }
     },
-    ["level_range"] = {
-      32,
-      34
-    },
-    ["location"] = "Thousand Needles",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "32-34",
     ["name"] = "Salt Flats Vulture",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1441
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1441,
+    ["zone_id"] = 400
   },
   ["4304"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      33,
-      34
-    },
-    ["location"] = "Scarlet Monastery",
+    ["diet"] = "Meat, Fruit",
+    ["family"] = "Hyena",
+    ["level_range"] = "33-34",
     ["name"] = "Scarlet Tracking Hound",
-    ["type"] = "Hyena"
+    ["type"] = "Cunning",
+    ["zone_id"] = 796
   },
   ["4341"] = {
     ["coords"] = {
@@ -33729,14 +33581,13 @@ Addon.TameableNPCs = {
         ["y"] = 22.6
       }
     },
-    ["level_range"] = {
-      35,
-      36
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "35-36",
     ["name"] = "Drywallow Crocolisk",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4343"] = {
     ["coords"] = {
@@ -34029,14 +33880,13 @@ Addon.TameableNPCs = {
         ["y"] = 61.8
       }
     },
-    ["level_range"] = {
-      37,
-      38
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "37-38",
     ["name"] = "Drywallow Snapper",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4344"] = {
     ["coords"] = {
@@ -34325,14 +34175,13 @@ Addon.TameableNPCs = {
         ["y"] = 61.8
       }
     },
-    ["level_range"] = {
-      38,
-      39
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "38-39",
     ["name"] = "Mottled Drywallow Crocolisk",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4345"] = {
     ["coords"] = {
@@ -34497,14 +34346,13 @@ Addon.TameableNPCs = {
         ["y"] = 69.6
       }
     },
-    ["level_range"] = {
-      40,
-      41
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "40-41",
     ["name"] = "Drywallow Daggermaw",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4396"] = {
     ["coords"] = {
@@ -34605,14 +34453,13 @@ Addon.TameableNPCs = {
         ["y"] = 41.8
       }
     },
-    ["level_range"] = {
-      36,
-      37
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "36-37",
     ["name"] = "Mudrock Tortoise",
-    ["type"] = "Turtle",
-    ["ui_map_id"] = 1445
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4400"] = {
     ["coords"] = {
@@ -34765,14 +34612,13 @@ Addon.TameableNPCs = {
         ["y"] = 54.4
       }
     },
-    ["level_range"] = {
-      41,
-      42
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "41-42",
     ["name"] = "Mudrock Snapjaw",
-    ["type"] = "Turtle",
-    ["ui_map_id"] = 1445
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4411"] = {
     ["coords"] = {
@@ -35113,14 +34959,13 @@ Addon.TameableNPCs = {
         ["y"] = 40.4
       }
     },
-    ["level_range"] = {
-      36,
-      37
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "36-37",
     ["name"] = "Darkfang Lurker",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4412"] = {
     ["coords"] = {
@@ -35337,14 +35182,13 @@ Addon.TameableNPCs = {
         ["y"] = 59.8
       }
     },
-    ["level_range"] = {
-      38,
-      39
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "38-39",
     ["name"] = "Darkfang Creeper",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4413"] = {
     ["coords"] = {
@@ -35601,62 +35445,58 @@ Addon.TameableNPCs = {
         ["y"] = 40.2
       }
     },
-    ["level_range"] = {
-      35,
-      36
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "35-36",
     ["name"] = "Darkfang Spider",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4511"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      24,
-      25
-    },
-    ["location"] = "Razorfen Kraul",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "24-25",
     ["name"] = "Agam'ar",
-    ["type"] = "Boar"
+    ["type"] = "Cunning",
+    ["zone_id"] = 491
   },
   ["4512"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      28
-    },
-    ["location"] = "Razorfen Kraul",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "28",
     ["name"] = "Rotting Agam'ar",
-    ["type"] = "Boar"
+    ["type"] = "Cunning",
+    ["zone_id"] = 491
   },
   ["4514"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      25,
-      26
-    },
-    ["location"] = "Razorfen Kraul",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "25-26",
     ["name"] = "Raging Agam'ar",
-    ["type"] = "Boar"
+    ["type"] = "Cunning",
+    ["zone_id"] = 491
   },
   ["4538"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      30,
-      31
-    },
-    ["location"] = "Razorfen Kraul",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Bat",
+    ["level_range"] = "30-31",
     ["name"] = "Kraul Bat",
-    ["type"] = "Bat"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 491
   },
   ["4539"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      32
-    },
-    ["location"] = "Razorfen Kraul",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Bat",
+    ["level_range"] = "32",
     ["name"] = "Greater Kraul Bat",
-    ["type"] = "Bat"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 491
   },
   ["4662"] = {
     ["coords"] = {
@@ -35897,14 +35737,13 @@ Addon.TameableNPCs = {
         ["y"] = 75.2
       }
     },
-    ["level_range"] = {
-      37,
-      38
-    },
-    ["location"] = "Desolace",
+    ["diet"] = "Meat, Fruit",
+    ["family"] = "Hyena",
+    ["level_range"] = "37-38",
     ["name"] = "Magram Bonepaw",
-    ["type"] = "Hyena",
-    ["ui_map_id"] = 1443
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1443,
+    ["zone_id"] = 405
   },
   ["4688"] = {
     ["coords"] = {
@@ -36293,14 +36132,13 @@ Addon.TameableNPCs = {
         ["y"] = 39.2
       }
     },
-    ["level_range"] = {
-      33,
-      35
-    },
-    ["location"] = "Desolace",
+    ["diet"] = "Meat, Fruit",
+    ["family"] = "Hyena",
+    ["level_range"] = "33-35",
     ["name"] = "Bonepaw Hyena",
-    ["type"] = "Hyena",
-    ["ui_map_id"] = 1443
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1443,
+    ["zone_id"] = 405
   },
   ["4693"] = {
     ["coords"] = {
@@ -37193,14 +37031,13 @@ Addon.TameableNPCs = {
         ["y"] = 17.6
       }
     },
-    ["level_range"] = {
-      36,
-      37
-    },
-    ["location"] = "Desolace",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "36-37",
     ["name"] = "Dread Flyer",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1443
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1443,
+    ["zone_id"] = 405
   },
   ["4694"] = {
     ["coords"] = {
@@ -37545,14 +37382,13 @@ Addon.TameableNPCs = {
         ["y"] = 74.6
       }
     },
-    ["level_range"] = {
-      39,
-      40
-    },
-    ["location"] = "Desolace",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "39-40",
     ["name"] = "Dread Ripper",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1443
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1443,
+    ["zone_id"] = 405
   },
   ["4696"] = {
     ["coords"] = {
@@ -38081,14 +37917,13 @@ Addon.TameableNPCs = {
         ["y"] = 36.6
       }
     },
-    ["level_range"] = {
-      30,
-      31
-    },
-    ["location"] = "Desolace",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "30-31",
     ["name"] = "Scorpashi Snapper",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1443
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1443,
+    ["zone_id"] = 405
   },
   ["4697"] = {
     ["coords"] = {
@@ -38385,14 +38220,13 @@ Addon.TameableNPCs = {
         ["y"] = 16.8
       }
     },
-    ["level_range"] = {
-      34,
-      35
-    },
-    ["location"] = "Desolace",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "34-35",
     ["name"] = "Scorpashi Lasher",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1443
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1443,
+    ["zone_id"] = 405
   },
   ["4699"] = {
     ["coords"] = {
@@ -38621,64 +38455,58 @@ Addon.TameableNPCs = {
         ["y"] = 71.6
       }
     },
-    ["level_range"] = {
-      38,
-      39
-    },
-    ["location"] = "Desolace",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "38-39",
     ["name"] = "Scorpashi Venomlash",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1443
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1443,
+    ["zone_id"] = 405
   },
   ["4821"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      22,
-      23
-    },
-    ["location"] = "Blackfathom Deeps",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "22-23",
     ["name"] = "Skittering Crustacean",
-    ["type"] = "Crab"
+    ["type"] = "Tenacity",
+    ["zone_id"] = 719
   },
   ["4822"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      23,
-      24
-    },
-    ["location"] = "Blackfathom Deeps",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "23-24",
     ["name"] = "Snapping Crustacean",
-    ["type"] = "Crab"
+    ["type"] = "Tenacity",
+    ["zone_id"] = 719
   },
   ["4823"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      25,
-      26
-    },
-    ["location"] = "Blackfathom Deeps",
+    ["diet"] = "Fish, Bread, Fungus, Fruit",
+    ["family"] = "Crab",
+    ["level_range"] = "25-26",
     ["name"] = "Barbed Crustacean",
-    ["type"] = "Crab"
+    ["type"] = "Tenacity",
+    ["zone_id"] = 719
   },
   ["4824"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      23,
-      24
-    },
-    ["location"] = "Blackfathom Deeps",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "23-24",
     ["name"] = "Aku'mai Fisher",
-    ["type"] = "Turtle"
+    ["type"] = "Tenacity",
+    ["zone_id"] = 719
   },
   ["4825"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      26,
-      27
-    },
-    ["location"] = "Blackfathom Deeps",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "26-27",
     ["name"] = "Aku'mai Snapjaw",
-    ["type"] = "Turtle"
+    ["type"] = "Tenacity",
+    ["zone_id"] = 719
   },
   ["4841"] = {
     ["coords"] = {
@@ -38807,32 +38635,31 @@ Addon.TameableNPCs = {
         ["y"] = 52.4
       }
     },
-    ["level_range"] = {
-      45
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "45",
     ["name"] = "Deadmire",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["4861"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      38,
-      39
-    },
-    ["location"] = "Uldaman",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Bat",
+    ["level_range"] = "38-39",
     ["name"] = "Shrike Bat",
-    ["type"] = "Bat"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1337
   },
   ["4887"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      25
-    },
-    ["location"] = "Blackfathom Deeps",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "25",
     ["name"] = "Ghamoo-ra",
-    ["type"] = "Turtle"
+    ["type"] = "Tenacity",
+    ["zone_id"] = 719
   },
   ["4950"] = {
     ["coords"] = {
@@ -38841,33 +38668,31 @@ Addon.TameableNPCs = {
         ["y"] = 46.6
       }
     },
-    ["level_range"] = {
-      35
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "35",
     ["name"] = "Spot",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["5053"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      18,
-      19
-    },
-    ["location"] = "Wailing Caverns",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "18-19",
     ["name"] = "Deviate Crocolisk",
-    ["type"] = "Crocolisk"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 718
   },
   ["5056"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      20,
-      21
-    },
-    ["location"] = "Wailing Caverns",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "20-21",
     ["name"] = "Deviate Dreadfang",
-    ["type"] = "Wind Serpent"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 718
   },
   ["5262"] = {
     ["coords"] = {
@@ -38968,14 +38793,13 @@ Addon.TameableNPCs = {
         ["y"] = 32.6
       }
     },
-    ["level_range"] = {
-      49,
-      50
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Gorilla",
+    ["level_range"] = "49-50",
     ["name"] = "Groddoc Thunderer",
-    ["type"] = "Gorilla",
-    ["ui_map_id"] = 1444
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5268"] = {
     ["coords"] = {
@@ -39140,14 +38964,13 @@ Addon.TameableNPCs = {
         ["y"] = 40.4
       }
     },
-    ["level_range"] = {
-      41,
-      42
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "41-42",
     ["name"] = "Ironfur Bear",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1444
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5274"] = {
     ["coords"] = {
@@ -39260,14 +39083,13 @@ Addon.TameableNPCs = {
         ["y"] = 32.6
       }
     },
-    ["level_range"] = {
-      48,
-      49
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "48-49",
     ["name"] = "Ironfur Patriarch",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1444
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5286"] = {
     ["coords"] = {
@@ -39492,14 +39314,13 @@ Addon.TameableNPCs = {
         ["y"] = 39.8
       }
     },
-    ["level_range"] = {
-      40,
-      41
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "40-41",
     ["name"] = "Longtooth Runner",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1444
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5287"] = {
     ["coords"] = {
@@ -39572,24 +39393,22 @@ Addon.TameableNPCs = {
         ["y"] = 51.8
       }
     },
-    ["level_range"] = {
-      43,
-      44
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "43-44",
     ["name"] = "Longtooth Howler",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1444
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5291"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      49,
-      50
-    },
-    ["location"] = "The Temple of Atal'Hakkar",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "49-50",
     ["name"] = "Hakkari Frostwing",
-    ["type"] = "Wind Serpent"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1477
   },
   ["5307"] = {
     ["coords"] = {
@@ -39642,14 +39461,13 @@ Addon.TameableNPCs = {
         ["y"] = 62.2
       }
     },
-    ["level_range"] = {
-      41,
-      43
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "41-43",
     ["name"] = "Vale Screecher",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1444
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5308"] = {
     ["coords"] = {
@@ -39754,14 +39572,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.4
       }
     },
-    ["level_range"] = {
-      44,
-      46
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "44-46",
     ["name"] = "Rogue Vale Screecher",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1444
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5349"] = {
     ["coords"] = {
@@ -39778,13 +39595,13 @@ Addon.TameableNPCs = {
         ["y"] = 25.4
       }
     },
-    ["level_range"] = {
-      49
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "49",
     ["name"] = "Arash-ethis",
-    ["type"] = "Wind Serpent",
-    ["ui_map_id"] = 1444
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5352"] = {
     ["coords"] = {
@@ -39825,13 +39642,13 @@ Addon.TameableNPCs = {
         ["y"] = 47.8
       }
     },
-    ["level_range"] = {
-      43
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "43",
     ["name"] = "Old Grizzlegut",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1444
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5356"] = {
     ["coords"] = {
@@ -39880,13 +39697,13 @@ Addon.TameableNPCs = {
         ["y"] = 37.0
       }
     },
-    ["level_range"] = {
-      42
-    },
-    ["location"] = "Feralas",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "42",
     ["name"] = "Snarler",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1444
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1444,
+    ["zone_id"] = 357
   },
   ["5422"] = {
     ["coords"] = {
@@ -40111,14 +39928,13 @@ Addon.TameableNPCs = {
         ["y"] = 29.0
       }
     },
-    ["level_range"] = {
-      40,
-      41
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "40-41",
     ["name"] = "Scorpid Hunter",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1446
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["5423"] = {
     ["coords"] = {
@@ -40239,14 +40055,13 @@ Addon.TameableNPCs = {
         ["y"] = 41.6
       }
     },
-    ["level_range"] = {
-      43,
-      44
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "43-44",
     ["name"] = "Scorpid Tail Lasher",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1446
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["5424"] = {
     ["coords"] = {
@@ -40307,14 +40122,13 @@ Addon.TameableNPCs = {
         ["y"] = 54.6
       }
     },
-    ["level_range"] = {
-      46,
-      47
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "46-47",
     ["name"] = "Scorpid Dunestalker",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1446
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["5425"] = {
     ["coords"] = {
@@ -40619,14 +40433,13 @@ Addon.TameableNPCs = {
         ["y"] = 29.0
       }
     },
-    ["level_range"] = {
-      41,
-      42
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat, Fruit",
+    ["family"] = "Hyena",
+    ["level_range"] = "41-42",
     ["name"] = "Starving Blisterpaw",
-    ["type"] = "Hyena",
-    ["ui_map_id"] = 1446
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["5426"] = {
     ["coords"] = {
@@ -40727,14 +40540,13 @@ Addon.TameableNPCs = {
         ["y"] = 41.6
       }
     },
-    ["level_range"] = {
-      44,
-      45
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat, Fruit",
+    ["family"] = "Hyena",
+    ["level_range"] = "44-45",
     ["name"] = "Blisterpaw Hyena",
-    ["type"] = "Hyena",
-    ["ui_map_id"] = 1446
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["5427"] = {
     ["coords"] = {
@@ -41311,14 +41123,13 @@ Addon.TameableNPCs = {
         ["y"] = 45.8
       }
     },
-    ["level_range"] = {
-      47,
-      48
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat, Fruit",
+    ["family"] = "Hyena",
+    ["level_range"] = "47-48",
     ["name"] = "Rabid Blisterpaw",
-    ["type"] = "Hyena",
-    ["ui_map_id"] = 1446
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["5428"] = {
     ["coords"] = {
@@ -41375,14 +41186,13 @@ Addon.TameableNPCs = {
         ["y"] = 25.8
       }
     },
-    ["level_range"] = {
-      41,
-      43
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "41-43",
     ["name"] = "Roc",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1446
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["5429"] = {
     ["coords"] = {
@@ -41463,14 +41273,13 @@ Addon.TameableNPCs = {
         ["y"] = 43.0
       }
     },
-    ["level_range"] = {
-      43,
-      45
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "43-45",
     ["name"] = "Fire Roc",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1446
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["5430"] = {
     ["coords"] = {
@@ -41807,33 +41616,31 @@ Addon.TameableNPCs = {
         ["y"] = 77.6
       }
     },
-    ["level_range"] = {
-      47,
-      49
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "47-49",
     ["name"] = "Searing Roc",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1446
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["5708"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      51
-    },
-    ["location"] = "The Temple of Atal'Hakkar",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "51",
     ["name"] = "Spawn of Hakkar",
-    ["type"] = "Wind Serpent"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1477
   },
   ["5756"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      20,
-      21
-    },
-    ["location"] = "Wailing Caverns",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "20-21",
     ["name"] = "Deviate Venomwing",
-    ["type"] = "Wind Serpent"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 718
   },
   ["5823"] = {
     ["coords"] = {
@@ -41894,13 +41701,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.0
       }
     },
-    ["level_range"] = {
-      11
-    },
-    ["location"] = "Durotar",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "11",
     ["name"] = "Death Flayer",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1411
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1411,
+    ["zone_id"] = 14
   },
   ["5937"] = {
     ["coords"] = {
@@ -42065,13 +41872,13 @@ Addon.TameableNPCs = {
         ["y"] = 74.6
       }
     },
-    ["level_range"] = {
-      35
-    },
-    ["location"] = "Thousand Needles",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "35",
     ["name"] = "Vile Sting",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1441
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1441,
+    ["zone_id"] = 400
   },
   ["5988"] = {
     ["coords"] = {
@@ -42212,14 +42019,13 @@ Addon.TameableNPCs = {
         ["y"] = 44.8
       }
     },
-    ["level_range"] = {
-      50,
-      51
-    },
-    ["location"] = "Blasted Lands",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "50-51",
     ["name"] = "Scorpok Stinger",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1419
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1419,
+    ["zone_id"] = 4
   },
   ["5992"] = {
     ["coords"] = {
@@ -42284,14 +42090,13 @@ Addon.TameableNPCs = {
         ["y"] = 28.6
       }
     },
-    ["level_range"] = {
-      48,
-      49
-    },
-    ["location"] = "Blasted Lands",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "48-49",
     ["name"] = "Ashmane Boar",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1419
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1419,
+    ["zone_id"] = 4
   },
   ["6013"] = {
     ["coords"] = {
@@ -42332,14 +42137,13 @@ Addon.TameableNPCs = {
         ["y"] = 53.2
       }
     },
-    ["level_range"] = {
-      35,
-      37
-    },
-    ["location"] = "Badlands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "35-37",
     ["name"] = "Wayward Buzzard",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1418
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1418,
+    ["zone_id"] = 3
   },
   ["6516"] = {
     ["coords"] = {
@@ -42380,14 +42184,13 @@ Addon.TameableNPCs = {
         ["y"] = 17.0
       }
     },
-    ["level_range"] = {
-      52,
-      53
-    },
-    ["location"] = "Un'Goro Crater",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Gorilla",
+    ["level_range"] = "52-53",
     ["name"] = "Un'Goro Thunderer",
-    ["type"] = "Gorilla",
-    ["ui_map_id"] = 1449
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1449,
+    ["zone_id"] = 490
   },
   ["6585"] = {
     ["coords"] = {
@@ -42400,14 +42203,13 @@ Addon.TameableNPCs = {
         ["y"] = 14.6
       }
     },
-    ["level_range"] = {
-      52,
-      53
-    },
-    ["location"] = "Un'Goro Crater",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Gorilla",
+    ["level_range"] = "52-53",
     ["name"] = "Uhk'loc",
-    ["type"] = "Gorilla",
-    ["ui_map_id"] = 1449
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1449,
+    ["zone_id"] = 490
   },
   ["6788"] = {
     ["coords"] = {
@@ -42416,24 +42218,22 @@ Addon.TameableNPCs = {
         ["y"] = 37.6
       }
     },
-    ["level_range"] = {
-      18,
-      19
-    },
-    ["location"] = "Darkshore",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "18-19",
     ["name"] = "Den Mother",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1439
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1439,
+    ["zone_id"] = 148
   },
   ["7022"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      39,
-      40
-    },
-    ["location"] = "Uldaman",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "39-40",
     ["name"] = "Venomlash Scorpid",
-    ["type"] = "Scorpid"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1337
   },
   ["7055"] = {
     ["coords"] = {
@@ -42462,24 +42262,22 @@ Addon.TameableNPCs = {
         ["y"] = 53.6
       }
     },
-    ["level_range"] = {
-      54,
-      55
-    },
-    ["location"] = "Burning Steppes",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "54-55",
     ["name"] = "Blackrock Worg",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1428
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1428,
+    ["zone_id"] = 46
   },
   ["7078"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      35,
-      36
-    },
-    ["location"] = "Uldaman",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "35-36",
     ["name"] = "Cleft Scorpid",
-    ["type"] = "Scorpid"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1337
   },
   ["7097"] = {
     ["coords"] = {
@@ -42528,14 +42326,13 @@ Addon.TameableNPCs = {
         ["y"] = 84.8
       }
     },
-    ["level_range"] = {
-      48,
-      49
-    },
-    ["location"] = "Felwood",
+    ["diet"] = "Meat",
+    ["family"] = "Owl",
+    ["level_range"] = "48-49",
     ["name"] = "Ironbeak Owl",
-    ["type"] = "Owl",
-    ["ui_map_id"] = 1448
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1448,
+    ["zone_id"] = 361
   },
   ["7098"] = {
     ["coords"] = {
@@ -42556,14 +42353,13 @@ Addon.TameableNPCs = {
         ["y"] = 21.6
       }
     },
-    ["level_range"] = {
-      52,
-      53
-    },
-    ["location"] = "Felwood",
+    ["diet"] = "Meat",
+    ["family"] = "Owl",
+    ["level_range"] = "52-53",
     ["name"] = "Ironbeak Screecher",
-    ["type"] = "Owl",
-    ["ui_map_id"] = 1448
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1448,
+    ["zone_id"] = 361
   },
   ["7099"] = {
     ["coords"] = {
@@ -42616,14 +42412,13 @@ Addon.TameableNPCs = {
         ["y"] = 70.0
       }
     },
-    ["level_range"] = {
-      50,
-      51
-    },
-    ["location"] = "Felwood",
+    ["diet"] = "Meat",
+    ["family"] = "Owl",
+    ["level_range"] = "50-51",
     ["name"] = "Ironbeak Hunter",
-    ["type"] = "Owl",
-    ["ui_map_id"] = 1448
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1448,
+    ["zone_id"] = 361
   },
   ["7319"] = {
     ["coords"] = {
@@ -42644,23 +42439,22 @@ Addon.TameableNPCs = {
         ["y"] = 25.6
       }
     },
-    ["level_range"] = {
-      12
-    },
-    ["location"] = "Teldrassil",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "12",
     ["name"] = "Lady Sathrah",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1438
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1438,
+    ["zone_id"] = 141
   },
   ["7405"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      42,
-      43
-    },
-    ["location"] = "Uldaman",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "42-43",
     ["name"] = "Deadly Cleft Scorpid",
-    ["type"] = "Scorpid"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1337
   },
   ["7430"] = {
     ["coords"] = {
@@ -42709,14 +42503,13 @@ Addon.TameableNPCs = {
         ["y"] = 14.6
       }
     },
-    ["level_range"] = {
-      55,
-      56
-    },
-    ["location"] = "Winterspring",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "55-56",
     ["name"] = "Frostsaber Cub",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1452
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1452,
+    ["zone_id"] = 618
   },
   ["7432"] = {
     ["coords"] = {
@@ -42821,14 +42614,13 @@ Addon.TameableNPCs = {
         ["y"] = 16.6
       }
     },
-    ["level_range"] = {
-      59,
-      60
-    },
-    ["location"] = "Winterspring",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "59-60",
     ["name"] = "Frostsaber Stalker",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1452
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1452,
+    ["zone_id"] = 618
   },
   ["7433"] = {
     ["coords"] = {
@@ -42917,14 +42709,13 @@ Addon.TameableNPCs = {
         ["y"] = 10.6
       }
     },
-    ["level_range"] = {
-      58,
-      59
-    },
-    ["location"] = "Winterspring",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "58-59",
     ["name"] = "Frostsaber Huntress",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1452
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1452,
+    ["zone_id"] = 618
   },
   ["7444"] = {
     ["coords"] = {
@@ -43061,14 +42852,13 @@ Addon.TameableNPCs = {
         ["y"] = 37.6
       }
     },
-    ["level_range"] = {
-      53,
-      54
-    },
-    ["location"] = "Winterspring",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "53-54",
     ["name"] = "Shardtooth Bear",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1452
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1452,
+    ["zone_id"] = 618
   },
   ["7445"] = {
     ["coords"] = {
@@ -43197,14 +42987,13 @@ Addon.TameableNPCs = {
         ["y"] = 26.0
       }
     },
-    ["level_range"] = {
-      57,
-      58
-    },
-    ["location"] = "Winterspring",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "57-58",
     ["name"] = "Elder Shardtooth",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1452
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1452,
+    ["zone_id"] = 618
   },
   ["7455"] = {
     ["coords"] = {
@@ -43373,14 +43162,13 @@ Addon.TameableNPCs = {
         ["y"] = 31.0
       }
     },
-    ["level_range"] = {
-      54,
-      56
-    },
-    ["location"] = "Winterspring",
+    ["diet"] = "Meat",
+    ["family"] = "Owl",
+    ["level_range"] = "54-56",
     ["name"] = "Winterspring Owl",
-    ["type"] = "Owl",
-    ["ui_map_id"] = 1452
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1452,
+    ["zone_id"] = 618
   },
   ["7456"] = {
     ["coords"] = {
@@ -43509,14 +43297,13 @@ Addon.TameableNPCs = {
         ["y"] = 54.6
       }
     },
-    ["level_range"] = {
-      57,
-      59
-    },
-    ["location"] = "Winterspring",
+    ["diet"] = "Meat",
+    ["family"] = "Owl",
+    ["level_range"] = "57-59",
     ["name"] = "Winterspring Screecher",
-    ["type"] = "Owl",
-    ["ui_map_id"] = 1452
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1452,
+    ["zone_id"] = 618
   },
   ["7803"] = {
     ["coords"] = {
@@ -43525,14 +43312,13 @@ Addon.TameableNPCs = {
         ["y"] = 53.8
       }
     },
-    ["level_range"] = {
-      46,
-      47
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "46-47",
     ["name"] = "Scorpid Duneburrower",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1446
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["8207"] = {
     ["coords"] = {
@@ -43609,13 +43395,13 @@ Addon.TameableNPCs = {
         ["y"] = 39.4
       }
     },
-    ["level_range"] = {
-      46
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "46",
     ["name"] = "Greater Firebird",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1446
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["8208"] = {
     ["coords"] = {
@@ -43656,13 +43442,13 @@ Addon.TameableNPCs = {
         ["y"] = 36.6
       }
     },
-    ["level_range"] = {
-      43
-    },
-    ["location"] = "Tanaris",
+    ["diet"] = "Meat, Fruit",
+    ["family"] = "Hyena",
+    ["level_range"] = "43",
     ["name"] = "Murderous Blisterpaw",
-    ["type"] = "Hyena",
-    ["ui_map_id"] = 1446
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1446,
+    ["zone_id"] = 440
   },
   ["8211"] = {
     ["coords"] = {
@@ -43719,13 +43505,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.0
       }
     },
-    ["level_range"] = {
-      42
-    },
-    ["location"] = "The Hinterlands",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "42",
     ["name"] = "Old Cliff Jumper",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1425
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1425,
+    ["zone_id"] = 47
   },
   ["8213"] = {
     ["coords"] = {
@@ -43830,13 +43616,13 @@ Addon.TameableNPCs = {
         ["y"] = 46.8
       }
     },
-    ["level_range"] = {
-      51
-    },
-    ["location"] = "The Hinterlands",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "51",
     ["name"] = "Ironback",
-    ["type"] = "Turtle",
-    ["ui_map_id"] = 1425
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1425,
+    ["zone_id"] = 47
   },
   ["8277"] = {
     ["coords"] = {
@@ -43961,13 +43747,13 @@ Addon.TameableNPCs = {
         ["y"] = 72.8
       }
     },
-    ["level_range"] = {
-      48
-    },
-    ["location"] = "Searing Gorge",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "48",
     ["name"] = "Rekk'tilac",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1427
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1427,
+    ["zone_id"] = 51
   },
   ["8299"] = {
     ["coords"] = {
@@ -44068,13 +43854,13 @@ Addon.TameableNPCs = {
         ["y"] = 35.8
       }
     },
-    ["level_range"] = {
-      52
-    },
-    ["location"] = "Blasted Lands",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Carrion Bird",
+    ["level_range"] = "52",
     ["name"] = "Spiteflayer",
-    ["type"] = "Carrion Bird",
-    ["ui_map_id"] = 1419
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1419,
+    ["zone_id"] = 4
   },
   ["8300"] = {
     ["coords"] = {
@@ -44143,13 +43929,13 @@ Addon.TameableNPCs = {
         ["y"] = 35.4
       }
     },
-    ["level_range"] = {
-      51
-    },
-    ["location"] = "Blasted Lands",
+    ["diet"] = "Meat, Fruit",
+    ["family"] = "Hyena",
+    ["level_range"] = "51",
     ["name"] = "Ravage",
-    ["type"] = "Hyena",
-    ["ui_map_id"] = 1419
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1419,
+    ["zone_id"] = 4
   },
   ["8301"] = {
     ["coords"] = {
@@ -44302,13 +44088,13 @@ Addon.TameableNPCs = {
         ["y"] = 36.2
       }
     },
-    ["level_range"] = {
-      53
-    },
-    ["location"] = "Blasted Lands",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "53",
     ["name"] = "Clack the Reaver",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1419
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1419,
+    ["zone_id"] = 4
   },
   ["8303"] = {
     ["coords"] = {
@@ -44385,23 +44171,22 @@ Addon.TameableNPCs = {
         ["y"] = 26.0
       }
     },
-    ["level_range"] = {
-      50
-    },
-    ["location"] = "Blasted Lands",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "50",
     ["name"] = "Grunter",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1419
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1419,
+    ["zone_id"] = 4
   },
   ["8336"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      49,
-      50
-    },
-    ["location"] = "The Temple of Atal'Hakkar",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "49-50",
     ["name"] = "Hakkari Sapper",
-    ["type"] = "Wind Serpent"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1477
   },
   ["8600"] = {
     ["coords"] = {
@@ -45038,14 +44823,13 @@ Addon.TameableNPCs = {
         ["y"] = 84.0
       }
     },
-    ["level_range"] = {
-      53,
-      55
-    },
-    ["location"] = "Eastern Plaguelands",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Bat",
+    ["level_range"] = "53-55",
     ["name"] = "Plaguebat",
-    ["type"] = "Bat",
-    ["ui_map_id"] = 1423
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1423,
+    ["zone_id"] = 139
   },
   ["8601"] = {
     ["coords"] = {
@@ -45226,14 +45010,13 @@ Addon.TameableNPCs = {
         ["y"] = 72.6
       }
     },
-    ["level_range"] = {
-      54,
-      56
-    },
-    ["location"] = "Eastern Plaguelands",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Bat",
+    ["level_range"] = "54-56",
     ["name"] = "Noxious Plaguebat",
-    ["type"] = "Bat",
-    ["ui_map_id"] = 1423
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1423,
+    ["zone_id"] = 139
   },
   ["8602"] = {
     ["coords"] = {
@@ -45318,14 +45101,13 @@ Addon.TameableNPCs = {
         ["y"] = 43.0
       }
     },
-    ["level_range"] = {
-      56,
-      58
-    },
-    ["location"] = "Eastern Plaguelands",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Bat",
+    ["level_range"] = "56-58",
     ["name"] = "Monstrous Plaguebat",
-    ["type"] = "Bat",
-    ["ui_map_id"] = 1423
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1423,
+    ["zone_id"] = 139
   },
   ["8762"] = {
     ["coords"] = {
@@ -45454,44 +45236,40 @@ Addon.TameableNPCs = {
         ["y"] = 33.2
       }
     },
-    ["level_range"] = {
-      47,
-      48
-    },
-    ["location"] = "Azshara",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "47-48",
     ["name"] = "Timberweb Recluse",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1447
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1447,
+    ["zone_id"] = 16
   },
   ["8926"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      50,
-      52
-    },
-    ["location"] = "Blackrock Depths",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "50-52",
     ["name"] = "Deep Stinger",
-    ["type"] = "Scorpid"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1584
   },
   ["8927"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      50,
-      52
-    },
-    ["location"] = "Blackrock Depths",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Bat",
+    ["level_range"] = "50-52",
     ["name"] = "Dark Screecher",
-    ["type"] = "Bat"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1584
   },
   ["8933"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      50,
-      52
-    },
-    ["location"] = "Blackrock Depths",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "50-52",
     ["name"] = "Cave Creeper",
-    ["type"] = "Spider"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1584
   },
   ["8958"] = {
     ["coords"] = {
@@ -45644,14 +45422,13 @@ Addon.TameableNPCs = {
         ["y"] = 15.2
       }
     },
-    ["level_range"] = {
-      49,
-      50
-    },
-    ["location"] = "Felwood",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "49-50",
     ["name"] = "Angerclaw Mauler",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1448
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1448,
+    ["zone_id"] = 361
   },
   ["8959"] = {
     ["coords"] = {
@@ -45800,14 +45577,13 @@ Addon.TameableNPCs = {
         ["y"] = 90.6
       }
     },
-    ["level_range"] = {
-      47,
-      48
-    },
-    ["location"] = "Felwood",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "47-48",
     ["name"] = "Felpaw Wolf",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1448
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1448,
+    ["zone_id"] = 361
   },
   ["8961"] = {
     ["coords"] = {
@@ -45940,24 +45716,22 @@ Addon.TameableNPCs = {
         ["y"] = 19.8
       }
     },
-    ["level_range"] = {
-      51,
-      52
-    },
-    ["location"] = "Felwood",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "51-52",
     ["name"] = "Felpaw Ravager",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1448
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1448,
+    ["zone_id"] = 361
   },
   ["9416"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      53,
-      54
-    },
-    ["location"] = "Blackrock Spire",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "53-54",
     ["name"] = "Scarshield Worg <Scarshield Legion>",
-    ["type"] = "Wolf"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1583
   },
   ["9622"] = {
     ["coords"] = {
@@ -45974,13 +45748,13 @@ Addon.TameableNPCs = {
         ["y"] = 14.6
       }
     },
-    ["level_range"] = {
-      55
-    },
-    ["location"] = "Un'Goro Crater",
+    ["diet"] = "Fungus, Fruit",
+    ["family"] = "Gorilla",
+    ["level_range"] = "55",
     ["name"] = "U'cha",
-    ["type"] = "Gorilla",
-    ["ui_map_id"] = 1449
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1449,
+    ["zone_id"] = 490
   },
   ["9691"] = {
     ["coords"] = {
@@ -46245,14 +46019,13 @@ Addon.TameableNPCs = {
         ["y"] = 31.6
       }
     },
-    ["level_range"] = {
-      52,
-      53
-    },
-    ["location"] = "Burning Steppes",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "52-53",
     ["name"] = "Venomtip Scorpid",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1428
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1428,
+    ["zone_id"] = 46
   },
   ["9695"] = {
     ["coords"] = {
@@ -46569,24 +46342,22 @@ Addon.TameableNPCs = {
         ["y"] = 25.2
       }
     },
-    ["level_range"] = {
-      54,
-      55
-    },
-    ["location"] = "Burning Steppes",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "54-55",
     ["name"] = "Deathlash Scorpid",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1428
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1428,
+    ["zone_id"] = 46
   },
   ["9696"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      56,
-      57
-    },
-    ["location"] = "Blackrock Spire",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "56-57",
     ["name"] = "Bloodaxe Worg <Scarshield Legion>",
-    ["type"] = "Wolf"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1583
   },
   ["9698"] = {
     ["coords"] = {
@@ -46751,14 +46522,13 @@ Addon.TameableNPCs = {
         ["y"] = 55.6
       }
     },
-    ["level_range"] = {
-      56,
-      57
-    },
-    ["location"] = "Burning Steppes",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "56-57",
     ["name"] = "Firetail Scorpid",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1428
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1428,
+    ["zone_id"] = 46
   },
   ["10200"] = {
     ["coords"] = {
@@ -46855,13 +46625,13 @@ Addon.TameableNPCs = {
         ["y"] = 14.8
       }
     },
-    ["level_range"] = {
-      57
-    },
-    ["location"] = "Winterspring",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "57",
     ["name"] = "Rak'shiri",
-    ["type"] = "Cat",
-    ["ui_map_id"] = 1452
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1452,
+    ["zone_id"] = 618
   },
   ["10644"] = {
     ["coords"] = {
@@ -46922,31 +46692,31 @@ Addon.TameableNPCs = {
         ["y"] = 17.8
       }
     },
-    ["level_range"] = {
-      22
-    },
-    ["location"] = "Ashenvale",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "22",
     ["name"] = "Mist Howler",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1440
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1440,
+    ["zone_id"] = 331
   },
   ["11357"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      60
-    },
-    ["location"] = "Zul'Gurub",
+    ["diet"] = "Fish, Cheese, Bread",
+    ["family"] = "Wind Serpent",
+    ["level_range"] = "60",
     ["name"] = "Son of Hakkar",
-    ["type"] = "Wind Serpent"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1977
   },
   ["11365"] = {
     ["coords"] = {},
-    ["level_range"] = {
-      60
-    },
-    ["location"] = "Zul'Gurub",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Cat",
+    ["level_range"] = "60",
     ["name"] = "Zulian Panther",
-    ["type"] = "Cat"
+    ["type"] = "Ferocity",
+    ["zone_id"] = 1977
   },
   ["11735"] = {
     ["coords"] = {
@@ -47531,14 +47301,13 @@ Addon.TameableNPCs = {
         ["y"] = 29.0
       }
     },
-    ["level_range"] = {
-      54,
-      55
-    },
-    ["location"] = "Silithus",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "54-55",
     ["name"] = "Stonelash Scorpid",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1451
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1451,
+    ["zone_id"] = 1377
   },
   ["11736"] = {
     ["coords"] = {
@@ -48127,13 +47896,13 @@ Addon.TameableNPCs = {
         ["y"] = 61.8
       }
     },
-    ["level_range"] = {
-      56
-    },
-    ["location"] = "Silithus",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "56",
     ["name"] = "Stonelash Pincer",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1451
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1451,
+    ["zone_id"] = 1377
   },
   ["11737"] = {
     ["coords"] = {
@@ -48666,14 +48435,13 @@ Addon.TameableNPCs = {
         ["y"] = 76.0
       }
     },
-    ["level_range"] = {
-      57,
-      58
-    },
-    ["location"] = "Silithus",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "57-58",
     ["name"] = "Stonelash Flayer",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1451
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1451,
+    ["zone_id"] = 1377
   },
   ["11921"] = {
     ["coords"] = {
@@ -48694,13 +48462,13 @@ Addon.TameableNPCs = {
         ["y"] = 72.8
       }
     },
-    ["level_range"] = {
-      21
-    },
-    ["location"] = "Stonetalon Mountains",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "21",
     ["name"] = "Besseleth",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1442
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1442,
+    ["zone_id"] = 406
   },
   ["14223"] = {
     ["coords"] = {
@@ -48801,13 +48569,13 @@ Addon.TameableNPCs = {
         ["y"] = 18.4
       }
     },
-    ["level_range"] = {
-      32
-    },
-    ["location"] = "Alterac Mountains",
+    ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
+    ["family"] = "Turtle",
+    ["level_range"] = "32",
     ["name"] = "Cranky Benj",
-    ["type"] = "Turtle",
-    ["ui_map_id"] = 1416
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1416,
+    ["zone_id"] = 36
   },
   ["14233"] = {
     ["coords"] = {
@@ -48876,13 +48644,13 @@ Addon.TameableNPCs = {
         ["y"] = 57.6
       }
     },
-    ["level_range"] = {
-      39
-    },
-    ["location"] = "Dustwallow Marsh",
+    ["diet"] = "Meat, Fish",
+    ["family"] = "Crocolisk",
+    ["level_range"] = "39",
     ["name"] = "Ripscale",
-    ["type"] = "Crocolisk",
-    ["ui_map_id"] = 1445
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1445,
+    ["zone_id"] = 15
   },
   ["14266"] = {
     ["coords"] = {
@@ -48911,13 +48679,13 @@ Addon.TameableNPCs = {
         ["y"] = 51.8
       }
     },
-    ["level_range"] = {
-      19
-    },
-    ["location"] = "Loch Modan",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "19",
     ["name"] = "Shanda the Spinner",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1432
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1432,
+    ["zone_id"] = 38
   },
   ["14279"] = {
     ["coords"] = {
@@ -49038,13 +48806,13 @@ Addon.TameableNPCs = {
         ["y"] = 55.0
       }
     },
-    ["level_range"] = {
-      24
-    },
-    ["location"] = "Hillsbrad Foothills",
+    ["diet"] = "Meat",
+    ["family"] = "Spider",
+    ["level_range"] = "24",
     ["name"] = "Creepthess",
-    ["type"] = "Spider",
-    ["ui_map_id"] = 1424
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1424,
+    ["zone_id"] = 267
   },
   ["14339"] = {
     ["coords"] = {
@@ -49065,13 +48833,13 @@ Addon.TameableNPCs = {
         ["y"] = 90.0
       }
     },
-    ["level_range"] = {
-      49
-    },
-    ["location"] = "Felwood",
+    ["diet"] = "Meat",
+    ["family"] = "Wolf",
+    ["level_range"] = "49",
     ["name"] = "Death Howl",
-    ["type"] = "Wolf",
-    ["ui_map_id"] = 1448
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1448,
+    ["zone_id"] = 361
   },
   ["14343"] = {
     ["coords"] = {
@@ -49104,13 +48872,13 @@ Addon.TameableNPCs = {
         ["y"] = 18.8
       }
     },
-    ["level_range"] = {
-      52
-    },
-    ["location"] = "Felwood",
+    ["diet"] = "Meat",
+    ["family"] = "Owl",
+    ["level_range"] = "52",
     ["name"] = "Olm the Wise",
-    ["type"] = "Owl",
-    ["ui_map_id"] = 1448
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1448,
+    ["zone_id"] = 361
   },
   ["14344"] = {
     ["coords"] = {
@@ -49139,13 +48907,13 @@ Addon.TameableNPCs = {
         ["y"] = 85.2
       }
     },
-    ["level_range"] = {
-      50
-    },
-    ["location"] = "Felwood",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Bear",
+    ["level_range"] = "50",
     ["name"] = "Mongress",
-    ["type"] = "Bear",
-    ["ui_map_id"] = 1448
+    ["type"] = "Tenacity",
+    ["ui_map_id"] = 1448,
+    ["zone_id"] = 361
   },
   ["14476"] = {
     ["coords"] = {
@@ -49294,13 +49062,13 @@ Addon.TameableNPCs = {
         ["y"] = 41.4
       }
     },
-    ["level_range"] = {
-      56
-    },
-    ["location"] = "Silithus",
+    ["diet"] = "Meat",
+    ["family"] = "Scorpid",
+    ["level_range"] = "56",
     ["name"] = "Krellack",
-    ["type"] = "Scorpid",
-    ["ui_map_id"] = 1451
+    ["type"] = "Ferocity",
+    ["ui_map_id"] = 1451,
+    ["zone_id"] = 1377
   },
   ["16117"] = {
     ["coords"] = {
@@ -49333,12 +49101,12 @@ Addon.TameableNPCs = {
         ["y"] = 33.6
       }
     },
-    ["level_range"] = {
-      60
-    },
-    ["location"] = "Eastern Plaguelands",
+    ["diet"] = "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+    ["family"] = "Boar",
+    ["level_range"] = "60",
     ["name"] = "Plagued Swine",
-    ["type"] = "Boar",
-    ["ui_map_id"] = 1423
+    ["type"] = "Cunning",
+    ["ui_map_id"] = 1423,
+    ["zone_id"] = 139
   }
 }
