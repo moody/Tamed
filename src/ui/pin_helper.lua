@@ -23,7 +23,7 @@ local function onEnter(self)
   _G.GameTooltip:AddDoubleLine(L.DIET, self.npc.diet, nil, nil, nil, 1, 1, 1)
   _G.GameTooltip:AddDoubleLine(L.TYPE, self.npc.type, nil, nil, nil, 1, 1, 1)
   _G.GameTooltip:AddDoubleLine(L.LOCATION, self.npc.location, nil, nil, nil, 1, 1, 1)
-  _G.GameTooltip:AddLine(("<%s>"):format(L.CLICK_TO_CLEAR), 0.6, 0.6, 0.6)
+  _G.GameTooltip:AddDoubleLine(L.LEFT_CLICK, L.CLEAR_PINS, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6)
   _G.GameTooltip:Show()
 end
 

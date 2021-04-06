@@ -2,7 +2,6 @@ local L = select(2, ...).Locale
 
 L["ALL_PET_FAMILIES"] = "All Pet Families"
 L["CLEAR_PINS"] = "Clear Pins"
-L["CLICK_TO_CLEAR"] = "Click to Clear"
 L["DIET"] = "Diet"
 L["FAMILY"] = "Family"
 L["LEARNABLE_BY"] = "Learnable By"
