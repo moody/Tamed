@@ -1,4 +1,5 @@
 local AddonName, Addon = ...
+local DCL = Addon.Libs.DCL
 local HBDPins = Addon.Libs.HBDPins
 local L = Addon.Locale
 local PinHelper = Addon.UI.PinHelper
@@ -16,12 +17,12 @@ local function onEnter(self)
   self.highlight:SetAlpha(0.4)
   -- Show tooltip
   _G.GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-  _G.GameTooltip:SetText(self.npc.name)
-  _G.GameTooltip:AddDoubleLine(L.LEVEL, self.npc.level_range, 1, 1, 1, 1, 1, 1)
-  _G.GameTooltip:AddDoubleLine(L.DIET, self.npc.diet, 1, 1, 1, 1, 1, 1)
-  _G.GameTooltip:AddDoubleLine(L.FAMILY, self.npc.family, 1, 1, 1, 1, 1, 1)
-  _G.GameTooltip:AddDoubleLine(L.TYPE, self.npc.type, 1, 1, 1, 1, 1, 1)
-  _G.GameTooltip:AddDoubleLine(L.LOCATION, self.npc.location, 1, 1, 1, 1, 1, 1)
+  _G.GameTooltip:SetText(DCL:ColorString(self.npc.name, Addon.Colors.Primary))
+  _G.GameTooltip:AddDoubleLine(L.LEVEL, self.npc.level_range, nil, nil, nil, 1, 1, 1)
+  _G.GameTooltip:AddDoubleLine(L.FAMILY, self.npc.family, nil, nil, nil, 1, 1, 1)
+  _G.GameTooltip:AddDoubleLine(L.DIET, self.npc.diet, nil, nil, nil, 1, 1, 1)
+  _G.GameTooltip:AddDoubleLine(L.TYPE, self.npc.type, nil, nil, nil, 1, 1, 1)
+  _G.GameTooltip:AddDoubleLine(L.LOCATION, self.npc.location, nil, nil, nil, 1, 1, 1)
   _G.GameTooltip:AddLine(("<%s>"):format(L.CLICK_TO_CLEAR), 0.6, 0.6, 0.6)
   _G.GameTooltip:Show()
 end

@@ -13,7 +13,8 @@ Addon.Libs = {
 }
 
 Addon.Colors = {
-  Primary = "AAD372"
+  Primary = "AAD372",
+  Label = "FFD100",
 }
 
 Addon.Commands = {}

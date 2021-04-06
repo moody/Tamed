@@ -1,5 +1,6 @@
 local _, Addon = ...
 local Ability = Addon.UI.Ability
+local DCL = Addon.Libs.DCL
 local HBDPins = Addon.Libs.HBDPins
 local L = Addon.Locale
 local PinHelper = Addon.UI.PinHelper
@@ -98,44 +99,46 @@ function Ability:AddTameableNPCsGroup(parent, ability, rankIndex)
 end
 
 function Ability:AddNPC(parent, npc)
+  local LABEL_S = DCL:ColorString("%s:", Addon.Colors.Label) .. " %s"
+
   parent = Widgets:InlineGroup({
     parent = parent,
-    title = npc.name,
+    title = DCL:ColorString(npc.name, Addon.Colors.Primary),
     fullWidth = true
   })
 
   -- Level.
   Widgets:Label({
     parent = parent,
-    text = ("%s: %s"):format(L.LEVEL, npc.level_range),
-    fullWidth = true
-  })
-
-  -- Diet.
-  Widgets:Label({
-    parent = parent,
-    text = ("%s: %s"):format(L.DIET, npc.diet),
+    text = LABEL_S:format(L.LEVEL, npc.level_range),
     fullWidth = true
   })
 
   -- Family.
   Widgets:Label({
     parent = parent,
-    text = ("%s: %s"):format(L.FAMILY, npc.family),
+    text = LABEL_S:format(L.FAMILY, npc.family),
+    fullWidth = true
+  })
+
+  -- Diet.
+  Widgets:Label({
+    parent = parent,
+    text = LABEL_S:format(L.DIET, npc.diet),
     fullWidth = true
   })
 
   -- Type.
   Widgets:Label({
     parent = parent,
-    text = ("%s: %s"):format(L.TYPE, npc.type),
+    text = LABEL_S:format(L.TYPE, npc.type),
     fullWidth = true
   })
 
   -- Location.
   Widgets:Label({
     parent = parent,
-    text = ("%s: %s"):format(L.LOCATION, npc.location),
+    text = LABEL_S:format(L.LOCATION, npc.location),
     fullWidth = true
   })
 
