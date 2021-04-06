@@ -14,6 +14,7 @@ Addon.Libs = {
 
 Addon.Colors = {
   Primary = "AAD372",
+  Highlight = "E3E34F",
   Label = "FFD100",
 }
 
@@ -45,4 +46,14 @@ end
 -- Update TameableNPCs with in-game data.
 for _, npc in pairs(Addon.TameableNPCs) do
   npc.location = _G.C_Map.GetAreaInfo(npc.zone_id)
+
+  -- Add `classification` to `level_range`.
+  if npc.classification then
+    npc.level_range = ("%s (%s)"):format(
+      npc.level_range, Addon.Libs.DCL:ColorString(
+        npc.classification,
+        Addon.Colors.Highlight
+      )
+    )
+  end
 end
