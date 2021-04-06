@@ -6,9 +6,7 @@ local PinHelper = Addon.UI.PinHelper
 local UI = Addon.UI
 
 function Commands:Initialize()
-  for _, k in pairs({ AddonName, "tamed" }) do
-    AceAddon:RegisterChatCommand(k, function(...) self:Handle(...) end)
-  end
+  AceAddon:RegisterChatCommand(AddonName, function(...) self:Handle(...) end)
   self.Initialize = nil
 end
 
