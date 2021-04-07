@@ -30659,7 +30659,7 @@ Addon.TameableNPCs = {
     ["zone_id"] = 718
   },
   ["3653"] = {
-    ["classification"] = "",
+    ["classification"] = "Elite",
     ["coords"] = {},
     ["diet"] = "Fish, Fungus, Fruit, Raw Fish",
     ["family"] = "Turtle",
