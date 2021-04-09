@@ -3,9 +3,8 @@ local DB = Addon.DB
 
 local defaults = {
   global = {
-    minimapIcon = {
-      hide = false
-    }
+    minimapIcon = { hide = false },
+    npc_tooltips = true,
   }
 }
 

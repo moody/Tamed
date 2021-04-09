@@ -25,4 +25,13 @@ function Options:AddGeneral(parent)
     get = function() return not DB.global.minimapIcon.hide end,
     set = function() MinimapIcon:Toggle() end
   })
+
+  -- NPC Tooltips.
+  Widgets:CheckBox({
+    parent = parent,
+    label = L.NPC_TOOLTIPS,
+    tooltip = L.NPC_TOOLTIPS_TOOLTIP,
+    get = function() return DB.global.npc_tooltips end,
+    set = function(value) DB.global.npc_tooltips = value end
+  })
 end

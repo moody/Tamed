@@ -28,6 +28,7 @@ src\_init.lua
 src\locale.lua
 src\commands.lua
 src\db.lua
+src\tooltips.lua
 
 # UI
 src\ui\minimap_icon.lua
