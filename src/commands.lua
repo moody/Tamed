@@ -1,7 +1,6 @@
 local AddonName, Addon = ...
 local AceAddon = Addon.Libs.AceAddon
 local Commands = Addon.Commands
-local MinimapIcon = Addon.UI.MinimapIcon
 local PinHelper = Addon.UI.PinHelper
 local UI = Addon.UI
 
@@ -15,9 +14,7 @@ function Commands:Handle(...)
 
   if type(s) == "string" then
     local cmd = AceAddon:GetArgs(s)
-    if cmd == "icon" then
-      return MinimapIcon:Toggle()
-    elseif cmd == "clear" then
+    if cmd == "clear" then
       return PinHelper:Clear()
     end
   end
