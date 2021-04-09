@@ -15,14 +15,6 @@ Toggles the user interface.
 /tamed
 ```
 
-### Minimap Icon
-
-Toggles the minimap icon.
-
-```txt
-/tamed icon
-```
-
 ### Clear Pins
 
 Clears all pins from the map.
