@@ -23,8 +23,11 @@ Addon.DB = {}
 Addon.Locale = {}
 
 Addon.UI = {
+  Groups = {
+    Ability = {},
+    Options = {},
+  },
   MinimapIcon = {},
-  Ability = {},
   PinHelper = {},
   Widgets = {}
 }

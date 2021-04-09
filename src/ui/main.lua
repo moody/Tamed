@@ -1,10 +1,14 @@
 local AddonName, Addon = ...
 local AceGUI = Addon.Libs.AceGUI
+local Colors = Addon.Colors
+local DCL = Addon.Libs.DCL
 local L = Addon.Locale
 local pairs = pairs
 local TameableAbilities = Addon.TameableAbilities
 local UI = Addon.UI
 local Widgets = Addon.UI.Widgets
+
+local TreeGroup = {}
 
 -- ============================================================================
 -- Functions
@@ -41,89 +45,121 @@ function UI:Create()
   frame:SetLayout("Flow")
   self.frame = frame
 
-  -- Heading.
+  -- Add heading.
   Widgets:Heading(
     frame,
     ("%s: %s"):format(
       L.VERSION,
-      "|cFFAAD372" .. Addon.VERSION .. "|r"
+      DCL:ColorString(Addon.VERSION, Colors.Primary)
     )
   )
 
+  -- Add spacer.
   Widgets:Spacer(frame)
 
-  -- Container for the TreeGroup.
-  local treeGroupContainer = Widgets:SimpleGroup({
-    parent = frame,
-    fullWidth = true,
-    fullHeight = true,
-    layout = "Fill"
-  })
+  -- Add TreeGroup.
+  TreeGroup:Create(frame)
 
-  -- Set up groups.
-  local treeGroup =  AceGUI:Create("TreeGroup")
-  treeGroup:SetLayout("Fill")
-  treeGroup:EnableButtonTooltips(false)
-
-  local abilities = {}
-  for id, ability in pairs(TameableAbilities) do
-    local children = {}
-
-    for i in ipairs(ability.ranks) do
-      children[#children+1] = {
-        text = ("%s %s"):format(L.RANK, i),
-        value = i
-      }
-    end
-
-    abilities[#abilities+1] = {
-      text = ability.name,
-      value = id,
-      icon = ability.icon,
-      disabled = true,
-      children = children
-    }
-  end
-
-  -- Sort abilities by text.
-  table.sort(abilities, function(a, b) return a.text < b.text end)
-  treeGroup:SetTree(abilities)
-
-  -- Add `OnGroupSelected` callback.
-  treeGroup:SetCallback("OnGroupSelected", function(this, event, key)
-    this:ReleaseChildren()
-
-    local parent = AceGUI:Create("ScrollFrame")
-    parent:SetLayout("Flow")
-    parent:PauseLayout()
-
-    local abilityId, abilityRank = key:match("^(.+)\001(%d+)$")
-    local ability = TameableAbilities[abilityId] or error("Invalid ability id: " .. abilityId)
-    UI.Ability:Create(parent, ability, tonumber(abilityRank))
-
-    parent:ResumeLayout()
-    parent:DoLayout()
-
-    this:AddChild(parent)
-  end)
-
-  treeGroup:SelectByPath(abilities[1].value, abilities[1].children[1].value)
-  treeGroupContainer:AddChild(treeGroup)
-
-  -- This function should only be called once.
   self.Create = nil
 end
 
-do -- Hook "CloseSpecialWindows" to hide UI when Esc is pressed
-  local closeSpecialWindows = _G.CloseSpecialWindows
-  _G.CloseSpecialWindows = function()
-    local found = closeSpecialWindows()
+-- ============================================================================
+-- TreeGroup Functions
+-- ============================================================================
 
-    if UI:IsShown() then
-      UI:Hide()
-      return true
+function TreeGroup:Create(parent)
+  local treeGroup = AceGUI:Create("TreeGroup")
+  treeGroup:SetLayout("Fill")
+  treeGroup:EnableButtonTooltips(false)
+  treeGroup:SetCallback("OnGroupSelected", self.OnGroupSelected)
+
+  -- Set tree.
+  local tree = self:BuildTree()
+  treeGroup:SetTree(tree)
+  treeGroup:SelectByValue(tree[1].value)
+
+  -- Add a SimpleGroup to `parent`, and add `treeGroup` to it.
+  Widgets:SimpleGroup({
+    parent = parent,
+    fullWidth = true,
+    fullHeight = true,
+    layout = "Fill"
+  }):AddChild(treeGroup)
+
+  self.Create = nil
+  self.BuildTree = nil
+end
+
+function TreeGroup:BuildTree()
+  local tree = {
+    { text = L.OPTIONS, value = "!options" },
+    { text = " ", value = "BLANK_1", disabled = true }
+  }
+
+  do -- Add ability groups to `tree`.
+    local abilities = {}
+    for id, ability in pairs(TameableAbilities) do
+      local children = {}
+
+      for i in ipairs(ability.ranks) do
+        children[#children+1] = {
+          text = ("%s %s"):format(L.RANK, i),
+          value = i
+        }
+      end
+
+      abilities[#abilities+1] = {
+        text = ability.name,
+        value = id,
+        icon = ability.icon,
+        disabled = true,
+        children = children
+      }
     end
 
-    return found
+    -- Sort `abilities` by `text`, and insert into `tree`.
+    table.sort(abilities, function(a, b) return a.text < b.text end)
+    for _, ability in ipairs(abilities) do tree[#tree+1] = ability end
   end
+
+  return tree
+end
+
+function TreeGroup:OnGroupSelected(event, value)
+  self:ReleaseChildren()
+
+  local parent = AceGUI:Create("ScrollFrame")
+  parent:SetLayout("Flow")
+  parent:PauseLayout()
+
+  -- Create a ui based on the selected tree group `value`.
+  if value == "!options" then
+    UI.Groups.Options:Create(parent)
+  else
+    local abilityId, abilityRank = value:match("^(.+)\001(%d+)$")
+    local ability = TameableAbilities[abilityId] or error("Invalid ability id: " .. abilityId)
+    UI.Groups.Ability:Create(parent, ability, tonumber(abilityRank))
+  end
+
+  parent:ResumeLayout()
+  parent:DoLayout()
+
+  self:AddChild(parent)
+end
+
+-- ============================================================================
+-- `CloseSpecialWindows` Hook
+-- ============================================================================
+
+-- `CloseSpecialWindows` is called when the "Esc" key is pressed.
+local closeSpecialWindows = _G.CloseSpecialWindows
+_G.CloseSpecialWindows = function()
+  local found = closeSpecialWindows()
+
+  if UI:IsShown() then
+    UI:Hide()
+    return true
+  end
+
+  return found
 end

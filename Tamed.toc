@@ -33,5 +33,6 @@ src\db.lua
 src\ui\minimap_icon.lua
 src\ui\widgets.lua
 src\ui\pin_helper.lua
-src\ui\ability.lua
 src\ui\main.lua
+src\ui\groups\ability.lua
+src\ui\groups\options.lua

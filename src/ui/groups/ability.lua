@@ -1,5 +1,5 @@
 local _, Addon = ...
-local Ability = Addon.UI.Ability
+local Ability = Addon.UI.Groups.Ability
 local DCL = Addon.Libs.DCL
 local HBDPins = Addon.Libs.HBDPins
 local L = Addon.Locale
