@@ -1,5 +1,6 @@
 local _, Addon = ...
 local AceGUI = Addon.Libs.AceGUI
+local GameTooltip = _G.GameTooltip
 local Widgets = Addon.UI.Widgets
 
 --[[
@@ -27,6 +28,43 @@ function Widgets:Button(options)
   button:SetCallback("OnLeave", options.onLeave)
   options.parent:AddChild(button)
   return button
+end
+
+--[[
+  Adds a basic AceGUI CheckBox to a parent widget and returns it.
+
+  options = {
+    parent = widget,
+    label = string,
+    tooltip = string,
+    get = function() -> boolean,
+    set = function(value)
+  }
+]]
+function Widgets:CheckBox(options)
+  local checkBox = AceGUI:Create("CheckBox")
+  checkBox:SetValue(options.get())
+  checkBox:SetLabel(options.label)
+
+  checkBox:SetCallback("OnValueChanged", function(_, _, value)
+    options.set(value)
+  end)
+
+  if options.tooltip then
+    checkBox:SetCallback("OnEnter", function(this)
+      GameTooltip:SetOwner(this.checkbg, "ANCHOR_TOP")
+      GameTooltip:SetText(options.label, 1.0, 0.82, 0)
+      GameTooltip:AddLine(options.tooltip, 1, 1, 1, true)
+      GameTooltip:Show()
+    end)
+
+    checkBox:SetCallback("OnLeave", function()
+      GameTooltip:Hide()
+    end)
+  end
+
+  options.parent:AddChild(checkBox)
+  return checkBox
 end
 
 -- Adds an AceGUI Heading to a parent widget and returns it.
