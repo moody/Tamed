@@ -54,11 +54,9 @@ _G.GameTooltip:HookScript("OnTooltipSetUnit", function(self)
   -- Add lines.
   self:AddLine(DCL:ColorString(AddonName, Colors.Primary))
   for _, ability in ipairs(abilities) do
-    self:AddDoubleLine(
-      "  " .. ability[1],
-      ability[2],
-      1, 1, 1,
-      0.6, 0.6, 0.6
+    self:AddLine(
+      ("  %s |cFF9D9D9D(%s)|r"):format(ability[1], ability[2]),
+      1, 1, 1
     )
   end
 end)
