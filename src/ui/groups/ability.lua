@@ -114,6 +114,13 @@ function Ability:AddNPC(parent, npc)
     fullWidth = true
   })
 
+  -- Abilities.
+  Widgets:Label({
+    parent = parent,
+    text = LABEL_S:format(L.ABILITIES, table.concat(npc.abilities, ", ")),
+    fullWidth = true
+  })
+
   -- Family.
   Widgets:Label({
     parent = parent,

@@ -1,5 +1,6 @@
 local L = select(2, ...).Locale
 
+L["ABILITIES"] = "Abilities"
 L["ALL_PET_FAMILIES"] = "All Pet Families"
 L["CLEAR_PINS"] = "Clear Pins"
 L["DIET"] = "Diet"

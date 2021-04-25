@@ -38,25 +38,3 @@ function Addon.Libs.AceAddon:OnInitialize()
   Addon.UI.MinimapIcon:Initialize()
   Addon.Commands:Initialize()
 end
-
--- Update TameableAbilities with in-game data.
-for _, ability in pairs(Addon.TameableAbilities) do
-  local name, _, icon = _G.GetSpellInfo(ability.ranks[1].spell_id)
-  ability.name = name
-  ability.icon = icon
-end
-
--- Update TameableNPCs with in-game data.
-for _, npc in pairs(Addon.TameableNPCs) do
-  npc.location = _G.C_Map.GetAreaInfo(npc.zone_id)
-
-  -- Add `classification` to `level_range`.
-  if npc.classification then
-    npc.level_range = ("%s (%s)"):format(
-      npc.level_range, Addon.Libs.DCL:ColorString(
-        npc.classification,
-        Addon.Colors.Highlight
-      )
-    )
-  end
-end
