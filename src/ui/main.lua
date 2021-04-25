@@ -39,9 +39,9 @@ end
 function UI:Create()
   local frame = AceGUI:Create("Frame")
   frame:SetTitle(AddonName)
-  frame:SetWidth(600)
+  frame:SetWidth(650)
   frame:SetHeight(500)
-  frame.frame:SetMinResize(600, 500)
+  frame.frame:SetMinResize(650, 500)
   frame:SetLayout("Flow")
   self.frame = frame
 
