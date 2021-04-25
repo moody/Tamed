@@ -1,11 +1,15 @@
 # Tamed Changelog
 
-## 1.13.8
+## 1.13.9
+
+- Added ability info for npcs to "Tameable NPCs" list and map pin tooltips
+
+## Version History
+
+### 1.13.8
 
 - Replaced `/tamed icon` command with a checkbox in the user interface
 - Added an option for NPC tooltips (enabled by default)
-
-## Version History
 
 ### 1.13.7
 
