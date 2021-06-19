@@ -173,7 +173,7 @@ function Ability:AddNPC(parent, npc)
     end,
   })
 
-  if not npc.ui_map_id then
+  if not npc.ui_map_id or #npc.coords == 0 then
     b:SetText(L.MAP_UNAVAILABLE)
     b:SetDisabled(true)
   end
