@@ -14,7 +14,7 @@ jobs:
       - name: Release
         uses: BigWigsMods/packager@master
         with:
-          args: -g classic
+          args: -g bc
         env:
           GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
           CF_API_KEY: ${{ secrets.CF_API_KEY }}

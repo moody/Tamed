@@ -8,12 +8,17 @@ Addon.TameableAbilities = {
       "Carrion Bird",
       "Cat",
       "Crocolisk",
+      "Dragonhawk",
       "Gorilla",
       "Hyena",
+      "Nether Ray",
       "Raptor",
+      "Ravager",
+      "Serpent",
       "Spider",
       "Tallstrider",
       "Turtle",
+      "Warp Stalker",
       "Wind Serpent",
       "Wolf"
     },
@@ -23,15 +28,15 @@ Addon.TameableAbilities = {
         ["npc_ids"] = {
           1509,
           1505,
+          30,
+          1994,
           2958,
           1688,
-          1994,
-          30,
           1138,
-          2959,
           1922,
-          1999,
           1131,
+          1999,
+          2959,
           3110
         },
         ["pet_level"] = 1,
@@ -43,14 +48,15 @@ Addon.TameableAbilities = {
         ["npc_ids"] = {
           1133,
           2000,
-          1555,
           118,
+          17199,
+          1555,
           2960,
           1195,
-          834,
-          2001,
           1765,
           1132,
+          834,
+          2001,
           833,
           7319,
           1693,
@@ -64,22 +70,23 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          1923,
           4005,
+          1923,
+          16349,
           1185,
           5053,
+          14266,
+          4006,
           505,
           3823,
-          4006,
-          14266,
           3653,
           2350,
           11921,
           569,
+          4824,
           2476,
           616,
           521,
-          4824,
           14279
         },
         ["pet_level"] = 16,
@@ -89,14 +96,14 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
+          4825,
+          4887,
           1112,
           2349,
           628,
-          4887,
           2089,
           1258,
           2348,
-          4825,
           574,
           3825,
           3821,
@@ -112,14 +119,13 @@ Addon.TameableAbilities = {
         ["npc_ids"] = {
           2563,
           4143,
+          2565,
           2727,
           4341,
-          2565,
-          4413,
-          4396,
-          4411,
-          4344,
-          4412
+          4343,
+          4412,
+          2753,
+          4344
         },
         ["pet_level"] = 32,
         ["rank"] = 5,
@@ -128,18 +134,17 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          2753,
           14233,
           4345,
-          5286,
           769,
+          5286,
           1087,
-          4400,
+          4841,
           8211,
           5356,
-          4841,
-          8762,
+          13599,
           8959,
+          8762,
           14339
         },
         ["pet_level"] = 40,
@@ -151,9 +156,9 @@ Addon.TameableAbilities = {
         ["npc_ids"] = {
           8277,
           2505,
-          8933,
-          3581,
           2681,
+          3581,
+          8933,
           8961,
           8213,
           6585,
@@ -167,12 +172,27 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          9696
+          9696,
+          11370,
+          16934,
+          19350,
+          18466
         },
         ["pet_level"] = 56,
         ["rank"] = 8,
         ["spell_id"] = 17261,
         ["training_cost"] = 25
+      },
+      {
+        ["npc_ids"] = {
+          18467,
+          21956,
+          20634
+        },
+        ["pet_level"] = 64,
+        ["rank"] = 9,
+        ["spell_id"] = 27050,
+        ["training_cost"] = 29
       }
     }
   },
@@ -184,11 +204,11 @@ Addon.TameableAbilities = {
     ["ranks"] = {
       {
         ["npc_ids"] = {
-          1984,
           3098,
+          1984,
           1985,
-          2966,
           708,
+          2966,
           2954,
           1125,
           3099,
@@ -198,11 +218,11 @@ Addon.TameableAbilities = {
           524,
           113,
           3100,
-          330,
           1689,
+          330,
+          1190,
           3225,
-          119,
-          1190
+          119
         },
         ["pet_level"] = 1,
         ["rank"] = 1,
@@ -212,8 +232,8 @@ Addon.TameableAbilities = {
       {
         ["npc_ids"] = {
           454,
-          157,
           1191,
+          157,
           1192,
           547
         },
@@ -224,8 +244,8 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          345,
           4511,
+          345,
           4514,
           4512
         },
@@ -249,7 +269,7 @@ Addon.TameableAbilities = {
         ["pet_level"] = 48,
         ["rank"] = 5,
         ["spell_id"] = 26201,
-        ["training_cost"] = 21
+        ["training_cost"] = 25
       },
       {
         ["npc_ids"] = {
@@ -258,7 +278,7 @@ Addon.TameableAbilities = {
         ["pet_level"] = 60,
         ["rank"] = 6,
         ["spell_id"] = 27685,
-        ["training_cost"] = 25
+        ["training_cost"] = 29
       }
     }
   },
@@ -270,7 +290,8 @@ Addon.TameableAbilities = {
       "Crab",
       "Owl",
       "Raptor",
-      "Scorpid"
+      "Scorpid",
+      "Warp Stalker"
     },
     ["name"] = "Claw",
     ["ranks"] = {
@@ -278,8 +299,8 @@ Addon.TameableAbilities = {
         ["npc_ids"] = {
           3124,
           3281,
-          3106,
           1995,
+          3106,
           1196
         },
         ["pet_level"] = 1,
@@ -289,16 +310,18 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
+          15652,
           822,
           1997,
-          3108,
           3127,
-          1961,
+          3108,
+          2163,
           5823,
           1778,
-          2163,
+          1961,
+          2232,
           1130,
-          2232
+          16348
         },
         ["pet_level"] = 8,
         ["rank"] = 2,
@@ -307,14 +330,15 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
+          16349,
           1189,
           1216,
           6788,
           3619,
           3812,
           1225,
-          2351,
           3809,
+          2351,
           4821,
           4822
         },
@@ -325,8 +349,8 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          3810,
           4823,
+          3810,
           4696,
           4140
         },
@@ -339,7 +363,6 @@ Addon.TameableAbilities = {
         ["npc_ids"] = {
           4697,
           5937,
-          4343,
           7022
         },
         ["pet_level"] = 32,
@@ -349,12 +372,12 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          5422,
           922,
+          5422,
           5268,
+          1088,
           731,
-          5352,
-          1088
+          5352
         },
         ["pet_level"] = 40,
         ["rank"] = 6,
@@ -368,8 +391,8 @@ Addon.TameableAbilities = {
           14344,
           7099,
           14343,
-          7444,
           8301,
+          7444,
           7455,
           9695,
           1816
@@ -382,12 +405,28 @@ Addon.TameableAbilities = {
       {
         ["npc_ids"] = {
           7456,
-          7445
+          7445,
+          17039,
+          17034
         },
         ["pet_level"] = 56,
         ["rank"] = 8,
         ["spell_id"] = 3009,
         ["training_cost"] = 25
+      },
+      {
+        ["npc_ids"] = {
+          22100,
+          18220,
+          22265,
+          17129,
+          18257,
+          20671
+        },
+        ["pet_level"] = 64,
+        ["rank"] = 9,
+        ["spell_id"] = 27049,
+        ["training_cost"] = 29
       }
     }
   },
@@ -400,8 +439,8 @@ Addon.TameableAbilities = {
           2042,
           1199,
           1553,
-          3035,
           3121,
+          3035,
           2957,
           3068,
           2070,
@@ -419,8 +458,8 @@ Addon.TameableAbilities = {
           3245,
           2323,
           2237,
-          4067,
-          2384
+          2384,
+          4067
         },
         ["pet_level"] = 15,
         ["rank"] = 2,
@@ -430,11 +469,11 @@ Addon.TameableAbilities = {
       {
         ["npc_ids"] = {
           4126,
-          2385,
           4538,
-          683,
+          2385,
+          4425,
           681,
-          4539,
+          683,
           736
         },
         ["pet_level"] = 25,
@@ -456,6 +495,7 @@ Addon.TameableAbilities = {
       {
         ["npc_ids"] = {
           2522,
+          8927,
           8600,
           8601
         },
@@ -473,6 +513,17 @@ Addon.TameableAbilities = {
         ["rank"] = 6,
         ["spell_id"] = 16697,
         ["training_cost"] = 18
+      },
+      {
+        ["npc_ids"] = {
+          21022,
+          20671,
+          22807
+        },
+        ["pet_level"] = 65,
+        ["rank"] = 7,
+        ["spell_id"] = 27048,
+        ["training_cost"] = 21
       }
     }
   },
@@ -481,6 +532,8 @@ Addon.TameableAbilities = {
       "Boar",
       "Cat",
       "Hyena",
+      "Raptor",
+      "Ravager",
       "Tallstrider",
       "Wolf"
     },
@@ -488,17 +541,17 @@ Addon.TameableAbilities = {
     ["ranks"] = {
       {
         ["npc_ids"] = {
-          976,
           682,
-          4688,
+          976,
           4304,
+          4688,
           2727,
           4950,
           767,
           4662,
           2728,
-          2850,
           729,
+          2850,
           2729
         },
         ["pet_level"] = 30,
@@ -508,12 +561,12 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
+          728,
           5286,
           2734,
-          728,
           5425,
-          2730,
           8211,
+          2730,
           1713,
           8208,
           731,
@@ -536,8 +589,12 @@ Addon.TameableAbilities = {
           9696,
           10200,
           7433,
+          16932,
           7432,
-          11365
+          11365,
+          15067,
+          22123,
+          20634
         },
         ["pet_level"] = 50,
         ["rank"] = 3,
@@ -550,6 +607,8 @@ Addon.TameableAbilities = {
     ["learned_by"] = {
       "Bat",
       "Carrion Bird",
+      "Dragonhawk",
+      "Nether Ray",
       "Owl",
       "Wind Serpent"
     },
@@ -557,13 +616,16 @@ Addon.TameableAbilities = {
     ["ranks"] = {
       {
         ["npc_ids"] = {
-          4538,
-          2578,
           4539,
+          4425,
+          2578,
           2579,
           6013,
+          4346,
           4693,
-          4861
+          4861,
+          4347,
+          4348
         },
         ["pet_level"] = 30,
         ["rank"] = 1,
@@ -588,21 +650,57 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
+          5708,
+          8927,
           1809,
           7099,
-          8927,
-          5708,
+          14343,
           8299,
           7098,
-          14343,
           8600,
           7455,
           2931,
-          7456
+          7456,
+          17053,
+          17128,
+          19055,
+          22265,
+          21042,
+          21804
         },
         ["pet_level"] = 50,
         ["rank"] = 3,
         ["spell_id"] = 23148,
+        ["training_cost"] = 25
+      }
+    }
+  },
+  ["firebreath"] = {
+    ["learned_by"] = {
+      "Dragonhawk"
+    },
+    ["name"] = "Fire Breath",
+    ["ranks"] = {
+      {
+        ["npc_ids"] = {
+          15649,
+          15650
+        },
+        ["pet_level"] = 1,
+        ["rank"] = 1,
+        ["spell_id"] = 34889,
+        ["training_cost"] = 5
+      },
+      {
+        ["npc_ids"] = {
+          27946,
+          20502,
+          18155,
+          20038
+        },
+        ["pet_level"] = 60,
+        ["rank"] = 2,
+        ["spell_id"] = 35323,
         ["training_cost"] = 25
       }
     }
@@ -615,7 +713,6 @@ Addon.TameableAbilities = {
     ["ranks"] = {
       {
         ["npc_ids"] = {
-          2960,
           1765,
           833,
           10644
@@ -630,7 +727,6 @@ Addon.TameableAbilities = {
           1258,
           3825,
           2729,
-          5287,
           2925
         },
         ["pet_level"] = 24,
@@ -642,6 +738,7 @@ Addon.TameableAbilities = {
         ["npc_ids"] = {
           5286,
           5356,
+          5287,
           2924,
           8959,
           14339
@@ -653,12 +750,117 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          9696
+          9696,
+          18476,
+          18033,
+          20058,
+          20330,
+          21956
         },
         ["pet_level"] = 56,
         ["rank"] = 4,
         ["spell_id"] = 24597,
         ["training_cost"] = 25
+      }
+    }
+  },
+  ["gore"] = {
+    ["learned_by"] = {
+      "Boar",
+      "Ravager"
+    },
+    ["name"] = "Gore",
+    ["ranks"] = {
+      {
+        ["npc_ids"] = {
+          1985,
+          2966,
+          2954,
+          3099,
+          1126,
+          524
+        },
+        ["pet_level"] = 1,
+        ["rank"] = 1,
+        ["spell_id"] = 35290,
+        ["training_cost"] = 1
+      },
+      {
+        ["npc_ids"] = {
+          3100,
+          17199,
+          3225,
+          1190,
+          157
+        },
+        ["pet_level"] = 8,
+        ["rank"] = 2,
+        ["spell_id"] = 35291,
+        ["training_cost"] = 4
+      },
+      {
+        ["npc_ids"] = {
+          17527,
+          1192,
+          547
+        },
+        ["pet_level"] = 16,
+        ["rank"] = 3,
+        ["spell_id"] = 35292,
+        ["training_cost"] = 7
+      },
+      {
+        ["npc_ids"] = {
+          345
+        },
+        ["pet_level"] = 24,
+        ["rank"] = 4,
+        ["spell_id"] = 35293,
+        ["training_cost"] = 10
+      },
+      {
+        ["npc_ids"] = {},
+        ["pet_level"] = 32,
+        ["rank"] = 5,
+        ["spell_id"] = 35294,
+        ["training_cost"] = 13
+      },
+      {
+        ["npc_ids"] = {},
+        ["pet_level"] = 40,
+        ["rank"] = 6,
+        ["spell_id"] = 35295,
+        ["training_cost"] = 17
+      },
+      {
+        ["npc_ids"] = {
+          5992
+        },
+        ["pet_level"] = 48,
+        ["rank"] = 7,
+        ["spell_id"] = 35296,
+        ["training_cost"] = 21
+      },
+      {
+        ["npc_ids"] = {
+          16117,
+          19189,
+          19349,
+          16934
+        },
+        ["pet_level"] = 56,
+        ["rank"] = 8,
+        ["spell_id"] = 35297,
+        ["training_cost"] = 25
+      },
+      {
+        ["npc_ids"] = {
+          22123
+        },
+        ["pet_level"] = 63,
+        ["rank"] = 9,
+        ["spell_id"] = 35298,
+        ["training_cost"] = 29
       }
     }
   },
@@ -669,7 +871,9 @@ Addon.TameableAbilities = {
     ["name"] = "Lightning Breath",
     ["ranks"] = {
       {
-        ["npc_ids"] = {},
+        ["npc_ids"] = {
+          20797
+        },
         ["pet_level"] = 1,
         ["rank"] = 1,
         ["spell_id"] = 24844,
@@ -680,9 +884,9 @@ Addon.TameableAbilities = {
           3630,
           3631,
           3247,
-          3424,
           5056,
           5756,
+          3424,
           3249
         },
         ["pet_level"] = 12,
@@ -704,6 +908,8 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
+          4347,
+          4348,
           5307,
           5308
         },
@@ -726,11 +932,56 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          11357
+          11357,
+          11359,
+          20749,
+          21123,
+          19428,
+          20673
         },
         ["pet_level"] = 60,
         ["rank"] = 6,
         ["spell_id"] = 25012,
+        ["training_cost"] = 25
+      }
+    }
+  },
+  ["poisonspit"] = {
+    ["learned_by"] = {
+      "Serpent"
+    },
+    ["name"] = "Poison Spit",
+    ["ranks"] = {
+      {
+        ["npc_ids"] = {
+          5048,
+          5755,
+          5762
+        },
+        ["pet_level"] = 15,
+        ["rank"] = 1,
+        ["spell_id"] = 35387,
+        ["training_cost"] = 5
+      },
+      {
+        ["npc_ids"] = {
+          7268,
+          5224,
+          5225
+        },
+        ["pet_level"] = 45,
+        ["rank"] = 2,
+        ["spell_id"] = 35389,
+        ["training_cost"] = 20
+      },
+      {
+        ["npc_ids"] = {
+          11373,
+          19784
+        },
+        ["pet_level"] = 60,
+        ["rank"] = 3,
+        ["spell_id"] = 35392,
         ["training_cost"] = 25
       }
     }
@@ -766,7 +1017,8 @@ Addon.TameableAbilities = {
       {
         ["npc_ids"] = {
           2522,
-          7432
+          7432,
+          15067
         },
         ["pet_level"] = 50,
         ["rank"] = 3,
@@ -799,6 +1051,7 @@ Addon.TameableAbilities = {
           4696,
           4140,
           4139,
+          4697,
           7078,
           5937,
           4699
@@ -810,16 +1063,16 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          5422,
           7405,
+          5422,
           5423,
           7803,
           5424,
           5988,
           8926,
           9691,
-          9695,
-          11735
+          11735,
+          9695
         },
         ["pet_level"] = 40,
         ["rank"] = 3,
@@ -828,15 +1081,25 @@ Addon.TameableAbilities = {
       },
       {
         ["npc_ids"] = {
-          14476,
           11736,
           9698,
+          14476,
           11737
         },
         ["pet_level"] = 56,
         ["rank"] = 4,
         ["spell_id"] = 24587,
         ["training_cost"] = 25
+      },
+      {
+        ["npc_ids"] = {
+          22100,
+          21864
+        },
+        ["pet_level"] = 64,
+        ["rank"] = 5,
+        ["spell_id"] = 27060,
+        ["training_cost"] = 29
       }
     }
   },
@@ -871,8 +1134,8 @@ Addon.TameableAbilities = {
       {
         ["npc_ids"] = {
           7097,
-          8927,
-          1809
+          1809,
+          8927
         },
         ["pet_level"] = 48,
         ["rank"] = 3,
@@ -882,12 +1145,25 @@ Addon.TameableAbilities = {
       {
         ["npc_ids"] = {
           8602,
-          7456
+          7456,
+          17035
         },
         ["pet_level"] = 56,
         ["rank"] = 4,
         ["spell_id"] = 24579,
         ["training_cost"] = 25
+      },
+      {
+        ["npc_ids"] = {
+          17129,
+          19055,
+          18257,
+          21042
+        },
+        ["pet_level"] = 64,
+        ["rank"] = 5,
+        ["spell_id"] = 27051,
+        ["training_cost"] = 29
       }
     }
   },
@@ -901,10 +1177,11 @@ Addon.TameableAbilities = {
         ["npc_ids"] = {
           3653,
           4824,
-          4887,
           4825,
+          4887,
           2408,
-          14223
+          14223,
+          8213
         },
         ["pet_level"] = 20,
         ["rank"] = 1,
@@ -948,6 +1225,26 @@ Addon.TameableAbilities = {
         ["rank"] = 3,
         ["spell_id"] = 26188,
         ["training_cost"] = 25
+      }
+    }
+  },
+  ["warp"] = {
+    ["learned_by"] = {
+      "Warp Stalker"
+    },
+    ["name"] = "Warp",
+    ["ranks"] = {
+      {
+        ["npc_ids"] = {
+          18464,
+          18465,
+          18884,
+          23219
+        },
+        ["pet_level"] = 60,
+        ["rank"] = 1,
+        ["spell_id"] = 35346,
+        ["training_cost"] = 1
       }
     }
   }
