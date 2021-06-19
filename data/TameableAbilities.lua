@@ -41,6 +41,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 1,
         ["rank"] = 1,
+        ["spell_id"] = 17253,
         ["training_cost"] = 1
       },
       {
@@ -64,6 +65,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 8,
         ["rank"] = 2,
+        ["spell_id"] = 17255,
         ["training_cost"] = 4
       },
       {
@@ -89,6 +91,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 16,
         ["rank"] = 3,
+        ["spell_id"] = 17256,
         ["training_cost"] = 7
       },
       {
@@ -109,6 +112,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 24,
         ["rank"] = 4,
+        ["spell_id"] = 17257,
         ["training_cost"] = 10
       },
       {
@@ -125,6 +129,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 32,
         ["rank"] = 5,
+        ["spell_id"] = 17258,
         ["training_cost"] = 13
       },
       {
@@ -144,6 +149,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 40,
         ["rank"] = 6,
+        ["spell_id"] = 17259,
         ["training_cost"] = 17
       },
       {
@@ -161,6 +167,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 48,
         ["rank"] = 7,
+        ["spell_id"] = 17260,
         ["training_cost"] = 21
       },
       {
@@ -173,6 +180,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 56,
         ["rank"] = 8,
+        ["spell_id"] = 17261,
         ["training_cost"] = 25
       },
       {
@@ -183,6 +191,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 64,
         ["rank"] = 9,
+        ["spell_id"] = 27050,
         ["training_cost"] = 29
       }
     }
@@ -217,6 +226,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 1,
         ["rank"] = 1,
+        ["spell_id"] = 7371,
         ["training_cost"] = 5
       },
       {
@@ -229,6 +239,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 12,
         ["rank"] = 2,
+        ["spell_id"] = 26177,
         ["training_cost"] = 9
       },
       {
@@ -240,12 +251,14 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 24,
         ["rank"] = 3,
+        ["spell_id"] = 26178,
         ["training_cost"] = 13
       },
       {
         ["npc_ids"] = {},
         ["pet_level"] = 36,
         ["rank"] = 4,
+        ["spell_id"] = 26179,
         ["training_cost"] = 17
       },
       {
@@ -255,6 +268,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 48,
         ["rank"] = 5,
+        ["spell_id"] = 26201,
         ["training_cost"] = 25
       },
       {
@@ -263,6 +277,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 60,
         ["rank"] = 6,
+        ["spell_id"] = 27685,
         ["training_cost"] = 29
       }
     }
@@ -290,6 +305,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 1,
         ["rank"] = 1,
+        ["spell_id"] = 16827,
         ["training_cost"] = 1
       },
       {
@@ -309,6 +325,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 8,
         ["rank"] = 2,
+        ["spell_id"] = 16828,
         ["training_cost"] = 4
       },
       {
@@ -327,6 +344,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 16,
         ["rank"] = 3,
+        ["spell_id"] = 16829,
         ["training_cost"] = 7
       },
       {
@@ -338,6 +356,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 24,
         ["rank"] = 4,
+        ["spell_id"] = 16830,
         ["training_cost"] = 10
       },
       {
@@ -348,6 +367,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 32,
         ["rank"] = 5,
+        ["spell_id"] = 16831,
         ["training_cost"] = 13
       },
       {
@@ -361,6 +381,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 40,
         ["rank"] = 6,
+        ["spell_id"] = 16832,
         ["training_cost"] = 17
       },
       {
@@ -378,6 +399,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 48,
         ["rank"] = 7,
+        ["spell_id"] = 3010,
         ["training_cost"] = 21
       },
       {
@@ -389,6 +411,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 56,
         ["rank"] = 8,
+        ["spell_id"] = 3009,
         ["training_cost"] = 25
       },
       {
@@ -402,6 +425,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 64,
         ["rank"] = 9,
+        ["spell_id"] = 27049,
         ["training_cost"] = 29
       }
     }
@@ -425,6 +449,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 5,
         ["rank"] = 1,
+        ["spell_id"] = 1742,
         ["training_cost"] = 8
       },
       {
@@ -438,6 +463,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 15,
         ["rank"] = 2,
+        ["spell_id"] = 1753,
         ["training_cost"] = 10
       },
       {
@@ -452,6 +478,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 25,
         ["rank"] = 3,
+        ["spell_id"] = 1754,
         ["training_cost"] = 12
       },
       {
@@ -462,6 +489,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 35,
         ["rank"] = 4,
+        ["spell_id"] = 1755,
         ["training_cost"] = 14
       },
       {
@@ -473,6 +501,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 45,
         ["rank"] = 5,
+        ["spell_id"] = 1756,
         ["training_cost"] = 16
       },
       {
@@ -482,6 +511,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 55,
         ["rank"] = 6,
+        ["spell_id"] = 16697,
         ["training_cost"] = 18
       },
       {
@@ -492,6 +522,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 65,
         ["rank"] = 7,
+        ["spell_id"] = 27048,
         ["training_cost"] = 21
       }
     }
@@ -525,6 +556,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 30,
         ["rank"] = 1,
+        ["spell_id"] = 23099,
         ["training_cost"] = 15
       },
       {
@@ -544,6 +576,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 40,
         ["rank"] = 2,
+        ["spell_id"] = 23109,
         ["training_cost"] = 20
       },
       {
@@ -565,6 +598,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 50,
         ["rank"] = 3,
+        ["spell_id"] = 23110,
         ["training_cost"] = 25
       }
     }
@@ -595,6 +629,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 30,
         ["rank"] = 1,
+        ["spell_id"] = 23145,
         ["training_cost"] = 15
       },
       {
@@ -610,6 +645,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 40,
         ["rank"] = 2,
+        ["spell_id"] = 23147,
         ["training_cost"] = 20
       },
       {
@@ -634,6 +670,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 50,
         ["rank"] = 3,
+        ["spell_id"] = 23148,
         ["training_cost"] = 25
       }
     }
@@ -651,6 +688,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 1,
         ["rank"] = 1,
+        ["spell_id"] = 34889,
         ["training_cost"] = 5
       },
       {
@@ -662,6 +700,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 60,
         ["rank"] = 2,
+        ["spell_id"] = 35323,
         ["training_cost"] = 25
       }
     }
@@ -680,6 +719,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 10,
         ["rank"] = 1,
+        ["spell_id"] = 24604,
         ["training_cost"] = 10
       },
       {
@@ -691,6 +731,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 24,
         ["rank"] = 2,
+        ["spell_id"] = 24605,
         ["training_cost"] = 15
       },
       {
@@ -704,6 +745,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 40,
         ["rank"] = 3,
+        ["spell_id"] = 24603,
         ["training_cost"] = 20
       },
       {
@@ -717,6 +759,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 56,
         ["rank"] = 4,
+        ["spell_id"] = 24597,
         ["training_cost"] = 25
       }
     }
@@ -739,6 +782,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 1,
         ["rank"] = 1,
+        ["spell_id"] = 35290,
         ["training_cost"] = 1
       },
       {
@@ -751,6 +795,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 8,
         ["rank"] = 2,
+        ["spell_id"] = 35291,
         ["training_cost"] = 4
       },
       {
@@ -761,6 +806,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 16,
         ["rank"] = 3,
+        ["spell_id"] = 35292,
         ["training_cost"] = 7
       },
       {
@@ -769,18 +815,21 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 24,
         ["rank"] = 4,
+        ["spell_id"] = 35293,
         ["training_cost"] = 10
       },
       {
         ["npc_ids"] = {},
         ["pet_level"] = 32,
         ["rank"] = 5,
+        ["spell_id"] = 35294,
         ["training_cost"] = 13
       },
       {
         ["npc_ids"] = {},
         ["pet_level"] = 40,
         ["rank"] = 6,
+        ["spell_id"] = 35295,
         ["training_cost"] = 17
       },
       {
@@ -789,6 +838,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 48,
         ["rank"] = 7,
+        ["spell_id"] = 35296,
         ["training_cost"] = 21
       },
       {
@@ -800,6 +850,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 56,
         ["rank"] = 8,
+        ["spell_id"] = 35297,
         ["training_cost"] = 25
       },
       {
@@ -808,6 +859,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 63,
         ["rank"] = 9,
+        ["spell_id"] = 35298,
         ["training_cost"] = 29
       }
     }
@@ -824,6 +876,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 1,
         ["rank"] = 1,
+        ["spell_id"] = 24844,
         ["training_cost"] = 1
       },
       {
@@ -838,6 +891,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 12,
         ["rank"] = 2,
+        ["spell_id"] = 25008,
         ["training_cost"] = 5
       },
       {
@@ -849,6 +903,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 24,
         ["rank"] = 3,
+        ["spell_id"] = 25009,
         ["training_cost"] = 10
       },
       {
@@ -860,6 +915,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 36,
         ["rank"] = 4,
+        ["spell_id"] = 25010,
         ["training_cost"] = 15
       },
       {
@@ -871,6 +927,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 48,
         ["rank"] = 5,
+        ["spell_id"] = 25011,
         ["training_cost"] = 20
       },
       {
@@ -884,6 +941,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 60,
         ["rank"] = 6,
+        ["spell_id"] = 25012,
         ["training_cost"] = 25
       }
     }
@@ -902,6 +960,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 15,
         ["rank"] = 1,
+        ["spell_id"] = 35387,
         ["training_cost"] = 5
       },
       {
@@ -912,6 +971,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 45,
         ["rank"] = 2,
+        ["spell_id"] = 35389,
         ["training_cost"] = 20
       },
       {
@@ -921,6 +981,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 60,
         ["rank"] = 3,
+        ["spell_id"] = 35392,
         ["training_cost"] = 25
       }
     }
@@ -940,6 +1001,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 30,
         ["rank"] = 1,
+        ["spell_id"] = 24450,
         ["training_cost"] = 15
       },
       {
@@ -949,6 +1011,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 40,
         ["rank"] = 2,
+        ["spell_id"] = 24452,
         ["training_cost"] = 20
       },
       {
@@ -959,6 +1022,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 50,
         ["rank"] = 3,
+        ["spell_id"] = 24453,
         ["training_cost"] = 25
       }
     }
@@ -979,6 +1043,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 8,
         ["rank"] = 1,
+        ["spell_id"] = 24640,
         ["training_cost"] = 10
       },
       {
@@ -993,6 +1058,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 24,
         ["rank"] = 2,
+        ["spell_id"] = 24583,
         ["training_cost"] = 15
       },
       {
@@ -1010,6 +1076,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 40,
         ["rank"] = 3,
+        ["spell_id"] = 24586,
         ["training_cost"] = 20
       },
       {
@@ -1021,6 +1088,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 56,
         ["rank"] = 4,
+        ["spell_id"] = 24587,
         ["training_cost"] = 25
       },
       {
@@ -1030,6 +1098,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 64,
         ["rank"] = 5,
+        ["spell_id"] = 27060,
         ["training_cost"] = 29
       }
     }
@@ -1048,6 +1117,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 8,
         ["rank"] = 1,
+        ["spell_id"] = 24423,
         ["training_cost"] = 10
       },
       {
@@ -1058,6 +1128,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 24,
         ["rank"] = 2,
+        ["spell_id"] = 24577,
         ["training_cost"] = 15
       },
       {
@@ -1068,6 +1139,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 48,
         ["rank"] = 3,
+        ["spell_id"] = 24578,
         ["training_cost"] = 20
       },
       {
@@ -1078,6 +1150,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 56,
         ["rank"] = 4,
+        ["spell_id"] = 24579,
         ["training_cost"] = 25
       },
       {
@@ -1089,6 +1162,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 64,
         ["rank"] = 5,
+        ["spell_id"] = 27051,
         ["training_cost"] = 29
       }
     }
@@ -1111,6 +1185,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 20,
         ["rank"] = 1,
+        ["spell_id"] = 26064,
         ["training_cost"] = 15
       }
     }
@@ -1128,6 +1203,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 30,
         ["rank"] = 1,
+        ["spell_id"] = 26090,
         ["training_cost"] = 15
       },
       {
@@ -1137,6 +1213,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 40,
         ["rank"] = 2,
+        ["spell_id"] = 26187,
         ["training_cost"] = 20
       },
       {
@@ -1146,6 +1223,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 50,
         ["rank"] = 3,
+        ["spell_id"] = 26188,
         ["training_cost"] = 25
       }
     }
@@ -1165,6 +1243,7 @@ Addon.TameableAbilities = {
         },
         ["pet_level"] = 60,
         ["rank"] = 1,
+        ["spell_id"] = 35346,
         ["training_cost"] = 1
       }
     }
