@@ -1,10 +1,14 @@
 # Tamed Changelog
 
-## 1.13.9
+## 2.5.1
 
-- Added ability info for npcs to "Tameable NPCs" list and map pin tooltips
+- Updated for The Burning Crusade Classic
 
 ## Version History
+
+### 1.13.9
+
+- Added ability info for npcs to "Tameable NPCs" list and map pin tooltips
 
 ### 1.13.8
 
