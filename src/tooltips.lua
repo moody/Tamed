@@ -2,11 +2,9 @@ local AddonName, Addon = ...
 local Colors = Addon.Colors
 local DB = Addon.DB
 local DCL = Addon.Libs.DCL
-local strsplit = _G.strsplit
 local TameableNPCs = Addon.TameableNPCs
-local UnitGUID = _G.UnitGUID
 
-_G.GameTooltip:HookScript("OnTooltipSetUnit", function(self)
+GameTooltip:HookScript("OnTooltipSetUnit", function(self)
   if not DB.global.npc_tooltips then return end
 
   -- Get unit.

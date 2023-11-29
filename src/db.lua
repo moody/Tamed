@@ -9,7 +9,7 @@ local defaults = {
 }
 
 function DB:Initialize()
-  local db = _G.LibStub("AceDB-3.0"):New("__TAMED_ADDON_DB__", defaults)
+  local db = LibStub("AceDB-3.0"):New("__TAMED_ADDON_DB__", defaults)
   setmetatable(self, { __index = db })
   self.Initialize = nil
 end

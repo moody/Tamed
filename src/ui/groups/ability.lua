@@ -15,18 +15,18 @@ function Ability:Create(parent, ability, rankIndex)
     text = "|cFFFFFFFF" .. title .. "|r",
     height = 34,
     onEnter = function()
-      _G.GameTooltip:SetOwner(_G.UIParent, "ANCHOR_CURSOR")
-      _G.GameTooltip:SetHyperlink("spell:" .. ability.ranks[rankIndex].spell_id)
-      _G.GameTooltip:Show()
+      GameTooltip:SetOwner(UIParent, "ANCHOR_CURSOR")
+      GameTooltip:SetHyperlink("spell:" .. ability.ranks[rankIndex].spell_id)
+      GameTooltip:Show()
     end,
     onLeave = function()
-      _G.GameTooltip:Hide()
+      GameTooltip:Hide()
     end
   })
 
   self:AddPetLevelGroup(parent, ability, rankIndex)
   self:AddTrainingCostGroup(parent, ability, rankIndex)
-  self:AddLearnedByGroup(parent, ability, rankIndex)
+  self:AddLearnedByGroup(parent, ability)
   self:AddTameableNPCsGroup(parent, ability, rankIndex)
 end
 
@@ -68,10 +68,10 @@ function Ability:AddLearnedByGroup(parent, ability)
   Widgets:Label({
     parent = parent,
     text = (
-      #ability.learned_by > 0 and
-      table.concat(ability.learned_by, ", ") or
-      L.ALL_PET_FAMILIES
-    ),
+        #ability.learned_by > 0 and
+            table.concat(ability.learned_by, ", ") or
+            L.ALL_PET_FAMILIES
+        ),
     fullWidth = true
   })
 end
@@ -99,6 +99,8 @@ function Ability:AddTameableNPCsGroup(parent, ability, rankIndex)
 end
 
 function Ability:AddNPC(parent, npc)
+  if not npc then return end
+
   local LABEL_S = DCL:ColorString("%s:", Addon.Colors.Label) .. " %s"
 
   parent = Widgets:InlineGroup({
@@ -155,8 +157,8 @@ function Ability:AddNPC(parent, npc)
     -- fullWidth = true,
     text = L.SHOW_ON_MAP,
     onClick = function()
-      _G.WorldMapFrame:Show()
-      _G.WorldMapFrame:SetMapID(npc.ui_map_id)
+      WorldMapFrame:Show()
+      WorldMapFrame:SetMapID(npc.ui_map_id)
 
       PinHelper:Clear()
 
@@ -165,7 +167,7 @@ function Ability:AddNPC(parent, npc)
           Addon,
           PinHelper:Get(npc),
           npc.ui_map_id,
-          coords.x  * 0.01,
+          coords.x * 0.01,
           coords.y * 0.01,
           HBD_PINS_WORLDMAP_SHOW_WORLD
         )

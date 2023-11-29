@@ -1,15 +1,15 @@
 local AddonName, Addon = ...
-Addon.VERSION = _G.GetAddOnMetadata(AddonName, "Version")
+Addon.VERSION = C_AddOns.GetAddOnMetadata(AddonName, "Version")
 Addon.ICON = "Interface\\ICONS\\Ability_Hunter_BeastTaming"
 
 Addon.Libs = {
-  AceAddon = _G.LibStub("AceAddon-3.0"):NewAddon(AddonName, "AceConsole-3.0"),
-  AceGUI = _G.LibStub("AceGUI-3.0"),
+  AceAddon = LibStub("AceAddon-3.0"):NewAddon(AddonName, "AceConsole-3.0"),
+  AceGUI = LibStub("AceGUI-3.0"),
   DCL = Addon.DethsColorLib,
-  HBD = _G.LibStub("HereBeDragons-2.0"),
-  HBDPins = _G.LibStub("HereBeDragons-Pins-2.0"),
-  LDB = _G.LibStub("LibDataBroker-1.1"),
-  LDBIcon = _G.LibStub("LibDBIcon-1.0"),
+  HBD = LibStub("HereBeDragons-2.0"),
+  HBDPins = LibStub("HereBeDragons-Pins-2.0"),
+  LDB = LibStub("LibDataBroker-1.1"),
+  LDBIcon = LibStub("LibDBIcon-1.0"),
 }
 
 Addon.Colors = {

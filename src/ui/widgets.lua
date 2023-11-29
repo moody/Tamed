@@ -1,6 +1,5 @@
 local _, Addon = ...
 local AceGUI = Addon.Libs.AceGUI
-local GameTooltip = _G.GameTooltip
 local Widgets = Addon.UI.Widgets
 
 --[[
@@ -104,7 +103,7 @@ function Widgets:Label(options)
   end
 
   if options.image then
-    label:SetImage(options.image.path, _G.unpack(options.image.texCoord))
+    label:SetImage(options.image.path, unpack(options.image.texCoord))
     if options.image.width and options.image.height then
       label:SetImageSize(options.image.width, options.image.height)
     end
