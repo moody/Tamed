@@ -41,7 +41,7 @@ function UI:Create()
   frame:SetTitle(AddonName)
   frame:SetWidth(650)
   frame:SetHeight(500)
-  frame.frame:SetMinResize(650, 500)
+  frame.frame:SetResizeBounds(650, 500)
   frame:SetLayout("Flow")
   self.frame = frame
 
