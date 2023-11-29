@@ -1,10 +1,9 @@
-## Interface: 20501
+## Interface: 11500
 ## Title: Tamed
-## Author: Dethanyel
+## Author: https://github.com/moody
 ## Version: @project-version@
 ## Notes: A guide to tamed pet abilities.
 ## SavedVariables: __TAMED_ADDON_DB__
-## X-Curse-Project-ID: 466858
 
 # Libraries
 libs\LibStub.lua
