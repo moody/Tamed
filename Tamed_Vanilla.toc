@@ -31,9 +31,9 @@ src\db.lua
 src\tooltips.lua
 
 # UI
-src\ui\minimap_icon.lua
+src\ui\minimap-icon.lua
 src\ui\widgets.lua
-src\ui\pin_helper.lua
+src\ui\pin-helper.lua
 src\ui\main.lua
-src\ui\groups\ability.lua
-src\ui\groups\options.lua
+src\ui\groups\ability-group.lua
+src\ui\groups\options-group.lua
