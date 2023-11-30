@@ -16,7 +16,6 @@ libs\HereBeDragons-2.0.lua
 libs\HereBeDragons-Pins-2.0.lua
 libs\LibDataBroker-1.1.lua
 libs\LibDBIcon-1.0.lua
-libs\DethsColorLib\DethsColorLib.xml
 
 # Data
 data\TameableAbilities.lua
