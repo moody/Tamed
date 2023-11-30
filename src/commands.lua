@@ -1,11 +1,11 @@
-local AddonName, Addon = ...
-local AceAddon = Addon.Libs.AceAddon
-local Commands = Addon.Commands
-local PinHelper = Addon.UI.PinHelper
-local UI = Addon.UI
+local ADDON_NAME, Addon = ...
+local AceAddon = Addon:GetLibrary("AceAddon")
+local Commands = Addon:GetModule("Commands")
+local PinHelper = Addon:GetModule("PinHelper")
+local UI = Addon:GetModule("UI")
 
 function Commands:Initialize()
-  AceAddon:RegisterChatCommand(AddonName, function(...) self:Handle(...) end)
+  AceAddon:RegisterChatCommand(ADDON_NAME, function(...) self:Handle(...) end)
   self.Initialize = nil
 end
 

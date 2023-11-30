@@ -1,6 +1,6 @@
 local _, Addon = ...
-local AceGUI = Addon.Libs.AceGUI
-local Widgets = Addon.UI.Widgets
+local AceGUI = Addon:GetLibrary("AceGUI")
+local Widgets = Addon:GetModule("Widgets")
 
 --[[
   Adds a basic AceGUI Button to a parent widget and returns it.

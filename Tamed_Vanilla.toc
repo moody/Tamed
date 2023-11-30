@@ -25,6 +25,7 @@ data\TameableNPCs.lua
 # General
 src\_init.lua
 src\locale.lua
+src\colors.lua
 src\data.lua
 src\commands.lua
 src\db.lua

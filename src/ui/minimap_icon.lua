@@ -1,19 +1,18 @@
-local AddonName, Addon = ...
-local Colors = Addon.Colors
-local DB = Addon.DB
-local DCL = Addon.Libs.DCL
-local L = Addon.Locale
-local LDB = Addon.Libs.LDB
-local LDBIcon = Addon.Libs.LDBIcon
-local MinimapIcon = Addon.UI.MinimapIcon
-local PinHelper = Addon.UI.PinHelper
-local UI = Addon.UI
+local ADDON_NAME, Addon = ...
+local Colors = Addon:GetModule("Colors")
+local DB = Addon:GetModule("DB")
+local L = Addon:GetModule("Locale")
+local LDB = Addon:GetLibrary("LDB")
+local LDBIcon = Addon:GetLibrary("LDBIcon")
+local MinimapIcon = Addon:GetModule("MinimapIcon")
+local PinHelper = Addon:GetModule("PinHelper")
+local UI = Addon:GetModule("UI")
 
 -- Initialize LDB object.
 function MinimapIcon:Initialize()
-  local object = LDB:NewDataObject(AddonName, {
+  local object = LDB:NewDataObject(ADDON_NAME, {
     type = "data source",
-    text = AddonName,
+    text = ADDON_NAME,
     icon = Addon.ICON,
 
     OnClick = function(_, button)
@@ -26,7 +25,7 @@ function MinimapIcon:Initialize()
 
     OnTooltipShow = function(tooltip)
       tooltip:AddDoubleLine(
-        DCL:ColorString(AddonName, Colors.Primary),
+        Colors.Primary(ADDON_NAME),
         Addon.VERSION
       )
       tooltip:AddLine(" ")
@@ -35,20 +34,20 @@ function MinimapIcon:Initialize()
     end,
   })
 
-  LDBIcon:Register(AddonName, object, DB.global.minimapIcon)
+  LDBIcon:Register(ADDON_NAME, object, DB.global.minimapIcon)
   self.Initialize = nil
 end
 
 -- Displays the minimap icon.
 function MinimapIcon:Show()
   DB.global.minimapIcon.hide = false
-  LDBIcon:Show(AddonName)
+  LDBIcon:Show(ADDON_NAME)
 end
 
 -- Hides the minimap icon.
 function MinimapIcon:Hide()
   DB.global.minimapIcon.hide = true
-  LDBIcon:Hide(AddonName)
+  LDBIcon:Hide(ADDON_NAME)
 end
 
 -- Toggles the minimap icon.

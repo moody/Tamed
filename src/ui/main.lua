@@ -1,12 +1,12 @@
 local AddonName, Addon = ...
-local AceGUI = Addon.Libs.AceGUI
-local Colors = Addon.Colors
-local DCL = Addon.Libs.DCL
-local L = Addon.Locale
-local pairs = pairs
+local AbilityGroup = Addon:GetModule("AbilityGroup")
+local AceGUI = Addon:GetLibrary("AceGUI")
+local Colors = Addon:GetModule("Colors")
+local L = Addon:GetModule("Locale")
+local OptionsGroup = Addon:GetModule("OptionsGroup")
 local TameableAbilities = Addon.TameableAbilities
-local UI = Addon.UI
-local Widgets = Addon.UI.Widgets
+local UI = Addon:GetModule("UI")
+local Widgets = Addon:GetModule("Widgets")
 
 local TreeGroup = {}
 
@@ -50,7 +50,7 @@ function UI:Create()
     frame,
     ("%s: %s"):format(
       L.VERSION,
-      DCL:ColorString(Addon.VERSION, Colors.Primary)
+      Colors.Primary(Addon.VERSION)
     )
   )
 
@@ -92,7 +92,7 @@ end
 
 function TreeGroup:BuildTree()
   local tree = {
-    { text = L.OPTIONS, value = "!options" },
+    { text = L.OPTIONS, value = "OPTIONS_GROUP" },
     { text = " ", value = "BLANK_1", disabled = true }
   }
 
@@ -102,13 +102,13 @@ function TreeGroup:BuildTree()
       local children = {}
 
       for i in ipairs(ability.ranks) do
-        children[#children+1] = {
+        children[#children + 1] = {
           text = ("%s %s"):format(L.RANK, i),
           value = i
         }
       end
 
-      abilities[#abilities+1] = {
+      abilities[#abilities + 1] = {
         text = ability.name,
         value = id,
         icon = ability.icon,
@@ -119,7 +119,7 @@ function TreeGroup:BuildTree()
 
     -- Sort `abilities` by `text`, and insert into `tree`.
     table.sort(abilities, function(a, b) return a.text < b.text end)
-    for _, ability in ipairs(abilities) do tree[#tree+1] = ability end
+    for _, ability in ipairs(abilities) do tree[#tree + 1] = ability end
   end
 
   return tree
@@ -133,12 +133,12 @@ function TreeGroup:OnGroupSelected(event, value)
   parent:PauseLayout()
 
   -- Create a ui based on the selected tree group `value`.
-  if value == "!options" then
-    UI.Groups.Options:Create(parent)
+  if value == "OPTIONS_GROUP" then
+    OptionsGroup:Create(parent)
   else
     local abilityId, abilityRank = value:match("^(.+)\001(%d+)$")
     local ability = TameableAbilities[abilityId] or error("Invalid ability id: " .. abilityId)
-    UI.Groups.Ability:Create(parent, ability, tonumber(abilityRank))
+    AbilityGroup:Create(parent, ability, tonumber(abilityRank))
   end
 
   parent:ResumeLayout()
