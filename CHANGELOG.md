@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.15.1] - 2025-03-01
+
+- Updated TOC version
+
 ## [1.15.0] - 2023-11-28
 
 - Fixes for Classic version 1.15.0
