@@ -1,4 +1,4 @@
-## Interface: 11500
+## Interface: 11506
 ## Title: Tamed
 ## Author: https://github.com/moody
 ## Version: @project-version@
