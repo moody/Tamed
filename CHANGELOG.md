@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.15.2] - 2026-01-17
+
+- Support for Burning Crusade Anniversary
+
 ## [1.15.1] - 2025-03-01
 
 - Updated TOC version
