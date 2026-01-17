@@ -1,5 +1,5 @@
 local _, Addon = ...
-local DB = Addon.DB
+local DB = Addon:GetModule("DB")
 
 local defaults = {
   global = {

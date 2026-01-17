@@ -1,4 +1,5 @@
-local L = select(2, ...).Locale
+local _, Addon = ...
+local L = Addon:GetModule("Locale")
 
 L["ABILITIES"] = "Abilities"
 L["ALL_PET_FAMILIES"] = "All Pet Families"

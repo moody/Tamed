@@ -1,8 +1,8 @@
-local AddonName, Addon = ...
-local DCL = Addon.Libs.DCL
-local HBDPins = Addon.Libs.HBDPins
-local L = Addon.Locale
-local PinHelper = Addon.UI.PinHelper
+local ADDON_NAME, Addon = ...
+local Colors = Addon:GetModule("Colors")
+local HBDPins = Addon:GetLibrary("HBDPins")
+local L = Addon:GetModule("Locale")
+local PinHelper = Addon:GetModule("PinHelper")
 
 local pins = {}
 local pool = {}
@@ -17,7 +17,7 @@ local function onEnter(self)
   self.highlight:SetAlpha(0.4)
   -- Show tooltip
   GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-  GameTooltip:SetText(DCL:ColorString(self.npc.name, Addon.Colors.Primary))
+  GameTooltip:SetText(Colors.Primary(self.npc.name))
   GameTooltip:AddDoubleLine(L.LEVEL, self.npc.level_range, nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.ABILITIES, table.concat(self.npc.abilities, ", "), nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.FAMILY, self.npc.family, nil, nil, nil, 1, 1, 1)
@@ -48,10 +48,10 @@ function PinHelper:Get(npc)
     pool[pin] = nil
   else
     count = count + 1
-    pin = CreateFrame("Button", AddonName .. "Pin" .. count, WorldMapFrame)
+    pin = CreateFrame("Button", ADDON_NAME .. "Pin" .. count, WorldMapFrame)
     pin:SetSize(14, 14)
 
-    pin.texture = pin:CreateTexture(AddonName .. "PinTexture" .. count, "BACKGROUND")
+    pin.texture = pin:CreateTexture(ADDON_NAME .. "PinTexture" .. count, "BACKGROUND")
     pin.texture:SetTexture(Addon.ICON)
     pin.texture:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     pin.texture:SetAllPoints()

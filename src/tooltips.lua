@@ -1,7 +1,6 @@
-local AddonName, Addon = ...
-local Colors = Addon.Colors
-local DB = Addon.DB
-local DCL = Addon.Libs.DCL
+local ADDON_NAME, Addon = ...
+local Colors = Addon:GetModule("Colors")
+local DB = Addon:GetModule("DB")
 local TameableNPCs = Addon.TameableNPCs
 
 GameTooltip:HookScript("OnTooltipSetUnit", function(self)
@@ -21,7 +20,7 @@ GameTooltip:HookScript("OnTooltipSetUnit", function(self)
   if not npc then return end
 
   -- Add lines.
-  self:AddLine(DCL:ColorString(AddonName, Colors.Primary))
+  self:AddLine(Colors.Primary(ADDON_NAME))
   for _, ability in ipairs(npc.abilities) do
     self:AddLine("  " .. ability, 1, 1, 1)
   end

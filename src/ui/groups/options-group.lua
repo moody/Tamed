@@ -1,16 +1,16 @@
 local _, Addon = ...
-local DB = Addon.DB
-local L = Addon.Locale
-local MinimapIcon = Addon.UI.MinimapIcon
-local Options = Addon.UI.Groups.Options
-local Widgets = Addon.UI.Widgets
+local DB = Addon:GetModule("DB")
+local L = Addon:GetModule("Locale")
+local MinimapIcon = Addon:GetModule("MinimapIcon")
+local OptionsGroup = Addon:GetModule("OptionsGroup")
+local Widgets = Addon:GetModule("Widgets")
 
-function Options:Create(parent)
+function OptionsGroup:Create(parent)
   Widgets:Heading(parent, L.OPTIONS)
   self:AddGeneral(parent)
 end
 
-function Options:AddGeneral(parent)
+function OptionsGroup:AddGeneral(parent)
   parent = Widgets:InlineGroup({
     parent = parent,
     title = L.GENERAL,

@@ -1,7 +1,6 @@
 local _, Addon = ...
-local Colors = Addon.Colors
-local DCL = Addon.Libs.DCL
-local L = Addon.Locale
+local Colors = Addon:GetModule("Colors")
+local L = Addon:GetModule("Locale")
 local TameableAbilities = Addon.TameableAbilities
 local TameableNPCs = Addon.TameableNPCs
 
@@ -37,10 +36,8 @@ for npc_id, npc in pairs(TameableNPCs) do
     -- Add `classification` to `level_range`.
     if npc.classification then
       npc.level_range = ("%s (%s)"):format(
-        npc.level_range, DCL:ColorString(
-          npc.classification,
-          Colors.Highlight
-        )
+        npc.level_range,
+        Colors.Highlight(npc.classification)
       )
     end
 
