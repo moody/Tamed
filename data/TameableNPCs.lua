@@ -17885,7 +17885,7 @@ Addon.TameableNPCs = {
     },
     ["diet"] = "Meat, Fish",
     ["family"] = "Cat",
-    ["level_range"] = "41",
+    ["level_range"] = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC and "50" or "41",
     ["name"] = "Jaguero Stalker",
     ["type"] = "Ferocity",
     ["ui_map_id"] = 1434,
