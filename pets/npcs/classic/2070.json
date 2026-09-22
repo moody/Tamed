@@ -3,7 +3,7 @@
   "name": "Moonstalker Runt",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "10-17",
   "zone_id": 148,
   "ui_map_id": 1439,

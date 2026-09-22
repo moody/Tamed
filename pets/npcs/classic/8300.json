@@ -3,7 +3,7 @@
   "name": "Ravage",
   "family": "Hyena",
   "type": "Cunning",
-  "diet": "Meat, Fruit",
+  "diet": ["Meat", "Fruit"],
   "level_range": "51",
   "classification": "Rare",
   "zone_id": 4,

@@ -3,7 +3,7 @@
   "name": "King Bangalash",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "43",
   "classification": "Elite",
   "zone_id": 33,

@@ -3,7 +3,7 @@
   "name": "Dreadfang Widow",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "64-65",
   "zone_id": 3519,
   "ui_map_id": 1952,

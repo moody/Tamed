@@ -3,7 +3,7 @@
   "name": "Scorpashi Snapper",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "30-31",
   "zone_id": 405,
   "ui_map_id": 1443,

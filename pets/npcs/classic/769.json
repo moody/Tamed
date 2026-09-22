@@ -3,7 +3,7 @@
   "name": "Deathstrike Tarantula",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "40-41",
   "zone_id": 8,
   "ui_map_id": 1435,

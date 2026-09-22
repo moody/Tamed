@@ -3,7 +3,7 @@
   "name": "Greater Fleshripper",
   "family": "Carrion Bird",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "16-17",
   "zone_id": 40,
   "ui_map_id": 1436,

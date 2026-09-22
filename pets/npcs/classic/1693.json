@@ -3,7 +3,7 @@
   "name": "Loch Crocolisk",
   "family": "Crocolisk",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "14-15",
   "zone_id": 38,
   "ui_map_id": 1432,

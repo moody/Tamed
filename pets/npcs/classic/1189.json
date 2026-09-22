@@ -3,7 +3,7 @@
   "name": "Black Bear Patriarch",
   "family": "Bear",
   "type": "Tenacity",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "16-17",
   "zone_id": 38,
   "ui_map_id": 1432,

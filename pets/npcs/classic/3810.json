@@ -3,7 +3,7 @@
   "name": "Elder Ashenvale Bear",
   "family": "Bear",
   "type": "Tenacity",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "25-26",
   "zone_id": 331,
   "ui_map_id": 1440,

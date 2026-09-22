@@ -3,7 +3,7 @@
   "name": "Foreststrider Fledgling",
   "family": "Tallstrider",
   "type": "Ferocity",
-  "diet": "Cheese, Fungus, Fruit",
+  "diet": ["Cheese", "Fungus", "Fruit"],
   "level_range": "11-13",
   "zone_id": 148,
   "ui_map_id": 1439,

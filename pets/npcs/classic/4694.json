@@ -3,7 +3,7 @@
   "name": "Dread Ripper",
   "family": "Carrion Bird",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "39-40",
   "zone_id": 405,
   "ui_map_id": 1443,

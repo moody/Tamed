@@ -3,7 +3,7 @@
   "name": "Tarantula",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "15-16",
   "zone_id": 44,
   "ui_map_id": 1433,

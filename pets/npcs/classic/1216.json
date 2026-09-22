@@ -3,7 +3,7 @@
   "name": "Shore Crawler",
   "family": "Crab",
   "type": "Tenacity",
-  "diet": "Fish, Bread, Fungus, Fruit",
+  "diet": ["Fish", "Bread", "Fungus", "Fruit"],
   "level_range": "17-18",
   "zone_id": 40,
   "ui_map_id": 1436,

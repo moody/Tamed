@@ -3,7 +3,7 @@
   "name": "Silvermane Howler",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "45-46",
   "zone_id": 47,
   "ui_map_id": 1425,

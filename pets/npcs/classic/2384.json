@@ -3,7 +3,7 @@
   "name": "Starving Mountain Lion",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "23-24",
   "zone_id": 267,
   "ui_map_id": 1424,

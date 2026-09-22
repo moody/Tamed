@@ -3,7 +3,7 @@
   "name": "Mist Howler",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "22",
   "classification": "Rare",
   "zone_id": 331,

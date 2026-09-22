@@ -3,7 +3,7 @@
   "name": "Wayward Buzzard",
   "family": "Carrion Bird",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "35-37",
   "zone_id": 3,
   "ui_map_id": 1418,

@@ -3,7 +3,7 @@
   "name": "Dark Worg",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "64-65",
   "zone_id": 3518,
   "ui_map_id": 1951,

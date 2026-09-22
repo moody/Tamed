@@ -3,7 +3,7 @@
   "name": "Female Kaliri Hatchling",
   "family": "Owl",
   "type": "Cunning",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "62",
   "zone_id": 3483,
   "ui_map_id": 1944,

@@ -3,7 +3,7 @@
   "name": "Githyiss the Vile",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "5",
   "zone_id": 141,
   "ui_map_id": 1438,

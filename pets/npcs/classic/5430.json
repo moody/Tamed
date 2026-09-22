@@ -3,7 +3,7 @@
   "name": "Searing Roc",
   "family": "Carrion Bird",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "47-49",
   "zone_id": 440,
   "ui_map_id": 1446,

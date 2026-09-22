@@ -3,7 +3,7 @@
   "name": "Giant Webwood Spider",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "10-11",
   "zone_id": 141,
   "ui_map_id": 1438,

@@ -3,7 +3,7 @@
   "name": "Gray Forest Wolf",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "7-8",
   "zone_id": 12,
   "ui_map_id": 1429,

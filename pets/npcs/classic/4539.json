@@ -3,7 +3,7 @@
   "name": "Greater Kraul Bat",
   "family": "Bat",
   "type": "Ferocity",
-  "diet": "Fungus, Fruit",
+  "diet": ["Fungus", "Fruit"],
   "level_range": "26",
   "classification": "Elite",
   "zone_id": 491,

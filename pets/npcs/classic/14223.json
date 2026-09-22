@@ -3,7 +3,7 @@
   "name": "Cranky Benj",
   "family": "Turtle",
   "type": "Tenacity",
-  "diet": "Fish, Fungus, Fruit, Raw Fish",
+  "diet": ["Fish", "Fungus", "Fruit", "Raw Fish"],
   "level_range": "32",
   "classification": "Rare",
   "zone_id": 36,

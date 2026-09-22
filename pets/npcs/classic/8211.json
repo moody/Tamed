@@ -3,7 +3,7 @@
   "name": "Old Cliff Jumper",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "42",
   "classification": "Rare",
   "zone_id": 47,

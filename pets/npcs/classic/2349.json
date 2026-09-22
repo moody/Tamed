@@ -3,7 +3,7 @@
   "name": "Giant Moss Creeper",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "24-25",
   "zone_id": 267,
   "ui_map_id": 1424,

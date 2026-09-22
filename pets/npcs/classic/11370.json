@@ -3,7 +3,7 @@
   "name": "Razzashi Broodwidow",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "56-61",
   "classification": "Elite",
   "zone_id": 1977,

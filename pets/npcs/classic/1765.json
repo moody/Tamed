@@ -3,7 +3,7 @@
   "name": "Worg",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "10-11",
   "zone_id": 130,
   "ui_map_id": 1421,

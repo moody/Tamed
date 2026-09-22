@@ -3,7 +3,7 @@
   "name": "Scalewing Serpent",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "66-67",
   "zone_id": 3522,
   "ui_map_id": 1949,

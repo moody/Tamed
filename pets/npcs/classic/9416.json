@@ -3,7 +3,7 @@
   "name": "Scarshield Worg <Scarshield Legion>",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "53-54",
   "zone_id": 1583,
   "abilities": [{ "key": "dash", "rank": 3 }],

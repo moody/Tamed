@@ -3,7 +3,7 @@
   "name": "Blind Hunter",
   "family": "Bat",
   "type": "Ferocity",
-  "diet": "Fungus, Fruit",
+  "diet": ["Fungus", "Fruit"],
   "level_range": "27",
   "classification": "Rare Elite",
   "zone_id": 491,

@@ -3,7 +3,7 @@
   "name": "Thunderhawk Cloudscraper",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "20-22",
   "zone_id": 17,
   "ui_map_id": 1413,

@@ -3,7 +3,7 @@
   "name": "Ridge Huntress",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "38-39",
   "zone_id": 3,
   "ui_map_id": 1418,

@@ -3,7 +3,7 @@
   "name": "Dreadmaw Crocolisk",
   "family": "Crocolisk",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "9-11",
   "zone_id": 14,
   "ui_map_id": 1411,

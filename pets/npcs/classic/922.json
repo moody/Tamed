@@ -3,7 +3,7 @@
   "name": "Silt Crawler",
   "family": "Crab",
   "type": "Tenacity",
-  "diet": "Fish, Bread, Fungus, Fruit",
+  "diet": ["Fish", "Bread", "Fungus", "Fruit"],
   "level_range": "40-41",
   "zone_id": 8,
   "ui_map_id": 1435,

@@ -3,7 +3,7 @@
   "name": "Ragged Scavenger",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "2-3",
   "zone_id": 85,
   "ui_map_id": 1420,

@@ -3,7 +3,7 @@
   "name": "Angerclaw Mauler",
   "family": "Bear",
   "type": "Tenacity",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "49-50",
   "zone_id": 361,
   "ui_map_id": 1448,

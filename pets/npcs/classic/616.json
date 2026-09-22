@@ -3,7 +3,7 @@
   "name": "Chatter",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "23",
   "classification": "Rare",
   "zone_id": 44,

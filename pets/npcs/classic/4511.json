@@ -3,7 +3,7 @@
   "name": "Agam'ar",
   "family": "Boar",
   "type": "Cunning",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "24-25",
   "classification": "Elite",
   "zone_id": 491,

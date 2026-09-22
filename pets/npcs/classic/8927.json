@@ -3,7 +3,7 @@
   "name": "Dark Screecher",
   "family": "Bat",
   "type": "Ferocity",
-  "diet": "Fungus, Fruit",
+  "diet": ["Fungus", "Fruit"],
   "level_range": "50-51",
   "zone_id": 1584,
   "abilities": [

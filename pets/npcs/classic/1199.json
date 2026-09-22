@@ -3,7 +3,7 @@
   "name": "Juvenile Snow Leopard",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "5-6",
   "zone_id": 1,
   "ui_map_id": 1426,

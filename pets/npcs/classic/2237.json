@@ -3,7 +3,7 @@
   "name": "Moonstalker Sire",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "17-18",
   "zone_id": 148,
   "ui_map_id": 1439,

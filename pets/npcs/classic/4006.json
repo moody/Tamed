@@ -3,7 +3,7 @@
   "name": "Deepmoss Webspinner",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "19-20",
   "zone_id": 406,
   "ui_map_id": 1442,

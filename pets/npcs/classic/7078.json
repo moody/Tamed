@@ -3,7 +3,7 @@
   "name": "Cleft Scorpid",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "36",
   "zone_id": 1337,
   "abilities": [{ "key": "scorpidpoison", "rank": 2 }],

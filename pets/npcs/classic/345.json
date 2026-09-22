@@ -3,7 +3,7 @@
   "name": "Bellygrub",
   "family": "Boar",
   "type": "Cunning",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "24",
   "zone_id": 44,
   "ui_map_id": 1433,

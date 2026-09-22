@@ -3,7 +3,7 @@
   "name": "Windroc Matriarch",
   "family": "Owl",
   "type": "Cunning",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "66",
   "classification": "Elite",
   "zone_id": 3518,

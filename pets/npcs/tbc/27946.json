@@ -3,7 +3,7 @@
   "name": "Silvermoon Dragonhawk",
   "family": "Dragonhawk",
   "type": "Ferocity",
-  "diet": "Meat, Fish, Fruit, Raw Meat, Raw Fish",
+  "diet": ["Meat", "Fish", "Fruit", "Raw Meat", "Raw Fish"],
   "level_range": "65",
   "classification": "Elite",
   "zone_id": 3430,

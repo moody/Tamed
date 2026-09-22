@@ -3,7 +3,7 @@
   "name": "Aku'mai Snapjaw",
   "family": "Turtle",
   "type": "Tenacity",
-  "diet": "Fish, Fungus, Fruit, Raw Fish",
+  "diet": ["Fish", "Fungus", "Fruit", "Raw Fish"],
   "level_range": "23",
   "classification": "Elite",
   "zone_id": 719,

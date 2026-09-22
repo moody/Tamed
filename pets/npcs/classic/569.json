@@ -3,7 +3,7 @@
   "name": "Green Recluse",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "21-22",
   "zone_id": 10,
   "ui_map_id": 1431,

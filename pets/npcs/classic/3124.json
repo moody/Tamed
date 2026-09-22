@@ -3,7 +3,7 @@
   "name": "Scorpid Worker",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "3",
   "zone_id": 14,
   "ui_map_id": 1411,

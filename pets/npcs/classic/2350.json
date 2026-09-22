@@ -3,7 +3,7 @@
   "name": "Forest Moss Creeper",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "20-21",
   "zone_id": 267,
   "ui_map_id": 1424,

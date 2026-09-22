@@ -3,7 +3,7 @@
   "name": "Fleeting Plainstrider",
   "family": "Tallstrider",
   "type": "Ferocity",
-  "diet": "Cheese, Fungus, Fruit",
+  "diet": ["Cheese", "Fungus", "Fruit"],
   "level_range": "12-13",
   "zone_id": 17,
   "ui_map_id": 1413,

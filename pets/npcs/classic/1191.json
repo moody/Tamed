@@ -3,7 +3,7 @@
   "name": "Mangy Mountain Boar",
   "family": "Boar",
   "type": "Cunning",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "14-15",
   "zone_id": 38,
   "ui_map_id": 1432,

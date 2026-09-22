@@ -3,7 +3,7 @@
   "name": "Lost Torranche",
   "family": "Tallstrider",
   "type": "Ferocity",
-  "diet": "Cheese, Fungus, Fruit",
+  "diet": ["Cheese", "Fungus", "Fruit"],
   "level_range": "70",
   "zone_id": 3519,
   "ui_map_id": 1952,

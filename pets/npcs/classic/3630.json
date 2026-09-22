@@ -3,7 +3,7 @@
   "name": "Deviate Coiler",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "15-16",
   "zone_id": 17,
   "ui_map_id": 1413,

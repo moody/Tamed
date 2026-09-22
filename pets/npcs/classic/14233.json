@@ -3,7 +3,7 @@
   "name": "Ripscale",
   "family": "Crocolisk",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "37",
   "classification": "Rare",
   "zone_id": 15,

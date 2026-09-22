@@ -3,7 +3,7 @@
   "name": "Deviate Venomwing",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "19",
   "classification": "Elite",
   "zone_id": 718,

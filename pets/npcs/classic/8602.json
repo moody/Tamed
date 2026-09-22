@@ -3,7 +3,7 @@
   "name": "Monstrous Plaguebat",
   "family": "Bat",
   "type": "Ferocity",
-  "diet": "Fungus, Fruit",
+  "diet": ["Fungus", "Fruit"],
   "level_range": "56-58",
   "zone_id": 139,
   "ui_map_id": 1423,

@@ -3,7 +3,7 @@
   "name": "Giant Plains Creeper",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "35-36",
   "zone_id": 45,
   "ui_map_id": 1417,

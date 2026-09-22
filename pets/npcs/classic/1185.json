@@ -3,7 +3,7 @@
   "name": "Wood Lurker",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "17-18",
   "zone_id": 38,
   "ui_map_id": 1432,

@@ -3,7 +3,7 @@
   "name": "Drywallow Daggermaw",
   "family": "Crocolisk",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "39-40",
   "zone_id": 15,
   "ui_map_id": 1445,

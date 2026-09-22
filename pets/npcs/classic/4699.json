@@ -3,7 +3,7 @@
   "name": "Scorpashi Venomlash",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "38-39",
   "zone_id": 405,
   "ui_map_id": 1443,

@@ -3,7 +3,7 @@
   "name": "Rekk'tilac",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "48",
   "classification": "Rare",
   "zone_id": 51,

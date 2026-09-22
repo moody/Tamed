@@ -3,7 +3,7 @@
   "name": "Tide Crawler",
   "family": "Crab",
   "type": "Tenacity",
-  "diet": "Fish, Bread, Fungus, Fruit",
+  "diet": ["Fish", "Bread", "Fungus", "Fruit"],
   "level_range": "12-14",
   "zone_id": 148,
   "ui_map_id": 1439,

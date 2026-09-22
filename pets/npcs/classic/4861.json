@@ -3,7 +3,7 @@
   "name": "Shrike Bat",
   "family": "Bat",
   "type": "Ferocity",
-  "diet": "Fungus, Fruit",
+  "diet": ["Fungus", "Fruit"],
   "level_range": "37-38",
   "classification": "Elite",
   "zone_id": 1337,

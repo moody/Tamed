@@ -3,7 +3,7 @@
   "name": "Den Mother",
   "family": "Bear",
   "type": "Tenacity",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "18-19",
   "zone_id": 148,
   "ui_map_id": 1439,

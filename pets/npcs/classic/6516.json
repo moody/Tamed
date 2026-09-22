@@ -3,7 +3,7 @@
   "name": "Un'Goro Thunderer",
   "family": "Gorilla",
   "type": "Ferocity",
-  "diet": "Fungus, Fruit",
+  "diet": ["Fungus", "Fruit"],
   "level_range": "52-53",
   "zone_id": 490,
   "ui_map_id": 1449,

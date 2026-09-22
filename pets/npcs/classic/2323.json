@@ -3,7 +3,7 @@
   "name": "Giant Foreststrider",
   "family": "Tallstrider",
   "type": "Ferocity",
-  "diet": "Cheese, Fungus, Fruit",
+  "diet": ["Cheese", "Fungus", "Fruit"],
   "level_range": "17-19",
   "zone_id": 148,
   "ui_map_id": 1439,

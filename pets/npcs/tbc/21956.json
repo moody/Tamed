@@ -3,7 +3,7 @@
   "name": "Rema <The Den Mother>",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "66",
   "zone_id": 3522,
   "ui_map_id": 1949,

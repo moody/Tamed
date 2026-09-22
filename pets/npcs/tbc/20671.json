@@ -3,7 +3,7 @@
   "name": "Ripfang Lynx",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "68-69",
   "zone_id": 3523,
   "ui_map_id": 1953,

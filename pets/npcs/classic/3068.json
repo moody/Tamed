@@ -3,7 +3,7 @@
   "name": "Mazzranache",
   "family": "Tallstrider",
   "type": "Ferocity",
-  "diet": "Cheese, Fungus, Fruit",
+  "diet": ["Cheese", "Fungus", "Fruit"],
   "level_range": "9",
   "classification": "Rare",
   "zone_id": 215,

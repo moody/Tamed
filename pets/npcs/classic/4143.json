@@ -3,7 +3,7 @@
   "name": "Sparkleshell Snapper",
   "family": "Turtle",
   "type": "Tenacity",
-  "diet": "Fish, Fungus, Fruit, Raw Fish",
+  "diet": ["Fish", "Fungus", "Fruit", "Raw Fish"],
   "level_range": "34-35",
   "zone_id": 400,
   "ui_map_id": 1441,

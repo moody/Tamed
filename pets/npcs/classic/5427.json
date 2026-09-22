@@ -3,7 +3,7 @@
   "name": "Rabid Blisterpaw",
   "family": "Hyena",
   "type": "Cunning",
-  "diet": "Meat, Fruit",
+  "diet": ["Meat", "Fruit"],
   "level_range": "47-48",
   "zone_id": 440,
   "ui_map_id": 1446,

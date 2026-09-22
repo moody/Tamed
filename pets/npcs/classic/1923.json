@@ -3,7 +3,7 @@
   "name": "Bloodsnout Worg",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "16-17",
   "zone_id": 130,
   "ui_map_id": 1421,

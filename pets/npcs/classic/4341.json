@@ -3,7 +3,7 @@
   "name": "Drywallow Crocolisk",
   "family": "Crocolisk",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "35-36",
   "zone_id": 15,
   "ui_map_id": 1445,

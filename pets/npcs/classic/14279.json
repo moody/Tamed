@@ -3,7 +3,7 @@
   "name": "Creepthess",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "24",
   "classification": "Rare",
   "zone_id": 267,

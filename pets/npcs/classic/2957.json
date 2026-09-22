@@ -3,7 +3,7 @@
   "name": "Elder Plainstrider",
   "family": "Tallstrider",
   "type": "Ferocity",
-  "diet": "Cheese, Fungus, Fruit",
+  "diet": ["Cheese", "Fungus", "Fruit"],
   "level_range": "8-9",
   "zone_id": 215,
   "ui_map_id": 1412,

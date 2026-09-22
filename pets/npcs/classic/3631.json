@@ -3,7 +3,7 @@
   "name": "Deviate Stinglash",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "16-17",
   "zone_id": 718,
   "abilities": [{ "key": "lightningbreath", "rank": 2 }],

@@ -3,7 +3,7 @@
   "name": "Feral Crag Coyote",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "37-38",
   "zone_id": 3,
   "ui_map_id": 1418,

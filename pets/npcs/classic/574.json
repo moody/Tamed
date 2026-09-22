@@ -3,7 +3,7 @@
   "name": "Naraxis",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "27",
   "classification": "Rare",
   "zone_id": 10,

@@ -3,7 +3,7 @@
   "name": "Starving Blisterpaw",
   "family": "Hyena",
   "type": "Cunning",
-  "diet": "Meat, Fruit",
+  "diet": ["Meat", "Fruit"],
   "level_range": "41-42",
   "zone_id": 440,
   "ui_map_id": 1446,

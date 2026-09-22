@@ -3,7 +3,7 @@
   "name": "Death Flayer",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "11",
   "classification": "Rare",
   "zone_id": 14,

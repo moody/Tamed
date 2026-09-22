@@ -3,7 +3,7 @@
   "name": "Scarlet Tracking Hound",
   "family": "Hyena",
   "type": "Cunning",
-  "diet": "Meat, Fruit",
+  "diet": ["Meat", "Fruit"],
   "level_range": "33",
   "classification": "Elite",
   "zone_id": 796,

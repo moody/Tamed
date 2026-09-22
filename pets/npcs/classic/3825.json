@@ -3,7 +3,7 @@
   "name": "Ghostpaw Alpha",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "27-28",
   "zone_id": 331,
   "ui_map_id": 1440,

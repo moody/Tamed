@@ -3,7 +3,7 @@
   "name": "Magram Bonepaw",
   "family": "Hyena",
   "type": "Cunning",
-  "diet": "Meat, Fruit",
+  "diet": ["Meat", "Fruit"],
   "level_range": "37-38",
   "zone_id": 405,
   "ui_map_id": 1443,

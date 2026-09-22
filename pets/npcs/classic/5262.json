@@ -3,7 +3,7 @@
   "name": "Groddoc Thunderer",
   "family": "Gorilla",
   "type": "Ferocity",
-  "diet": "Fungus, Fruit",
+  "diet": ["Fungus", "Fruit"],
   "level_range": "49-50",
   "zone_id": 357,
   "ui_map_id": 1444,

@@ -3,7 +3,7 @@
   "name": "Razorfang Hatchling",
   "family": "Ravager",
   "type": "Ferocity",
-  "diet": "Meat, Raw Meat",
+  "diet": ["Meat", "Raw Meat"],
   "level_range": "59-60",
   "zone_id": 3483,
   "ui_map_id": 1944,

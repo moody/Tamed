@@ -3,7 +3,7 @@
   "name": "Dread Flyer",
   "family": "Carrion Bird",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "36-37",
   "zone_id": 405,
   "ui_map_id": 1443,

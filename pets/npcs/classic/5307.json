@@ -3,7 +3,7 @@
   "name": "Vale Screecher",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "41-43",
   "zone_id": 357,
   "ui_map_id": 1444,

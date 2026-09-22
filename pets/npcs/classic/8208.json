@@ -3,7 +3,7 @@
   "name": "Murderous Blisterpaw",
   "family": "Hyena",
   "type": "Cunning",
-  "diet": "Meat, Fruit",
+  "diet": ["Meat", "Fruit"],
   "level_range": "43",
   "classification": "Rare",
   "zone_id": 440,

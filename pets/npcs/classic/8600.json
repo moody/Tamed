@@ -3,7 +3,7 @@
   "name": "Plaguebat",
   "family": "Bat",
   "type": "Ferocity",
-  "diet": "Fungus, Fruit",
+  "diet": ["Fungus", "Fruit"],
   "level_range": "53-55",
   "zone_id": 139,
   "ui_map_id": 1423,

@@ -3,7 +3,7 @@
   "name": "Large Loch Crocolisk",
   "family": "Crocolisk",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "22",
   "classification": "Rare",
   "zone_id": 38,

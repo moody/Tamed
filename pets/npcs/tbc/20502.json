@@ -3,7 +3,7 @@
   "name": "Eclipsion Dragonhawk",
   "family": "Dragonhawk",
   "type": "Ferocity",
-  "diet": "Meat, Fish, Fruit, Raw Meat, Raw Fish",
+  "diet": ["Meat", "Fish", "Fruit", "Raw Meat", "Raw Fish"],
   "level_range": "67-68",
   "zone_id": 3520,
   "ui_map_id": 1948,

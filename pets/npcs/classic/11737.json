@@ -3,7 +3,7 @@
   "name": "Stonelash Flayer",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "57-58",
   "zone_id": 1377,
   "ui_map_id": 1451,

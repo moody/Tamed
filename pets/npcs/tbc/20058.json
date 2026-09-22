@@ -3,7 +3,7 @@
   "name": "Bloodmaul Dire Wolf",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "60-65",
   "zone_id": 3522,
   "ui_map_id": 1949,

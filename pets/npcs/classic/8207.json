@@ -3,7 +3,7 @@
   "name": "Greater Firebird",
   "family": "Carrion Bird",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "46",
   "classification": "Rare",
   "zone_id": 440,

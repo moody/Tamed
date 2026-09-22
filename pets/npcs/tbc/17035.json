@@ -3,7 +3,7 @@
   "name": "Kaliri Matriarch",
   "family": "Owl",
   "type": "Cunning",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "63",
   "zone_id": 3483,
   "ui_map_id": 1944,

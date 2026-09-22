@@ -3,7 +3,7 @@
   "name": "Son of Hakkar",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "60",
   "classification": "Elite",
   "zone_id": 1977,

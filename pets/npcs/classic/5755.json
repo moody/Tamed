@@ -3,7 +3,7 @@
   "name": "Deviate Viper",
   "family": "Serpent",
   "type": "Ferocity",
-  "diet": "Meat, Fish, Raw Meat, Raw Fish",
+  "diet": ["Meat", "Fish", "Raw Meat", "Raw Fish"],
   "level_range": "19",
   "classification": "Elite",
   "zone_id": 718,

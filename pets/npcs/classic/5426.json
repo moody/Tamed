@@ -3,7 +3,7 @@
   "name": "Blisterpaw Hyena",
   "family": "Hyena",
   "type": "Cunning",
-  "diet": "Meat, Fruit",
+  "diet": ["Meat", "Fruit"],
   "level_range": "44-45",
   "zone_id": 440,
   "ui_map_id": 1446,

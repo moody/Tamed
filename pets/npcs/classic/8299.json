@@ -3,7 +3,7 @@
   "name": "Spiteflayer",
   "family": "Carrion Bird",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "52",
   "classification": "Rare",
   "zone_id": 4,

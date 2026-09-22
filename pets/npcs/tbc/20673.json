@@ -3,7 +3,7 @@
   "name": "Swiftwing Shredder",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "68-69",
   "zone_id": 3523,
   "ui_map_id": 1953,

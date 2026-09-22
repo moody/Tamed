@@ -3,7 +3,7 @@
   "name": "Scorpid Dunestalker",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "46-47",
   "zone_id": 440,
   "ui_map_id": 1446,

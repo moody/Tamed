@@ -3,7 +3,7 @@
   "name": "Wildthorn Lurker",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "28-29",
   "zone_id": 331,
   "ui_map_id": 1440,

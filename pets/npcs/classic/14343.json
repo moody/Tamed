@@ -3,7 +3,7 @@
   "name": "Olm the Wise",
   "family": "Owl",
   "type": "Cunning",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "52",
   "classification": "Rare",
   "zone_id": 361,

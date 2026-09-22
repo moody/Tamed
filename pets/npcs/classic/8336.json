@@ -3,7 +3,7 @@
   "name": "Hakkari Sapper",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "48-49",
   "classification": "Elite",
   "zone_id": 1477,

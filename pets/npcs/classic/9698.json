@@ -3,7 +3,7 @@
   "name": "Firetail Scorpid",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "56-57",
   "zone_id": 46,
   "ui_map_id": 1428,

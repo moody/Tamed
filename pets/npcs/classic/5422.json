@@ -3,7 +3,7 @@
   "name": "Scorpid Hunter",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "40-41",
   "zone_id": 440,
   "ui_map_id": 1446,

@@ -3,7 +3,7 @@
   "name": "Deathlash Scorpid",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "54-55",
   "zone_id": 46,
   "ui_map_id": 1428,

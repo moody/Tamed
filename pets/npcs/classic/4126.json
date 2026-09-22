@@ -3,7 +3,7 @@
   "name": "Crag Stalker",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "25-26",
   "zone_id": 400,
   "ui_map_id": 1441,

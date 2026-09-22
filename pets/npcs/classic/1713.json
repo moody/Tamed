@@ -3,7 +3,7 @@
   "name": "Elder Shadowmaw Panther",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "42-43",
   "zone_id": 33,
   "ui_map_id": 1434,

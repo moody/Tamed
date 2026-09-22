@@ -3,7 +3,7 @@
   "name": "Thistle Boar",
   "family": "Boar",
   "type": "Cunning",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "2-3",
   "zone_id": 141,
   "ui_map_id": 1438,

@@ -3,7 +3,7 @@
   "name": "Mongress",
   "family": "Bear",
   "type": "Tenacity",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "50",
   "classification": "Rare",
   "zone_id": 361,

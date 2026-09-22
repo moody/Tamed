@@ -3,7 +3,7 @@
   "name": "Elder Mistvale Gorilla",
   "family": "Gorilla",
   "type": "Ferocity",
-  "diet": "Fungus, Fruit",
+  "diet": ["Fungus", "Fruit"],
   "level_range": "40-41",
   "zone_id": 33,
   "ui_map_id": 1434,

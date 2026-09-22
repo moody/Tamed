@@ -3,7 +3,7 @@
   "name": "Bloodfalcon",
   "family": "Dragonhawk",
   "type": "Ferocity",
-  "diet": "Meat, Fish, Fruit, Raw Meat, Raw Fish",
+  "diet": ["Meat", "Fish", "Fruit", "Raw Meat", "Raw Fish"],
   "level_range": "69-70",
   "classification": "Elite",
   "zone_id": 3847,

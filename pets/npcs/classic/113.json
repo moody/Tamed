@@ -3,7 +3,7 @@
   "name": "Stonetusk Boar",
   "family": "Boar",
   "type": "Cunning",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "5-6",
   "zone_id": 12,
   "ui_map_id": 1429,

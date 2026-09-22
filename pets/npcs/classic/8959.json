@@ -3,7 +3,7 @@
   "name": "Felpaw Wolf",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "47-48",
   "zone_id": 361,
   "ui_map_id": 1448,

@@ -3,7 +3,7 @@
   "name": "Krellack",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "56",
   "classification": "Rare",
   "zone_id": 1377,

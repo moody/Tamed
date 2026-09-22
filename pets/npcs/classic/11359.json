@@ -3,7 +3,7 @@
   "name": "Soulflayer",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "61",
   "classification": "Elite",
   "zone_id": 1977,

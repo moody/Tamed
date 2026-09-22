@@ -3,7 +3,7 @@
   "name": "Vile Sting",
   "family": "Scorpid",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "35",
   "classification": "Rare Elite",
   "zone_id": 400,

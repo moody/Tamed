@@ -3,7 +3,7 @@
   "name": "Gutripper",
   "family": "Owl",
   "type": "Cunning",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "67",
   "classification": "Elite",
   "zone_id": 3518,

@@ -3,7 +3,7 @@
   "name": "Young Mesa Buzzard",
   "family": "Carrion Bird",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "31-32",
   "zone_id": 45,
   "ui_map_id": 1417,

@@ -3,7 +3,7 @@
   "name": "Ravenous Windroc",
   "family": "Owl",
   "type": "Cunning",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "65-66",
   "zone_id": 3518,
   "ui_map_id": 1951,

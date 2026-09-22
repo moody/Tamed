@@ -3,7 +3,7 @@
   "name": "Winterspring Owl",
   "family": "Owl",
   "type": "Cunning",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "54-56",
   "zone_id": 618,
   "ui_map_id": 1452,

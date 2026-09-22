@@ -3,7 +3,7 @@
   "name": "Plagued Swine",
   "family": "Boar",
   "type": "Cunning",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "60",
   "zone_id": 139,
   "ui_map_id": 1423,

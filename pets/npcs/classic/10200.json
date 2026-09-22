@@ -3,7 +3,7 @@
   "name": "Rak'shiri",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "57",
   "classification": "Rare",
   "zone_id": 618,

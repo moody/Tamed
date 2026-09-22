@@ -3,7 +3,7 @@
   "name": "Clattering Crawler",
   "family": "Crab",
   "type": "Tenacity",
-  "diet": "Fish, Bread, Fungus, Fruit",
+  "diet": ["Fish", "Bread", "Fungus", "Fruit"],
   "level_range": "19-20",
   "zone_id": 331,
   "ui_map_id": 1440,

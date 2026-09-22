@@ -3,7 +3,7 @@
   "name": "Skettis Kaliri",
   "family": "Owl",
   "type": "Cunning",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "70",
   "zone_id": 3519,
   "ui_map_id": 1952,

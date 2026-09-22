@@ -3,7 +3,7 @@
   "name": "Sin'Dall",
   "family": "Cat",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "37",
   "zone_id": 33,
   "ui_map_id": 1434,

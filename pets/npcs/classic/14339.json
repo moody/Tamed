@@ -3,7 +3,7 @@
   "name": "Death Howl",
   "family": "Wolf",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "49",
   "classification": "Rare",
   "zone_id": 361,

@@ -3,7 +3,7 @@
   "name": "Strigid Owl",
   "family": "Owl",
   "type": "Cunning",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "5-6",
   "zone_id": 141,
   "ui_map_id": 1438,

@@ -3,7 +3,7 @@
   "name": "Sewer Beast",
   "family": "Crocolisk",
   "type": "Ferocity",
-  "diet": "Meat, Fish",
+  "diet": ["Meat", "Fish"],
   "level_range": "50",
   "classification": "Rare",
   "zone_id": 1519,

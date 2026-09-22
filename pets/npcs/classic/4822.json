@@ -3,7 +3,7 @@
   "name": "Snapping Crustacean",
   "family": "Crab",
   "type": "Tenacity",
-  "diet": "Fish, Bread, Fungus, Fruit",
+  "diet": ["Fish", "Bread", "Fungus", "Fruit"],
   "level_range": "22-23",
   "classification": "Elite",
   "zone_id": 719,

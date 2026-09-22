@@ -3,7 +3,7 @@
   "name": "Arash-ethis",
   "family": "Wind Serpent",
   "type": "Ferocity",
-  "diet": "Fish, Cheese, Bread",
+  "diet": ["Fish", "Cheese", "Bread"],
   "level_range": "49",
   "classification": "Rare",
   "zone_id": 357,

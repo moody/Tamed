@@ -3,7 +3,7 @@
   "name": "Dire Mottled Boar",
   "family": "Boar",
   "type": "Cunning",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "6-7",
   "zone_id": 14,
   "ui_map_id": 1411,

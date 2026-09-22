@@ -3,7 +3,7 @@
   "name": "Webwood Silkspinner",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "8-9",
   "zone_id": 141,
   "ui_map_id": 1438,

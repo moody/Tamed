@@ -3,7 +3,7 @@
   "name": "Ironfur Patriarch",
   "family": "Bear",
   "type": "Tenacity",
-  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
   "level_range": "48-49",
   "zone_id": 357,
   "ui_map_id": 1444,

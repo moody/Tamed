@@ -3,7 +3,7 @@
   "name": "Shanda the Spinner",
   "family": "Spider",
   "type": "Ferocity",
-  "diet": "Meat",
+  "diet": ["Meat"],
   "level_range": "19",
   "classification": "Rare",
   "zone_id": 38,
