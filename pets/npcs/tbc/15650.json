@@ -3,7 +3,7 @@
   "name": "Crazed Dragonhawk",
   "family": "Dragonhawk",
   "type": "Ferocity",
-  "diet": ["Meat", "Fish", "Fruit", "Raw Meat", "Raw Fish"],
+  "diet": ["Meat", "Fish", "Fruit"],
   "level_range": "7-8",
   "zone_id": 3430,
   "ui_map_id": 1941,

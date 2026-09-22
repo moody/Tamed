@@ -3,7 +3,7 @@
   "name": "Aku'mai Fisher",
   "family": "Turtle",
   "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit", "Raw Fish"],
+  "diet": ["Fish", "Fungus", "Fruit"],
   "level_range": "22-23",
   "classification": "Elite",
   "zone_id": 719,

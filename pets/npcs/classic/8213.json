@@ -3,7 +3,7 @@
   "name": "Ironback",
   "family": "Turtle",
   "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit", "Raw Fish"],
+  "diet": ["Fish", "Fungus", "Fruit"],
   "level_range": "51",
   "classification": "Rare",
   "zone_id": 47,

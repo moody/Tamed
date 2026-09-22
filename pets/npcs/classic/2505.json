@@ -3,7 +3,7 @@
   "name": "Saltwater Snapjaw",
   "family": "Turtle",
   "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit", "Raw Fish"],
+  "diet": ["Fish", "Fungus", "Fruit"],
   "level_range": "49-50",
   "zone_id": 47,
   "ui_map_id": 1425,

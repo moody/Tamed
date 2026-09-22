@@ -3,7 +3,7 @@
   "name": "Blackwind Warp Chaser",
   "family": "Warp Stalker",
   "type": "Ferocity",
-  "diet": ["Fish", "Fruit", "Raw Fish"],
+  "diet": ["Fish", "Fruit"],
   "level_range": "69-70",
   "zone_id": 3519,
   "ui_map_id": 1952,

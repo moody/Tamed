@@ -3,7 +3,7 @@
   "name": "Enraged Ravager",
   "family": "Ravager",
   "type": "Ferocity",
-  "diet": ["Meat", "Raw Meat"],
+  "diet": ["Meat"],
   "level_range": "16-17",
   "zone_id": 3525,
   "ui_map_id": 1950,

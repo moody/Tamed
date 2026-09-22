@@ -3,7 +3,7 @@
   "name": "Snapjaw",
   "family": "Turtle",
   "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit", "Raw Fish"],
+  "diet": ["Fish", "Fungus", "Fruit"],
   "level_range": "30-31",
   "zone_id": 267,
   "ui_map_id": 1424,

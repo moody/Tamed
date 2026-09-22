@@ -3,7 +3,7 @@
   "name": "Warp Chaser",
   "family": "Warp Stalker",
   "type": "Ferocity",
-  "diet": ["Fish", "Fruit", "Raw Fish"],
+  "diet": ["Fish", "Fruit"],
   "level_range": "67-68",
   "zone_id": 3523,
   "ui_map_id": 1953,

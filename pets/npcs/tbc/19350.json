@@ -3,7 +3,7 @@
   "name": "Thornfang Venomspitter",
   "family": "Ravager",
   "type": "Ferocity",
-  "diet": ["Meat", "Raw Meat"],
+  "diet": ["Meat"],
   "level_range": "62-63",
   "zone_id": 3483,
   "ui_map_id": 1944,

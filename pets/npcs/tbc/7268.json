@@ -3,7 +3,7 @@
   "name": "Sandfury Guardian",
   "family": "Serpent",
   "type": "Ferocity",
-  "diet": ["Meat", "Fish", "Raw Meat", "Raw Fish"],
+  "diet": ["Meat", "Fish"],
   "level_range": "45",
   "classification": "Elite",
   "zone_id": 1176,

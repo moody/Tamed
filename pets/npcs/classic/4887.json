@@ -3,7 +3,7 @@
   "name": "Ghamoo-ra",
   "family": "Turtle",
   "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit", "Raw Fish"],
+  "diet": ["Fish", "Fungus", "Fruit"],
   "level_range": "23",
   "classification": "Elite",
   "zone_id": 719,

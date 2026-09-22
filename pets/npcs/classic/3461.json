@@ -3,7 +3,7 @@
   "name": "Oasis Snapjaw",
   "family": "Turtle",
   "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit", "Raw Fish"],
+  "diet": ["Fish", "Fungus", "Fruit"],
   "level_range": "15-16",
   "zone_id": 17,
   "ui_map_id": 1413,
