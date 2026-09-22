@@ -1,7 +1,10 @@
-local ADDON_NAME, Addon = ...
+local ADDON_NAME = ... ---@type string
+local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local HBDPins = Addon:GetLibrary("HBDPins")
 local L = Addon:GetModule("Locale")
+
+--- @class PinHelper
 local PinHelper = Addon:GetModule("PinHelper")
 
 local pins = {}

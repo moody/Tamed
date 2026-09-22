@@ -1,4 +1,6 @@
-local _, Addon = ...
+local Addon = select(2, ...) ---@type Addon
+
+--- @class Locale
 local L = Addon:GetModule("Locale")
 
 L["ABILITIES"] = "Abilities"

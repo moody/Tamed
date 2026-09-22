@@ -8,8 +8,6 @@
 # Libraries
 libs\LibStub.lua
 libs\CallbackHandler-1.0.lua
-libs\AceAddon-3.0.lua
-libs\AceConsole-3.0.lua
 libs\AceDB-3.0.lua
 libs\AceGUI-3.0\AceGUI-3.0.xml
 libs\HereBeDragons-2.0.lua
@@ -19,12 +17,15 @@ libs\LibDBIcon-1.0.lua
 
 # General
 src\_init.lua
+src\events\events.lua
+src\events\event-manager.lua
 src\locale.lua
-src\colors.lua
+src\utils\colors.lua
 src\data.lua
 src\commands.lua
 src\db.lua
 src\tooltips.lua
+src\login.lua
 
 # Data
 data\TameableNPCs-Classic.lua

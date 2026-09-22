@@ -1,4 +1,5 @@
-local ADDON_NAME, Addon = ...
+local ADDON_NAME = ... ---@type string
+local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local DB = Addon:GetModule("DB")
 local TameableNPCs = Addon:GetModule("TameableNPCs")

@@ -1,4 +1,6 @@
-local _, Addon = ...
+local Addon = select(2, ...) ---@type Addon
+
+--- @class DB
 local DB = Addon:GetModule("DB")
 
 local defaults = {

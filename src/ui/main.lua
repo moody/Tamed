@@ -1,12 +1,15 @@
-local AddonName, Addon = ...
+local ADDON_NAME = ... ---@type string
+local Addon = select(2, ...) ---@type Addon
 local AbilityGroup = Addon:GetModule("AbilityGroup")
 local AceGUI = Addon:GetLibrary("AceGUI")
 local Colors = Addon:GetModule("Colors")
 local L = Addon:GetModule("Locale")
 local OptionsGroup = Addon:GetModule("OptionsGroup")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
-local UI = Addon:GetModule("UI")
 local Widgets = Addon:GetModule("Widgets")
+
+--- @class UI
+local UI = Addon:GetModule("UI")
 
 local TreeGroup = {}
 
@@ -38,7 +41,7 @@ end
 
 function UI:Create()
   local frame = AceGUI:Create("Frame")
-  frame:SetTitle(AddonName)
+  frame:SetTitle(ADDON_NAME)
   frame:SetWidth(650)
   frame:SetHeight(500)
   frame.frame:SetResizeBounds(650, 500)

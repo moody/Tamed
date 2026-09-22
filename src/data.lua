@@ -1,9 +1,11 @@
-local _, Addon = ...
+local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
-local Data = Addon:GetModule("Data")
 local L = Addon:GetModule("Locale")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
+
+--- @class Data
+local Data = Addon:GetModule("Data")
 
 -- Resolves TameableAbilities/TameableNPCs against the running client, once
 -- every flavor's data has been merged in.

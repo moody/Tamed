@@ -1,4 +1,7 @@
-local ADDON_NAME, Addon = ...
+local ADDON_NAME = ... ---@type string
+
+--- @class Addon
+local Addon = select(2, ...)
 
 -- ============================================================================
 -- Consts
@@ -12,13 +15,38 @@ Addon.IS_TBC = WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC
 -- Functions
 -- ============================================================================
 
-do -- Addon:GetModule()
+-- Addon:GetModule()
+do
+  --- @type table<string, table>
   local modules = {}
 
+  --- Gets or creates a module table for the given `key`.
+  --- @generic T
+  --- @param key `T`
+  --- @return T
   function Addon:GetModule(key)
+    --- @cast key +string
     key = key:upper()
     if type(modules[key]) ~= "table" then modules[key] = {} end
     return modules[key]
+  end
+end
+
+do -- Addon:GetLibrary()
+  --- @enum (key) LibraryKey
+  local libraries = {
+    AceGUI = LibStub("AceGUI-3.0"),
+    HBD = LibStub("HereBeDragons-2.0"),
+    HBDPins = LibStub("HereBeDragons-Pins-2.0"),
+    LDB = LibStub("LibDataBroker-1.1"),
+    LDBIcon = LibStub("LibDBIcon-1.0")
+  }
+
+  --- Returns a library based on the given `key`.
+  --- @param key LibraryKey
+  --- @return table
+  function Addon:GetLibrary(key)
+    return libraries[key] or error("Invalid library: " .. key)
   end
 end
 
@@ -54,31 +82,5 @@ do -- Addon:MergeTameableAbilities()
         TameableAbilities[key] = patch
       end
     end
-  end
-end
-
-do -- Addon:GetLibrary()
-  local libraries = {
-    AceAddon = LibStub("AceAddon-3.0"):NewAddon(ADDON_NAME, "AceConsole-3.0"),
-    AceGUI = LibStub("AceGUI-3.0"),
-    HBD = LibStub("HereBeDragons-2.0"),
-    HBDPins = LibStub("HereBeDragons-Pins-2.0"),
-    LDB = LibStub("LibDataBroker-1.1"),
-    LDBIcon = LibStub("LibDBIcon-1.0")
-  }
-
-  function Addon:GetLibrary(key)
-    return libraries[key] or error("Invalid library: " .. key)
-  end
-end
-
-do -- AceAddon:OnInitialize().
-  local AceAddon = Addon:GetLibrary("AceAddon")
-
-  function AceAddon:OnInitialize()
-    Addon:GetModule("DB"):Initialize()
-    Addon:GetModule("Data"):Initialize()
-    Addon:GetModule("MinimapIcon"):Initialize()
-    Addon:GetModule("Commands"):Initialize()
   end
 end

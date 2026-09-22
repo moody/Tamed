@@ -1,12 +1,15 @@
-local ADDON_NAME, Addon = ...
+local ADDON_NAME = ... ---@type string
+local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local DB = Addon:GetModule("DB")
 local L = Addon:GetModule("Locale")
 local LDB = Addon:GetLibrary("LDB")
 local LDBIcon = Addon:GetLibrary("LDBIcon")
-local MinimapIcon = Addon:GetModule("MinimapIcon")
 local PinHelper = Addon:GetModule("PinHelper")
 local UI = Addon:GetModule("UI")
+
+--- @class MinimapIcon
+local MinimapIcon = Addon:GetModule("MinimapIcon")
 
 -- Initialize LDB object.
 function MinimapIcon:Initialize()
