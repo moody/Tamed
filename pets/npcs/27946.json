@@ -1,0 +1,13 @@
+{
+  "npc_id": 27946,
+  "name": "Silvermoon Dragonhawk",
+  "family": "Dragonhawk",
+  "type": "Ferocity",
+  "diet": "Meat, Fish, Fruit, Raw Meat, Raw Fish",
+  "level_range": "65",
+  "classification": "Elite",
+  "zone_id": 3430,
+  "ui_map_id": 1941,
+  "abilities": [{ "key": "firebreath", "rank": 2 }],
+  "coords": [[54.6, 50.8]]
+}

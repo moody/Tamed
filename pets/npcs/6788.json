@@ -1,0 +1,12 @@
+{
+  "npc_id": 6788,
+  "name": "Den Mother",
+  "family": "Bear",
+  "type": "Tenacity",
+  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "level_range": "18-19",
+  "zone_id": 148,
+  "ui_map_id": 1439,
+  "abilities": [{ "key": "claw", "rank": 3 }],
+  "coords": [[51.6, 37.6]]
+}

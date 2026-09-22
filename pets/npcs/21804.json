@@ -1,0 +1,20 @@
+{
+  "npc_id": 21804,
+  "name": "Skettis Kaliri",
+  "family": "Owl",
+  "type": "Cunning",
+  "diet": "Meat",
+  "level_range": "70",
+  "zone_id": 3519,
+  "ui_map_id": 1952,
+  "abilities": [{ "key": "dive", "rank": 3 }],
+  "coords": [
+    [62.0, 74.8],
+    [65.6, 78.6],
+    [66.6, 80.0],
+    [70.0, 75.6],
+    [70.4, 79.6],
+    [74.2, 82.2],
+    [75.0, 80.6]
+  ]
+}

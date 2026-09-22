@@ -1,0 +1,26 @@
+{
+  "npc_id": 3225,
+  "name": "Corrupted Mottled Boar",
+  "family": "Boar",
+  "type": "Cunning",
+  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "level_range": "10-11",
+  "zone_id": 14,
+  "ui_map_id": 1411,
+  "abilities": [
+    { "key": "charge", "rank": 1 },
+    { "key": "gore", "rank": 2 }
+  ],
+  "coords": [
+    [36.8, 39.4],
+    [36.8, 40.4],
+    [36.8, 42.8],
+    [37.0, 37.6],
+    [37.0, 45.2],
+    [37.8, 24.0],
+    [38.2, 23.0],
+    [40.6, 22.6],
+    [42.6, 20.6],
+    [42.6, 22.0]
+  ]
+}

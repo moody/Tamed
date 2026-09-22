@@ -1,0 +1,16 @@
+{
+  "npc_id": 19055,
+  "name": "Windroc Matriarch",
+  "family": "Owl",
+  "type": "Cunning",
+  "diet": "Meat",
+  "level_range": "66",
+  "classification": "Elite",
+  "zone_id": 3518,
+  "ui_map_id": 1951,
+  "abilities": [
+    { "key": "dive", "rank": 3 },
+    { "key": "screech", "rank": 5 }
+  ],
+  "coords": [[61.6, 66.6]]
+}

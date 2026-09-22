@@ -1,0 +1,18 @@
+{
+  "npc_id": 17039,
+  "name": "Male Kaliri Hatchling",
+  "family": "Owl",
+  "type": "Cunning",
+  "diet": "Meat",
+  "level_range": "61",
+  "zone_id": 3483,
+  "ui_map_id": 1944,
+  "abilities": [{ "key": "claw", "rank": 8 }],
+  "coords": [
+    [25.2, 71.6],
+    [25.6, 76.8],
+    [26.4, 74.4],
+    [27.6, 77.8],
+    [29.0, 81.4]
+  ]
+}

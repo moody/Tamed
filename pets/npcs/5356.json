@@ -1,0 +1,27 @@
+{
+  "npc_id": 5356,
+  "name": "Snarler",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "42",
+  "classification": "Rare",
+  "zone_id": 357,
+  "ui_map_id": 1444,
+  "abilities": [
+    { "key": "bite", "rank": 6 },
+    { "key": "furioushowl", "rank": 3 }
+  ],
+  "coords": [
+    [75.6, 36.2],
+    [76.0, 43.4],
+    [76.8, 39.0],
+    [77.6, 37.2],
+    [79.6, 39.0],
+    [80.8, 40.6],
+    [82.6, 41.1],
+    [82.8, 38.8],
+    [84.6, 38.0],
+    [85.4, 37.0]
+  ]
+}

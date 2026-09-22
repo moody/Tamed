@@ -1,0 +1,12 @@
+{
+  "npc_id": 7022,
+  "name": "Venomlash Scorpid",
+  "family": "Scorpid",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "37-38",
+  "classification": "Elite",
+  "zone_id": 1337,
+  "abilities": [{ "key": "claw", "rank": 5 }],
+  "coords": []
+}

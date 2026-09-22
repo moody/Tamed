@@ -1,0 +1,17 @@
+{
+  "npc_id": 1112,
+  "name": "Leech Widow",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "24",
+  "classification": "Rare",
+  "zone_id": 11,
+  "ui_map_id": 1437,
+  "abilities": [{ "key": "bite", "rank": 4 }],
+  "coords": [
+    [45.6, 63.8],
+    [46.6, 64.0],
+    [47.0, 61.6]
+  ]
+}

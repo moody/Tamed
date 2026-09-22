@@ -1,0 +1,28 @@
+{
+  "npc_id": 8211,
+  "name": "Old Cliff Jumper",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "42",
+  "classification": "Rare",
+  "zone_id": 47,
+  "ui_map_id": 1425,
+  "abilities": [
+    { "key": "bite", "rank": 6 },
+    { "key": "dash", "rank": 2 }
+  ],
+  "coords": [
+    [15.6, 53.0],
+    [17.0, 54.6],
+    [17.6, 56.0],
+    [18.2, 54.4],
+    [19.4, 53.8],
+    [19.6, 50.6],
+    [20.5, 48.9],
+    [21.1, 51.0],
+    [21.4, 52.6],
+    [22.6, 52.4],
+    [23.2, 51.0]
+  ]
+}

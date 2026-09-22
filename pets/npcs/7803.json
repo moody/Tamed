@@ -1,0 +1,12 @@
+{
+  "npc_id": 7803,
+  "name": "Scorpid Duneburrower",
+  "family": "Scorpid",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "46-47",
+  "zone_id": 440,
+  "ui_map_id": 1446,
+  "abilities": [{ "key": "scorpidpoison", "rank": 3 }],
+  "coords": [[61.2, 53.8]]
+}

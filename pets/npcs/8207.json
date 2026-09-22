@@ -1,0 +1,28 @@
+{
+  "npc_id": 8207,
+  "name": "Greater Firebird",
+  "family": "Carrion Bird",
+  "type": "Ferocity",
+  "diet": "Meat, Fish",
+  "level_range": "46",
+  "classification": "Rare",
+  "zone_id": 440,
+  "ui_map_id": 1446,
+  "abilities": [{ "key": "dive", "rank": 2 }],
+  "coords": [
+    [41.2, 35.2],
+    [42.2, 36.4],
+    [42.2, 38.2],
+    [42.8, 34.7],
+    [44.8, 35.4],
+    [45.4, 33.6],
+    [46.8, 33.6],
+    [47.0, 34.6],
+    [47.4, 37.0],
+    [47.8, 39.8],
+    [48.7, 35.2],
+    [49.3, 38.8],
+    [50.8, 38.4],
+    [53.0, 38.7]
+  ]
+}

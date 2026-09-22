@@ -1,0 +1,15 @@
+{
+  "npc_id": 2565,
+  "name": "Giant Plains Creeper",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "35-36",
+  "zone_id": 45,
+  "ui_map_id": 1417,
+  "abilities": [{ "key": "bite", "rank": 5 }],
+  "coords": [
+    [44.2, 35.8],
+    [44.6, 32.0]
+  ]
+}

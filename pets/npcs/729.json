@@ -1,0 +1,12 @@
+{
+  "npc_id": 729,
+  "name": "Sin'Dall",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": "Meat, Fish",
+  "level_range": "37",
+  "zone_id": 33,
+  "ui_map_id": 1434,
+  "abilities": [{ "key": "dash", "rank": 1 }],
+  "coords": [[32.6, 17.2]]
+}

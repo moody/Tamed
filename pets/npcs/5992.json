@@ -1,0 +1,27 @@
+{
+  "npc_id": 5992,
+  "name": "Ashmane Boar",
+  "family": "Boar",
+  "type": "Cunning",
+  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "level_range": "48-49",
+  "zone_id": 4,
+  "ui_map_id": 1419,
+  "abilities": [
+    { "key": "charge", "rank": 5 },
+    { "key": "gore", "rank": 7 }
+  ],
+  "coords": [
+    [55.6, 31.6],
+    [56.8, 32.4],
+    [56.9, 29.2],
+    [57.6, 30.6],
+    [57.6, 34.4],
+    [58.6, 28.6],
+    [58.6, 35.6],
+    [61.0, 26.7],
+    [61.1, 28.8],
+    [62.6, 26.2],
+    [62.6, 28.6]
+  ]
+}

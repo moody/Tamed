@@ -1,0 +1,25 @@
+{
+  "npc_id": 4117,
+  "name": "Cloud Serpent",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": "Fish, Cheese, Bread",
+  "level_range": "25-26",
+  "zone_id": 400,
+  "ui_map_id": 1441,
+  "abilities": [{ "key": "lightningbreath", "rank": 3 }],
+  "coords": [
+    [34.6, 26.6],
+    [37.6, 30.0],
+    [37.6, 53.8],
+    [37.8, 38.2],
+    [39.0, 56.2],
+    [39.8, 33.4],
+    [39.8, 37.2],
+    [40.0, 34.8],
+    [40.6, 57.2],
+    [44.6, 54.2],
+    [51.6, 56.0],
+    [52.6, 54.8]
+  ]
+}

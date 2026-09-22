@@ -1,0 +1,12 @@
+{
+  "npc_id": 5291,
+  "name": "Hakkari Frostwing",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": "Fish, Cheese, Bread",
+  "level_range": "48-49",
+  "classification": "Elite",
+  "zone_id": 1477,
+  "abilities": [{ "key": "lightningbreath", "rank": 5 }],
+  "coords": []
+}

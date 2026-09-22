@@ -1,0 +1,11 @@
+{
+  "npc_id": 13599,
+  "name": "Stolid Snapjaw",
+  "family": "Turtle",
+  "type": "Tenacity",
+  "diet": "Fish, Fungus, Fruit, Raw Fish",
+  "level_range": "45-46",
+  "zone_id": 2100,
+  "abilities": [{ "key": "bite", "rank": 6 }],
+  "coords": []
+}

@@ -1,0 +1,17 @@
+{
+  "npc_id": 7319,
+  "name": "Lady Sathrah",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "12",
+  "zone_id": 141,
+  "ui_map_id": 1438,
+  "abilities": [{ "key": "bite", "rank": 2 }],
+  "coords": [
+    [39.6, 25.6],
+    [42.0, 25.6],
+    [47.8, 26.6],
+    [48.0, 25.6]
+  ]
+}

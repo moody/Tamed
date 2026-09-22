@@ -1,0 +1,15 @@
+{
+  "npc_id": 4824,
+  "name": "Aku'mai Fisher",
+  "family": "Turtle",
+  "type": "Tenacity",
+  "diet": "Fish, Fungus, Fruit, Raw Fish",
+  "level_range": "22-23",
+  "classification": "Elite",
+  "zone_id": 719,
+  "abilities": [
+    { "key": "bite", "rank": 3 },
+    { "key": "shellshield", "rank": 1 }
+  ],
+  "coords": []
+}

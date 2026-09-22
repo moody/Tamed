@@ -1,0 +1,11 @@
+{
+  "npc_id": 8926,
+  "name": "Deep Stinger",
+  "family": "Scorpid",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "50-51",
+  "zone_id": 1584,
+  "abilities": [{ "key": "scorpidpoison", "rank": 3 }],
+  "coords": []
+}

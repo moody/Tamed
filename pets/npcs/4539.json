@@ -1,0 +1,12 @@
+{
+  "npc_id": 4539,
+  "name": "Greater Kraul Bat",
+  "family": "Bat",
+  "type": "Ferocity",
+  "diet": "Fungus, Fruit",
+  "level_range": "26",
+  "classification": "Elite",
+  "zone_id": 491,
+  "abilities": [{ "key": "dive", "rank": 1 }],
+  "coords": []
+}

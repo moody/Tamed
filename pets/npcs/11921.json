@@ -1,0 +1,17 @@
+{
+  "npc_id": 11921,
+  "name": "Besseleth",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "21",
+  "zone_id": 406,
+  "ui_map_id": 1442,
+  "abilities": [{ "key": "bite", "rank": 3 }],
+  "coords": [
+    [52.6, 74.0],
+    [53.0, 71.4],
+    [53.6, 72.6],
+    [54.6, 72.8]
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "npc_id": 4005,
+  "name": "Deepmoss Creeper",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "16-17",
+  "zone_id": 406,
+  "ui_map_id": 1442,
+  "abilities": [{ "key": "bite", "rank": 3 }],
+  "coords": [
+    [55.0, 76.0],
+    [56.8, 76.2],
+    [58.8, 75.0],
+    [59.2, 72.8],
+    [59.2, 78.0],
+    [61.6, 82.0],
+    [64.2, 93.2],
+    [65.0, 83.8],
+    [67.6, 87.6],
+    [68.8, 88.6]
+  ]
+}

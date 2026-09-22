@@ -1,0 +1,12 @@
+{
+  "npc_id": 3281,
+  "name": "Sarkoth",
+  "family": "Scorpid",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "4",
+  "zone_id": 14,
+  "ui_map_id": 1411,
+  "abilities": [{ "key": "claw", "rank": 1 }],
+  "coords": [[40.6, 66.6]]
+}

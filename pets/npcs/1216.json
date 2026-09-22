@@ -1,0 +1,24 @@
+{
+  "npc_id": 1216,
+  "name": "Shore Crawler",
+  "family": "Crab",
+  "type": "Tenacity",
+  "diet": "Fish, Bread, Fungus, Fruit",
+  "level_range": "17-18",
+  "zone_id": 40,
+  "ui_map_id": 1436,
+  "abilities": [{ "key": "claw", "rank": 3 }],
+  "coords": [
+    [25.8, 64.8],
+    [26.6, 65.8],
+    [26.6, 68.0],
+    [28.8, 77.2],
+    [29.6, 78.7],
+    [30.4, 81.1],
+    [30.8, 83.2],
+    [33.2, 83.2],
+    [35.8, 87.4],
+    [36.2, 90.0],
+    [37.0, 88.6]
+  ]
+}

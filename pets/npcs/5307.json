@@ -1,0 +1,27 @@
+{
+  "npc_id": 5307,
+  "name": "Vale Screecher",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": "Fish, Cheese, Bread",
+  "level_range": "41-43",
+  "zone_id": 357,
+  "ui_map_id": 1444,
+  "abilities": [
+    { "key": "dive", "rank": 2 },
+    { "key": "lightningbreath", "rank": 4 }
+  ],
+  "coords": [
+    [55.8, 54.0],
+    [57.0, 53.0],
+    [57.0, 60.8],
+    [57.1, 54.9],
+    [57.4, 56.6],
+    [57.6, 59.6],
+    [58.6, 55.6],
+    [58.6, 56.6],
+    [58.6, 58.8],
+    [60.0, 61.2],
+    [60.6, 62.2]
+  ]
+}

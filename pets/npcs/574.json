@@ -1,0 +1,13 @@
+{
+  "npc_id": 574,
+  "name": "Naraxis",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "27",
+  "classification": "Rare",
+  "zone_id": 10,
+  "ui_map_id": 1431,
+  "abilities": [{ "key": "bite", "rank": 4 }],
+  "coords": [[86.5, 48.8]]
+}

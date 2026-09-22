@@ -1,0 +1,25 @@
+{
+  "npc_id": 8300,
+  "name": "Ravage",
+  "family": "Hyena",
+  "type": "Cunning",
+  "diet": "Meat, Fruit",
+  "level_range": "51",
+  "classification": "Rare",
+  "zone_id": 4,
+  "ui_map_id": 1419,
+  "abilities": [{ "key": "dash", "rank": 3 }],
+  "coords": [
+    [46.6, 37.8],
+    [47.2, 34.4],
+    [48.0, 33.6],
+    [48.8, 38.6],
+    [49.2, 37.2],
+    [49.8, 35.2],
+    [58.7, 34.7],
+    [59.2, 37.8],
+    [60.6, 37.6],
+    [60.9, 35.1],
+    [61.4, 38.6]
+  ]
+}

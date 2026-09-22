@@ -1,0 +1,27 @@
+{
+  "npc_id": 3249,
+  "name": "Greater Thunderhawk",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": "Fish, Cheese, Bread",
+  "level_range": "23-24",
+  "zone_id": 17,
+  "ui_map_id": 1413,
+  "abilities": [{ "key": "lightningbreath", "rank": 2 }],
+  "coords": [
+    [43.8, 74.4],
+    [43.8, 78.8],
+    [44.2, 77.0],
+    [44.8, 78.6],
+    [45.1, 74.6],
+    [45.1, 80.7],
+    [46.8, 73.6],
+    [46.8, 76.2],
+    [46.8, 79.0],
+    [47.2, 74.6],
+    [47.6, 81.0],
+    [48.6, 79.2],
+    [48.8, 76.8],
+    [49.0, 75.8]
+  ]
+}

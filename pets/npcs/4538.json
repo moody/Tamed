@@ -1,0 +1,12 @@
+{
+  "npc_id": 4538,
+  "name": "Kraul Bat",
+  "family": "Bat",
+  "type": "Ferocity",
+  "diet": "Fungus, Fruit",
+  "level_range": "26",
+  "classification": "Elite",
+  "zone_id": 491,
+  "abilities": [{ "key": "cower", "rank": 3 }],
+  "coords": []
+}

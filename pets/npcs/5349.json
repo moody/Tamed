@@ -1,0 +1,20 @@
+{
+  "npc_id": 5349,
+  "name": "Arash-ethis",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": "Fish, Cheese, Bread",
+  "level_range": "49",
+  "classification": "Rare",
+  "zone_id": 357,
+  "ui_map_id": 1444,
+  "abilities": [
+    { "key": "dive", "rank": 2 },
+    { "key": "lightningbreath", "rank": 5 }
+  ],
+  "coords": [
+    [41.8, 24.8],
+    [46.0, 23.8],
+    [46.2, 25.4]
+  ]
+}

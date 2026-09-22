@@ -1,0 +1,15 @@
+{
+  "npc_id": 4341,
+  "name": "Drywallow Crocolisk",
+  "family": "Crocolisk",
+  "type": "Ferocity",
+  "diet": "Meat, Fish",
+  "level_range": "35-36",
+  "zone_id": 15,
+  "ui_map_id": 1445,
+  "abilities": [{ "key": "bite", "rank": 5 }],
+  "coords": [
+    [48.4, 21.6],
+    [49.8, 22.6]
+  ]
+}

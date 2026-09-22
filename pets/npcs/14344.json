@@ -1,0 +1,19 @@
+{
+  "npc_id": 14344,
+  "name": "Mongress",
+  "family": "Bear",
+  "type": "Tenacity",
+  "diet": "Meat, Fish, Cheese, Bread, Fungus, Fruit",
+  "level_range": "50",
+  "classification": "Rare",
+  "zone_id": 361,
+  "ui_map_id": 1448,
+  "abilities": [{ "key": "claw", "rank": 7 }],
+  "coords": [
+    [40.6, 79.0],
+    [43.4, 77.0],
+    [45.8, 85.2],
+    [46.8, 83.2],
+    [47.2, 85.2]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "npc_id": 3241,
+  "name": "Savannah Patriarch",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": "Meat, Fish",
+  "level_range": "15-16",
+  "zone_id": 17,
+  "ui_map_id": 1413,
+  "abilities": [{ "key": "cower", "rank": 2 }],
+  "coords": [
+    [43.0, 15.0],
+    [44.9, 14.9],
+    [45.2, 16.6],
+    [46.8, 13.8],
+    [62.0, 32.4]
+  ]
+}

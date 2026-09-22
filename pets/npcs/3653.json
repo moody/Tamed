@@ -1,0 +1,15 @@
+{
+  "npc_id": 3653,
+  "name": "Kresh",
+  "family": "Turtle",
+  "type": "Tenacity",
+  "diet": "Fish, Fungus, Fruit, Raw Fish",
+  "level_range": "20",
+  "classification": "Elite",
+  "zone_id": 718,
+  "abilities": [
+    { "key": "bite", "rank": 3 },
+    { "key": "shellshield", "rank": 1 }
+  ],
+  "coords": []
+}

@@ -1,0 +1,15 @@
+{
+  "npc_id": 4425,
+  "name": "Blind Hunter",
+  "family": "Bat",
+  "type": "Ferocity",
+  "diet": "Fungus, Fruit",
+  "level_range": "27",
+  "classification": "Rare Elite",
+  "zone_id": 491,
+  "abilities": [
+    { "key": "cower", "rank": 3 },
+    { "key": "dive", "rank": 1 }
+  ],
+  "coords": []
+}

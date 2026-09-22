@@ -1,0 +1,12 @@
+{
+  "npc_id": 5224,
+  "name": "Murk Slitherer",
+  "family": "Serpent",
+  "type": "Ferocity",
+  "diet": "Meat, Fish, Raw Meat, Raw Fish",
+  "level_range": "45-46",
+  "zone_id": 8,
+  "ui_map_id": 1435,
+  "abilities": [{ "key": "poisonspit", "rank": 2 }],
+  "coords": [[58.8, 60.8]]
+}

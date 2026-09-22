@@ -1,0 +1,23 @@
+{
+  "npc_id": 2522,
+  "name": "Jaguero Stalker",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": "Meat, Fish",
+  "level_range": "41",
+  "zone_id": 33,
+  "ui_map_id": 1434,
+  "abilities": [
+    { "key": "cower", "rank": 5 },
+    { "key": "prowl", "rank": 3 }
+  ],
+  "coords": [
+    [36.6, 81.0],
+    [36.8, 83.0],
+    [37.0, 78.4],
+    [38.0, 78.4],
+    [38.4, 81.1],
+    [38.6, 77.6],
+    [38.6, 82.8]
+  ]
+}

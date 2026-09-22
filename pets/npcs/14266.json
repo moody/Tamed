@@ -1,0 +1,19 @@
+{
+  "npc_id": 14266,
+  "name": "Shanda the Spinner",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": "Meat",
+  "level_range": "19",
+  "classification": "Rare",
+  "zone_id": 38,
+  "ui_map_id": 1432,
+  "abilities": [{ "key": "bite", "rank": 3 }],
+  "coords": [
+    [76.2, 47.2],
+    [76.6, 55.0],
+    [77.0, 51.2],
+    [77.8, 53.1],
+    [79.8, 51.8]
+  ]
+}
