@@ -4,6 +4,7 @@ local Colors = Addon:GetModule("Colors")
 local HBDPins = Addon:GetLibrary("HBDPins")
 local L = Addon:GetModule("Locale")
 local PinHelper = Addon:GetModule("PinHelper")
+local TameableNPCs = Addon:GetModule("TameableNPCs")
 local Widgets = Addon:GetModule("Widgets")
 
 function AbilityGroup:Create(parent, ability, rankIndex)
@@ -86,7 +87,7 @@ function AbilityGroup:AddTameableNPCsGroup(parent, ability, rankIndex)
   local npc_ids = ability.ranks[rankIndex].npc_ids
   if #npc_ids > 0 then
     for _, npc_id in ipairs(npc_ids) do
-      local npc = Addon.TameableNPCs[tostring(npc_id)]
+      local npc = TameableNPCs[tostring(npc_id)]
       self:AddNPC(parent, npc)
     end
   else

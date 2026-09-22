@@ -4,7 +4,7 @@ local AceGUI = Addon:GetLibrary("AceGUI")
 local Colors = Addon:GetModule("Colors")
 local L = Addon:GetModule("Locale")
 local OptionsGroup = Addon:GetModule("OptionsGroup")
-local TameableAbilities = Addon.TameableAbilities
+local TameableAbilities = Addon:GetModule("TameableAbilities")
 local UI = Addon:GetModule("UI")
 local Widgets = Addon:GetModule("Widgets")
 
