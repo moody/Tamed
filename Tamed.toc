@@ -1,4 +1,4 @@
-## Interface: 11508
+## Interface: 20506, 16001, 11509
 ## Title: Tamed
 ## Author: https://github.com/moody
 ## Version: @project-version@
@@ -17,10 +17,6 @@ libs\HereBeDragons-Pins-2.0.lua
 libs\LibDataBroker-1.1.lua
 libs\LibDBIcon-1.0.lua
 
-# Data
-data\TameableAbilities.lua
-data\TameableNPCs.lua
-
 # General
 src\_init.lua
 src\locale.lua
@@ -29,6 +25,12 @@ src\data.lua
 src\commands.lua
 src\db.lua
 src\tooltips.lua
+
+# Data
+data\TameableNPCs-Classic.lua
+data\TameableAbilities-Classic.lua
+data\TameableNPCs-TBC.lua
+data\TameableAbilities-TBC.lua
 
 # UI
 src\ui\minimap-icon.lua
