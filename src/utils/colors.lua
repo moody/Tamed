@@ -57,3 +57,11 @@ end
 Colors.Primary = createColor("FFAAD372")
 Colors.Highlight = createColor("FFE3E34F")
 Colors.Label = createColor("FFFFD100")
+
+Colors.Backdrop = createColor("FF121212")
+Colors.Black = createColor("FF000000")
+Colors.DarkGrey = createColor("FF1E1E1E")
+Colors.Gold = createColor("FFFFD100")
+Colors.Grey = createColor("FF9D9D9D")
+Colors.Red = createColor("FFE34F4F")
+Colors.White = createColor("FFFFFFFF")
