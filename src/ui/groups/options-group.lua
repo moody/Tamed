@@ -1,9 +1,11 @@
-local _, Addon = ...
-local DB = Addon:GetModule("DB")
+local Addon = select(2, ...) ---@type Addon
 local L = Addon:GetModule("Locale")
 local MinimapIcon = Addon:GetModule("MinimapIcon")
-local OptionsGroup = Addon:GetModule("OptionsGroup")
+local StateManager = Addon:GetModule("StateManager")
 local Widgets = Addon:GetModule("Widgets")
+
+--- @class OptionsGroup
+local OptionsGroup = Addon:GetModule("OptionsGroup")
 
 function OptionsGroup:Create(parent)
   Widgets:Heading(parent, L.OPTIONS)
@@ -22,7 +24,7 @@ function OptionsGroup:AddGeneral(parent)
     parent = parent,
     label = L.MINIMAP_ICON,
     tooltip = L.MINIMAP_ICON_TOOLTIP,
-    get = function() return not DB.global.minimapIcon.hide end,
+    get = function() return not StateManager:GetState().minimapIcon.hide end,
     set = function() MinimapIcon:Toggle() end
   })
 
@@ -31,7 +33,7 @@ function OptionsGroup:AddGeneral(parent)
     parent = parent,
     label = L.NPC_TOOLTIPS,
     tooltip = L.NPC_TOOLTIPS_TOOLTIP,
-    get = function() return DB.global.npc_tooltips end,
-    set = function(value) DB.global.npc_tooltips = value end
+    get = function() return StateManager:GetState().npc_tooltips end,
+    set = function(value) StateManager:SetNpcTooltipsEnabled(value) end
   })
 end

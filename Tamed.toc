@@ -9,12 +9,12 @@
 # Libraries
 libs\LibStub.lua
 libs\CallbackHandler-1.0.lua
-libs\AceDB-3.0.lua
 libs\AceGUI-3.0\AceGUI-3.0.xml
 libs\HereBeDragons-2.0.lua
 libs\HereBeDragons-Pins-2.0.lua
 libs\LibDataBroker-1.1.lua
 libs\LibDBIcon-1.0.lua
+libs\Wux.lua
 
 # General
 src\_init.lua
@@ -25,7 +25,7 @@ src\utils\colors.lua
 src\utils\ticker-manager.lua
 src\data.lua
 src\commands.lua
-src\db.lua
+src\store\state-manager.lua
 src\tooltips.lua
 src\login.lua
 

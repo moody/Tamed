@@ -1,5 +1,7 @@
-local _, Addon = ...
+local Addon = select(2, ...) ---@type Addon
 local AceGUI = Addon:GetLibrary("AceGUI")
+
+--- @class Widgets
 local Widgets = Addon:GetModule("Widgets")
 
 --[[

@@ -1,11 +1,11 @@
 local ADDON_NAME = ... ---@type string
 local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
-local DB = Addon:GetModule("DB")
+local StateManager = Addon:GetModule("StateManager")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 
 GameTooltip:HookScript("OnTooltipSetUnit", function(self)
-  if not DB.global.npc_tooltips then return end
+  if not StateManager:GetState().npc_tooltips then return end
 
   -- Get unit.
   local _, unit = self:GetUnit()
