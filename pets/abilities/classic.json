@@ -51,17 +51,12 @@
       "Carrion Bird",
       "Cat",
       "Crocolisk",
-      "Dragonhawk",
       "Gorilla",
       "Hyena",
-      "Nether Ray",
       "Raptor",
-      "Ravager",
-      "Serpent",
       "Spider",
       "Tallstrider",
       "Turtle",
-      "Warp Stalker",
       "Wind Serpent",
       "Wolf"
     ],
@@ -77,14 +72,6 @@
       { "rank": 9, "spell_id": 27050, "pet_level": 64, "training_cost": 29 }
     ]
   },
-  "firebreath": {
-    "name": "Fire Breath",
-    "learned_by": ["Dragonhawk"],
-    "ranks": [
-      { "rank": 1, "spell_id": 34889, "pet_level": 1, "training_cost": 5 },
-      { "rank": 2, "spell_id": 35323, "pet_level": 60, "training_cost": 25 }
-    ]
-  },
   "lightningbreath": {
     "name": "Lightning Breath",
     "learned_by": ["Wind Serpent"],
@@ -95,22 +82,6 @@
       { "rank": 4, "spell_id": 25010, "pet_level": 36, "training_cost": 15 },
       { "rank": 5, "spell_id": 25011, "pet_level": 48, "training_cost": 20 },
       { "rank": 6, "spell_id": 25012, "pet_level": 60, "training_cost": 25 }
-    ]
-  },
-  "poisonspit": {
-    "name": "Poison Spit",
-    "learned_by": ["Serpent"],
-    "ranks": [
-      { "rank": 1, "spell_id": 35387, "pet_level": 15, "training_cost": 5 },
-      { "rank": 2, "spell_id": 35389, "pet_level": 45, "training_cost": 20 },
-      { "rank": 3, "spell_id": 35392, "pet_level": 60, "training_cost": 25 }
-    ]
-  },
-  "warp": {
-    "name": "Warp",
-    "learned_by": ["Warp Stalker"],
-    "ranks": [
-      { "rank": 1, "spell_id": 35346, "pet_level": 60, "training_cost": 1 }
     ]
   },
   "scorpidpoison": {
@@ -144,7 +115,7 @@
   },
   "gore": {
     "name": "Gore",
-    "learned_by": ["Boar", "Ravager"],
+    "learned_by": ["Boar"],
     "ranks": [
       { "rank": 1, "spell_id": 35290, "pet_level": 1, "training_cost": 1 },
       { "rank": 2, "spell_id": 35291, "pet_level": 8, "training_cost": 4 },
@@ -159,15 +130,7 @@
   },
   "dash": {
     "name": "Dash",
-    "learned_by": [
-      "Boar",
-      "Cat",
-      "Hyena",
-      "Raptor",
-      "Ravager",
-      "Tallstrider",
-      "Wolf"
-    ],
+    "learned_by": ["Boar", "Cat", "Hyena", "Raptor", "Tallstrider", "Wolf"],
     "ranks": [
       { "rank": 1, "spell_id": 23099, "pet_level": 30, "training_cost": 15 },
       { "rank": 2, "spell_id": 23109, "pet_level": 40, "training_cost": 20 },
@@ -183,8 +146,7 @@
       "Crab",
       "Owl",
       "Raptor",
-      "Scorpid",
-      "Warp Stalker"
+      "Scorpid"
     ],
     "ranks": [
       { "rank": 1, "spell_id": 16827, "pet_level": 1, "training_cost": 1 },
@@ -210,14 +172,7 @@
   },
   "dive": {
     "name": "Dive",
-    "learned_by": [
-      "Bat",
-      "Carrion Bird",
-      "Dragonhawk",
-      "Nether Ray",
-      "Owl",
-      "Wind Serpent"
-    ],
+    "learned_by": ["Bat", "Carrion Bird", "Owl", "Wind Serpent"],
     "ranks": [
       { "rank": 1, "spell_id": 23145, "pet_level": 30, "training_cost": 15 },
       { "rank": 2, "spell_id": 23147, "pet_level": 40, "training_cost": 20 },
