@@ -22,6 +22,7 @@ src\events\events.lua
 src\events\event-manager.lua
 src\locale.lua
 src\utils\colors.lua
+src\utils\ticker-manager.lua
 src\data.lua
 src\commands.lua
 src\db.lua
