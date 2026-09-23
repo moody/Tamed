@@ -1,15 +1,15 @@
 local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
+local E = Addon:GetModule("Events")
+local EventManager = Addon:GetModule("EventManager")
 local L = Addon:GetModule("Locale")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 
---- @class Data
-local Data = Addon:GetModule("Data")
-
 -- Resolves TameableAbilities/TameableNPCs against the running client, once
--- every flavor's data has been merged in.
-function Data:Initialize()
+-- every flavor's data has been merged in (guaranteed by PlayerLogin, since
+-- the flavor data files all load and run before then).
+EventManager:Once(E.Wow.PlayerLogin, function()
   -- Update TameableAbilities with in-game data.
   for key, ability in pairs(TameableAbilities) do
     -- Remove unavailable ranks.
@@ -18,6 +18,11 @@ function Data:Initialize()
       if (GetSpellInfo(rank.spell_id) == nil) then
         table.remove(ability.ranks, i)
       end
+    end
+
+    -- Every surviving rank gets an npc_ids list, even one that stays empty.
+    for _, rank in ipairs(ability.ranks) do
+      rank.npc_ids = {}
     end
 
     -- If ability exists, update its name and icon.
@@ -47,10 +52,10 @@ function Data:Initialize()
         )
       end
 
-      -- Resolve npc's own ability/rank references into display strings. The
-      -- displayed rank number is a rank's position among those still
-      -- available on this client, not its original rank number, since
-      -- removing an earlier rank shifts everything after it.
+      -- Resolve npc's ability/rank references into display strings, and
+      -- record npc_id on the matching rank. Displayed rank number is the
+      -- rank's position among those still available on this client, not its
+      -- original number: removing an earlier rank shifts the rest.
       local abilities = {}
       for _, entry in ipairs(npc.abilities) do
         local ability = TameableAbilities[entry.key]
@@ -66,6 +71,7 @@ function Data:Initialize()
                   rankIndex
                 )
               }
+              rank.npc_ids[#rank.npc_ids + 1] = npc_id
               break
             end
           end
@@ -78,6 +84,4 @@ function Data:Initialize()
       TameableNPCs[npc_id] = nil
     end
   end
-
-  self.Initialize = nil
-end
+end)

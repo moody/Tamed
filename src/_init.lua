@@ -16,8 +16,7 @@ Addon.IS_TBC = WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC
 -- Functions
 -- ============================================================================
 
--- Addon:GetModule()
-do
+do -- Addon:GetModule()
   --- @type table<string, table>
   local modules = {}
 
@@ -36,7 +35,6 @@ end
 do -- Addon:GetLibrary()
   --- @enum (key) LibraryKey
   local libraries = {
-    AceGUI = LibStub("AceGUI-3.0"),
     HBD = LibStub("HereBeDragons-2.0"),
     HBDPins = LibStub("HereBeDragons-Pins-2.0"),
     LDB = LibStub("LibDataBroker-1.1"),

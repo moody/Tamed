@@ -1,6 +1,8 @@
 local ADDON_NAME = ... ---@type string
 local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
+local E = Addon:GetModule("Events")
+local EventManager = Addon:GetModule("EventManager")
 local L = Addon:GetModule("Locale")
 local LDB = Addon:GetLibrary("LDB")
 local LDBIcon = Addon:GetLibrary("LDBIcon")
@@ -12,8 +14,9 @@ local UI = Addon:GetModule("UI")
 --- @class MinimapIcon
 local MinimapIcon = Addon:GetModule("MinimapIcon")
 
--- Initialize LDB object.
-function MinimapIcon:Initialize()
+-- Registers the minimap icon once the store exists, since LibDBIcon reads
+-- db's fields immediately to position the icon.
+EventManager:Once(E.StoreCreated, function()
   local object = LDB:NewDataObject(ADDON_NAME, {
     type = "data source",
     text = ADDON_NAME,
@@ -46,7 +49,7 @@ function MinimapIcon:Initialize()
       for k in pairs(patchCache) do patchCache[k] = nil end
     end)
 
-    -- Helper function to debounce a minimap icon state patch.
+    -- Debounces a minimap icon state patch.
     --- @param key string
     --- @param value any
     debouncePatchMinimapIcon = function(key, value)
@@ -55,8 +58,8 @@ function MinimapIcon:Initialize()
     end
   end
 
-  -- When the minimap icon is being dragged, LibDBIcon sets `db.minimapPos` on
-  -- every frame update. Therefore, we use a metatable to debounce changes.
+  -- LibDBIcon sets `db.minimapPos` on every frame while the icon is being
+  -- dragged; this metatable debounces those writes into a state patch.
   local db = setmetatable({}, {
     __index = function(t, k)
       return StateManager:GetState().minimapIcon[k]
@@ -67,8 +70,7 @@ function MinimapIcon:Initialize()
   })
 
   LDBIcon:Register(ADDON_NAME, object, db)
-  self.Initialize = nil
-end
+end)
 
 -- Displays the minimap icon.
 function MinimapIcon:Show()
