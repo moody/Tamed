@@ -50,6 +50,13 @@ do -- Addon:GetLibrary()
   end
 end
 
+--- Returns the full path to a file in the `/assets` folder.
+--- @param fileName string
+--- @return string
+function Addon:GetAsset(fileName)
+  return ("Interface\\AddOns\\%s\\assets\\%s"):format(ADDON_NAME, fileName)
+end
+
 do -- Addon:MergeTameableNPCs()
   local TameableNPCs = Addon:GetModule("TameableNPCs")
 
