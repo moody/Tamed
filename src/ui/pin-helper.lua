@@ -7,6 +7,8 @@ local L = Addon:GetModule("Locale")
 --- @class PinHelper
 local PinHelper = Addon:GetModule("PinHelper")
 
+local PIN_TEXTURE = "Interface\\ICONS\\Ability_Hunter_BeastTaming"
+
 local pins = {}
 local pool = {}
 local count = 0
@@ -15,6 +17,7 @@ local count = 0
 -- Callbacks
 -- ============================================================================
 
+--- @param self TamedMapPin
 local function onEnter(self)
   -- Show highlight
   self.highlight:SetAlpha(0.4)
@@ -24,7 +27,7 @@ local function onEnter(self)
   GameTooltip:AddDoubleLine(L.LEVEL, self.npc.level_range, nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.ABILITIES, table.concat(self.npc.abilities, ", "), nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.FAMILY, self.npc.family, nil, nil, nil, 1, 1, 1)
-  GameTooltip:AddDoubleLine(L.DIET, self.npc.diet, nil, nil, nil, 1, 1, 1)
+  GameTooltip:AddDoubleLine(L.DIET, table.concat(self.npc.diet, ", "), nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.TYPE, self.npc.type, nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.LOCATION, self.npc.location, nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.LEFT_CLICK, L.CLEAR_PINS, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6)
@@ -44,7 +47,10 @@ end
 -- Functions
 -- ============================================================================
 
+--- @param npc TameableNPC
+--- @return table|Button
 function PinHelper:Get(npc)
+  --- @class TamedMapPin : Button
   local pin = next(pool)
 
   if pin then
@@ -55,12 +61,12 @@ function PinHelper:Get(npc)
     pin:SetSize(14, 14)
 
     pin.texture = pin:CreateTexture(ADDON_NAME .. "PinTexture" .. count, "BACKGROUND")
-    pin.texture:SetTexture(Addon.ICON)
+    pin.texture:SetTexture(PIN_TEXTURE)
     pin.texture:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     pin.texture:SetAllPoints()
 
     pin.highlight = pin:CreateTexture(pin:GetName() .. "Hightlight", "HIGHLIGHT")
-    pin.highlight:SetTexture(Addon.ICON)
+    pin.highlight:SetTexture(PIN_TEXTURE)
     pin.highlight:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     pin.highlight:SetBlendMode("ADD")
     pin.highlight:SetAlpha(0)
