@@ -1,6 +1,7 @@
 local ADDON_NAME = ... ---@type string
 local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
+local TickerManager = Addon:GetModule("TickerManager")
 local Widgets = Addon:GetModule("Widgets")
 
 --- @class ComponentFactory
@@ -15,6 +16,9 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 --- @field width integer
 --- @field height integer
 --- @field titleText string
+--- @field isSpecialFrame? boolean Registers with `UISpecialFrames` so ESC closes it. Defaults to `true`.
+--- @field frameStrata? FrameStrata Defaults to `HIGH`.
+--- @field refresh? fun() Called repeatedly while the window is visible.
 
 -- =============================================================================
 -- ComponentFactory - Window
@@ -38,24 +42,30 @@ function ComponentFactory:Window(options)
     visibility = "GONE",
 
     defaultFrameFactory = function(parent)
-      return CreateFrame("Frame", nil, parent)
+      return CreateFrame("Frame")
     end,
 
-    frameFactory = function()
+    frameFactory = function(parent)
       local frame = Widgets:Frame({
         name = ADDON_NAME .. "_" .. options.name,
         enableDragging = true,
-        frameStrata = "HIGH"
+        frameStrata = options.frameStrata or "HIGH"
       })
       frame:SetPoint("CENTER")
 
-      -- Register with Blizzard's own ESC-closes-this-frame mechanism.
-      table.insert(UISpecialFrames, frame:GetName())
+      if options.isSpecialFrame ~= false then
+        table.insert(UISpecialFrames, frame:GetName())
+      end
 
       frame:Hide()
       frame:HookScript("OnHide", function()
         root:SetVisibility("GONE")
       end)
+
+      -- Bind the refresh callback to the root frame, if given.
+      if options.refresh then
+        TickerManager:NewTicker(1 / 30, options.refresh):BindFrame(frame)
+      end
 
       return frame
     end
@@ -82,18 +92,18 @@ function ComponentFactory:Window(options)
     end
   })
 
-  root.CloseButton = root.TitleRow:AddChild({
-    width = 24,
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local button = CreateFrame("Button", "$parent_CloseButton", parent, "UIPanelCloseButton")
-      button:SetScript("OnClick", function()
+  root.CloseButton = root.TitleRow:AttachComponent(
+    ComponentFactory:WindowTitleButton({
+      name = "$parent_CloseButton",
+      texture = Addon:GetAsset("x-icon"),
+      textureSize = 14,
+      highlightColor = Colors.Red,
+      onClick = function()
         root:SetVisibility("GONE")
         root:Layout()
-      end)
-      return button
-    end
-  })
+      end
+    })
+  )
 
   return root
 end
