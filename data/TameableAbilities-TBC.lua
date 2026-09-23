@@ -79,9 +79,66 @@ Addon:MergeTameableAbilities({
     }
   },
   ["gore"] = {
+    ["name"] = "Gore",
     ["learned_by"] = {
       "Boar",
       "Ravager"
+    },
+    ["ranks"] = {
+      {
+        ["rank"] = 1,
+        ["spell_id"] = 35290,
+        ["pet_level"] = 1,
+        ["training_cost"] = 1
+      },
+      {
+        ["rank"] = 2,
+        ["spell_id"] = 35291,
+        ["pet_level"] = 8,
+        ["training_cost"] = 4
+      },
+      {
+        ["rank"] = 3,
+        ["spell_id"] = 35292,
+        ["pet_level"] = 16,
+        ["training_cost"] = 7
+      },
+      {
+        ["rank"] = 4,
+        ["spell_id"] = 35293,
+        ["pet_level"] = 24,
+        ["training_cost"] = 10
+      },
+      {
+        ["rank"] = 5,
+        ["spell_id"] = 35294,
+        ["pet_level"] = 32,
+        ["training_cost"] = 13
+      },
+      {
+        ["rank"] = 6,
+        ["spell_id"] = 35295,
+        ["pet_level"] = 40,
+        ["training_cost"] = 17
+      },
+      {
+        ["rank"] = 7,
+        ["spell_id"] = 35296,
+        ["pet_level"] = 48,
+        ["training_cost"] = 21
+      },
+      {
+        ["rank"] = 8,
+        ["spell_id"] = 35297,
+        ["pet_level"] = 56,
+        ["training_cost"] = 25
+      },
+      {
+        ["rank"] = 9,
+        ["spell_id"] = 35298,
+        ["pet_level"] = 63,
+        ["training_cost"] = 29
+      }
     }
   },
   ["poisonspit"] = {
