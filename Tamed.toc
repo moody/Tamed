@@ -9,11 +9,11 @@
 # Libraries
 libs\LibStub.lua
 libs\CallbackHandler-1.0.lua
-libs\AceGUI-3.0\AceGUI-3.0.xml
 libs\HereBeDragons-2.0.lua
 libs\HereBeDragons-Pins-2.0.lua
 libs\LibDataBroker-1.1.lua
 libs\LibDBIcon-1.0.lua
+libs\Waffle.lua
 libs\Wux.lua
 
 # General
@@ -27,7 +27,6 @@ src\data.lua
 src\commands.lua
 src\store\state-manager.lua
 src\tooltips.lua
-src\login.lua
 
 # Data
 data\TameableNPCs-Classic.lua
@@ -36,9 +35,12 @@ data\TameableNPCs-TBC.lua
 data\TameableAbilities-TBC.lua
 
 # UI
+src\ui\widgets\widgets.lua
+src\ui\widgets\primitives\frame.lua
+src\ui\widgets\primitives\button.lua
+src\ui\widgets\primitives\check-box.lua
+src\ui\widgets\primitives\slider.lua
+src\ui\components\window.lua
 src\ui\minimap-icon.lua
-src\ui\widgets.lua
 src\ui\pin-helper.lua
 src\ui\main.lua
-src\ui\groups\ability-group.lua
-src\ui\groups\options-group.lua
