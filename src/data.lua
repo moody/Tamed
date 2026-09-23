@@ -6,6 +6,48 @@ local L = Addon:GetModule("Locale")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 
+-- ============================================================================
+-- LuaCATS Annotations
+-- ============================================================================
+
+--- @class TameableAbilityRank
+--- @field rank integer The rank's own number, not its position in `ranks`.
+--- @field spell_id integer
+--- @field pet_level? integer
+--- @field training_cost? integer
+--- @field npc_ids string[] Ids of NPCs that teach this rank.
+
+--- @class TameableAbility
+--- @field name string Resolved from `spell_id` via `GetSpellInfo`.
+--- @field icon integer Resolved from `spell_id` via `GetSpellInfo`.
+--- @field learned_by string[] Pet family names; empty means every family.
+--- @field ranks TameableAbilityRank[] Ranks available on the running client.
+
+--- @class TameableAbilities : table<string, TameableAbility>
+
+--- @class TameableNPCCoord
+--- @field x number
+--- @field y number
+
+--- @class TameableNPC
+--- @field name string
+--- @field family string
+--- @field type string
+--- @field diet string[]
+--- @field level_range string Includes `classification`, if any, once resolved.
+--- @field classification? string
+--- @field zone_id integer
+--- @field ui_map_id? integer
+--- @field abilities string[] Formatted display strings, not `{key, rank}` entries.
+--- @field coords TameableNPCCoord[]
+--- @field location string Resolved from `zone_id` via `C_Map.GetAreaInfo`.
+
+--- @class TameableNPCs : table<string, TameableNPC>
+
+-- ============================================================================
+-- PlayerLogin
+-- ============================================================================
+
 -- Resolves TameableAbilities/TameableNPCs against the running client, once
 -- every flavor's data has been merged in (guaranteed by PlayerLogin, since
 -- the flavor data files all load and run before then).
@@ -15,7 +57,7 @@ EventManager:Once(E.Wow.PlayerLogin, function()
     -- Remove unavailable ranks.
     for i = #ability.ranks, 1, -1 do
       local rank = ability.ranks[i]
-      if (GetSpellInfo(rank.spell_id) == nil) then
+      if (C_Spell.GetSpellInfo(rank.spell_id) == nil) then
         table.remove(ability.ranks, i)
       end
     end
@@ -27,10 +69,10 @@ EventManager:Once(E.Wow.PlayerLogin, function()
 
     -- If ability exists, update its name and icon.
     if #ability.ranks > 0 then
-      local name, _, icon = GetSpellInfo(ability.ranks[1].spell_id)
-      if type(name) == "string" and type(icon) == "number" then
-        ability.name = name
-        ability.icon = icon
+      local spellInfo = C_Spell.GetSpellInfo(ability.ranks[1].spell_id)
+      if type(spellInfo.name) == "string" and type(spellInfo.iconID) == "number" then
+        ability.name = spellInfo.name
+        ability.icon = spellInfo.iconID
       else
         TameableAbilities[key] = nil
       end
