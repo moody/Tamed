@@ -54,6 +54,8 @@ EventManager:Once(E.Wow.PlayerLogin, function()
 
   _Store = Wux:CreateStore(reducer, Wux:ReadSavedVariables(SAVED_VARIABLES_KEY))
   _Store:ConnectSavedVariables(SAVED_VARIABLES_KEY)
+
+  EventManager:Fire(E.StoreCreated)
 end)
 
 -- ============================================================================
