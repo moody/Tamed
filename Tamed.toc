@@ -42,6 +42,7 @@ src\ui\widgets\primitives\check-box.lua
 src\ui\widgets\primitives\slider.lua
 src\ui\components\window.lua
 src\ui\components\window-title-button.lua
+src\ui\components\scroll-panel.lua
 src\ui\minimap-icon.lua
 src\ui\pin-helper.lua
 src\ui\main.lua
