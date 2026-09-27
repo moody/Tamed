@@ -69,25 +69,21 @@ EventManager:Once(E.StoreCreated, function()
   })
 
   LDBIcon:Register(ADDON_NAME, object, db)
-end)
 
--- Displays the minimap icon.
-function MinimapIcon:Show()
-  StateManager:PatchMinimapIcon({ hide = false })
-  LDBIcon:Show(ADDON_NAME)
-end
+  -- Listen for the `StateUpdated` event and refresh the icon.
+  EventManager:On(E.StateUpdated, function()
+    LDBIcon:Refresh(ADDON_NAME, db)
+  end)
 
--- Hides the minimap icon.
-function MinimapIcon:Hide()
-  StateManager:PatchMinimapIcon({ hide = true })
-  LDBIcon:Hide(ADDON_NAME)
-end
-
--- Toggles the minimap icon.
-function MinimapIcon:Toggle()
-  if StateManager:GetState().minimapIcon.hide then
-    self:Show()
-  else
-    self:Hide()
+  --- Returns true if the minimap icon is visible.
+  --- @return boolean
+  function MinimapIcon:IsEnabled()
+    return not StateManager:GetState().minimapIcon.hide
   end
-end
+
+  --- Sets the visibility of the minimap icon.
+  --- @param enabled boolean
+  function MinimapIcon:SetEnabled(enabled)
+    StateManager:PatchMinimapIcon({ hide = not enabled })
+  end
+end)
