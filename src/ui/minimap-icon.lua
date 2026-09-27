@@ -17,6 +17,9 @@ local MinimapIcon = Addon:GetModule("MinimapIcon")
 -- Registers the minimap icon once the store exists, since LibDBIcon reads
 -- db's fields immediately to position the icon.
 EventManager:Once(E.StoreCreated, function()
+  local TOGGLE_UI_TOOLTIP = Colors.Grey("- %s: %s"):format(Colors.Gold(L.LEFT_CLICK), Colors.White(L.TOGGLE_UI))
+  local CLEAR_PINS_TOOLTIP = Colors.Grey("- %s: %s"):format(Colors.Gold(L.RIGHT_CLICK), Colors.White(L.CLEAR_PINS))
+
   local object = LDB:NewDataObject(ADDON_NAME, {
     type = "data source",
     text = ADDON_NAME,
@@ -31,13 +34,9 @@ EventManager:Once(E.StoreCreated, function()
     end,
 
     OnTooltipShow = function(tooltip)
-      tooltip:AddDoubleLine(
-        Colors.Primary(ADDON_NAME),
-        Addon.VERSION
-      )
-      tooltip:AddLine(" ")
-      tooltip:AddDoubleLine(L.LEFT_CLICK, L.TOGGLE_UI, nil, nil, nil, 1, 1, 1)
-      tooltip:AddDoubleLine(L.RIGHT_CLICK, L.CLEAR_PINS, nil, nil, nil, 1, 1, 1)
+      tooltip:AddDoubleLine(Colors.Primary(ADDON_NAME), Addon.VERSION)
+      tooltip:AddLine(TOGGLE_UI_TOOLTIP)
+      tooltip:AddLine(CLEAR_PINS_TOOLTIP)
     end,
   })
 
