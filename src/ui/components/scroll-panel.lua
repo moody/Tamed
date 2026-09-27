@@ -19,13 +19,18 @@ function ComponentFactory:ScrollPanel()
   -- Frames
   ------------------------------------------------------------
 
-  --- @type SliderWidget
-  local slider
-
   local scrollFrame = CreateFrame("ScrollFrame")
   local scrollChild = CreateFrame("Frame", nil, scrollFrame)
   scrollFrame:SetScrollChild(scrollChild)
   scrollFrame:Hide()
+
+  local slider = Widgets:Slider({ orientation = "VERTICAL" })
+  slider:SetAllPoints()
+  slider:SetScript("OnValueChanged", function(_, value)
+    local min, max = slider:GetMinMaxValues()
+    scrollFrame:SetVerticalScroll(Clamp(math.floor(value + 0.5), min, max))
+  end)
+  slider:Hide()
 
   ------------------------------------------------------------
   -- Functions
@@ -102,18 +107,9 @@ function ComponentFactory:ScrollPanel()
   })
 
   Components.SliderColumn = Components.ScrollRow:AddColumn({
+    frame = slider,
     width = 12,
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      slider = Widgets:Slider({ parent = parent, orientation = "VERTICAL" })
-      slider:SetAllPoints()
-      slider:SetScript("OnValueChanged", function(self, value)
-        local min, max = self:GetMinMaxValues()
-        scrollFrame:SetVerticalScroll(Clamp(math.floor(value + 0.5), min, max))
-      end)
-      return slider
-    end,
+    visibility = "GONE"
   })
 
   return Components.Root
