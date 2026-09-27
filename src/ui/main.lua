@@ -3,6 +3,8 @@ local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local ComponentFactory = Addon:GetModule("ComponentFactory")
 local L = Addon:GetModule("Locale")
+local MinimapIcon = Addon:GetModule("MinimapIcon")
+local StateManager = Addon:GetModule("StateManager")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
 local Widgets = Addon:GetModule("Widgets")
 
@@ -107,8 +109,6 @@ Components.MainScreenRow = Components.Root:AddRow({
 Components.Sidebar = Components.MainScreenRow:AddColumn({
   width = "30%",
   padding = Widgets:Padding(),
-
-  --- @param parent Frame
   frameFactory = function(parent)
     return Widgets:Frame({ parent = parent })
   end,
@@ -124,8 +124,6 @@ Components.SidebarContent = Components.SidebarScrollPanel.ScrollChild
 -- Content area: switches to match the sidebar's current selection.
 Components.ContentArea = Components.MainScreenRow:AddColumn({
   padding = Widgets:Padding(),
-
-  --- @param parent Frame
   frameFactory = function(parent)
     return Widgets:Frame({ parent = parent })
   end,
@@ -144,26 +142,30 @@ local function measureFontString(fontString, width)
   return width, fontString:GetStringHeight() + Widgets:Padding(1.5)
 end
 
+--- @class SelectableRowOptions
+--- @field labelText string
+--- @field screen WaffleFlexComponent
+--- @field marginBottom? number
+
 --- Adds a selectable button row to `container`: shows `screen` in the
 --- content area when clicked, and highlights while selected or hovered.
 --- @param container WaffleFlexComponent
---- @param options { labelText: string, screen: WaffleFlexComponent, marginBottom: number? }
+--- @param options SelectableRowOptions
+--- @return SelectableRow
 local function addSelectableRow(container, options)
-  return container:AddChild({
+  local row
+
+  --- @class SelectableRow : WaffleFlexComponent
+  row = container:AddChild({
     height = "AUTO",
     marginBottom = options.marginBottom,
 
-    --- @param parent Frame
     frameFactory = function(parent)
-      local frame
-      frame = Widgets:Button({
+      local frame = Widgets:Button({
         parent = parent,
         labelText = options.labelText,
         labelColor = Colors.White,
-        onClick = function()
-          Components:SelectRowButton(frame)
-          Components:ShowContentScreen(options.screen)
-        end,
+        onClick = function() row:Select() end
       })
       frame:SetBackdropColor(0, 0, 0, 0)
       frame:SetBackdropBorderColor(0, 0, 0, 0)
@@ -184,28 +186,134 @@ local function addSelectableRow(container, options)
       return measureFontString(frame.label, width)
     end,
   })
+
+  --- Selects this row and shows its content screen, as if clicked.
+  function row:Select()
+    Components:SelectRowButton(self:GetFrame())
+    Components:ShowContentScreen(options.screen)
+  end
+
+  return row
 end
 
 -- ============================================================================
 -- Sidebar: Options
 -- ============================================================================
 
-Components.OptionsScreen = Components.ContentArea:AddChild({
-  visibility = "GONE",
+--- @class OptionRowOptions
+--- @field labelText string
+--- @field tooltipText string
+--- @field get fun(): boolean
+--- @field set fun(value: boolean)
 
-  --- @param parent Frame
-  frameFactory = function(parent)
-    local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    fontString:SetText(L.OPTIONS)
-    return fontString
-  end,
+--- Adds a checkbox + label row to `container`, toggled by clicking either
+--- one, showing a tooltip with `tooltipText` on hover.
+--- @param container WaffleFlexComponent
+--- @param options OptionRowOptions
+local function addOptionRow(container, options)
+  local row = container:AddRow({
+    maxWidth = 200,
+    height = "AUTO",
+    align = "CENTER",
+    gap = Widgets:Padding(0.5),
+    paddingTop = Widgets:Padding(0.5),
+    paddingBottom = Widgets:Padding(0.5),
+    paddingLeft = Widgets:Padding(),
+    paddingRight = Widgets:Padding(),
+
+    frameFactory = function(parent)
+      local frame = Widgets:Frame({ parent = parent, frameType = "Button" })
+
+      local function setColors(alpha)
+        frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(alpha))
+        frame:SetBackdropBorderColor(Colors.White:GetRGBA(alpha))
+      end
+
+      setColors(0.25)
+      frame:SetScript("OnUpdate", function() frame:SetAlpha(options.get() and 1 or 0.5) end)
+      frame:SetScript("OnClick", function() options.set(not options.get()) end)
+      frame:SetScript("OnEnter", function(self)
+        setColors(0.5)
+        GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT")
+        GameTooltip:SetText(options.labelText, Colors.Gold:GetRGB())
+        GameTooltip:AddLine(options.tooltipText, 1, 1, 1, true)
+        GameTooltip:Show()
+      end)
+      frame:SetScript("OnLeave", function()
+        setColors(0.25)
+        GameTooltip:Hide()
+      end)
+      return frame
+    end,
+  })
+
+  -- Row text.
+  row:AddChild({
+    height = "AUTO",
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+      fontString:SetJustifyH("LEFT")
+      fontString:SetWordWrap(false)
+      fontString:SetTextColor(Colors.White:GetRGB())
+      fontString:SetText(options.labelText)
+      return fontString
+    end,
+
+    onMeasure = measureFontString
+  })
+
+  -- Row checkbox.
+  row:AddChild({
+    width = 12,
+    height = 12,
+
+    frameFactory = function(parent)
+      local checkBox = Widgets:CheckBox({
+        parent = parent,
+        color = Colors.White,
+        get = options.get,
+        set = options.set
+      })
+      checkBox:EnableMouse(false)
+      return checkBox
+    end,
+  })
+
+  return row
+end
+
+Components.OptionsScreen = Components.ContentArea:AddColumn({
+  visibility = "GONE",
+  height = "AUTO",
+  gap = Widgets:Padding(),
 })
 
-addSelectableRow(Components.SidebarContent, {
+addOptionRow(Components.OptionsScreen, {
+  labelText = L.MINIMAP_ICON,
+  tooltipText = L.MINIMAP_ICON_TOOLTIP,
+  get = function() return MinimapIcon:IsEnabled() end,
+  set = function(value) MinimapIcon:SetEnabled(value) end,
+})
+
+addOptionRow(Components.OptionsScreen, {
+  labelText = L.NPC_TOOLTIPS,
+  tooltipText = L.NPC_TOOLTIPS_TOOLTIP,
+  get = function() return StateManager:GetState().npc_tooltips end,
+  set = function(value) StateManager:SetNpcTooltipsEnabled(value) end,
+})
+
+Components.OptionsRow = addSelectableRow(Components.SidebarContent, {
   labelText = L.OPTIONS,
   screen = Components.OptionsScreen,
   marginBottom = Widgets:Padding(2),
 })
+
+-- Select Options by default.
+Components.OptionsRow:WhenFrameReady(function()
+  Components.OptionsRow:Select()
+end)
 
 -- ============================================================================
 -- Sidebar: Abilities
@@ -234,7 +342,6 @@ for _, ability in ipairs(abilities) do
     gap = Widgets:Padding(0.5),
     align = "CENTER",
 
-    --- @param parent Frame
     frameFactory = function(parent)
       local frame = Widgets:Frame({ parent = parent, frameType = "Button" })
       frame:SetBackdropColor(0, 0, 0, 0)
@@ -307,6 +414,7 @@ for _, ability in ipairs(abilities) do
   for _, rank in ipairs(ability.ranks) do
     local rankScreen = Components.ContentArea:AddChild({
       visibility = "GONE",
+
       --- @param parent Frame
       frameFactory = function(parent)
         local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
@@ -321,6 +429,7 @@ for _, ability in ipairs(abilities) do
       paddingLeft = Widgets:Padding(),
       paddingRight = Widgets:Padding(),
     })
+
     addSelectableRow(rankRow, {
       labelText = ("%s %d"):format(L.RANK, rank.rank),
       screen = rankScreen,
