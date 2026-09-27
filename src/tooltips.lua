@@ -4,7 +4,7 @@ local Colors = Addon:GetModule("Colors")
 local StateManager = Addon:GetModule("StateManager")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 
-GameTooltip:HookScript("OnTooltipSetUnit", function(self)
+local function addTamedTooltip(self)
   if not StateManager:GetState().npc_tooltips then return end
 
   -- Get unit.
@@ -25,4 +25,10 @@ GameTooltip:HookScript("OnTooltipSetUnit", function(self)
   for _, ability in ipairs(npc.abilities) do
     self:AddLine("  " .. ability, 1, 1, 1)
   end
-end)
+end
+
+if TooltipDataProcessor and TooltipDataProcessor.AddTooltipPostCall then
+  TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, addTamedTooltip)
+else
+  GameTooltip:HookScript("OnTooltipSetUnit", addTamedTooltip)
+end
