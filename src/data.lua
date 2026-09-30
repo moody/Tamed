@@ -50,7 +50,8 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 
 -- Resolves TameableAbilities/TameableNPCs against the running client, once
 -- every flavor's data has been merged in (guaranteed by PlayerLogin, since
--- the flavor data files all load and run before then).
+-- the flavor data files all load and run before then). Fires
+-- `DataLoaded` when done.
 EventManager:Once(E.Wow.PlayerLogin, function()
   -- Update TameableAbilities with in-game data.
   for key, ability in pairs(TameableAbilities) do
@@ -126,4 +127,6 @@ EventManager:Once(E.Wow.PlayerLogin, function()
       TameableNPCs[npc_id] = nil
     end
   end
+
+  EventManager:Fire(E.DataLoaded)
 end)
