@@ -29,8 +29,8 @@ end
 -- ComponentFactory - NpcCard
 -- =============================================================================
 
---- Creates a card showing an NPC's name, level, and location. Clicking the
---- card or its button shows the NPC on the map, if it has a `ui_map_id`.
+--- Creates a card showing an NPC's name, level, and location. Hovering shows
+--- the NPC tooltip; clicking shows the NPC on the map, if it has a `ui_map_id`.
 --- @return NpcCardComponent card
 function ComponentFactory:NpcCard()
   --- @type TameableNPC?
@@ -45,6 +45,26 @@ function ComponentFactory:NpcCard()
     local alpha = (npc and npc.ui_map_id and frame:IsMouseOver()) and 0.5 or 0.25
     frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(alpha))
     frame:SetBackdropBorderColor(Colors.White:GetRGBA(alpha))
+  end
+
+  --- Shows the NPC tooltip on the card, if it has an NPC.
+  --- @param frame FrameWidget
+  local function showTooltip(frame)
+    if npc then
+      GameTooltip:SetOwner(frame, "ANCHOR_TOP")
+      GameTooltip:SetText(Colors.Primary(npc.name))
+      GameTooltip:AddDoubleLine(L.LEVEL, Colors.White(npc.level_range))
+      GameTooltip:AddDoubleLine(L.ABILITIES, Colors.White(table.concat(npc.abilities, ", ")))
+      GameTooltip:AddDoubleLine(L.FAMILY, Colors.White(npc.family))
+      GameTooltip:AddDoubleLine(L.DIET, Colors.White(table.concat(npc.diet, ", ")))
+      GameTooltip:AddDoubleLine(L.TYPE, Colors.White(npc.type))
+      GameTooltip:AddDoubleLine(L.LOCATION, Colors.White(npc.location))
+      if npc.ui_map_id then
+        GameTooltip:AddLine(" ")
+        GameTooltip:AddDoubleLine(Colors.White(L.LEFT_CLICK), Colors.Green(L.SHOW_ON_MAP))
+      end
+      GameTooltip:Show()
+    end
   end
 
   local card
@@ -65,10 +85,15 @@ function ComponentFactory:NpcCard()
         if npc and npc.ui_map_id then showOnMap(npc) end
       end)
 
-      frame:SetScript("OnEnter", updateHighlight)
+      frame:SetScript("OnEnter", function()
+        updateHighlight(frame)
+        showTooltip(frame)
+      end)
 
-      -- Stays highlighted while over the map button
-      frame:SetScript("OnLeave", updateHighlight)
+      frame:SetScript("OnLeave", function()
+        updateHighlight(frame)
+        GameTooltip:Hide()
+      end)
 
       return frame
     end,
@@ -79,10 +104,9 @@ function ComponentFactory:NpcCard()
 
   --- Adds a text line filled in by `getText` for the current NPC.
   --- @param fontObject string
-  --- @param color Color
   --- @param wordWrap boolean
   --- @param getText fun(npc: TameableNPC): string
-  local function addTextLine(fontObject, color, wordWrap, getText)
+  local function addTextLine(fontObject, wordWrap, getText)
     local node = info:AddChild({
       height = "AUTO",
 
@@ -91,7 +115,6 @@ function ComponentFactory:NpcCard()
         local fontString = parent:CreateFontString(nil, "ARTWORK", fontObject)
         fontString:SetJustifyH("LEFT")
         fontString:SetWordWrap(wordWrap)
-        fontString:SetTextColor(color:GetRGB())
         fontString:SetText(npc and getText(npc) or "")
         return fontString
       end,
@@ -105,29 +128,10 @@ function ComponentFactory:NpcCard()
     textLines[#textLines + 1] = { node = node, getText = getText }
   end
 
-  addTextLine("GameFontNormal", Colors.Primary, false, function(n) return n.name end)
-  addTextLine("GameFontNormalSmall", Colors.Grey, false, function(n) return ("%s %s"):format(L.LEVEL, n.level_range) end)
-  addTextLine("GameFontNormalSmall", Colors.Grey, true, function(n) return n.location end)
-
-  local mapButton = card:AddChild({
-    width = 90,
-    height = 20,
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      return Widgets:Button({
-        parent = parent,
-        labelText = L.SHOW_ON_MAP,
-        onClick = function()
-          if npc then showOnMap(npc) end
-        end,
-        onLeave = function()
-          local frame = card:GetFrame()
-          if frame then updateHighlight(frame) end
-        end,
-      })
-    end,
-  })
+  addTextLine("GameFontNormal", false, function(n)
+    return Colors.Grey("%s (%s)"):format(Colors.Primary(n.name), Colors.White(n.level_range))
+  end)
+  addTextLine("GameFontNormalSmall", true, function(n) return Colors.Grey(n.location) end)
 
   --- Sets the NPC shown.
   --- @param newNpc? TameableNPC
@@ -140,10 +144,11 @@ function ComponentFactory:NpcCard()
       if fontString then fontString:SetText(line.getText(npc)) end
     end
 
-    mapButton:SetVisibility(npc.ui_map_id and "VISIBLE" or "GONE")
-
     local frame = self:GetFrame()
-    if frame then updateHighlight(frame) end
+    if frame then
+      updateHighlight(frame)
+      if GameTooltip:IsOwned(frame) then showTooltip(frame) end
+    end
 
     self:MarkDirty()
   end
