@@ -52,6 +52,7 @@ function ComponentFactory:Window(options)
         frameStrata = options.frameStrata or "HIGH"
       })
       frame:SetPoint("CENTER")
+      frame:SetToplevel(true)
 
       if options.isSpecialFrame ~= false then
         table.insert(UISpecialFrames, frame:GetName())

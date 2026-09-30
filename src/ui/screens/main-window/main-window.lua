@@ -28,6 +28,7 @@ local function showContentScreen(screen)
   if currentContentScreen then currentContentScreen:SetVisibility("GONE") end
   screen:SetVisibility("VISIBLE")
   currentContentScreen = screen
+  currentContentScreen:Layout()
 end
 
 -- ============================================================================
@@ -39,6 +40,7 @@ Components.Root = ComponentFactory:Window({
   width = 720,
   height = 540,
   titleText = "",
+  frameStrata = "MEDIUM",
   refresh = function() Components.Root:Layout() end
 })
 
@@ -101,8 +103,8 @@ EventManager:Once(E.DataLoaded, function()
       showContentScreen(Components.OptionsScreen)
     end,
     onSelectRank = function(ability, rank)
-      Components.RankScreen:SetRank(ability, rank)
       showContentScreen(Components.RankScreen)
+      Components.RankScreen:SetRank(ability, rank)
     end,
   }))
 end)
