@@ -1,0 +1,17 @@
+{
+  "npc_id": 3472,
+  "name": "Washte Pawne",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": ["Fish", "Cheese", "Bread"],
+  "level_range": "25",
+  "zone_id": 17,
+  "ui_map_id": 1413,
+  "abilities": [{ "key": "lightningbreath", "rank": 3 }],
+  "coords": [
+    [43.4, 81.6],
+    [44.8, 74.4],
+    [44.8, 78.8],
+    [47.6, 79.6]
+  ]
+}

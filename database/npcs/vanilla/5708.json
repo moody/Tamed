@@ -1,0 +1,15 @@
+{
+  "npc_id": 5708,
+  "name": "Spawn of Hakkar",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": ["Fish", "Cheese", "Bread"],
+  "level_range": "49",
+  "classification": "Elite",
+  "zone_id": 1477,
+  "abilities": [
+    { "key": "dive", "rank": 3 },
+    { "key": "lightningbreath", "rank": 5 }
+  ],
+  "coords": []
+}

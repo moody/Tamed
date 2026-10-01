@@ -1,0 +1,11 @@
+{
+  "npc_id": 7405,
+  "name": "Deadly Cleft Scorpid",
+  "family": "Scorpid",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "37-38",
+  "zone_id": 1337,
+  "abilities": [{ "key": "scorpidpoison", "rank": 3 }],
+  "coords": []
+}

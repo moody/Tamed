@@ -1,0 +1,18 @@
+{
+  "npc_id": 7055,
+  "name": "Blackrock Worg",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "54-55",
+  "zone_id": 46,
+  "ui_map_id": 1428,
+  "abilities": [{ "key": "dash", "rank": 3 }],
+  "coords": [
+    [38.8, 54.8],
+    [44.9, 56.7],
+    [48.8, 58.6],
+    [51.6, 54.6],
+    [55.8, 53.6]
+  ]
+}

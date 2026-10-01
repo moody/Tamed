@@ -1,0 +1,22 @@
+{
+  "npc_id": 1509,
+  "name": "Ragged Scavenger",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "2-3",
+  "zone_id": 85,
+  "ui_map_id": 1420,
+  "abilities": [{ "key": "bite", "rank": 1 }],
+  "coords": [
+    [34.8, 61.4],
+    [35.0, 58.8],
+    [35.1, 62.8],
+    [35.6, 65.8],
+    [35.8, 56.2],
+    [37.1, 61.1],
+    [37.2, 58.8],
+    [37.6, 57.0],
+    [38.0, 63.8]
+  ]
+}

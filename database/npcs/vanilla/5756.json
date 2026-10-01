@@ -1,0 +1,12 @@
+{
+  "npc_id": 5756,
+  "name": "Deviate Venomwing",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": ["Fish", "Cheese", "Bread"],
+  "level_range": "19",
+  "classification": "Elite",
+  "zone_id": 718,
+  "abilities": [{ "key": "lightningbreath", "rank": 2 }],
+  "coords": []
+}

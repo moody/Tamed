@@ -1,0 +1,18 @@
+{
+  "npc_id": 17035,
+  "name": "Kaliri Matriarch",
+  "family": "Owl",
+  "type": "Cunning",
+  "diet": ["Meat"],
+  "level_range": "63",
+  "zone_id": 3483,
+  "ui_map_id": 1944,
+  "abilities": [{ "key": "screech", "rank": 4 }],
+  "coords": [
+    [25.2, 71.6],
+    [25.4, 77.6],
+    [26.2, 75.8],
+    [27.6, 78.6],
+    [28.8, 81.6]
+  ]
+}

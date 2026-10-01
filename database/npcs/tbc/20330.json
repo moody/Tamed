@@ -1,0 +1,23 @@
+{
+  "npc_id": 20330,
+  "name": "Bloodmaul Battle Worg",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "66-67",
+  "zone_id": 3522,
+  "ui_map_id": 1949,
+  "abilities": [{ "key": "furioushowl", "rank": 4 }],
+  "coords": [
+    [54.6, 37.4],
+    [54.8, 35.1],
+    [55.2, 31.3],
+    [55.7, 32.7],
+    [56.8, 30.2],
+    [56.9, 28.5],
+    [57.0, 23.0],
+    [57.0, 26.0],
+    [57.2, 24.7],
+    [58.0, 32.8]
+  ]
+}

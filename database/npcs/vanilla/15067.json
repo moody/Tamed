@@ -1,0 +1,15 @@
+{
+  "npc_id": 15067,
+  "name": "Zulian Stalker",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "61",
+  "classification": "Elite",
+  "zone_id": 1977,
+  "abilities": [
+    { "key": "dash", "rank": 3 },
+    { "key": "prowl", "rank": 3 }
+  ],
+  "coords": []
+}

@@ -1,0 +1,12 @@
+{
+  "npc_id": 5048,
+  "name": "Deviate Adder",
+  "family": "Serpent",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "18-19",
+  "classification": "Elite",
+  "zone_id": 718,
+  "abilities": [{ "key": "poisonspit", "rank": 1 }],
+  "coords": []
+}

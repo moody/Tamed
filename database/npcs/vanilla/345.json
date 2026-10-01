@@ -1,0 +1,22 @@
+{
+  "npc_id": 345,
+  "name": "Bellygrub",
+  "family": "Boar",
+  "type": "Cunning",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "level_range": "24",
+  "zone_id": 44,
+  "ui_map_id": 1433,
+  "abilities": [
+    { "key": "charge", "rank": 3 },
+    { "key": "gore", "rank": 4 }
+  ],
+  "coords": [
+    [15.4, 50.4],
+    [16.6, 50.8],
+    [17.1, 48.8],
+    [19.4, 46.8],
+    [21.2, 46.6],
+    [22.4, 59.2]
+  ]
+}

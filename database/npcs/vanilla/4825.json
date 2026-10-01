@@ -1,0 +1,15 @@
+{
+  "npc_id": 4825,
+  "name": "Aku'mai Snapjaw",
+  "family": "Turtle",
+  "type": "Tenacity",
+  "diet": ["Fish", "Fungus", "Fruit"],
+  "level_range": "23",
+  "classification": "Elite",
+  "zone_id": 719,
+  "abilities": [
+    { "key": "bite", "rank": 4 },
+    { "key": "shellshield", "rank": 1 }
+  ],
+  "coords": []
+}

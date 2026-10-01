@@ -1,0 +1,11 @@
+{
+  "npc_id": 5053,
+  "name": "Deviate Crocolisk",
+  "family": "Crocolisk",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "18-19",
+  "zone_id": 718,
+  "abilities": [{ "key": "bite", "rank": 3 }],
+  "coords": []
+}

@@ -1,0 +1,15 @@
+{
+  "npc_id": 8927,
+  "name": "Dark Screecher",
+  "family": "Bat",
+  "type": "Ferocity",
+  "diet": ["Fungus", "Fruit"],
+  "level_range": "50-51",
+  "zone_id": 1584,
+  "abilities": [
+    { "key": "cower", "rank": 5 },
+    { "key": "dive", "rank": 3 },
+    { "key": "screech", "rank": 3 }
+  ],
+  "coords": []
+}

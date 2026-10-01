@@ -1,0 +1,12 @@
+{
+  "npc_id": 11370,
+  "name": "Razzashi Broodwidow",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "56-61",
+  "classification": "Elite",
+  "zone_id": 1977,
+  "abilities": [{ "key": "bite", "rank": 8 }],
+  "coords": []
+}

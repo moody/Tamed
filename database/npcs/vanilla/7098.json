@@ -1,0 +1,17 @@
+{
+  "npc_id": 7098,
+  "name": "Ironbeak Screecher",
+  "family": "Owl",
+  "type": "Cunning",
+  "diet": ["Meat"],
+  "level_range": "52-53",
+  "zone_id": 361,
+  "ui_map_id": 1448,
+  "abilities": [{ "key": "dive", "rank": 3 }],
+  "coords": [
+    [55.8, 10.6],
+    [58.0, 15.8],
+    [62.2, 19.6],
+    [63.6, 21.6]
+  ]
+}

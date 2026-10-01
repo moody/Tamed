@@ -1,7 +1,10 @@
-local ADDON_NAME, Addon = ...
+local ADDON_NAME = ... ---@type string
+local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local HBDPins = Addon:GetLibrary("HBDPins")
 local L = Addon:GetModule("Locale")
+
+--- @class PinHelper
 local PinHelper = Addon:GetModule("PinHelper")
 
 local pins = {}
@@ -12,16 +15,17 @@ local count = 0
 -- Callbacks
 -- ============================================================================
 
+--- @param self TamedMapPin
 local function onEnter(self)
   -- Show highlight
   self.highlight:SetAlpha(0.4)
   -- Show tooltip
   GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-  GameTooltip:SetText(Colors.Primary(self.npc.name))
+  GameTooltip:SetText(Colors.Green(self.npc.name))
   GameTooltip:AddDoubleLine(L.LEVEL, self.npc.level_range, nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.ABILITIES, table.concat(self.npc.abilities, ", "), nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.FAMILY, self.npc.family, nil, nil, nil, 1, 1, 1)
-  GameTooltip:AddDoubleLine(L.DIET, self.npc.diet, nil, nil, nil, 1, 1, 1)
+  GameTooltip:AddDoubleLine(L.DIET, table.concat(self.npc.diet, ", "), nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.TYPE, self.npc.type, nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.LOCATION, self.npc.location, nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.LEFT_CLICK, L.CLEAR_PINS, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6)
@@ -41,7 +45,10 @@ end
 -- Functions
 -- ============================================================================
 
+--- @param npc TameableNPC
+--- @return table|Button
 function PinHelper:Get(npc)
+  --- @class TamedMapPin : Button
   local pin = next(pool)
 
   if pin then

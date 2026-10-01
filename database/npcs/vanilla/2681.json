@@ -1,0 +1,22 @@
+{
+  "npc_id": 2681,
+  "name": "Vilebranch Raiding Wolf",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "50-51",
+  "zone_id": 47,
+  "ui_map_id": 1425,
+  "abilities": [
+    { "key": "bite", "rank": 7 },
+    { "key": "dash", "rank": 3 }
+  ],
+  "coords": [
+    [58.6, 66.0],
+    [59.2, 74.4],
+    [59.8, 77.0],
+    [60.8, 78.6],
+    [60.9, 76.9],
+    [61.3, 80.3]
+  ]
+}

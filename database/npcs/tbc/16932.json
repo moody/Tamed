@@ -1,0 +1,23 @@
+{
+  "npc_id": 16932,
+  "name": "Razorfang Hatchling",
+  "family": "Ravager",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "59-60",
+  "zone_id": 3483,
+  "ui_map_id": 1944,
+  "abilities": [{ "key": "dash", "rank": 3 }],
+  "coords": [
+    [33.6, 89.8],
+    [35.0, 91.6],
+    [36.5, 91.2],
+    [36.9, 89.6],
+    [38.2, 85.6],
+    [38.6, 87.0],
+    [39.2, 88.4],
+    [40.6, 86.6],
+    [41.1, 85.0],
+    [42.0, 82.6]
+  ]
+}

@@ -1,9 +1,12 @@
-local _, Addon = ...
+local Addon = select(2, ...) ---@type Addon
+
+--- @class Locale
 local L = Addon:GetModule("Locale")
 
 L["ABILITIES"] = "Abilities"
 L["ALL_PET_FAMILIES"] = "All Pet Families"
 L["CLEAR_PINS"] = "Clear Pins"
+L["COMMANDS"] = "Commands"
 L["DIET"] = "Diet"
 L["FAMILY"] = "Family"
 L["GENERAL"] = "General"
@@ -12,16 +15,17 @@ L["LEFT_CLICK"] = "Left-Click"
 L["LEVEL"] = "Level"
 L["LOCATION"] = "Location"
 L["MAP_UNAVAILABLE"] = "Map Unavailable"
-L["MINIMAP_ICON_TOOLTIP"] = "Show an icon on the minimap."
+L["MINIMAP_ICON_DESCRIPTION"] = "Show an icon on the minimap."
 L["MINIMAP_ICON"] = "Minimap Icon"
 L["NONE"] = "None"
-L["NPC_TOOLTIPS_TOOLTIP"] = "Show tameable ability information in the tooltips of relevant NPCs."
+L["NPC_TOOLTIPS_DESCRIPTION"] = "Show tameable ability information in the tooltips of relevant NPCs."
 L["NPC_TOOLTIPS"] = "NPC Tooltips"
 L["OPTIONS"] = "Options"
 L["PET_LEVEL"] = "Pet Level"
 L["RANK"] = "Rank"
 L["RIGHT_CLICK"] = "Right-Click"
 L["SHOW_ON_MAP"] = "Show on Map"
+L["SHOW_TOOLTIP"] = "Show Tooltip"
 L["TAMEABLE_NPCS"] = "Tameable NPCs"
 L["TOGGLE_UI"] = "Toggle UI"
 L["TRAINING_COST"] = "Training Cost"

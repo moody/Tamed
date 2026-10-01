@@ -1,0 +1,19 @@
+{
+  "npc_id": 18033,
+  "name": "Dark Worg",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "64-65",
+  "zone_id": 3518,
+  "ui_map_id": 1951,
+  "abilities": [{ "key": "furioushowl", "rank": 4 }],
+  "coords": [
+    [67.8, 78.4],
+    [68.2, 74.6],
+    [68.6, 77.0],
+    [68.9, 82.5],
+    [70.4, 79.2],
+    [70.4, 80.9]
+  ]
+}

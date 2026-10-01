@@ -1,0 +1,18 @@
+{
+  "npc_id": 119,
+  "name": "Longsnout",
+  "family": "Boar",
+  "type": "Cunning",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "level_range": "10-11",
+  "zone_id": 12,
+  "ui_map_id": 1429,
+  "abilities": [{ "key": "charge", "rank": 1 }],
+  "coords": [
+    [24.8, 87.6],
+    [25.1, 83.1],
+    [25.6, 79.6],
+    [25.6, 81.4],
+    [25.6, 85.6]
+  ]
+}

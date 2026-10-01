@@ -7,6 +7,9 @@ manual-changelog:
   markup-type: markdown
 
 ignore:
-  - tamed.png
-  - pins.png
-  - README.md
+  - .git
+  - .github
+  - .vscode
+  - CONTRIBUTING.md
+  - database
+  - HISTORY.md

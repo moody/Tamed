@@ -1,0 +1,12 @@
+{
+  "npc_id": 976,
+  "name": "Kurzen War Tiger",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "32-33",
+  "zone_id": 33,
+  "ui_map_id": 1434,
+  "abilities": [{ "key": "dash", "rank": 1 }],
+  "coords": [[45.6, 9.8]]
+}

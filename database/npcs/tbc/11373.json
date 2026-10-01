@@ -1,0 +1,12 @@
+{
+  "npc_id": 11373,
+  "name": "Razzashi Cobra",
+  "family": "Serpent",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "60",
+  "classification": "Elite",
+  "zone_id": 1977,
+  "abilities": [{ "key": "poisonspit", "rank": 3 }],
+  "coords": []
+}

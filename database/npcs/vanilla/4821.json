@@ -1,0 +1,12 @@
+{
+  "npc_id": 4821,
+  "name": "Skittering Crustacean",
+  "family": "Crab",
+  "type": "Tenacity",
+  "diet": ["Fish", "Bread", "Fungus", "Fruit"],
+  "level_range": "22",
+  "classification": "Elite",
+  "zone_id": 719,
+  "abilities": [{ "key": "claw", "rank": 3 }],
+  "coords": []
+}

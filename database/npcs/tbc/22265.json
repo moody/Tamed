@@ -1,0 +1,21 @@
+{
+  "npc_id": 22265,
+  "name": "Shadowwing Owl",
+  "family": "Owl",
+  "type": "Cunning",
+  "diet": ["Meat"],
+  "level_range": "66-67",
+  "zone_id": 3520,
+  "ui_map_id": 1948,
+  "abilities": [
+    { "key": "claw", "rank": 9 },
+    { "key": "dive", "rank": 3 }
+  ],
+  "coords": [
+    [17.8, 29.4],
+    [19.2, 27.6],
+    [20.4, 23.1],
+    [21.0, 26.3],
+    [21.8, 24.0]
+  ]
+}

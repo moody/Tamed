@@ -1,0 +1,12 @@
+{
+  "npc_id": 4950,
+  "name": "Spot",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "35",
+  "zone_id": 15,
+  "ui_map_id": 1445,
+  "abilities": [{ "key": "dash", "rank": 1 }],
+  "coords": [[67.8, 46.6]]
+}

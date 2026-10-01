@@ -1,0 +1,15 @@
+{
+  "npc_id": 9696,
+  "name": "Bloodaxe Worg <Scarshield Legion>",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "56-57",
+  "zone_id": 1583,
+  "abilities": [
+    { "key": "bite", "rank": 8 },
+    { "key": "dash", "rank": 3 },
+    { "key": "furioushowl", "rank": 4 }
+  ],
+  "coords": []
+}

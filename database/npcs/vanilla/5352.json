@@ -1,0 +1,22 @@
+{
+  "npc_id": 5352,
+  "name": "Old Grizzlegut",
+  "family": "Bear",
+  "type": "Tenacity",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "level_range": "43",
+  "classification": "Rare",
+  "zone_id": 357,
+  "ui_map_id": 1444,
+  "abilities": [{ "key": "claw", "rank": 6 }],
+  "coords": [
+    [57.8, 58.0],
+    [58.6, 56.2],
+    [59.2, 58.4],
+    [60.6, 60.8],
+    [67.0, 47.8],
+    [68.8, 48.8],
+    [69.6, 42.4],
+    [69.6, 46.9]
+  ]
+}

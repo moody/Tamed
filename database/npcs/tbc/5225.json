@@ -1,0 +1,12 @@
+{
+  "npc_id": 5225,
+  "name": "Murk Spitter",
+  "family": "Serpent",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "46-47",
+  "zone_id": 8,
+  "ui_map_id": 1435,
+  "abilities": [{ "key": "poisonspit", "rank": 2 }],
+  "coords": []
+}

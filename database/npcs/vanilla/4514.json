@@ -1,0 +1,12 @@
+{
+  "npc_id": 4514,
+  "name": "Raging Agam'ar",
+  "family": "Boar",
+  "type": "Cunning",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "level_range": "25",
+  "classification": "Elite",
+  "zone_id": 491,
+  "abilities": [{ "key": "charge", "rank": 3 }],
+  "coords": []
+}

@@ -1,0 +1,26 @@
+{
+  "npc_id": 22123,
+  "name": "Rip-Blade Ravager",
+  "family": "Ravager",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "63",
+  "zone_id": 3522,
+  "ui_map_id": 1949,
+  "abilities": [
+    { "key": "dash", "rank": 3 },
+    { "key": "gore", "rank": 9 }
+  ],
+  "coords": [
+    [57.8, 61.4],
+    [58.7, 62.6],
+    [58.8, 61.0],
+    [58.8, 68.8],
+    [59.2, 66.8],
+    [59.2, 72.6],
+    [59.4, 71.1],
+    [59.7, 64.9],
+    [60.4, 68.8],
+    [60.6, 65.2]
+  ]
+}

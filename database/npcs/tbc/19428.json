@@ -1,0 +1,12 @@
+{
+  "npc_id": 19428,
+  "name": "Cobalt Serpent",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": ["Fish", "Cheese", "Bread"],
+  "level_range": "68-71",
+  "classification": "Elite",
+  "zone_id": 3791,
+  "abilities": [{ "key": "lightningbreath", "rank": 6 }],
+  "coords": []
+}

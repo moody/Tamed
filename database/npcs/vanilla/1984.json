@@ -1,0 +1,22 @@
+{
+  "npc_id": 1984,
+  "name": "Young Thistle Boar",
+  "family": "Boar",
+  "type": "Cunning",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "level_range": "1-2",
+  "zone_id": 141,
+  "ui_map_id": 1438,
+  "abilities": [{ "key": "charge", "rank": 1 }],
+  "coords": [
+    [55.8, 43.6],
+    [56.6, 44.4],
+    [57.4, 40.7],
+    [57.8, 38.8],
+    [57.8, 42.6],
+    [58.8, 44.9],
+    [59.6, 42.8],
+    [61.2, 45.0],
+    [62.6, 42.0]
+  ]
+}

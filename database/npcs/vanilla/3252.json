@@ -1,0 +1,20 @@
+{
+  "npc_id": 3252,
+  "name": "Silithid Swarmer",
+  "family": "Scorpid",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "21-22",
+  "zone_id": 17,
+  "ui_map_id": 1413,
+  "abilities": [{ "key": "scorpidpoison", "rank": 1 }],
+  "coords": [
+    [43.6, 69.4],
+    [43.6, 70.6],
+    [45.0, 72.3],
+    [45.2, 68.8],
+    [47.4, 69.6],
+    [48.0, 71.6],
+    [48.6, 69.6]
+  ]
+}

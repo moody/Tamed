@@ -1,0 +1,16 @@
+{
+  "npc_id": 1505,
+  "name": "Night Web Spider",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "3-4",
+  "zone_id": 85,
+  "ui_map_id": 1420,
+  "abilities": [{ "key": "bite", "rank": 1 }],
+  "coords": [
+    [23.8, 58.8],
+    [24.4, 60.6],
+    [27.6, 59.2]
+  ]
+}

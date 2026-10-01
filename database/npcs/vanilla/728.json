@@ -1,0 +1,16 @@
+{
+  "npc_id": 728,
+  "name": "Bhag'thera",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "40",
+  "zone_id": 33,
+  "ui_map_id": 1434,
+  "abilities": [{ "key": "dash", "rank": 2 }],
+  "coords": [
+    [47.6, 28.8],
+    [49.0, 20.6],
+    [49.8, 24.6]
+  ]
+}

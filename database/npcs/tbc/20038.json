@@ -1,0 +1,12 @@
+{
+  "npc_id": 20038,
+  "name": "Phoenix-Hawk Hatchling",
+  "family": "Dragonhawk",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish", "Fruit"],
+  "level_range": "70",
+  "classification": "Elite",
+  "zone_id": 3845,
+  "abilities": [{ "key": "firebreath", "rank": 2 }],
+  "coords": []
+}

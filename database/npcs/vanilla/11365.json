@@ -1,0 +1,12 @@
+{
+  "npc_id": 11365,
+  "name": "Zulian Panther",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "60",
+  "classification": "Elite",
+  "zone_id": 1977,
+  "abilities": [{ "key": "dash", "rank": 3 }],
+  "coords": []
+}

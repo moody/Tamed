@@ -1,0 +1,13 @@
+{
+  "npc_id": 6585,
+  "name": "Uhk'loc",
+  "family": "Gorilla",
+  "type": "Ferocity",
+  "diet": ["Fungus", "Fruit"],
+  "level_range": "52-53",
+  "classification": "Rare",
+  "zone_id": 490,
+  "ui_map_id": 1449,
+  "abilities": [{ "key": "bite", "rank": 7 }],
+  "coords": [[68.6, 14.6]]
+}

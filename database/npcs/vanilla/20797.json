@@ -1,0 +1,12 @@
+{
+  "npc_id": 20797,
+  "name": "Deviate Coiler Hatchling",
+  "family": "Wind Serpent",
+  "type": "Ferocity",
+  "diet": ["Fish", "Cheese", "Bread"],
+  "level_range": "11",
+  "zone_id": 17,
+  "ui_map_id": 1413,
+  "abilities": [{ "key": "lightningbreath", "rank": 1 }],
+  "coords": [[46.0, 36.4]]
+}

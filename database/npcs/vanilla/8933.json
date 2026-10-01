@@ -1,0 +1,11 @@
+{
+  "npc_id": 8933,
+  "name": "Cave Creeper",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "50-51",
+  "zone_id": 1584,
+  "abilities": [{ "key": "bite", "rank": 7 }],
+  "coords": []
+}

@@ -1,0 +1,12 @@
+{
+  "npc_id": 1994,
+  "name": "Githyiss the Vile",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "5",
+  "zone_id": 141,
+  "ui_map_id": 1438,
+  "abilities": [{ "key": "bite", "rank": 1 }],
+  "coords": [[56.6, 26.0]]
+}

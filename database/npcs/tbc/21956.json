@@ -1,0 +1,15 @@
+{
+  "npc_id": 21956,
+  "name": "Rema <The Den Mother>",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "66",
+  "zone_id": 3522,
+  "ui_map_id": 1949,
+  "abilities": [
+    { "key": "bite", "rank": 9 },
+    { "key": "furioushowl", "rank": 4 }
+  ],
+  "coords": [[51.4, 74.7]]
+}
