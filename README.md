@@ -1,8 +1,8 @@
 # Tamed
 
-Tamed is an addon for Classic WoW to assist Hunters with tamed ability information. The main goal of this addon is to provide an in-game solution to finding tameable pets which teach new ranks of pet abilities.
+Tamed helps Hunters in Classic WoW find the tameable pets that teach each rank of a pet ability, and shows where they spawn on the world map.
 
-Aims to support Vanilla, The Burning Crusade, and Forever.
+Supports Vanilla and The Burning Crusade. Forever support is planned.
 
 ![Tamed](/.github/images/Tamed.png?raw=true)
 ![Pins](/.github/images/Pins.png?raw=true)
