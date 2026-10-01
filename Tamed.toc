@@ -29,10 +29,12 @@ src\store\state-manager.lua
 src\tooltips.lua
 
 # Data
-src\data\TameableNPCs-Classic.lua
-src\data\TameableAbilities-Classic.lua
+src\data\TameableNPCs-Vanilla.lua
+src\data\TameableAbilities-Vanilla.lua
 src\data\TameableNPCs-TBC.lua
 src\data\TameableAbilities-TBC.lua
+src\data\TameableNPCs-Forever.lua
+src\data\TameableAbilities-Forever.lua
 
 # UI
 src\ui\widgets\widgets.lua
