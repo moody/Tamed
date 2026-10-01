@@ -29,11 +29,11 @@ function ComponentFactory:SelectableRow(options)
   --- @param frame ButtonWidget
   local function updateSelectionColors(frame)
     if isSelected then
-      frame:SetBackdropColor(Colors.Gold:GetRGBA(0.1))
-      frame.label:SetTextColor(Colors.Gold:GetRGBA())
+      frame:SetBackdropColor(Colors.Green:GetRGBA(0.1))
+      frame.label:SetTextColor(Colors.Green:GetRGBA())
     else
       frame:SetBackdropColor(0, 0, 0, 0)
-      frame.label:SetTextColor(Colors.White:GetRGBA())
+      frame.label:SetTextColor(Colors.LightGrey:GetRGBA())
     end
   end
 
@@ -46,7 +46,7 @@ function ComponentFactory:SelectableRow(options)
       local frame = Widgets:Button({
         parent = parent,
         labelText = options.labelText,
-        labelColor = Colors.White,
+        labelColor = Colors.LightGrey,
         onClick = function() options.onClick(root) end
       })
 
@@ -54,10 +54,12 @@ function ComponentFactory:SelectableRow(options)
 
       frame:SetBackdropBorderColor(0, 0, 0, 0)
       frame:SetScript("OnEnter", function()
-        if not isSelected then frame:SetBackdropColor(Colors.White:GetRGBA(0.1)) end
+        if isSelected then return end
+        frame:SetBackdropColor(Colors.White:GetRGBA(0.1))
+        frame.label:SetTextColor(Colors.White:GetRGBA())
       end)
       frame:SetScript("OnLeave", function()
-        if not isSelected then frame:SetBackdropColor(0, 0, 0, 0) end
+        if not isSelected then updateSelectionColors(frame) end
       end)
 
       updateSelectionColors(frame)

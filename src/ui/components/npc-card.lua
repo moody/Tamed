@@ -42,9 +42,13 @@ function ComponentFactory:NpcCard()
   --- Highlights the card while hovered, if its NPC has a map.
   --- @param frame FrameWidget
   local function updateHighlight(frame)
-    local alpha = (npc and npc.ui_map_id and frame:IsMouseOver()) and 0.5 or 0.25
-    frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(alpha))
-    frame:SetBackdropBorderColor(Colors.White:GetRGBA(alpha))
+    if npc and npc.ui_map_id and frame:IsMouseOver() then
+      frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(0.5))
+      frame:SetBackdropBorderColor(Colors.Green:GetRGBA(0.5))
+    else
+      frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(0.25))
+      frame:SetBackdropBorderColor(Colors.White:GetRGBA(0.1))
+    end
   end
 
   --- Shows the NPC tooltip on the card, if it has an NPC.
@@ -52,7 +56,7 @@ function ComponentFactory:NpcCard()
   local function showTooltip(frame)
     if npc then
       GameTooltip:SetOwner(frame, "ANCHOR_TOP")
-      GameTooltip:SetText(Colors.Primary(npc.name))
+      GameTooltip:SetText(Colors.Green(npc.name))
       GameTooltip:AddDoubleLine(L.LEVEL, Colors.White(npc.level_range))
       GameTooltip:AddDoubleLine(L.ABILITIES, Colors.White(table.concat(npc.abilities, ", ")))
       GameTooltip:AddDoubleLine(L.FAMILY, Colors.White(npc.family))
@@ -126,9 +130,9 @@ function ComponentFactory:NpcCard()
     textLines[#textLines + 1] = { node = node, getText = getText }
   end
 
-  addTextLine("LEFT", function(n) return Colors.Primary(n.name) end)
+  addTextLine("LEFT", function(n) return Colors.Green(n.name) end)
   addTextLine("CENTER", function(n) return Colors.White(n.level_range) end)
-  addTextLine("RIGHT", function(n) return Colors.Gold(n.location) end)
+  addTextLine("RIGHT", function(n) return Colors.LightGrey(n.location) end)
 
   --- Sets the NPC shown.
   --- @param newNpc? TameableNPC

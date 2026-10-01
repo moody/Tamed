@@ -91,7 +91,7 @@ EventManager:Once(E.Wow.PlayerLogin, function()
       if npc.classification then
         npc.level_range = ("%s (%s)"):format(
           npc.level_range,
-          Colors.Highlight(npc.classification)
+          Colors.Gold(npc.classification)
         )
       end
 

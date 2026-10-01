@@ -23,7 +23,7 @@ local function onEnter(self)
   self.highlight:SetAlpha(0.4)
   -- Show tooltip
   GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-  GameTooltip:SetText(Colors.Primary(self.npc.name))
+  GameTooltip:SetText(Colors.Green(self.npc.name))
   GameTooltip:AddDoubleLine(L.LEVEL, self.npc.level_range, nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.ABILITIES, table.concat(self.npc.abilities, ", "), nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.FAMILY, self.npc.family, nil, nil, nil, 1, 1, 1)

@@ -26,7 +26,7 @@ function Widgets:Button(options)
   -- Defaults.
   options.name = options.name or Widgets:GetUniqueName("Button")
   options.frameType = "Button"
-  options.labelColor = options.labelColor or Colors.Gold
+  options.labelColor = options.labelColor or Colors.Green
 
   --- @class ButtonWidget : FrameWidget, Button
   local frame = self:Frame(options)

@@ -26,7 +26,7 @@ function Widgets:CheckBox(options)
   options.frameType = "Button"
   options.width = options.width or 20
   options.height = options.height or 20
-  options.color = options.color or Colors.Highlight
+  options.color = options.color or Colors.Green
 
   --- @class CheckBoxWidget : FrameWidget, Button
   local frame = self:Frame(options)

@@ -24,7 +24,7 @@ EventManager:Once(E.StoreCreated, function()
     if not npc then return end
 
     -- Add lines.
-    self:AddLine(Colors.Primary(ADDON_NAME))
+    self:AddLine(Colors.Green(ADDON_NAME))
     for _, ability in ipairs(npc.abilities) do
       self:AddLine("  " .. ability, 1, 1, 1)
     end

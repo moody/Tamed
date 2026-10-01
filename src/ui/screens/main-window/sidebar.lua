@@ -87,7 +87,7 @@ local function addAbilityGroup(container, ability, onSelectRank)
       local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
       fontString:SetJustifyH("LEFT")
       fontString:SetWordWrap(false)
-      fontString:SetTextColor(Colors.Grey:GetRGB())
+      fontString:SetTextColor(Colors.White:GetRGB())
       fontString:SetTextToFit(ability.name)
       return fontString
     end,
@@ -104,7 +104,7 @@ local function addAbilityGroup(container, ability, onSelectRank)
     frameFactory = function(parent)
       expandIcon = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
       expandIcon:SetJustifyH("RIGHT")
-      expandIcon:SetTextColor(Colors.White:GetRGBA())
+      expandIcon:SetTextColor(Colors.Grey:GetRGBA())
       expandIcon:SetText("+")
       return expandIcon
     end,
