@@ -30,9 +30,9 @@ EventManager:Once(E.StoreCreated, function()
     end
   end
 
-  if TooltipDataProcessor and TooltipDataProcessor.AddTooltipPostCall then
-    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, addTamedTooltip)
-  else
+  if Addon.IS_VANILLA or Addon.IS_TBC then
     GameTooltip:HookScript("OnTooltipSetUnit", addTamedTooltip)
+  else
+    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, addTamedTooltip)
   end
 end)
