@@ -11,5 +11,3 @@ ignore:
   - .github
   - .vscode
   - HISTORY.md
-  - pins.png
-  - tamed.png
