@@ -34,7 +34,7 @@ EventManager:Once(E.StoreCreated, function()
     end,
 
     OnTooltipShow = function(tooltip)
-      tooltip:AddDoubleLine(Colors.Green(ADDON_NAME), Addon.VERSION)
+      tooltip:AddDoubleLine(Colors.Green(ADDON_NAME), Colors.Grey(Addon.VERSION))
       tooltip:AddLine(TOGGLE_UI_TOOLTIP)
       tooltip:AddLine(CLEAR_PINS_TOOLTIP)
     end,
