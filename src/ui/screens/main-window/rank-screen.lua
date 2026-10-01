@@ -30,47 +30,6 @@ function RankScreen:Build()
   -- Local Functions
   -- ------------------------------------------------------
 
-  --- Adds a label/value row to `container`. The value wraps, growing the row.
-  --- @param container WaffleFlexComponent
-  --- @param labelText string
-  --- @return WaffleFlexComponent valueNode
-  local function addDetailRow(container, labelText)
-    local row = container:AddRow({ height = "AUTO", align = "START", gap = Widgets:Padding(0.5) })
-
-    row:AddChild({
-      width = 110,
-      height = 18,
-
-      --- @param parent Frame
-      frameFactory = function(parent)
-        local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-        fontString:SetJustifyH("LEFT")
-        fontString:SetJustifyV("TOP")
-        fontString:SetText(labelText)
-        return fontString
-      end,
-    })
-
-    return row:AddChild({
-      height = "AUTO",
-
-      --- @param parent Frame
-      frameFactory = function(parent)
-        local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-        fontString:SetJustifyH("LEFT")
-        fontString:SetJustifyV("TOP")
-        fontString:SetWordWrap(true)
-        fontString:SetTextColor(Colors.White:GetRGB())
-        return fontString
-      end,
-
-      onMeasure = function(fontString, width)
-        fontString:SetSize(width, 0)
-        return width, fontString:GetStringHeight()
-      end,
-    })
-  end
-
   --- Fills the NPC cards from the scroll offset and updates the slider.
   local function refreshNpcCards()
     --- @type SliderWidget
@@ -117,10 +76,11 @@ function RankScreen:Build()
       Colors.Grey("%s (%s %d)"):format(Colors.White(ability.name), L.RANK, rank.rank)
     )
 
-    Components.PetLevelText:GetFrame():SetText(rank.pet_level and tostring(rank.pet_level) or L.NONE)
-    Components.TrainingCostText:GetFrame():SetText(rank.training_cost and rank.training_cost or L.NONE)
-    Components.LearnableByText:GetFrame():SetText(
-      #ability.learned_by > 0 and table.concat(ability.learned_by, ", ") or L.ALL_PET_FAMILIES)
+    Components.PetLevelRow:SetText(rank.pet_level and tostring(rank.pet_level) or L.NONE)
+    Components.TrainingCostRow:SetText(rank.training_cost and rank.training_cost or L.NONE)
+    Components.LearnableByRow:SetText(
+      #ability.learned_by > 0 and table.concat(ability.learned_by, ", ") or L.ALL_PET_FAMILIES
+    )
 
     currentNpcIds = {}
     for _, npc_id in ipairs(rank.npc_ids) do
@@ -204,9 +164,18 @@ function RankScreen:Build()
     end,
   })
 
-  Components.PetLevelText = addDetailRow(Components.DetailsCard, L.PET_LEVEL)
-  Components.TrainingCostText = addDetailRow(Components.DetailsCard, L.TRAINING_COST)
-  Components.LearnableByText = addDetailRow(Components.DetailsCard, L.LEARNABLE_BY)
+  --- @type DetailRowComponent
+  Components.PetLevelRow = Components.DetailsCard:AttachComponent(
+    ComponentFactory:DetailRow({ labelText = L.PET_LEVEL })
+  )
+  --- @type DetailRowComponent
+  Components.TrainingCostRow = Components.DetailsCard:AttachComponent(
+    ComponentFactory:DetailRow({ labelText = L.TRAINING_COST })
+  )
+  --- @type DetailRowComponent
+  Components.LearnableByRow = Components.DetailsCard:AttachComponent(
+    ComponentFactory:DetailRow({ labelText = L.LEARNABLE_BY })
+  )
 
   -- Shows the spell tooltip on hover.
   Components.DetailsCard:AddChild({

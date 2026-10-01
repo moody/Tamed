@@ -44,7 +44,7 @@ src\ui\components\window.lua
 src\ui\components\window-title-button.lua
 src\ui\components\scroll-panel.lua
 src\ui\components\selectable-row.lua
-src\ui\components\option-button.lua
+src\ui\components\detail-row.lua
 src\ui\components\npc-card.lua
 src\ui\minimap-icon.lua
 src\ui\pin-helper.lua
