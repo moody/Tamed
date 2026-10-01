@@ -1,7 +1,6 @@
 local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local ComponentFactory = Addon:GetModule("ComponentFactory")
-local GetCoinTextureString = C_CurrencyInfo and C_CurrencyInfo.GetCoinTextureString or GetCoinTextureString
 local L = Addon:GetModule("Locale")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 local Widgets = Addon:GetModule("Widgets")
@@ -119,8 +118,7 @@ function RankScreen:Build()
     )
 
     Components.PetLevelText:GetFrame():SetText(rank.pet_level and tostring(rank.pet_level) or L.NONE)
-    Components.TrainingCostText:GetFrame():SetText(
-      rank.training_cost and GetCoinTextureString(rank.training_cost) or L.NONE)
+    Components.TrainingCostText:GetFrame():SetText(rank.training_cost and rank.training_cost or L.NONE)
     Components.LearnableByText:GetFrame():SetText(
       #ability.learned_by > 0 and table.concat(ability.learned_by, ", ") or L.ALL_PET_FAMILIES)
 
