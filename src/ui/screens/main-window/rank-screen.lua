@@ -23,7 +23,7 @@ function RankScreen:Build()
   --- @type TameableAbilityRank?
   local currentRank
 
-  --- Ids of NPCs teaching `currentRank`, sorted by name.
+  --- Ids of NPCs teaching `currentRank`, sorted by `min_level`, then name.
   --- @type string[]
   local currentNpcIds = {}
 
@@ -131,8 +131,8 @@ function RankScreen:Build()
     table.sort(currentNpcIds, function(a, b)
       --- @type TameableNPC, TameableNPC
       a, b = TameableNPCs[a], TameableNPCs[b]
-      if a.level_range ~= b.level_range then
-        return a.level_range < b.level_range
+      if a.min_level ~= b.min_level then
+        return a.min_level < b.min_level
       end
       return a.name < b.name
     end)

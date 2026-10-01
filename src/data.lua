@@ -35,6 +35,7 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 --- @field type string
 --- @field diet string[]
 --- @field level_range string Includes `classification`, if any, once resolved.
+--- @field min_level integer First number in `level_range`.
 --- @field classification? string
 --- @field zone_id integer
 --- @field ui_map_id? integer
@@ -85,6 +86,7 @@ EventManager:Once(E.Wow.PlayerLogin, function()
   -- Update TameableNPCs with in-game data.
   for npc_id, npc in pairs(TameableNPCs) do
     npc.location = C_Map.GetAreaInfo(npc.zone_id)
+    npc.min_level = tonumber(npc.level_range:match("%d+"))
 
     if npc.location then
       -- Add `classification` to `level_range`.
