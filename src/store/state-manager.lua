@@ -6,7 +6,7 @@ local Wux = Addon.Wux
 --- @class StateManager
 local StateManager = Addon:GetModule("StateManager")
 
-local SAVED_VARIABLES_KEY = "__TAMED_ADDON_DB__"
+local SAVED_VARIABLES_KEY = "__TAMED_ADDON_V2_SAVED_VARIABLES__"
 
 -- ============================================================================
 -- LuaCATS Annotations

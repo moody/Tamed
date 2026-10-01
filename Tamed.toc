@@ -4,7 +4,7 @@
 ## Version: 2.0.0
 ## IconTexture: Interface\ICONS\Ability_Hunter_BeastTaming
 ## Notes: A guide to tamed pet abilities.
-## SavedVariables: __TAMED_ADDON_DB__
+## SavedVariables: __TAMED_ADDON_DB__, __TAMED_ADDON_V2_SAVED_VARIABLES__
 
 # Libraries
 libs\LibStub.lua
