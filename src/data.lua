@@ -25,9 +25,8 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 
 --- @class TameableAbilities : table<string, TameableAbility>
 
---- @class TameableNPCCoord
---- @field x number
---- @field y number
+--- Map position as `{x, y}` percentages (0 to 100).
+--- @alias TameableNPCCoord [number, number]
 
 --- @class TameableNPC
 --- @field name string

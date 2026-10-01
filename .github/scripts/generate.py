@@ -35,6 +35,12 @@ def luaString(s):
     return f'"{escaped}"'
 
 
+# Returns whether value is an int or float. JSON booleans are excluded, since
+# Python treats bool as an int.
+def isNumber(value):
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
 # Serializes a JSON-decoded value into Lua table/literal syntax, indented
 # for the given nesting depth.
 def luaSerialize(value, indent):
@@ -48,6 +54,8 @@ def luaSerialize(value, indent):
     if isinstance(value, list):
         if not value:
             return "{}"
+        if all(isNumber(item) for item in value):
+            return "{" + ", ".join(str(item) for item in value) + "}"
         inner = ",\n".join(f"{pad}  {luaSerialize(item, indent + 1)}" for item in value)
         return "{\n" + inner + f"\n{pad}}}"
     if isinstance(value, dict):
@@ -61,10 +69,11 @@ def luaSerialize(value, indent):
     raise TypeError(f"cannot serialize {value!r}")
 
 
-# Converts [x, y] pairs to {x=.., y=..} tables. database/ stores the compact
-# form for easy hand-editing; the shipped Lua needs the named form.
-def coordsToNamed(coords):
-    return [{"x": x, "y": y} for x, y in coords]
+# Exits with an error if any coord is not an [x, y] pair of numbers.
+def validateCoords(coords, fileLabel):
+    for coord in coords:
+        if len(coord) != 2 or not all(isNumber(n) for n in coord):
+            sys.exit(f"invalid coord {coord!r} in {fileLabel} (expected [x, y])")
 
 
 # Exits with an error if diet has a token outside VALID_DIETS.
@@ -76,8 +85,8 @@ def validateDiet(diet, fileLabel):
             )
 
 
-# Reorders npc's fields to NPC_FIELD_ORDER, converting coords and validating
-# diet along the way. Exits with an error on any unrecognized field.
+# Reorders npc's fields to NPC_FIELD_ORDER, validating diet and coords along
+# the way. Exits with an error on any unrecognized field.
 def orderNpcFields(npc, fileLabel):
     ordered = {}
     for field in NPC_FIELD_ORDER:
@@ -87,7 +96,7 @@ def orderNpcFields(npc, fileLabel):
         if field == "diet":
             validateDiet(value, fileLabel)
         elif field == "coords":
-            value = coordsToNamed(value)
+            validateCoords(value, fileLabel)
         ordered[field] = value
 
     unknown = set(npc) - {"npc_id"} - set(NPC_FIELD_ORDER)

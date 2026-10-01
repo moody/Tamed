@@ -21,7 +21,7 @@ local function showOnMap(npc)
   for _, coord in ipairs(npc.coords) do
     HBDPins:AddWorldMapIconMap(
       Addon, PinHelper:Get(npc), npc.ui_map_id,
-      coord.x * 0.01, coord.y * 0.01, HBD_PINS_WORLDMAP_SHOW_WORLD
+      coord[1] * 0.01, coord[2] * 0.01, HBD_PINS_WORLDMAP_SHOW_WORLD
     )
   end
 end
