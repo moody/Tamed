@@ -100,21 +100,19 @@ function ComponentFactory:NpcCard()
   })
 
   -- Name, level, and location.
-  local info = card:AddColumn({ height = "AUTO", gap = 2 })
+  local info = card:AddRow({ height = "AUTO", gap = Widgets:Padding(0.25), align = "CENTER" })
 
   --- Adds a text line filled in by `getText` for the current NPC.
-  --- @param fontObject string
-  --- @param wordWrap boolean
+  --- @param justify "LEFT" | "CENTER" | "RIGHT"
   --- @param getText fun(npc: TameableNPC): string
-  local function addTextLine(fontObject, wordWrap, getText)
+  local function addTextLine(justify, getText)
     local node = info:AddChild({
       height = "AUTO",
 
       --- @param parent Frame
       frameFactory = function(parent)
-        local fontString = parent:CreateFontString(nil, "ARTWORK", fontObject)
-        fontString:SetJustifyH("LEFT")
-        fontString:SetWordWrap(wordWrap)
+        local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
+        fontString:SetJustifyH(justify)
         fontString:SetText(npc and getText(npc) or "")
         return fontString
       end,
@@ -128,10 +126,9 @@ function ComponentFactory:NpcCard()
     textLines[#textLines + 1] = { node = node, getText = getText }
   end
 
-  addTextLine("GameFontNormal", false, function(n)
-    return Colors.Grey("%s (%s)"):format(Colors.Primary(n.name), Colors.White(n.level_range))
-  end)
-  addTextLine("GameFontNormalSmall", true, function(n) return Colors.Grey(n.location) end)
+  addTextLine("LEFT", function(n) return Colors.Primary(n.name) end)
+  addTextLine("CENTER", function(n) return Colors.White(n.level_range) end)
+  addTextLine("RIGHT", function(n) return Colors.Gold(n.location) end)
 
   --- Sets the NPC shown.
   --- @param newNpc? TameableNPC

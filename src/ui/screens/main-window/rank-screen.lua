@@ -18,7 +18,7 @@ local RankScreen = Addon:GetModule("RankScreen")
 function RankScreen:Build()
   local Components = {}
 
-  local NUM_NPC_CARDS = 5
+  local NUM_NPC_CARDS = 7
 
   --- @type TameableAbilityRank?
   local currentRank
@@ -47,7 +47,6 @@ function RankScreen:Build()
         local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
         fontString:SetJustifyH("LEFT")
         fontString:SetJustifyV("TOP")
-        fontString:SetTextColor(Colors.Grey:GetRGB())
         fontString:SetText(labelText)
         return fontString
       end,
@@ -111,7 +110,9 @@ function RankScreen:Build()
     --- @type RankHeadingIcon
     local headingIcon = Components.HeadingIcon:GetFrame()
     headingIcon.texture:SetTexture(ability.icon)
-    Components.HeadingText:GetFrame():SetText(("%s (%s %d)"):format(ability.name, L.RANK, rank.rank))
+    Components.HeadingText:GetFrame():SetText(
+      Colors.Grey("%s (%s %d)"):format(Colors.White(ability.name), L.RANK, rank.rank)
+    )
 
     Components.PetLevelText:GetFrame():SetText(rank.pet_level and tostring(rank.pet_level) or L.NONE)
     Components.TrainingCostText:GetFrame():SetText(
@@ -123,7 +124,14 @@ function RankScreen:Build()
     for _, npc_id in ipairs(rank.npc_ids) do
       currentNpcIds[#currentNpcIds + 1] = npc_id
     end
-    table.sort(currentNpcIds, function(a, b) return TameableNPCs[a].name < TameableNPCs[b].name end)
+    table.sort(currentNpcIds, function(a, b)
+      --- @type TameableNPC, TameableNPC
+      a, b = TameableNPCs[a], TameableNPCs[b]
+      if a.level_range ~= b.level_range then
+        return a.level_range < b.level_range
+      end
+      return a.name < b.name
+    end)
 
     Components.NpcSlider:GetFrame():SetValue(0)
     refreshNpcCards()
@@ -139,29 +147,12 @@ function RankScreen:Build()
   local heading = Components.Root:AddRow({
     height = 32,
     align = "CENTER",
-    gap = Widgets:Padding(0.5),
-  })
-
-  Components.HeadingText = heading:AddChild({
-    height = "AUTO",
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
-      fontString:SetJustifyH("LEFT")
-      fontString:SetWordWrap(false)
-      return fontString
-    end,
-
-    onMeasure = function(fontString, width)
-      fontString:SetSize(width, 0)
-      return width, fontString:GetStringHeight()
-    end,
+    gap = Widgets:Padding(),
   })
 
   Components.HeadingIcon = heading:AddChild({
-    width = 28,
-    height = 28,
+    width = 24,
+    height = 24,
 
     --- @param parent Frame
     frameFactory = function(parent)
@@ -175,6 +166,23 @@ function RankScreen:Build()
       frame.texture:SetTexCoord(0.08, 0.92, 0.08, 0.92)
 
       return frame
+    end,
+  })
+
+  Components.HeadingText = heading:AddChild({
+    height = "AUTO",
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalHuge")
+      fontString:SetJustifyH("LEFT")
+      fontString:SetWordWrap(false)
+      return fontString
+    end,
+
+    onMeasure = function(fontString, width)
+      fontString:SetSize(width, 0)
+      return width, fontString:GetStringHeight()
     end,
   })
 
@@ -231,7 +239,7 @@ function RankScreen:Build()
     frameFactory = function(parent)
       local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
       fontString:SetJustifyH("LEFT")
-      fontString:SetText(L.TAMEABLE_NPCS)
+      fontString:SetText(Colors.White(L.TAMEABLE_NPCS))
       return fontString
     end,
   })
