@@ -85,6 +85,10 @@ function RankScreen:Build()
       card:SetVisibility(npc and "VISIBLE" or "INVISIBLE")
     end
 
+    local isEmpty = #currentNpcIds == 0
+    Components.NpcCardColumn:SetVisibility(isEmpty and "GONE" or "VISIBLE")
+    Components.NpcEmptyText:SetVisibility(isEmpty and "VISIBLE" or "GONE")
+
     local maxScroll = math.max(#currentNpcIds - NUM_NPC_CARDS, 0)
     slider:SetMinMaxValues(0, maxScroll)
     Components.NpcSlider:SetVisibility(maxScroll <= 0 and "GONE" or "VISIBLE")
@@ -264,6 +268,20 @@ function RankScreen:Build()
   -- Cards split this column's height evenly.
   Components.NpcCardColumn = Components.NpcListRow:AddColumn({
     gap = Widgets:Padding(0.5),
+  })
+
+  -- Shown instead of the cards when the rank has no NPCs.
+  Components.NpcEmptyText = Components.NpcListRow:AddChild({
+    visibility = "GONE",
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+      fontString:SetJustifyH("CENTER")
+      fontString:SetJustifyV("MIDDLE")
+      fontString:SetText(Colors.Grey(L.NONE))
+      return fontString
+    end,
   })
 
   Components.NpcSlider = Components.NpcListRow:AddChild({
