@@ -15,7 +15,8 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 --- Opens the world map to the given NPC's zone, pinning its spawn locations.
 --- @param npc TameableNPC
 local function showOnMap(npc)
-  OpenWorldMap(npc.ui_map_id)
+  ShowUIPanel(WorldMapFrame)
+  WorldMapFrame:SetMapID(npc.ui_map_id)
   PinHelper:Clear()
   for _, coord in ipairs(npc.coords) do
     HBDPins:AddWorldMapIconMap(
