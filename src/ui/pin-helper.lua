@@ -7,8 +7,6 @@ local L = Addon:GetModule("Locale")
 --- @class PinHelper
 local PinHelper = Addon:GetModule("PinHelper")
 
-local PIN_TEXTURE = "Interface\\ICONS\\Ability_Hunter_BeastTaming"
-
 local pins = {}
 local pool = {}
 local count = 0
@@ -61,12 +59,12 @@ function PinHelper:Get(npc)
     pin:SetSize(14, 14)
 
     pin.texture = pin:CreateTexture(ADDON_NAME .. "PinTexture" .. count, "BACKGROUND")
-    pin.texture:SetTexture(PIN_TEXTURE)
+    pin.texture:SetTexture(Addon.ICON)
     pin.texture:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     pin.texture:SetAllPoints()
 
     pin.highlight = pin:CreateTexture(pin:GetName() .. "Hightlight", "HIGHLIGHT")
-    pin.highlight:SetTexture(PIN_TEXTURE)
+    pin.highlight:SetTexture(Addon.ICON)
     pin.highlight:SetTexCoord(0.08, 0.92, 0.08, 0.92)
     pin.highlight:SetBlendMode("ADD")
     pin.highlight:SetAlpha(0)

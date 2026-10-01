@@ -2,7 +2,7 @@
 ## Title: Tamed
 ## Author: https://github.com/moody
 ## Version: 2.0.0
-## IconTexture: Interface\AddOns\Tamed\assets\tamed-icon
+## IconTexture: Interface\ICONS\Ability_Hunter_BeastTaming
 ## Notes: A guide to tamed pet abilities.
 ## SavedVariables: __TAMED_ADDON_DB__
 

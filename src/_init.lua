@@ -10,7 +10,7 @@ local Addon = select(2, ...)
 -- ============================================================================
 
 Addon.VERSION = C_AddOns.GetAddOnMetadata(ADDON_NAME, "Version")
-Addon.ICON = "Interface\\AddOns\\Tamed\\assets\\tamed-icon"
+Addon.ICON = "Interface\\ICONS\\Ability_Hunter_BeastTaming"
 Addon.IS_TBC = WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC
 
 -- ============================================================================
