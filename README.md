@@ -43,4 +43,4 @@ Pet ability and NPC data is hand-editable. See [CONTRIBUTING.md](CONTRIBUTING.md
 
 ## License
 
-[MIT](LICENSE.md)
+[MIT](LICENSE)
