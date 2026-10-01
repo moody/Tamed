@@ -24,3 +24,7 @@ Clears all pins from the map.
 ```txt
 /tamed clear
 ```
+
+## Contributing
+
+Pet ability and NPC data is hand-editable. See [CONTRIBUTING.md](CONTRIBUTING.md) to add or fix entries.
