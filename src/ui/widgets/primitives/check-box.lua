@@ -38,15 +38,17 @@ function Widgets:CheckBox(options)
 
   local function setNormalColors(isEnabled)
     local backdropColor = isEnabled and options.color or Colors.DarkGrey
+    local borderColor = isEnabled and options.color or Colors.Grey
     frame:SetBackdropColor(backdropColor:GetRGBA(0.25))
-    frame:SetBackdropBorderColor(options.color:GetRGBA(0.75))
+    frame:SetBackdropBorderColor(borderColor:GetRGBA(0.75))
     frame.checkTexture:SetColorTexture(options.color:GetRGBA(0.75))
   end
 
   local function setHighlightColors(isEnabled)
     local backdropColor = isEnabled and options.color or Colors.DarkGrey
+    local borderColor = isEnabled and options.color or Colors.Grey
     frame:SetBackdropColor(backdropColor:GetRGBA(0.5))
-    frame:SetBackdropBorderColor(options.color:GetRGBA(1))
+    frame:SetBackdropBorderColor(borderColor:GetRGBA(1))
     frame.checkTexture:SetColorTexture(options.color:GetRGBA(1))
   end
 
