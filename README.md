@@ -28,3 +28,15 @@ Clears all pins from the map.
 ## Contributing
 
 Pet ability and NPC data is hand-editable. See [CONTRIBUTING.md](CONTRIBUTING.md) to add or fix entries.
+
+## Credit
+
+### Libraries
+
+- [CallbackHandler-1.0](https://www.wowace.com/projects/callbackhandler)
+- [HereBeDragons-2.0](https://www.wowace.com/projects/herebedragons)
+- [LibDataBroker-1.1](https://www.wowace.com/projects/libdatabroker-1-1)
+- [LibDBIcon-1.0](https://www.wowace.com/projects/libdbicon-1-0)
+- [LibStub](https://www.wowace.com/projects/libstub)
+- [Waffle](https://github.com/moody/Waffle)
+- [Wux](https://github.com/moody/Wux)
