@@ -16,4 +16,4 @@ jobs:
       - name: Regenerate Data
         run: python3 .github/scripts/generate.py
       - name: Git Diff on Data
-        run: git diff --exit-code data/
+        run: git diff --exit-code src/data/

@@ -10,4 +10,5 @@ ignore:
   - .git
   - .github
   - .vscode
+  - database
   - HISTORY.md
