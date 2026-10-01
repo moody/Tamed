@@ -40,3 +40,7 @@ Pet ability and NPC data is hand-editable. See [CONTRIBUTING.md](CONTRIBUTING.md
 - [LibStub](https://www.wowace.com/projects/libstub)
 - [Waffle](https://github.com/moody/Waffle)
 - [Wux](https://github.com/moody/Wux)
+
+## License
+
+[MIT](LICENSE.md)
