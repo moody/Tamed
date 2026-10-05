@@ -2,6 +2,13 @@
 
 Older release notes for [Tamed](https://github.com/moody/Tamed). See [CHANGELOG.md](CHANGELOG.md) for the current and most recent release.
 
+## [2.0.0] - 2026-10-01
+
+### Changed
+
+- Rebuilt the user interface
+- Refactored pet data for maintainability
+
 ## [1.15.3] - 2026-07-10
 
 - Version update
