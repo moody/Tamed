@@ -10,7 +10,8 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 -- =============================================================================
 
 --- Creates a vertically scrollable Waffle region. Its slider only shows when
---- the content actually overflows the viewport.
+--- the content actually overflows the viewport, but its space is always
+--- reserved so the content width never shifts.
 --- @return ScrollPanelComponent root
 function ComponentFactory:ScrollPanel()
   local Components = {}
@@ -35,11 +36,14 @@ function ComponentFactory:ScrollPanel()
   -- Functions
   ------------------------------------------------------------
 
-  --- Recomputes the slider's range and shows or hides it as necessary.
+  --- Recomputes the slider's range and shows or hides it as necessary. Hidden
+  --- as `INVISIBLE` rather than `GONE` so its space stays reserved; otherwise
+  --- the content width, and anything laid out against it, shifts whenever
+  --- the content starts or stops overflowing.
   local function updateSlider()
     local maxScroll = math.max(scrollChild:GetHeight() - scrollFrame:GetHeight(), 0)
     slider:SetMinMaxValues(0, maxScroll)
-    Components.SliderColumn:SetVisibility(maxScroll > 0 and "VISIBLE" or "GONE")
+    Components.SliderColumn:SetVisibility(maxScroll > 0 and "VISIBLE" or "INVISIBLE")
   end
 
   --- Creates a plain frame for children with no frameFactory of their own.
@@ -108,7 +112,7 @@ function ComponentFactory:ScrollPanel()
   Components.SliderColumn = Components.ScrollRow:AddColumn({
     frame = slider,
     width = 12,
-    visibility = "GONE"
+    visibility = "INVISIBLE"
   })
 
   -- The thumb is invisible on the first layout, so we
