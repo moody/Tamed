@@ -5,6 +5,7 @@ local EventManager = Addon:GetModule("EventManager")
 local L = Addon:GetModule("Locale")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
+local TameableZones = Addon:GetModule("TameableZones")
 
 -- ============================================================================
 -- LuaCATS Annotations
@@ -44,14 +45,25 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 
 --- @class TameableNPCs : table<string, TameableNPC>
 
+--- @class TameableZoneRank
+--- @field ability TameableAbility
+--- @field rank TameableAbilityRank
+
+--- @class TameableZone
+--- @field name string Resolved from `zone_id` via `C_Map.GetAreaInfo`.
+--- @field npc_ids string[] Ids of NPCs that teach at least one rank, sorted by `min_level`, then name.
+--- @field ranks TameableZoneRank[] Ranks taught here, sorted by ability name, then rank.
+
+--- @class TameableZones : table<integer, TameableZone>
+
 -- ============================================================================
 -- PlayerLogin
 -- ============================================================================
 
 -- Resolves TameableAbilities/TameableNPCs against the running client, once
 -- every flavor's data has been merged in (guaranteed by PlayerLogin, since
--- the flavor data files all load and run before then). Fires
--- `DataLoaded` when done.
+-- the flavor data files all load and run before then), and indexes them by
+-- zone into TameableZones. Fires `DataLoaded` when done.
 EventManager:Once(E.Wow.PlayerLogin, function()
   -- Update TameableAbilities with in-game data.
   for key, ability in pairs(TameableAbilities) do
@@ -79,6 +91,33 @@ EventManager:Once(E.Wow.PlayerLogin, function()
       end
     else
       TameableAbilities[key] = nil
+    end
+  end
+
+  -- Ranks already recorded per zone, so NPCs sharing a rank list it once.
+  --- @type table<TameableZone, table<TameableAbilityRank, true>>
+  local zoneRankSets = {}
+
+  --- Records that `npc` teaches `rank` of `ability` in its zone.
+  --- @param npc_id string
+  --- @param npc TameableNPC
+  --- @param ability TameableAbility
+  --- @param rank TameableAbilityRank
+  local function addToZone(npc_id, npc, ability, rank)
+    local zone = TameableZones[npc.zone_id]
+    if not zone then
+      zone = { name = npc.location, npc_ids = {}, ranks = {} }
+      TameableZones[npc.zone_id] = zone
+      zoneRankSets[zone] = {}
+    end
+
+    if zone.npc_ids[#zone.npc_ids] ~= npc_id then
+      zone.npc_ids[#zone.npc_ids + 1] = npc_id
+    end
+
+    if not zoneRankSets[zone][rank] then
+      zoneRankSets[zone][rank] = true
+      zone.ranks[#zone.ranks + 1] = { ability = ability, rank = rank }
     end
   end
 
@@ -116,6 +155,7 @@ EventManager:Once(E.Wow.PlayerLogin, function()
                 )
               }
               rank.npc_ids[#rank.npc_ids + 1] = npc_id
+              addToZone(npc_id, npc, ability, rank)
               break
             end
           end
@@ -127,6 +167,24 @@ EventManager:Once(E.Wow.PlayerLogin, function()
     else
       TameableNPCs[npc_id] = nil
     end
+  end
+
+  -- Sort each zone's NPCs and ranks for display.
+  for _, zone in pairs(TameableZones) do
+    table.sort(zone.npc_ids, function(a, b)
+      --- @type TameableNPC, TameableNPC
+      a, b = TameableNPCs[a], TameableNPCs[b]
+      if a.min_level ~= b.min_level then
+        return a.min_level < b.min_level
+      end
+      return a.name < b.name
+    end)
+    table.sort(zone.ranks, function(a, b)
+      if a.ability.name ~= b.ability.name then
+        return a.ability.name < b.ability.name
+      end
+      return a.rank.rank < b.rank.rank
+    end)
   end
 
   EventManager:Fire(E.DataLoaded)

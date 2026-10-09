@@ -17,40 +17,8 @@ local RankScreen = Addon:GetModule("RankScreen")
 function RankScreen:Build()
   local Components = {}
 
-  local NUM_NPC_CARDS = 7
-
   --- @type TameableAbilityRank?
   local currentRank
-
-  --- Ids of NPCs teaching `currentRank`, sorted by `min_level`, then name.
-  --- @type string[]
-  local currentNpcIds = {}
-
-  -- ------------------------------------------------------
-  -- Local Functions
-  -- ------------------------------------------------------
-
-  --- Fills the NPC cards from the scroll offset and updates the slider.
-  local function refreshNpcCards()
-    --- @type SliderWidget
-    local slider = Components.NpcSlider:GetFrame()
-    local offset = math.floor(slider:GetValue() + 0.5)
-
-    for i, card in ipairs(Components.NpcCards) do
-      local npc_id = currentNpcIds[i + offset]
-      local npc = npc_id and TameableNPCs[npc_id]
-      card:SetNpc(npc)
-      card:SetVisibility(npc and "VISIBLE" or "INVISIBLE")
-    end
-
-    local isEmpty = #currentNpcIds == 0
-    Components.NpcCardColumn:SetVisibility(isEmpty and "GONE" or "VISIBLE")
-    Components.NpcEmptyText:SetVisibility(isEmpty and "VISIBLE" or "GONE")
-
-    local maxScroll = math.max(#currentNpcIds - NUM_NPC_CARDS, 0)
-    slider:SetMinMaxValues(0, maxScroll)
-    Components.NpcSlider:SetVisibility(maxScroll <= 0 and "GONE" or "VISIBLE")
-  end
 
   -- ------------------------------------------------------
   -- Root Component
@@ -82,11 +50,12 @@ function RankScreen:Build()
       #ability.learned_by > 0 and table.concat(ability.learned_by, ", ") or L.ALL_PET_FAMILIES
     )
 
-    currentNpcIds = {}
+    -- Copied, since sorting in place would reorder `rank.npc_ids`.
+    local npcIds = {}
     for _, npc_id in ipairs(rank.npc_ids) do
-      currentNpcIds[#currentNpcIds + 1] = npc_id
+      npcIds[#npcIds + 1] = npc_id
     end
-    table.sort(currentNpcIds, function(a, b)
+    table.sort(npcIds, function(a, b)
       --- @type TameableNPC, TameableNPC
       a, b = TameableNPCs[a], TameableNPCs[b]
       if a.min_level ~= b.min_level then
@@ -95,8 +64,7 @@ function RankScreen:Build()
       return a.name < b.name
     end)
 
-    Components.NpcSlider:GetFrame():SetValue(0)
-    refreshNpcCards()
+    Components.NpcList:SetNpcIds(npcIds)
 
     self:MarkDirty()
   end
@@ -216,59 +184,8 @@ function RankScreen:Build()
   })
 
   -- NPC list: cards and slider.
-  Components.NpcListRow = Components.Root:AddRow({
-    padding = Widgets:Padding(),
-    gap = Widgets:Padding(0.5),
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local frame = Widgets:Frame({ parent = parent })
-      frame:EnableMouseWheel(true)
-      frame:SetScript("OnMouseWheel", function(_, delta)
-        local slider = Components.NpcSlider:GetFrame()
-        if slider then slider:SetValue(slider:GetValue() - delta) end
-      end)
-      return frame
-    end,
-  })
-
-  -- Cards split this column's height evenly.
-  Components.NpcCardColumn = Components.NpcListRow:AddColumn({
-    gap = Widgets:Padding(0.5),
-  })
-
-  -- Shown instead of the cards when the rank has no NPCs.
-  Components.NpcEmptyText = Components.NpcListRow:AddChild({
-    visibility = "GONE",
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-      fontString:SetJustifyH("CENTER")
-      fontString:SetJustifyV("MIDDLE")
-      fontString:SetText(Colors.Grey(L.NONE))
-      return fontString
-    end,
-  })
-
-  Components.NpcSlider = Components.NpcListRow:AddChild({
-    width = 12,
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local slider = Widgets:Slider({ parent = parent })
-      slider:SetScript("OnValueChanged", refreshNpcCards)
-      return slider
-    end,
-  })
-
-  --- @type NpcCardComponent[]
-  Components.NpcCards = {}
-  for i = 1, NUM_NPC_CARDS do
-    local card = ComponentFactory:NpcCard()
-    card:SetVisibility("INVISIBLE")
-    Components.NpcCards[i] = Components.NpcCardColumn:AttachComponent(card)
-  end
+  --- @type NpcListComponent
+  Components.NpcList = Components.Root:AttachComponent(ComponentFactory:NpcList())
 
   return Components.Root
 end

@@ -27,13 +27,24 @@ local function showOnMap(npc)
 end
 
 -- =============================================================================
+-- LuaCATS Annotations
+-- =============================================================================
+
+--- @class NpcCardOptions
+--- @field showAbilities? boolean Shows the NPC's abilities in place of its location.
+
+-- =============================================================================
 -- ComponentFactory - NpcCard
 -- =============================================================================
 
---- Creates a card showing an NPC's name, level, and location. Hovering shows
---- the NPC tooltip; clicking shows the NPC on the map, if it has a `ui_map_id`.
+--- Creates a card showing an NPC's name, level, and location (or abilities).
+--- Hovering shows the NPC tooltip; clicking shows the NPC on the map, if it has
+--- a `ui_map_id`.
+--- @param options? NpcCardOptions
 --- @return NpcCardComponent card
-function ComponentFactory:NpcCard()
+function ComponentFactory:NpcCard(options)
+  options = options or {}
+
   --- @type TameableNPC?
   local npc
 
@@ -133,7 +144,11 @@ function ComponentFactory:NpcCard()
 
   addTextLine("LEFT", function(n) return Colors.Green(n.name) end)
   addTextLine("CENTER", function(n) return Colors.White(n.level_range) end)
-  addTextLine("RIGHT", function(n) return Colors.LightGrey(n.location) end)
+  if options.showAbilities then
+    addTextLine("RIGHT", function(n) return Colors.White(table.concat(n.abilities, "\n")) end)
+  else
+    addTextLine("RIGHT", function(n) return Colors.LightGrey(n.location) end)
+  end
 
   --- Sets the NPC shown.
   --- @param newNpc? TameableNPC
