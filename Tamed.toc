@@ -49,9 +49,11 @@ src\ui\components\selectable-row.lua
 src\ui\components\detail-row.lua
 src\ui\components\option-row.lua
 src\ui\components\npc-card.lua
+src\ui\components\npc-list.lua
 src\ui\minimap-icon.lua
 src\ui\pin-helper.lua
 src\ui\screens\main-window\options-screen.lua
 src\ui\screens\main-window\rank-screen.lua
+src\ui\screens\main-window\zone-screen.lua
 src\ui\screens\main-window\sidebar.lua
 src\ui\screens\main-window\main-window.lua

@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- Added a zone view, listing the abilities, ranks, and tameable NPCs available in each zone
+
 ## [2.0.1] - 2026-10-05
 
 ### Fixed

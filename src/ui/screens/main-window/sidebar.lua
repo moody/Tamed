@@ -5,6 +5,7 @@ local E = Addon:GetModule("Events")
 local EventManager = Addon:GetModule("EventManager")
 local L = Addon:GetModule("Locale")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
+local TameableZones = Addon:GetModule("TameableZones")
 local Widgets = Addon:GetModule("Widgets")
 
 --- @class Sidebar
@@ -143,6 +144,7 @@ end
 --- @class SidebarOptions
 --- @field onSelectOptions fun() Called when the Options row is selected.
 --- @field onSelectRank fun(ability: TameableAbility, rank: TameableAbilityRank) Called when a rank row is selected.
+--- @field onSelectZone fun(zone: TameableZone) Called when a zone row is selected.
 
 --- Builds and returns a root component describing the Sidebar.
 --- @param options SidebarOptions
@@ -164,6 +166,39 @@ function Sidebar:Build(options)
   selectRow(optionsRow)
   options.onSelectOptions()
 
+  -- View toggle: lists abilities or zones below. Its selection is separate
+  -- from the content selection above, which stays as-is when switching.
+  local viewToggle = root.ScrollChild:AddRow({
+    height = "AUTO",
+    gap = Widgets:Padding(0.5),
+    marginBottom = Widgets:Padding(),
+  })
+
+  local abilitiesColumn = root.ScrollChild:AddColumn({ height = "AUTO" })
+  local zonesColumn = root.ScrollChild:AddColumn({ height = "AUTO", visibility = "GONE" })
+
+  --- @type SelectableRowComponent, SelectableRowComponent
+  local abilitiesViewRow, zonesViewRow
+
+  --- Shows either the abilities or the zones list.
+  --- @param showZones boolean
+  local function selectView(showZones)
+    abilitiesViewRow:SetSelected(not showZones)
+    zonesViewRow:SetSelected(showZones)
+    abilitiesColumn:SetVisibility(showZones and "GONE" or "VISIBLE")
+    zonesColumn:SetVisibility(showZones and "VISIBLE" or "GONE")
+  end
+
+  abilitiesViewRow = viewToggle:AttachComponent(ComponentFactory:SelectableRow({
+    labelText = L.ABILITIES,
+    onClick = function() selectView(false) end,
+  }))
+  zonesViewRow = viewToggle:AttachComponent(ComponentFactory:SelectableRow({
+    labelText = L.ZONES,
+    onClick = function() selectView(true) end,
+  }))
+  selectView(false)
+
   -- Ability rows, sorted by name.
   local abilities = {}
   for _, ability in pairs(TameableAbilities) do
@@ -172,7 +207,24 @@ function Sidebar:Build(options)
   table.sort(abilities, function(a, b) return a.name < b.name end)
 
   for _, ability in ipairs(abilities) do
-    addAbilityGroup(root.ScrollChild, ability, options.onSelectRank)
+    addAbilityGroup(abilitiesColumn, ability, options.onSelectRank)
+  end
+
+  -- Zone rows, sorted by name.
+  local zones = {}
+  for _, zone in pairs(TameableZones) do
+    zones[#zones + 1] = zone
+  end
+  table.sort(zones, function(a, b) return a.name < b.name end)
+
+  for _, zone in ipairs(zones) do
+    zonesColumn:AttachComponent(ComponentFactory:SelectableRow({
+      labelText = zone.name,
+      onClick = function(row)
+        selectRow(row)
+        options.onSelectZone(zone)
+      end,
+    }))
   end
 
   return root
