@@ -1,0 +1,21 @@
+{
+  "npc_id": 266851,
+  "name": "Ukorsbane",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "8",
+  "classification": "Elite",
+  "zone_id": 14,
+  "ui_map_id": 1411,
+  "abilities": [{ "key": "bite", "rank": 1 }],
+  "coords": [
+    [49.4, 56.4],
+    [49.4, 56.6],
+    [49.6, 56.4],
+    [49.6, 56.6],
+    [50.6, 56.4],
+    [50.8, 56.6],
+    [51.5, 55.9]
+  ]
+}

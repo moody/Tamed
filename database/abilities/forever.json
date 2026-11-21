@@ -1,0 +1,21 @@
+{
+  "bite": {
+    "learned_by": [
+      "Bat",
+      "Bear",
+      "Boar",
+      "Carrion Bird",
+      "Cat",
+      "Crocolisk",
+      "Fox",
+      "Gorilla",
+      "Hyena",
+      "Raptor",
+      "Spider",
+      "Tallstrider",
+      "Turtle",
+      "Wind Serpent",
+      "Wolf"
+    ]
+  }
+}

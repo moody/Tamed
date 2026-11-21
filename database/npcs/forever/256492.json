@@ -1,0 +1,23 @@
+{
+  "npc_id": 256492,
+  "name": "Fernfeather",
+  "family": "Tallstrider",
+  "type": "Ferocity",
+  "diet": ["Cheese", "Fungus", "Fruit"],
+  "level_range": "10",
+  "classification": "Rare",
+  "zone_id": 16593,
+  "ui_map_id": 2521,
+  "abilities": [{ "key": "bite", "rank": 2 }],
+  "coords": [
+    [48.4, 85.4],
+    [48.4, 85.8],
+    [48.7, 85.5],
+    [48.8, 85.4],
+    [51.2, 82.8],
+    [51.4, 82.4],
+    [51.5, 83.0],
+    [53.2, 78.4],
+    [54.0, 79.1]
+  ]
+}

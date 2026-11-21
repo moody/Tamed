@@ -1,0 +1,18 @@
+{
+  "npc_id": 258522,
+  "name": "Sootfur",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "38",
+  "zone_id": 16591,
+  "ui_map_id": 2548,
+  "abilities": [{ "key": "bite", "rank": 5 }],
+  "coords": [
+    [53.9, 84.3],
+    [54.0, 86.0],
+    [54.4, 85.4],
+    [54.5, 85.4],
+    [54.5, 85.5]
+  ]
+}
