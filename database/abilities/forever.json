@@ -224,5 +224,38 @@
         "pet_level": 60
       }
     ]
+  },
+  "savagerend": {
+    "name": "Savage Rend",
+    "learned_by": [
+      "Raptor"
+    ],
+    "ranks": [
+      {
+        "rank": 1,
+        "spell_id": 1265065,
+        "pet_level": 12
+      },
+      {
+        "rank": 2,
+        "spell_id": 1265066,
+        "pet_level": 24
+      },
+      {
+        "rank": 3,
+        "spell_id": 1265067,
+        "pet_level": 36
+      },
+      {
+        "rank": 4,
+        "spell_id": 1265068,
+        "pet_level": 48
+      },
+      {
+        "rank": 5,
+        "spell_id": 1265069,
+        "pet_level": 60
+      }
+    ]
   }
 }
