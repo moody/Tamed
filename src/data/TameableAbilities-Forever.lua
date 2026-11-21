@@ -69,7 +69,6 @@ Addon:MergeTameableAbilities({
       "Cat",
       "Crab",
       "Crocolisk",
-      "Owl",
       "Raptor",
       "Scorpid"
     }
@@ -143,7 +142,6 @@ Addon:MergeTameableAbilities({
       "Bat",
       "Bird of Prey",
       "Carrion Bird",
-      "Owl",
       "Wind Serpent"
     }
   },
@@ -277,6 +275,13 @@ Addon:MergeTameableAbilities({
         ["spell_id"] = 1265069,
         ["pet_level"] = 60
       }
+    }
+  },
+  ["screech"] = {
+    ["learned_by"] = {
+      "Bat",
+      "Bird of Prey",
+      "Carrion Bird"
     }
   },
   ["sonicblast"] = {
