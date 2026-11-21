@@ -328,5 +328,38 @@
         "pet_level": 60
       }
     ]
+  },
+  "tendonrip": {
+    "name": "Tendon Rip",
+    "learned_by": [
+      "Hyena"
+    ],
+    "ranks": [
+      {
+        "rank": 1,
+        "spell_id": 1265038,
+        "pet_level": 12
+      },
+      {
+        "rank": 2,
+        "spell_id": 1265039,
+        "pet_level": 24
+      },
+      {
+        "rank": 3,
+        "spell_id": 1265040,
+        "pet_level": 36
+      },
+      {
+        "rank": 4,
+        "spell_id": 1265041,
+        "pet_level": 48
+      },
+      {
+        "rank": 5,
+        "spell_id": 1265042,
+        "pet_level": 60
+      }
+    ]
   }
 }

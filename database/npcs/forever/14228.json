@@ -8,7 +8,7 @@
   "classification": "Rare",
   "zone_id": 405,
   "ui_map_id": 1443,
-  "abilities": [{ "key": "bite", "rank": 5 }],
+  "abilities": [{ "key": "bite", "rank": 5 }, { "key": "tendonrip", "rank": 2 }],
   "coords": [
     [48.8, 8.4],
     [49.0, 8.6],
