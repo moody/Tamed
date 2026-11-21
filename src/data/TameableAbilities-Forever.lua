@@ -73,5 +73,13 @@ Addon:MergeTameableAbilities({
       "Raptor",
       "Scorpid"
     }
+  },
+  ["cower"] = {
+    ["learned_by"] = {
+      "Bat",
+      "Bird of Prey",
+      "Cat",
+      "Tallstrider"
+    }
   }
 })

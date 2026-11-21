@@ -1,0 +1,17 @@
+{
+  "npc_id": 268231,
+  "name": "Ta'shkal",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "58",
+  "zone_id": 616,
+  "ui_map_id": 2482,
+  "abilities": [{ "key": "cower", "rank": 6 }],
+  "coords": [
+    [26.4, 65.2],
+    [26.5, 65.4],
+    [26.6, 64.4],
+    [26.8, 65.6]
+  ]
+}
