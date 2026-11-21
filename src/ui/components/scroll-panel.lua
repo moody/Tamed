@@ -6,6 +6,24 @@ local Widgets = Addon:GetModule("Widgets")
 local ComponentFactory = Addon:GetModule("ComponentFactory")
 
 -- =============================================================================
+-- Local Functions
+-- =============================================================================
+
+--- Most pixels scrolled by one wheel notch.
+local WHEEL_STEP = 48
+
+--- Returns where scrolling ends up after one wheel notch, from `0` to `max`.
+--- @param position number Where scrolling is.
+--- @param delta number Positive scrolls up, negative scrolls down.
+--- @param step number Pixels per notch.
+--- @param max number
+--- @return integer
+local function getWheelTarget(position, delta, step, max)
+  local target = math.floor(position - step * delta + 0.5)
+  return math.max(0, math.min(target, max))
+end
+
+-- =============================================================================
 -- ComponentFactory - ScrollPanel
 -- =============================================================================
 
@@ -64,8 +82,10 @@ function ComponentFactory:ScrollPanel()
       frame:SetBackdropBorderColor(0, 0, 0, 0)
       frame:EnableMouseWheel(true)
       frame:SetScript("OnMouseWheel", function(_, delta)
-        local min, max = slider:GetMinMaxValues()
-        slider:SetValue(Clamp(slider:GetValue() - scrollFrame:GetHeight() * 0.75 * delta, min, max))
+        local _, max = slider:GetMinMaxValues()
+        -- An eighth of the range, from a third of WHEEL_STEP up to WHEEL_STEP.
+        local step = Clamp(max / 8, WHEEL_STEP / 3, WHEEL_STEP)
+        slider:SetValue(getWheelTarget(slider:GetValue(), delta, step, max))
       end)
       return frame
     end,
@@ -101,6 +121,7 @@ function ComponentFactory:ScrollPanel()
     frame = scrollFrame,
     onLayout = function(_, width)
       Components.Root.ScrollChild:SetWidth(width)
+      Components.Root.ScrollChild:Layout()
       updateSlider()
     end
   })
