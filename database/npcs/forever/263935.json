@@ -8,7 +8,7 @@
   "classification": "Rare Elite",
   "zone_id": 616,
   "ui_map_id": 2482,
-  "abilities": [{ "key": "bite", "rank": 8 }],
+  "abilities": [{ "key": "bite", "rank": 8 }, { "key": "furioushowl", "rank": 4 }],
   "coords": [
     [52.6, 71.4],
     [54.0, 68.8],

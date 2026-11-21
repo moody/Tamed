@@ -1654,6 +1654,45 @@ Addon:MergeTameableNPCs({
       {65.0, 21.2}
     }
   },
+  ["12431"] = {
+    ["name"] = "Gorefang",
+    ["family"] = "Wolf",
+    ["type"] = "Ferocity",
+    ["diet"] = {
+      "Meat"
+    },
+    ["level_range"] = "13",
+    ["classification"] = "Rare",
+    ["zone_id"] = 130,
+    ["ui_map_id"] = 1421,
+    ["abilities"] = {
+      {
+        ["key"] = "furioushowl",
+        ["rank"] = 1
+      }
+    },
+    ["coords"] = {
+      {46.2, 18.0},
+      {46.2, 25.4},
+      {46.4, 26.2},
+      {46.4, 26.6},
+      {46.6, 25.8},
+      {46.9, 25.0},
+      {47.0, 17.4},
+      {47.0, 18.8},
+      {47.0, 26.6},
+      {47.1, 17.7},
+      {50.2, 17.8},
+      {50.4, 18.8},
+      {50.6, 18.6},
+      {51.0, 18.2},
+      {51.8, 18.2},
+      {59.0, 8.6},
+      {59.4, 7.8},
+      {59.8, 8.0},
+      {59.8, 8.6}
+    }
+  },
   ["14228"] = {
     ["name"] = "Giggler",
     ["family"] = "Hyena",
@@ -1839,6 +1878,10 @@ Addon:MergeTameableNPCs({
       {
         ["key"] = "bite",
         ["rank"] = 8
+      },
+      {
+        ["key"] = "furioushowl",
+        ["rank"] = 4
       }
     },
     ["coords"] = {
@@ -3311,6 +3354,10 @@ Addon:MergeTameableNPCs({
       {
         ["key"] = "bite",
         ["rank"] = 8
+      },
+      {
+        ["key"] = "furioushowl",
+        ["rank"] = 4
       }
     },
     ["coords"] = {
@@ -3629,6 +3676,37 @@ Addon:MergeTameableNPCs({
       {57.0, 49.3},
       {57.1, 51.5},
       {57.5, 49.1}
+    }
+  },
+  ["274300"] = {
+    ["name"] = "Coldrasp",
+    ["family"] = "Wolf",
+    ["type"] = "Ferocity",
+    ["diet"] = {
+      "Meat"
+    },
+    ["level_range"] = "12",
+    ["classification"] = "Rare",
+    ["zone_id"] = 85,
+    ["ui_map_id"] = 1420,
+    ["abilities"] = {
+      {
+        ["key"] = "furioushowl",
+        ["rank"] = 1
+      }
+    },
+    ["coords"] = {
+      {16.0, 66.8},
+      {16.6, 67.4},
+      {17.4, 68.8},
+      {17.8, 68.4},
+      {17.8, 68.5},
+      {19.4, 65.0},
+      {19.6, 65.2},
+      {19.6, 70.4},
+      {19.8, 64.4},
+      {19.8, 71.0},
+      {20.0, 71.8}
     }
   },
   ["276111"] = {
