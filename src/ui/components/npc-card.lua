@@ -42,15 +42,17 @@ function ComponentFactory:NpcCard()
 
   local isHovered = false
 
-  --- Highlights the card while hovered.
+  --- Tints the card while hovered, green if its NPC has a map.
   --- @param frame FrameWidget
   local function updateHighlight(frame)
     if isHovered then
-      frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(0.5))
-      frame:SetBackdropBorderColor(Colors.Green:GetRGBA(0.5))
+      if npc and npc.ui_map_id then
+        frame:SetBackdropColor(Colors.Green:GetRGBA(0.12))
+      else
+        frame:SetBackdropColor(Colors.White:GetRGBA(0.08))
+      end
     else
-      frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(0.25))
-      frame:SetBackdropBorderColor(Colors.White:GetRGBA(0.1))
+      frame:SetBackdropColor(0, 0, 0, 0)
     end
   end
 
@@ -88,7 +90,15 @@ function ComponentFactory:NpcCard()
     --- @param parent Frame
     frameFactory = function(parent)
       local frame = Widgets:Frame({ parent = parent, frameType = "Button" })
+      frame:SetBackdropBorderColor(0, 0, 0, 0)
       updateHighlight(frame)
+
+      -- Divider between cards.
+      local divider = frame:CreateTexture(nil, "BORDER")
+      divider:SetColorTexture(Colors.White:GetRGBA(0.06))
+      divider:SetHeight(1)
+      divider:SetPoint("BOTTOMLEFT")
+      divider:SetPoint("BOTTOMRIGHT")
 
       frame:SetScript("OnClick", function()
         if npc and npc.ui_map_id then showOnMap(npc) end
@@ -120,9 +130,11 @@ function ComponentFactory:NpcCard()
 
   --- Adds a text line filled in by `getText` for the current NPC.
   --- @param justify "LEFT" | "CENTER" | "RIGHT"
+  --- @param columnWidth? integer Without it, the line takes the width left over.
   --- @param getText fun(npc: TameableNPC): string
-  local function addTextLine(justify, getText)
+  local function addTextLine(justify, columnWidth, getText)
     local node = info:AddChild({
+      width = columnWidth,
       height = "AUTO",
 
       --- @param parent Frame
@@ -142,9 +154,9 @@ function ComponentFactory:NpcCard()
     textLines[#textLines + 1] = { node = node, getText = getText }
   end
 
-  addTextLine("LEFT", function(n) return Colors.Green(n.name) end)
-  addTextLine("CENTER", function(n) return Colors.White(n.level_range) end)
-  addTextLine("RIGHT", function(n)
+  addTextLine("LEFT", nil, function(n) return Colors.Green(n.name) end)
+  addTextLine("CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, function(n) return Colors.White(n.level_range) end)
+  addTextLine("RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, function(n)
     local color = n.ui_map_id and Colors.LightGrey or Colors.DimGrey
     return color(n.location)
   end)
