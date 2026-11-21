@@ -52,8 +52,25 @@ Components.Root.TitleText = nil
 -- Title Bar Components
 -- ============================================================================
 
+Components.TitleBarNameText = Components.Root.TitleRow:AddRow({ gap = Widgets:Padding(0.5) })
+
+-- Addon icon, to the left of the name.
+Components.TitleBarNameText:AddChild({
+  width = 20,
+  height = 20,
+  shrink = 0,
+  alignSelf = "CENTER",
+
+  --- @param parent Frame
+  frameFactory = function(parent)
+    local icon = parent:CreateTexture("$parent_TitleIcon", "ARTWORK")
+    icon:SetTexture(Addon.ICON)
+    icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
+    return icon
+  end
+})
+
 -- Addon name, in green.
-Components.TitleBarNameText = Components.Root.TitleRow:AddRow()
 Components.TitleBarNameText:AddChild({
   --- @param parent Frame
   frameFactory = function(parent)
