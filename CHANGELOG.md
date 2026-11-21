@@ -1,7 +1,12 @@
 # Changelog
 
-## [2.0.1] - 2026-10-05
+## [2.1.0] - 2026-11-21
+
+### Added
+
+- WoW Forever now has its own pet ability and tameable NPC data
+- Forever abilities: Dismember, Dust Cloud, Mine!, Pinch, Savage Rend, Sonic Blast, Swipe, Tendon Rip, Trickster's Dance, and Web
 
 ### Fixed
 
-- Fixed a Lua error when showing NPC tooltips in dungeons on WoW Forever
+- Fixed Tameable NPC cards not highlighting when the mouse moves onto them slowly
