@@ -25,18 +25,22 @@ function OptionsScreen:Build()
     gap = Widgets:Padding(),
   })
 
-  --- Returns a bordered card for grouping rows.
+  --- Returns a card for grouping rows.
   --- @param gap number
+  --- @param padding number
   --- @return WaffleFlexComponent card
-  local function addCard(gap)
+  local function addCard(gap, padding)
     return root:AddColumn({
       height = "AUTO",
       gap = gap,
-      padding = Widgets:Padding(),
+      padding = padding,
 
       --- @param parent Frame
       frameFactory = function(parent)
-        return Widgets:Frame({ parent = parent })
+        local frame = Widgets:Frame({ parent = parent })
+        frame:SetBackdropColor(Colors.White:GetRGBA(0.04))
+        frame:SetBackdropBorderColor(0, 0, 0, 0)
+        return frame
       end,
     })
   end
@@ -45,30 +49,10 @@ function OptionsScreen:Build()
   -- Heading Components
   -- ------------------------------------------------------
 
-  -- Heading: addon icon and title.
+  -- Heading: title.
   local heading = root:AddRow({
-    height = 32,
+    height = 48,
     align = "CENTER",
-    gap = Widgets:Padding(),
-  })
-
-  heading:AddChild({
-    width = 24,
-    height = 24,
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local frame = Widgets:Frame({ parent = parent })
-      frame:SetBackdropBorderColor(Colors.White:GetRGBA(0.25))
-
-      local texture = frame:CreateTexture(nil, "ARTWORK")
-      texture:SetPoint("TOPLEFT", 1, -1)
-      texture:SetPoint("BOTTOMRIGHT", -1, 1)
-      texture:SetTexCoord(0.08, 0.92, 0.08, 0.92)
-      texture:SetTexture(Addon.ICON)
-
-      return frame
-    end,
   })
 
   heading:AddChild({
@@ -93,7 +77,10 @@ function OptionsScreen:Build()
   -- Options Components
   -- ------------------------------------------------------
 
-  local optionsCard = addCard(0)
+  root:AttachComponent(ComponentFactory:SectionTitle({ titleText = L.GENERAL }))
+
+  -- The option rows have padding of their own.
+  local optionsCard = addCard(0, Widgets:Padding(0.5))
 
   optionsCard:AttachComponent(ComponentFactory:OptionRow({
     labelText = L.MINIMAP_ICON,
@@ -113,34 +100,57 @@ function OptionsScreen:Build()
   -- Commands Components
   -- ------------------------------------------------------
 
-  root:AddChild({
+  root:AttachComponent(ComponentFactory:SectionTitle({ titleText = L.COMMANDS }))
+
+  local commandsCard = addCard(Widgets:Padding(0.5), Widgets:Padding())
+
+  commandsCard:AttachComponent(ComponentFactory:DetailRow({ labelText = "/tamed", valueText = L.TOGGLE_UI }))
+
+  -- The `/tamed clear` row, with its action in place of a description.
+  local clearRow = commandsCard:AddRow({
     height = 24,
+    align = "CENTER",
+    gap = Widgets:Padding(0.5),
+  })
+
+  clearRow:AddChild({
+    width = 110,
+    height = 18,
 
     --- @param parent Frame
     frameFactory = function(parent)
-      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
+      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
       fontString:SetJustifyH("LEFT")
-      fontString:SetText(Colors.White(L.COMMANDS))
+      fontString:SetTextColor(Colors.White:GetRGB())
+      fontString:SetText("/tamed clear")
       return fontString
     end,
   })
 
-  local commandsCard = addCard(Widgets:Padding(0.5))
-
-  commandsCard:AttachComponent(ComponentFactory:DetailRow({ labelText = "/tamed", valueText = L.TOGGLE_UI }))
-  commandsCard:AttachComponent(ComponentFactory:DetailRow({ labelText = "/tamed clear", valueText = L.CLEAR_PINS }))
-
-  commandsCard:AddChild({
+  clearRow:AddChild({
+    width = 120,
     height = 24,
-    marginTop = Widgets:Padding(0.5),
 
     --- @param parent Frame
     frameFactory = function(parent)
-      return Widgets:Button({
+      --- Colors the button flat, brighter while hovered.
+      --- @param button ButtonWidget
+      --- @param isHovered boolean
+      local function setFlatColors(button, isHovered)
+        button:SetBackdropColor(Colors.White:GetRGBA(isHovered and 0.12 or 0.06))
+        button:SetBackdropBorderColor(0, 0, 0, 0)
+      end
+
+      local button = Widgets:Button({
         parent = parent,
         labelText = L.CLEAR_PINS,
         onClick = function() PinHelper:Clear() end,
+        onEnter = function(target) setFlatColors(target, true) end,
+        onLeave = function(target) setFlatColors(target, false) end,
       })
+      setFlatColors(button, false)
+
+      return button
     end,
   })
 

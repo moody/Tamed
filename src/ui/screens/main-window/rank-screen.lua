@@ -110,11 +110,9 @@ function RankScreen:Build()
       return a.name < b.name
     end)
 
-    --- @type RankNpcHeading
-    local npcHeading = Components.NpcHeading:GetFrame()
-    local npcTitle = Colors.White(L.TAMEABLE_NPCS)
+    local npcTitle = L.TAMEABLE_NPCS
     if #currentNpcIds > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #currentNpcIds) end
-    npcHeading.text:SetText(npcTitle)
+    Components.NpcHeading:SetTitleText(npcTitle)
 
     Components.NpcSlider:GetFrame():SetValue(0)
     refreshNpcCards()
@@ -248,30 +246,10 @@ function RankScreen:Build()
   -- NPCs Components
   -- ------------------------------------------------------
 
-  -- Tameable NPCs heading, with the NPC count and a rule underneath.
-  Components.NpcHeading = Components.Root:AddChild({
-    height = 24,
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      --- @class RankNpcHeading : Frame
-      --- @field text FontString
-      local frame = CreateFrame("Frame", nil, parent)
-
-      frame.text = frame:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-      frame.text:SetPoint("BOTTOMLEFT", 0, Widgets:Padding(0.5))
-      frame.text:SetJustifyH("LEFT")
-      frame.text:SetText(Colors.White(L.TAMEABLE_NPCS))
-
-      local rule = frame:CreateTexture(nil, "ARTWORK")
-      rule:SetColorTexture(Colors.White:GetRGBA(0.1))
-      rule:SetHeight(1)
-      rule:SetPoint("BOTTOMLEFT")
-      rule:SetPoint("BOTTOMRIGHT")
-
-      return frame
-    end,
-  })
+  -- Tameable NPCs heading, with the NPC count.
+  Components.NpcHeading = Components.Root:AttachComponent(
+    ComponentFactory:SectionTitle({ titleText = L.TAMEABLE_NPCS })
+  )
 
   -- NPC list: a header band above the cards and slider, on the same surface as
   -- the stat tiles.
