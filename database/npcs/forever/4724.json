@@ -1,0 +1,16 @@
+{
+  "npc_id": 4724,
+  "name": "Sandstrider",
+  "family": "Tallstrider",
+  "type": "Ferocity",
+  "diet": ["Cheese", "Fungus", "Fruit"],
+  "level_range": "30-31",
+  "zone_id": 405,
+  "ui_map_id": 1443,
+  "abilities": [{ "key": "dash", "rank": 1 }],
+  "coords": [
+    [37.6, 31.6],
+    [39.1, 22.7],
+    [40.5, 26.2]
+  ]
+}
