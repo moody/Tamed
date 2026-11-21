@@ -119,5 +119,14 @@ Addon:MergeTameableAbilities({
         ["training_cost"] = 1
       }
     }
+  },
+  ["dive"] = {
+    ["learned_by"] = {
+      "Bat",
+      "Bird of Prey",
+      "Carrion Bird",
+      "Owl",
+      "Wind Serpent"
+    }
   }
 })
