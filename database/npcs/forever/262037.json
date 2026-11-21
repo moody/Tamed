@@ -1,0 +1,17 @@
+{
+  "npc_id": 262037,
+  "name": "Roosting Duskbat",
+  "family": "Bat",
+  "type": "Ferocity",
+  "diet": ["Fungus", "Fruit"],
+  "level_range": "37-38",
+  "zone_id": 16591,
+  "ui_map_id": 2548,
+  "abilities": [{ "key": "sonicblast", "rank": 3 }],
+  "coords": [
+    [60.0, 84.4],
+    [60.0, 85.8],
+    [60.2, 84.5],
+    [60.8, 85.2]
+  ]
+}

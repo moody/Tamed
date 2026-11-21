@@ -260,5 +260,43 @@ Addon:MergeTameableAbilities({
         ["pet_level"] = 60
       }
     }
+  },
+  ["sonicblast"] = {
+    ["name"] = "Sonic Blast",
+    ["learned_by"] = {
+      "Bat"
+    },
+    ["ranks"] = {
+      {
+        ["rank"] = 1,
+        ["spell_id"] = 1264478,
+        ["pet_level"] = 12,
+        ["training_cost"] = 1
+      },
+      {
+        ["rank"] = 2,
+        ["spell_id"] = 1264479,
+        ["pet_level"] = 24,
+        ["training_cost"] = 1
+      },
+      {
+        ["rank"] = 3,
+        ["spell_id"] = 1264480,
+        ["pet_level"] = 36,
+        ["training_cost"] = 1
+      },
+      {
+        ["rank"] = 4,
+        ["spell_id"] = 1264481,
+        ["pet_level"] = 48,
+        ["training_cost"] = 1
+      },
+      {
+        ["rank"] = 5,
+        ["spell_id"] = 1264482,
+        ["pet_level"] = 60,
+        ["training_cost"] = 1
+      }
+    }
   }
 })
