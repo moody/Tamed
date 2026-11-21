@@ -60,5 +60,18 @@ Addon:MergeTameableAbilities({
         ["training_cost"] = 25
       }
     }
+  },
+  ["claw"] = {
+    ["learned_by"] = {
+      "Bear",
+      "Bird of Prey",
+      "Carrion Bird",
+      "Cat",
+      "Crab",
+      "Crocolisk",
+      "Owl",
+      "Raptor",
+      "Scorpid"
+    }
   }
 })
