@@ -4866,6 +4866,10 @@ Addon:MergeTameableNPCs({
       {
         ["key"] = "bite",
         ["rank"] = 6
+      },
+      {
+        ["key"] = "shellshield",
+        ["rank"] = 1
       }
     },
     ["coords"] = {

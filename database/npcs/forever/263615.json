@@ -8,7 +8,7 @@
   "classification": "Elite",
   "zone_id": 16591,
   "ui_map_id": 2548,
-  "abilities": [{ "key": "bite", "rank": 6 }],
+  "abilities": [{ "key": "bite", "rank": 6 }, { "key": "shellshield", "rank": 1 }],
   "coords": [
     [58.3, 34.1],
     [58.8, 32.9],
