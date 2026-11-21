@@ -364,5 +364,19 @@ Addon:MergeTameableAbilities({
         ["pet_level"] = 60
       }
     }
+  },
+  ["trickstersdance"] = {
+    ["name"] = "Trickster's Dance",
+    ["learned_by"] = {
+      "Fox"
+    },
+    ["ranks"] = {
+      {
+        ["rank"] = 1,
+        ["spell_id"] = 1310612,
+        ["pet_level"] = 20,
+        ["training_cost"] = 10
+      }
+    }
   }
 })
