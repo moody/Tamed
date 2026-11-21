@@ -1,0 +1,14 @@
+{
+  "npc_id": 260797,
+  "name": "Elder Crocolisk",
+  "family": "Crocolisk",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "27",
+  "classification": "Elite",
+  "zone_id": 16732,
+  "abilities": [{ "key": "dismember", "rank": 2 }],
+  "coords": [
+
+  ]
+}
