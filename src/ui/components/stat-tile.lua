@@ -5,6 +5,9 @@ local Widgets = Addon:GetModule("Widgets")
 --- @class ComponentFactory
 local ComponentFactory = Addon:GetModule("ComponentFactory")
 
+--- Width of the strip on the left edge of a tile.
+local ACCENT_WIDTH = 3
+
 -- =============================================================================
 -- LuaCATS Annotations
 -- =============================================================================
@@ -43,6 +46,13 @@ function ComponentFactory:StatTile(options)
       local frame = Widgets:Frame({ parent = parent })
       frame:SetBackdropColor(Colors.White:GetRGBA(0.04))
       frame:SetBackdropBorderColor(0, 0, 0, 0)
+
+      local accent = frame:CreateTexture(nil, "ARTWORK")
+      accent:SetWidth(ACCENT_WIDTH)
+      accent:SetPoint("TOPLEFT")
+      accent:SetPoint("BOTTOMLEFT")
+      accent:SetColorTexture(Colors.Green:GetRGB())
+
       return frame
     end,
   })
