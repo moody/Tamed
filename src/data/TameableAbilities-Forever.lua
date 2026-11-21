@@ -81,5 +81,43 @@ Addon:MergeTameableAbilities({
       "Cat",
       "Tallstrider"
     }
+  },
+  ["dismember"] = {
+    ["name"] = "Dismember",
+    ["learned_by"] = {
+      "Crocolisk"
+    },
+    ["ranks"] = {
+      {
+        ["rank"] = 1,
+        ["spell_id"] = 1264758,
+        ["pet_level"] = 12,
+        ["training_cost"] = 1
+      },
+      {
+        ["rank"] = 2,
+        ["spell_id"] = 1264927,
+        ["pet_level"] = 24,
+        ["training_cost"] = 1
+      },
+      {
+        ["rank"] = 3,
+        ["spell_id"] = 1264929,
+        ["pet_level"] = 36,
+        ["training_cost"] = 1
+      },
+      {
+        ["rank"] = 4,
+        ["spell_id"] = 1264930,
+        ["pet_level"] = 48,
+        ["training_cost"] = 1
+      },
+      {
+        ["rank"] = 5,
+        ["spell_id"] = 1264933,
+        ["pet_level"] = 60,
+        ["training_cost"] = 1
+      }
+    }
   }
 })
