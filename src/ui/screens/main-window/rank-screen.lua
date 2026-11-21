@@ -105,11 +105,41 @@ function RankScreen:Build()
   -- Heading Components
   -- ------------------------------------------------------
 
-  -- Heading: name/rank text, spell icon flush right.
+  -- Heading: spell icon and name/rank text. Hovering it shows the spell tooltip.
   local heading = Components.Root:AddRow({
     height = 32,
     align = "CENTER",
     gap = Widgets:Padding(),
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local frame = Widgets:Frame({ parent = parent })
+      frame:SetBackdropColor(0, 0, 0, 0)
+      frame:SetBackdropBorderColor(0, 0, 0, 0)
+      frame:EnableMouse(true)
+
+      frame:SetScript("OnEnter", function()
+        frame:SetBackdropColor(Colors.White:GetRGBA(0.05))
+        --- @type RankHeadingIcon
+        local icon = Components.HeadingIcon:GetFrame()
+        icon:SetBackdropBorderColor(Colors.Green:GetRGBA(0.5))
+        if currentRank then
+          GameTooltip:SetOwner(icon, "ANCHOR_RIGHT")
+          GameTooltip:SetHyperlink("spell:" .. currentRank.spell_id)
+          GameTooltip:Show()
+        end
+      end)
+
+      frame:SetScript("OnLeave", function()
+        frame:SetBackdropColor(0, 0, 0, 0)
+        --- @type RankHeadingIcon
+        local icon = Components.HeadingIcon:GetFrame()
+        icon:SetBackdropBorderColor(Colors.White:GetRGBA(0.25))
+        GameTooltip:Hide()
+      end)
+
+      return frame
+    end,
   })
 
   Components.HeadingIcon = heading:AddChild({
@@ -177,26 +207,6 @@ function RankScreen:Build()
     ComponentFactory:DetailRow({ labelText = L.LEARNABLE_BY })
   )
 
-  -- Shows the spell tooltip on hover.
-  Components.DetailsCard:AddChild({
-    height = 24,
-    marginTop = Widgets:Padding(0.5),
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      return Widgets:Button({
-        parent = parent,
-        labelText = L.SHOW_TOOLTIP,
-        onEnter = function(self)
-          if not currentRank then return end
-          GameTooltip:SetOwner(self, "ANCHOR_TOP")
-          GameTooltip:SetHyperlink("spell:" .. currentRank.spell_id)
-          GameTooltip:Show()
-        end,
-        onLeave = function() GameTooltip:Hide() end,
-      })
-    end,
-  })
 
   -- ------------------------------------------------------
   -- NPCs Components
