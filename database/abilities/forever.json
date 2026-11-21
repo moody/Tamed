@@ -408,5 +408,23 @@
         "pet_level": 60
       }
     ]
+  },
+  "dash": {
+    "learned_by": [
+      "Bear",
+      "Boar",
+      "Cat",
+      "Crab",
+      "Crocolisk",
+      "Fox",
+      "Gorilla",
+      "Hyena",
+      "Raptor",
+      "Scorpid",
+      "Spider",
+      "Tallstrider",
+      "Turtle",
+      "Wolf"
+    ]
   }
 }

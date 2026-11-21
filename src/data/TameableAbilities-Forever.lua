@@ -82,6 +82,24 @@ Addon:MergeTameableAbilities({
       "Tallstrider"
     }
   },
+  ["dash"] = {
+    ["learned_by"] = {
+      "Bear",
+      "Boar",
+      "Cat",
+      "Crab",
+      "Crocolisk",
+      "Fox",
+      "Gorilla",
+      "Hyena",
+      "Raptor",
+      "Scorpid",
+      "Spider",
+      "Tallstrider",
+      "Turtle",
+      "Wolf"
+    }
+  },
   ["dismember"] = {
     ["name"] = "Dismember",
     ["learned_by"] = {
