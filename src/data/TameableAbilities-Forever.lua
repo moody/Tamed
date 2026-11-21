@@ -161,5 +161,38 @@ Addon:MergeTameableAbilities({
         ["pet_level"] = 60
       }
     }
+  },
+  ["mine"] = {
+    ["name"] = "Mine!",
+    ["learned_by"] = {
+      "Bird of Prey"
+    },
+    ["ranks"] = {
+      {
+        ["rank"] = 1,
+        ["spell_id"] = 1265054,
+        ["pet_level"] = 10
+      },
+      {
+        ["rank"] = 2,
+        ["spell_id"] = 1265055,
+        ["pet_level"] = 20
+      },
+      {
+        ["rank"] = 3,
+        ["spell_id"] = 1265056,
+        ["pet_level"] = 30
+      },
+      {
+        ["rank"] = 4,
+        ["spell_id"] = 1265057,
+        ["pet_level"] = 40
+      },
+      {
+        ["rank"] = 5,
+        ["spell_id"] = 1265058,
+        ["pet_level"] = 50
+      }
+    }
   }
 })
