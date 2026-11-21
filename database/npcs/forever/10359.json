@@ -1,0 +1,24 @@
+{
+  "npc_id": 10359,
+  "name": "Sri'Skulk",
+  "family": "Spider",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "13",
+  "classification": "Rare",
+  "zone_id": 85,
+  "ui_map_id": 1420,
+  "abilities": [{ "key": "bite", "rank": 2 }, { "key": "web", "rank": 1 }],
+  "coords": [
+    [83.6, 55.0],
+    [84.6, 50.0],
+    [85.3, 51.1],
+    [88.7, 51.6],
+    [88.8, 50.6],
+    [89.0, 52.6],
+    [89.2, 47.4],
+    [89.4, 41.4],
+    [89.6, 41.6],
+    [89.8, 47.2]
+  ]
+}

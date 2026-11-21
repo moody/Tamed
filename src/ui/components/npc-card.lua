@@ -37,18 +37,22 @@ function ComponentFactory:NpcCard()
   --- @type TameableNPC?
   local npc
 
-  --- @type { node: WaffleFlexComponent, getText: fun(npc: TameableNPC): string }[]
+  --- @type { node: WaffleFlexComponent<FontString>, getText: fun(npc: TameableNPC): string }[]
   local textLines = {}
 
-  --- Highlights the card while hovered, if its NPC has a map.
+  local isHovered = false
+
+  --- Tints the card while hovered, green if its NPC has a map.
   --- @param frame FrameWidget
   local function updateHighlight(frame)
-    if npc and npc.ui_map_id and frame:IsMouseOver() then
-      frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(0.5))
-      frame:SetBackdropBorderColor(Colors.Green:GetRGBA(0.5))
+    if isHovered then
+      if npc and npc.ui_map_id then
+        frame:SetBackdropColor(Colors.Green:GetRGBA(0.12))
+      else
+        frame:SetBackdropColor(Colors.White:GetRGBA(0.08))
+      end
     else
-      frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(0.25))
-      frame:SetBackdropBorderColor(Colors.White:GetRGBA(0.1))
+      frame:SetBackdropColor(0, 0, 0, 0)
     end
   end
 
@@ -64,9 +68,11 @@ function ComponentFactory:NpcCard()
       GameTooltip:AddDoubleLine(L.DIET, Colors.White(table.concat(npc.diet, ", ")))
       GameTooltip:AddDoubleLine(L.TYPE, Colors.White(npc.type))
       GameTooltip:AddDoubleLine(L.LOCATION, Colors.White(npc.location))
+      GameTooltip:AddLine(" ")
       if npc.ui_map_id then
-        GameTooltip:AddLine(" ")
         GameTooltip:AddDoubleLine(Colors.White(L.LEFT_CLICK), Colors.Green(L.SHOW_ON_MAP))
+      else
+        GameTooltip:AddLine(Colors.Grey(L.MAP_UNAVAILABLE))
       end
       GameTooltip:Show()
     end
@@ -74,7 +80,7 @@ function ComponentFactory:NpcCard()
 
   local card
 
-  --- @class NpcCardComponent : WaffleFlexComponent
+  --- @class NpcCardComponent : WaffleFlexComponent<FrameWidget>
   card = Addon.Waffle:Flex({
     direction = "ROW",
     align = "CENTER",
@@ -84,20 +90,35 @@ function ComponentFactory:NpcCard()
     --- @param parent Frame
     frameFactory = function(parent)
       local frame = Widgets:Frame({ parent = parent, frameType = "Button" })
+      frame:SetBackdropBorderColor(0, 0, 0, 0)
       updateHighlight(frame)
+
+      -- Divider between cards.
+      local divider = frame:CreateTexture(nil, "BORDER")
+      divider:SetColorTexture(Colors.White:GetRGBA(0.06))
+      divider:SetHeight(1)
+      divider:SetPoint("BOTTOMLEFT")
+      divider:SetPoint("BOTTOMRIGHT")
 
       frame:SetScript("OnClick", function()
         if npc and npc.ui_map_id then showOnMap(npc) end
       end)
 
       frame:SetScript("OnEnter", function()
+        isHovered = true
         updateHighlight(frame)
         showTooltip(frame)
       end)
 
       frame:SetScript("OnLeave", function()
+        isHovered = false
         updateHighlight(frame)
         GameTooltip:Hide()
+      end)
+
+      frame:SetScript("OnHide", function()
+        isHovered = false
+        updateHighlight(frame)
       end)
 
       return frame
@@ -109,9 +130,11 @@ function ComponentFactory:NpcCard()
 
   --- Adds a text line filled in by `getText` for the current NPC.
   --- @param justify "LEFT" | "CENTER" | "RIGHT"
+  --- @param columnWidth? integer Without it, the line takes the width left over.
   --- @param getText fun(npc: TameableNPC): string
-  local function addTextLine(justify, getText)
+  local function addTextLine(justify, columnWidth, getText)
     local node = info:AddChild({
+      width = columnWidth,
       height = "AUTO",
 
       --- @param parent Frame
@@ -131,9 +154,12 @@ function ComponentFactory:NpcCard()
     textLines[#textLines + 1] = { node = node, getText = getText }
   end
 
-  addTextLine("LEFT", function(n) return Colors.Green(n.name) end)
-  addTextLine("CENTER", function(n) return Colors.White(n.level_range) end)
-  addTextLine("RIGHT", function(n) return Colors.LightGrey(n.location) end)
+  addTextLine("LEFT", nil, function(n) return Colors.Green(n.name) end)
+  addTextLine("CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, function(n) return Colors.White(n.level_range) end)
+  addTextLine("RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, function(n)
+    local color = n.ui_map_id and Colors.LightGrey or Colors.DimGrey
+    return color(n.location)
+  end)
 
   --- Sets the NPC shown.
   --- @param newNpc? TameableNPC

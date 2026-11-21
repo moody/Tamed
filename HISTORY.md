@@ -2,6 +2,12 @@
 
 Older release notes for [Tamed](https://github.com/moody/Tamed). See [CHANGELOG.md](CHANGELOG.md) for the current and most recent release.
 
+## [2.0.1] - 2026-10-05
+
+### Fixed
+
+- Fixed a Lua error when showing NPC tooltips in dungeons on WoW Forever
+
 ## [2.0.0] - 2026-10-01
 
 ### Changed

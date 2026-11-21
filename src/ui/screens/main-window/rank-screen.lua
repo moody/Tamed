@@ -17,7 +17,8 @@ local RankScreen = Addon:GetModule("RankScreen")
 function RankScreen:Build()
   local Components = {}
 
-  local NUM_NPC_CARDS = 7
+  local NUM_NPC_CARDS = 9
+  local NPC_SLIDER_WIDTH = 6
 
   --- @type TameableAbilityRank?
   local currentRank
@@ -43,13 +44,19 @@ function RankScreen:Build()
       card:SetVisibility(npc and "VISIBLE" or "INVISIBLE")
     end
 
+    -- An empty rank shows no surface, header, or slider, only the empty text.
     local isEmpty = #currentNpcIds == 0
+    Components.NpcList:GetFrame():SetBackdropColor(Colors.White:GetRGBA(isEmpty and 0 or 0.04))
+    Components.NpcColumnLabels:SetVisibility(isEmpty and "GONE" or "VISIBLE")
     Components.NpcCardColumn:SetVisibility(isEmpty and "GONE" or "VISIBLE")
     Components.NpcEmptyText:SetVisibility(isEmpty and "VISIBLE" or "GONE")
 
+    -- The track keeps its space on every rank, so the right edge never shifts.
+    -- Only the thumb hides when the list cannot scroll.
     local maxScroll = math.max(#currentNpcIds - NUM_NPC_CARDS, 0)
     slider:SetMinMaxValues(0, maxScroll)
-    Components.NpcSlider:SetVisibility(maxScroll <= 0 and "GONE" or "VISIBLE")
+    slider.texture:SetShown(maxScroll > 0)
+    Components.NpcSlider:SetVisibility(isEmpty and "INVISIBLE" or "VISIBLE")
   end
 
   -- ------------------------------------------------------
@@ -72,15 +79,23 @@ function RankScreen:Build()
     --- @type RankHeadingIcon
     local headingIcon = Components.HeadingIcon:GetFrame()
     headingIcon.texture:SetTexture(ability.icon)
-    Components.HeadingText:GetFrame():SetText(
-      Colors.Grey("%s (%s %d)"):format(Colors.White(ability.name), L.RANK, rank.rank)
+    Components.HeadingName:GetFrame():SetText(Colors.White(ability.name))
+    Components.HeadingRank:GetFrame():SetText(Colors.Grey(("%s %d"):format(L.RANK, rank.rank)))
+
+    Components.PetLevelTile:SetText(
+      rank.pet_level and tostring(rank.pet_level) or L.NONE,
+      rank.pet_level == nil
+    )
+    Components.TrainingCostTile:SetText(
+      rank.training_cost and tostring(rank.training_cost) or L.NONE,
+      rank.training_cost == nil
     )
 
-    Components.PetLevelRow:SetText(rank.pet_level and tostring(rank.pet_level) or L.NONE)
-    Components.TrainingCostRow:SetText(rank.training_cost and rank.training_cost or L.NONE)
-    Components.LearnableByRow:SetText(
-      #ability.learned_by > 0 and table.concat(ability.learned_by, ", ") or L.ALL_PET_FAMILIES
-    )
+    local learnedBy = L.ALL_PET_FAMILIES
+    if #ability.learned_by > 0 then
+      learnedBy = table.concat(ability.learned_by, Colors.Grey(" · "))
+    end
+    Components.LearnableByTile:SetText(learnedBy)
 
     currentNpcIds = {}
     for _, npc_id in ipairs(rank.npc_ids) do
@@ -95,6 +110,10 @@ function RankScreen:Build()
       return a.name < b.name
     end)
 
+    local npcTitle = L.TAMEABLE_NPCS
+    if #currentNpcIds > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #currentNpcIds) end
+    Components.NpcHeading:SetTitleText(npcTitle)
+
     Components.NpcSlider:GetFrame():SetValue(0)
     refreshNpcCards()
 
@@ -105,33 +124,65 @@ function RankScreen:Build()
   -- Heading Components
   -- ------------------------------------------------------
 
-  -- Heading: name/rank text, spell icon flush right.
+  -- Heading: spell icon and name/rank text. Hovering it shows the spell tooltip.
   local heading = Components.Root:AddRow({
-    height = 32,
+    height = 48,
     align = "CENTER",
     gap = Widgets:Padding(),
+    paddingTop = Widgets:Padding(0.5),
+    paddingBottom = Widgets:Padding(0.5),
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local frame = Widgets:Frame({ parent = parent })
+      frame:SetBackdropColor(0, 0, 0, 0)
+      frame:SetBackdropBorderColor(0, 0, 0, 0)
+      frame:EnableMouse(true)
+
+      frame:SetScript("OnEnter", function()
+        frame:SetBackdropColor(Colors.White:GetRGBA(0.05))
+        if currentRank then
+          GameTooltip:SetOwner(Components.HeadingIcon:GetFrame(), "ANCHOR_RIGHT")
+          GameTooltip:SetHyperlink("spell:" .. currentRank.spell_id)
+          GameTooltip:Show()
+        end
+      end)
+
+      frame:SetScript("OnLeave", function()
+        frame:SetBackdropColor(0, 0, 0, 0)
+        GameTooltip:Hide()
+      end)
+
+      return frame
+    end,
   })
 
   Components.HeadingIcon = heading:AddChild({
-    width = 24,
-    height = 24,
+    width = 40,
+    height = 40,
 
     --- @param parent Frame
     frameFactory = function(parent)
       --- @class RankHeadingIcon : FrameWidget
       local frame = Widgets:Frame({ parent = parent })
-      frame:SetBackdropBorderColor(Colors.White:GetRGBA(0.25))
+      frame:SetBackdropColor(0, 0, 0, 0)
+      frame:SetBackdropBorderColor(0, 0, 0, 0)
 
       frame.texture = frame:CreateTexture(nil, "ARTWORK")
-      frame.texture:SetPoint("TOPLEFT", 1, -1)
-      frame.texture:SetPoint("BOTTOMRIGHT", -1, 1)
+      frame.texture:SetAllPoints()
       frame.texture:SetTexCoord(0.08, 0.92, 0.08, 0.92)
 
       return frame
     end,
   })
 
-  Components.HeadingText = heading:AddChild({
+  -- Ability name above the rank.
+  local headingText = heading:AddColumn({
+    height = "AUTO",
+    gap = Widgets:Padding(0.25),
+  })
+
+  Components.HeadingName = headingText:AddChild({
     height = "AUTO",
 
     --- @param parent Frame
@@ -148,81 +199,66 @@ function RankScreen:Build()
     end,
   })
 
+  Components.HeadingRank = headingText:AddChild({
+    height = "AUTO",
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+      fontString:SetJustifyH("LEFT")
+      fontString:SetWordWrap(false)
+      return fontString
+    end,
+
+    onMeasure = function(fontString, width)
+      fontString:SetSize(width, 0)
+      return width, fontString:GetStringHeight()
+    end,
+  })
+
   -- ------------------------------------------------------
-  -- Details Components
+  -- Stats Components
   -- ------------------------------------------------------
 
-  -- Details card. Grows with its text, shrinking the NPC list.
-  Components.DetailsCard = Components.Root:AddColumn({
+  -- Pet level and training cost side by side, then the families that learn the
+  -- rank. Grows with its text, shrinking the NPC list.
+  local stats = Components.Root:AddColumn({
     height = "AUTO",
     gap = Widgets:Padding(0.5),
-    padding = Widgets:Padding(),
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      return Widgets:Frame({ parent = parent })
-    end,
   })
 
-  --- @type DetailRowComponent
-  Components.PetLevelRow = Components.DetailsCard:AttachComponent(
-    ComponentFactory:DetailRow({ labelText = L.PET_LEVEL })
-  )
-  --- @type DetailRowComponent
-  Components.TrainingCostRow = Components.DetailsCard:AttachComponent(
-    ComponentFactory:DetailRow({ labelText = L.TRAINING_COST })
-  )
-  --- @type DetailRowComponent
-  Components.LearnableByRow = Components.DetailsCard:AttachComponent(
-    ComponentFactory:DetailRow({ labelText = L.LEARNABLE_BY })
-  )
-
-  -- Shows the spell tooltip on hover.
-  Components.DetailsCard:AddChild({
-    height = 24,
-    marginTop = Widgets:Padding(0.5),
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      return Widgets:Button({
-        parent = parent,
-        labelText = L.SHOW_TOOLTIP,
-        onEnter = function(self)
-          if not currentRank then return end
-          GameTooltip:SetOwner(self, "ANCHOR_TOP")
-          GameTooltip:SetHyperlink("spell:" .. currentRank.spell_id)
-          GameTooltip:Show()
-        end,
-        onLeave = function() GameTooltip:Hide() end,
-      })
-    end,
+  local numbers = stats:AddRow({
+    height = "AUTO",
+    gap = Widgets:Padding(0.5),
   })
+
+  Components.PetLevelTile = numbers:AttachComponent(
+    ComponentFactory:StatTile({ labelText = L.PET_LEVEL })
+  )
+  Components.TrainingCostTile = numbers:AttachComponent(
+    ComponentFactory:StatTile({ labelText = L.TRAINING_COST })
+  )
+  Components.LearnableByTile = stats:AttachComponent(
+    ComponentFactory:StatTile({ labelText = L.LEARNABLE_BY, valueFont = "GameFontNormal" })
+  )
 
   -- ------------------------------------------------------
   -- NPCs Components
   -- ------------------------------------------------------
 
-  -- Tameable NPCs heading.
-  Components.Root:AddChild({
-    height = 24,
+  -- Tameable NPCs heading, with the NPC count.
+  Components.NpcHeading = Components.Root:AttachComponent(
+    ComponentFactory:SectionTitle({ titleText = L.TAMEABLE_NPCS })
+  )
 
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge")
-      fontString:SetJustifyH("LEFT")
-      fontString:SetText(Colors.White(L.TAMEABLE_NPCS))
-      return fontString
-    end,
-  })
-
-  -- NPC list: cards and slider.
-  Components.NpcListRow = Components.Root:AddRow({
-    padding = Widgets:Padding(),
-    gap = Widgets:Padding(0.5),
-
+  -- NPC list: a header band above the cards and slider, on the same surface as
+  -- the stat tiles.
+  Components.NpcList = Components.Root:AddColumn({
     --- @param parent Frame
     frameFactory = function(parent)
       local frame = Widgets:Frame({ parent = parent })
+      frame:SetBackdropColor(Colors.White:GetRGBA(0.04))
+      frame:SetBackdropBorderColor(0, 0, 0, 0)
       frame:EnableMouseWheel(true)
       frame:SetScript("OnMouseWheel", function(_, delta)
         local slider = Components.NpcSlider:GetFrame()
@@ -232,31 +268,85 @@ function RankScreen:Build()
     end,
   })
 
-  -- Cards split this column's height evenly.
-  Components.NpcCardColumn = Components.NpcListRow:AddColumn({
-    gap = Widgets:Padding(0.5),
+  -- Column labels, in a band of their own. Right padding lines them up with the card text.
+  Components.NpcColumnLabels = Components.NpcList:AddRow({
+    height = 24,
+    gap = Widgets:Padding(0.25),
+    paddingLeft = Widgets:Padding(),
+    paddingRight = Widgets:Padding() + Widgets:Padding(0.5) * 2 + NPC_SLIDER_WIDTH,
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local frame = Widgets:Frame({ parent = parent })
+      frame:SetBackdropColor(Colors.White:GetRGBA(0.06))
+      frame:SetBackdropBorderColor(0, 0, 0, 0)
+
+      local rule = frame:CreateTexture(nil, "BORDER")
+      rule:SetColorTexture(Colors.White:GetRGBA(0.1))
+      rule:SetHeight(1)
+      rule:SetPoint("BOTTOMLEFT")
+      rule:SetPoint("BOTTOMRIGHT")
+
+      return frame
+    end,
   })
 
-  -- Shown instead of the cards when the rank has no NPCs.
-  Components.NpcEmptyText = Components.NpcListRow:AddChild({
+  --- Adds a label to the column labels.
+  --- @param justify "LEFT" | "CENTER" | "RIGHT"
+  --- @param width? integer Without it, the label takes the width left over.
+  --- @param text string
+  local function addColumnLabel(justify, width, text)
+    Components.NpcColumnLabels:AddChild({
+      width = width,
+
+      --- @param parent Frame
+      frameFactory = function(parent)
+        local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
+        fontString:SetJustifyH(justify)
+        fontString:SetText(Colors.LightGrey(text))
+        return fontString
+      end,
+    })
+  end
+
+  addColumnLabel("LEFT", nil, L.NAME)
+  addColumnLabel("CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, L.LEVEL)
+  addColumnLabel("RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, L.LOCATION)
+
+  -- Cards and slider.
+  local npcBody = Components.NpcList:AddRow({
+    gap = Widgets:Padding(0.5),
+    paddingRight = Widgets:Padding(0.5),
+  })
+
+  -- Cards split this column's height evenly.
+  Components.NpcCardColumn = npcBody:AddColumn({})
+
+  -- Shown instead of the cards when the rank has no NPCs, under the heading's rule.
+  Components.NpcEmptyText = npcBody:AddChild({
     visibility = "GONE",
 
     --- @param parent Frame
     frameFactory = function(parent)
       local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-      fontString:SetJustifyH("CENTER")
-      fontString:SetJustifyV("MIDDLE")
+      fontString:SetJustifyH("LEFT")
+      fontString:SetJustifyV("TOP")
       fontString:SetText(Colors.Grey(L.NONE))
       return fontString
     end,
   })
 
-  Components.NpcSlider = Components.NpcListRow:AddChild({
-    width = 12,
+  -- Margins keep the thumb, which overhangs the track by half its height, inside the body.
+  Components.NpcSlider = npcBody:AddChild({
+    width = NPC_SLIDER_WIDTH,
+    marginTop = NPC_SLIDER_WIDTH,
+    marginBottom = NPC_SLIDER_WIDTH,
 
     --- @param parent Frame
     frameFactory = function(parent)
-      local slider = Widgets:Slider({ parent = parent })
+      local slider = Widgets:Slider({ parent = parent, width = NPC_SLIDER_WIDTH })
+      slider:SetBackdropColor(Colors.Black:GetRGBA(0.3))
+      slider:SetBackdropBorderColor(0, 0, 0, 0)
       slider:SetScript("OnValueChanged", refreshNpcCards)
       return slider
     end,

@@ -1,0 +1,19 @@
+{
+  "npc_id": 855,
+  "name": "Young Stranglethorn Raptor",
+  "family": "Raptor",
+  "type": "Cunning",
+  "diet": ["Meat"],
+  "level_range": "30-31",
+  "zone_id": 33,
+  "ui_map_id": 1434,
+  "abilities": [{ "key": "savagerend", "rank": 2 }],
+  "coords": [
+    [23.8, 15.4],
+    [24.0, 15.7],
+    [24.6, 15.4],
+    [25.0, 15.8],
+    [25.8, 16.0],
+    [26.7, 14.4]
+  ]
+}

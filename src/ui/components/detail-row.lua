@@ -17,7 +17,7 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 -- ComponentFactory - DetailRow
 -- =============================================================================
 
---- Creates a gold label beside a white value. The value wraps, growing the row.
+--- Creates a white label beside a grey value. The value wraps, growing the row.
 --- @param options DetailRowOptions
 --- @return DetailRowComponent root
 function ComponentFactory:DetailRow(options)
@@ -40,11 +40,13 @@ function ComponentFactory:DetailRow(options)
       local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
       fontString:SetJustifyH("LEFT")
       fontString:SetJustifyV("TOP")
+      fontString:SetTextColor(Colors.White:GetRGB())
       fontString:SetText(options.labelText)
       return fontString
     end,
   })
 
+  --- @type WaffleFlexComponent<FontString>
   local valueNode = root:AddChild({
     height = "AUTO",
 
@@ -54,7 +56,7 @@ function ComponentFactory:DetailRow(options)
       fontString:SetJustifyH("LEFT")
       fontString:SetJustifyV("TOP")
       fontString:SetWordWrap(true)
-      fontString:SetTextColor(Colors.White:GetRGB())
+      fontString:SetTextColor(Colors.Grey:GetRGB())
       fontString:SetText(valueText)
       return fontString
     end,

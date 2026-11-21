@@ -2,7 +2,7 @@
 
 Tamed helps Hunters in Classic WoW find the tameable pets that teach each rank of a pet ability, and shows where they spawn on the world map.
 
-Supports Vanilla and The Burning Crusade. Forever support is planned.
+Supports Vanilla, The Burning Crusade, and WoW Forever.
 
 ![Tamed](/.github/images/Tamed.png?raw=true)
 ![Pins](/.github/images/Pins.png?raw=true)

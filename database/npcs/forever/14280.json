@@ -1,0 +1,27 @@
+{
+  "npc_id": 14280,
+  "name": "Big Samras",
+  "family": "Bear",
+  "type": "Tenacity",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "level_range": "27",
+  "classification": "Rare",
+  "zone_id": 267,
+  "ui_map_id": 1424,
+  "abilities": [{ "key": "swipe", "rank": 2 }],
+  "coords": [
+    [71.4, 28.2],
+    [71.4, 28.8],
+    [71.8, 28.1],
+    [71.8, 28.6],
+    [75.4, 32.1],
+    [75.6, 30.8],
+    [84.0, 47.0],
+    [84.2, 46.2],
+    [84.8, 47.0],
+    [86.2, 38.8],
+    [86.3, 47.3],
+    [86.6, 39.4],
+    [86.6, 39.8]
+  ]
+}

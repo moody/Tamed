@@ -1,0 +1,15 @@
+{
+  "npc_id": 258922,
+  "name": "Hungry Crocolisk",
+  "family": "Crocolisk",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "37-38",
+  "zone_id": 16591,
+  "ui_map_id": 2548,
+  "abilities": [{ "key": "dismember", "rank": 3 }],
+  "coords": [
+    [46.0, 70.7],
+    [46.2, 70.2]
+  ]
+}

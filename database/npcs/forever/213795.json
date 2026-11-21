@@ -1,0 +1,18 @@
+{
+  "npc_id": 213795,
+  "name": "Gharrik",
+  "family": "Carrion Bird",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "40",
+  "zone_id": 3,
+  "ui_map_id": 1418,
+  "abilities": [{ "key": "screech", "rank": 2 }],
+  "coords": [
+    [22.2, 67.8],
+    [22.4, 67.4],
+    [22.6, 67.4],
+    [22.6, 67.6],
+    [23.4, 66.2]
+  ]
+}

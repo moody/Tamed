@@ -1,0 +1,19 @@
+{
+  "npc_id": 251115,
+  "name": "Urs'anah",
+  "family": "Bear",
+  "type": "Tenacity",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "level_range": "5",
+  "zone_id": 16593,
+  "ui_map_id": 2521,
+  "abilities": [{ "key": "claw", "rank": 1 }],
+  "coords": [
+    [35.2, 25.4],
+    [35.3, 24.2],
+    [35.4, 25.6],
+    [35.6, 25.2],
+    [35.6, 26.0],
+    [35.8, 24.3]
+  ]
+}

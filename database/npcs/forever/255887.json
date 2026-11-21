@@ -1,0 +1,23 @@
+{
+  "npc_id": 255887,
+  "name": "Slydris",
+  "family": "Fox",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "6",
+  "classification": "Rare Elite",
+  "zone_id": 16593,
+  "ui_map_id": 2521,
+  "abilities": [{ "key": "bite", "rank": 1 }],
+  "coords": [
+    [49.6, 53.4],
+    [50.4, 50.4],
+    [50.4, 50.6],
+    [50.4, 51.6],
+    [50.6, 51.3],
+    [50.8, 50.4],
+    [50.8, 51.6],
+    [51.6, 51.0],
+    [51.6, 52.0]
+  ]
+}

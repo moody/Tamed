@@ -1,0 +1,29 @@
+{
+  "npc_id": 12432,
+  "name": "Old Vicejaw",
+  "family": "Bear",
+  "type": "Tenacity",
+  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "level_range": "14",
+  "classification": "Rare",
+  "zone_id": 130,
+  "ui_map_id": 1421,
+  "abilities": [{ "key": "swipe", "rank": 1 }],
+  "coords": [
+    [51.4, 63.4],
+    [51.4, 63.6],
+    [51.6, 63.6],
+    [51.8, 63.2],
+    [52.0, 62.4],
+    [53.4, 52.2],
+    [53.6, 52.6],
+    [53.8, 51.4],
+    [53.8, 51.8],
+    [55.1, 61.0],
+    [55.4, 60.4],
+    [55.4, 61.6],
+    [55.6, 61.2],
+    [56.0, 60.4],
+    [56.1, 61.6]
+  ]
+}

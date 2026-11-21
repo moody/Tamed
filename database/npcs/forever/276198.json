@@ -1,0 +1,25 @@
+{
+  "npc_id": 276198,
+  "name": "Shal'ma",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "9",
+  "classification": "Rare",
+  "zone_id": 14,
+  "ui_map_id": 1411,
+  "abilities": [{ "key": "cower", "rank": 1 }],
+  "coords": [
+    [60.4, 89.4],
+    [60.4, 89.8],
+    [60.5, 90.0],
+    [61.4, 90.8],
+    [63.0, 96.2],
+    [63.2, 95.4],
+    [68.2, 71.8],
+    [68.6, 71.4],
+    [68.6, 72.4],
+    [68.7, 72.5],
+    [69.6, 71.8]
+  ]
+}

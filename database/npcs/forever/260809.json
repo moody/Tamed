@@ -1,0 +1,23 @@
+{
+  "npc_id": 260809,
+  "name": "Highland Tortoise",
+  "family": "Turtle",
+  "type": "Tenacity",
+  "diet": ["Fish", "Fungus", "Fruit"],
+  "level_range": "26",
+  "zone_id": 11,
+  "ui_map_id": 1437,
+  "abilities": [{ "key": "bite", "rank": 4 }],
+  "coords": [
+    [48.0, 56.5],
+    [48.6, 56.2],
+    [49.1, 57.5],
+    [49.4, 56.5],
+    [49.9, 57.2],
+    [50.1, 57.9],
+    [50.3, 58.7],
+    [50.4, 58.0],
+    [50.4, 58.8],
+    [50.7, 58.9]
+  ]
+}

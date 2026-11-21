@@ -1,0 +1,20 @@
+{
+  "npc_id": 268530,
+  "name": "Bloodtalon Matriarch",
+  "family": "Raptor",
+  "type": "Cunning",
+  "diet": ["Meat"],
+  "level_range": "9",
+  "zone_id": 14,
+  "ui_map_id": 1411,
+  "abilities": [{ "key": "bite", "rank": 2 }],
+  "coords": [
+    [66.8, 71.6],
+    [68.2, 71.8],
+    [68.4, 71.0],
+    [68.5, 70.2],
+    [68.6, 71.6],
+    [68.6, 72.7],
+    [68.7, 71.4]
+  ]
+}

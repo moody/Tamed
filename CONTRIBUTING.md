@@ -37,8 +37,6 @@ Each folder or file is a flavor: `vanilla`, `tbc`, or `forever`. `vanilla` holds
 - **A record new to the flavor** is written in full.
 - **A record that exists in `vanilla`** is written as a patch: its key (`npc_id`, or the ability's key) plus only the fields that change. Each field in a patch replaces the Vanilla field as a whole, so a patched `coords` or `ranks` list must be complete.
 
-`forever.json` and `forever/` do not exist yet; create them to add the first Forever entry.
-
 ## NPCs
 
 Each NPC is one file, `database/npcs/<flavor>/<npc_id>.json`. A patch can leave out any required field except `npc_id`.

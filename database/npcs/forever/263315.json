@@ -1,0 +1,23 @@
+{
+  "npc_id": 263315,
+  "name": "Ombassa",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "41",
+  "classification": "Elite",
+  "zone_id": 16591,
+  "ui_map_id": 2548,
+  "abilities": [{ "key": "dash", "rank": 2 }],
+  "coords": [
+    [59.4, 53.4],
+    [59.4, 53.8],
+    [59.4, 54.7],
+    [59.6, 53.4],
+    [59.6, 53.8],
+    [59.6, 54.5],
+    [61.3, 54.3],
+    [62.5, 52.1],
+    [63.2, 51.1]
+  ]
+}

@@ -22,7 +22,7 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 --- Creates a full-width row with a checkbox, label, and description. Clicking
 --- anywhere on the row toggles the option.
 --- @param options OptionRowOptions
---- @return WaffleFlexComponent root
+--- @return WaffleFlexComponent<FrameWidget> root
 function ComponentFactory:OptionRow(options)
   local root = Addon.Waffle:Flex({
     direction = "ROW",

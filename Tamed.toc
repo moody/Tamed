@@ -1,7 +1,7 @@
 ## Interface: 20506, 16001, 11509
 ## Title: Tamed
 ## Author: https://github.com/moody
-## Version: 2.0.1
+## Version: 2.1.0
 ## IconTexture: Interface\ICONS\Ability_Hunter_BeastTaming
 ## Notes: A guide to tamed pet abilities.
 ## SavedVariables: __TAMED_ADDON_DB__, __TAMED_ADDON_V2_SAVED_VARIABLES__
@@ -42,12 +42,15 @@ src\ui\widgets\primitives\frame.lua
 src\ui\widgets\primitives\button.lua
 src\ui\widgets\primitives\check-box.lua
 src\ui\widgets\primitives\slider.lua
+src\ui\components\component-factory.lua
 src\ui\components\window.lua
 src\ui\components\window-title-button.lua
 src\ui\components\scroll-panel.lua
 src\ui\components\selectable-row.lua
 src\ui\components\detail-row.lua
 src\ui\components\option-row.lua
+src\ui\components\section-title.lua
+src\ui\components\stat-tile.lua
 src\ui\components\npc-card.lua
 src\ui\minimap-icon.lua
 src\ui\pin-helper.lua

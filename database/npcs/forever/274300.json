@@ -1,0 +1,25 @@
+{
+  "npc_id": 274300,
+  "name": "Coldrasp",
+  "family": "Wolf",
+  "type": "Ferocity",
+  "diet": ["Meat"],
+  "level_range": "12",
+  "classification": "Rare",
+  "zone_id": 85,
+  "ui_map_id": 1420,
+  "abilities": [{ "key": "furioushowl", "rank": 1 }],
+  "coords": [
+    [16.0, 66.8],
+    [16.6, 67.4],
+    [17.4, 68.8],
+    [17.8, 68.4],
+    [17.8, 68.5],
+    [19.4, 65.0],
+    [19.6, 65.2],
+    [19.6, 70.4],
+    [19.8, 64.4],
+    [19.8, 71.0],
+    [20.0, 71.8]
+  ]
+}

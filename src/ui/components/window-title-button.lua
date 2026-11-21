@@ -22,7 +22,7 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 
 --- Creates a fixed-width icon button meant for a window's title row.
 --- @param options WindowTitleButtonOptions
---- @return WaffleFlexComponent
+--- @return WaffleFlexComponent<WindowTitleButtonWidget>
 function ComponentFactory:WindowTitleButton(options)
   return Addon.Waffle:Flex({
     width = 46,

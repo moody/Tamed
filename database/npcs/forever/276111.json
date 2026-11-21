@@ -1,0 +1,25 @@
+{
+  "npc_id": 276111,
+  "name": "Ghostfang",
+  "family": "Cat",
+  "type": "Ferocity",
+  "diet": ["Meat", "Fish"],
+  "level_range": "10",
+  "classification": "Rare",
+  "zone_id": 1,
+  "ui_map_id": 1426,
+  "abilities": [{ "key": "claw", "rank": 2 }],
+  "coords": [
+    [74.6, 63.2],
+    [79.1, 42.9],
+    [79.8, 43.0],
+    [80.2, 46.4],
+    [80.4, 47.0],
+    [80.6, 47.0],
+    [81.0, 45.4],
+    [81.3, 45.8],
+    [81.4, 55.6],
+    [81.8, 55.4],
+    [81.8, 55.6]
+  ]
+}
