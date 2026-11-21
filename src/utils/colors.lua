@@ -57,6 +57,7 @@ end
 Colors.Backdrop = createColor("FF121212")
 Colors.Black = createColor("FF000000")
 Colors.DarkGrey = createColor("FF1E1E1E")
+Colors.DimGrey = createColor("FF6E6E6E")
 Colors.Gold = createColor("FFFFD100")
 Colors.Green = createColor("FFAAD372")
 Colors.Grey = createColor("FF9D9D9D")

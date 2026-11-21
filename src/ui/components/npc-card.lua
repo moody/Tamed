@@ -42,10 +42,10 @@ function ComponentFactory:NpcCard()
 
   local isHovered = false
 
-  --- Highlights the card while hovered, if its NPC has a map.
+  --- Highlights the card while hovered.
   --- @param frame FrameWidget
   local function updateHighlight(frame)
-    if npc and npc.ui_map_id and isHovered then
+    if isHovered then
       frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(0.5))
       frame:SetBackdropBorderColor(Colors.Green:GetRGBA(0.5))
     else
@@ -66,9 +66,11 @@ function ComponentFactory:NpcCard()
       GameTooltip:AddDoubleLine(L.DIET, Colors.White(table.concat(npc.diet, ", ")))
       GameTooltip:AddDoubleLine(L.TYPE, Colors.White(npc.type))
       GameTooltip:AddDoubleLine(L.LOCATION, Colors.White(npc.location))
+      GameTooltip:AddLine(" ")
       if npc.ui_map_id then
-        GameTooltip:AddLine(" ")
         GameTooltip:AddDoubleLine(Colors.White(L.LEFT_CLICK), Colors.Green(L.SHOW_ON_MAP))
+      else
+        GameTooltip:AddLine(Colors.Grey(L.MAP_UNAVAILABLE))
       end
       GameTooltip:Show()
     end
@@ -142,7 +144,10 @@ function ComponentFactory:NpcCard()
 
   addTextLine("LEFT", function(n) return Colors.Green(n.name) end)
   addTextLine("CENTER", function(n) return Colors.White(n.level_range) end)
-  addTextLine("RIGHT", function(n) return Colors.LightGrey(n.location) end)
+  addTextLine("RIGHT", function(n)
+    local color = n.ui_map_id and Colors.LightGrey or Colors.DimGrey
+    return color(n.location)
+  end)
 
   --- Sets the NPC shown.
   --- @param newNpc? TameableNPC
