@@ -7,7 +7,7 @@
   "level_range": "58",
   "zone_id": 616,
   "ui_map_id": 2482,
-  "abilities": [{ "key": "cower", "rank": 6 }],
+  "abilities": [{ "key": "cower", "rank": 6 }, { "key": "prowl", "rank": 3 }],
   "coords": [
     [26.4, 65.2],
     [26.5, 65.4],

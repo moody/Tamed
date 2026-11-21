@@ -2223,6 +2223,10 @@ Addon:MergeTameableNPCs({
       {
         ["key"] = "dash",
         ["rank"] = 2
+      },
+      {
+        ["key"] = "prowl",
+        ["rank"] = 2
       }
     },
     ["coords"] = {
@@ -3926,6 +3930,10 @@ Addon:MergeTameableNPCs({
       {
         ["key"] = "cower",
         ["rank"] = 6
+      },
+      {
+        ["key"] = "prowl",
+        ["rank"] = 3
       }
     },
     ["coords"] = {
