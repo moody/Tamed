@@ -40,10 +40,12 @@ function ComponentFactory:NpcCard()
   --- @type { node: WaffleFlexComponent, getText: fun(npc: TameableNPC): string }[]
   local textLines = {}
 
+  local isHovered = false
+
   --- Highlights the card while hovered, if its NPC has a map.
   --- @param frame FrameWidget
   local function updateHighlight(frame)
-    if npc and npc.ui_map_id and frame:IsMouseOver() then
+    if npc and npc.ui_map_id and isHovered then
       frame:SetBackdropColor(Colors.DarkGrey:GetRGBA(0.5))
       frame:SetBackdropBorderColor(Colors.Green:GetRGBA(0.5))
     else
@@ -91,13 +93,20 @@ function ComponentFactory:NpcCard()
       end)
 
       frame:SetScript("OnEnter", function()
+        isHovered = true
         updateHighlight(frame)
         showTooltip(frame)
       end)
 
       frame:SetScript("OnLeave", function()
+        isHovered = false
         updateHighlight(frame)
         GameTooltip:Hide()
+      end)
+
+      frame:SetScript("OnHide", function()
+        isHovered = false
+        updateHighlight(frame)
       end)
 
       return frame
