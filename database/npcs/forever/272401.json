@@ -7,7 +7,7 @@
   "level_range": "60",
   "zone_id": 357,
   "ui_map_id": 1444,
-  "abilities": [{ "key": "dive", "rank": 3 }],
+  "abilities": [{ "key": "dive", "rank": 3 }, { "key": "lightningbreath", "rank": 6 }],
   "coords": [
     [53.4, 51.1],
     [56.5, 50.0],

@@ -3668,6 +3668,10 @@ Addon:MergeTameableNPCs({
       {
         ["key"] = "dive",
         ["rank"] = 3
+      },
+      {
+        ["key"] = "lightningbreath",
+        ["rank"] = 6
       }
     },
     ["coords"] = {
