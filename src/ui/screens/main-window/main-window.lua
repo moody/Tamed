@@ -120,7 +120,6 @@ local contentArea = mainScreenRow:AddColumn({
 
 Components.OptionsScreen = contentArea:AttachComponent(OptionsScreen:Build())
 
---- @type RankScreenComponent
 Components.RankScreen = contentArea:AttachComponent(RankScreen:Build())
 
 -- ============================================================================

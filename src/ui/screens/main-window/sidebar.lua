@@ -146,11 +146,10 @@ end
 
 --- Builds and returns a root component describing the Sidebar.
 --- @param options SidebarOptions
---- @return WaffleFlexComponent root
+--- @return ScrollPanelComponent root
 function Sidebar:Build(options)
   local root = ComponentFactory:ScrollPanel()
 
-  --- @type SelectableRowComponent
   local optionsRow = root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
     labelText = L.OPTIONS,
     marginBottom = Widgets:Padding(2),

@@ -37,7 +37,7 @@ function ComponentFactory:NpcCard()
   --- @type TameableNPC?
   local npc
 
-  --- @type { node: WaffleFlexComponent, getText: fun(npc: TameableNPC): string }[]
+  --- @type { node: WaffleFlexComponent<FontString>, getText: fun(npc: TameableNPC): string }[]
   local textLines = {}
 
   local isHovered = false
@@ -80,7 +80,7 @@ function ComponentFactory:NpcCard()
 
   local card
 
-  --- @class NpcCardComponent : WaffleFlexComponent
+  --- @class NpcCardComponent : WaffleFlexComponent<FrameWidget>
   card = Addon.Waffle:Flex({
     direction = "ROW",
     align = "CENTER",

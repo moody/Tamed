@@ -31,7 +31,7 @@ function ComponentFactory:StatTile(options)
     fontString:SetTextColor(color:GetRGB())
   end
 
-  --- @class StatTileComponent : WaffleFlexComponent
+  --- @class StatTileComponent : WaffleFlexComponent<FrameWidget>
   local root = Addon.Waffle:Flex({
     direction = "COLUMN",
     height = "AUTO",
@@ -60,6 +60,7 @@ function ComponentFactory:StatTile(options)
     end,
   })
 
+  --- @type WaffleFlexComponent<FontString>
   local valueNode = root:AddChild({
     height = "AUTO",
 

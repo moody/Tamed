@@ -45,6 +45,7 @@ function ComponentFactory:DetailRow(options)
     end,
   })
 
+  --- @type WaffleFlexComponent<FontString>
   local valueNode = root:AddChild({
     height = "AUTO",
 

@@ -234,15 +234,12 @@ function RankScreen:Build()
     gap = Widgets:Padding(0.5),
   })
 
-  --- @type StatTileComponent
   Components.PetLevelTile = numbers:AttachComponent(
     ComponentFactory:StatTile({ labelText = L.PET_LEVEL })
   )
-  --- @type StatTileComponent
   Components.TrainingCostTile = numbers:AttachComponent(
     ComponentFactory:StatTile({ labelText = L.TRAINING_COST })
   )
-  --- @type StatTileComponent
   Components.LearnableByTile = stats:AttachComponent(
     ComponentFactory:StatTile({ labelText = L.LEARNABLE_BY, valueFont = "GameFontNormal" })
   )

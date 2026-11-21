@@ -69,8 +69,8 @@ function ComponentFactory:ScrollPanel()
   -- Root
   ------------------------------------------------------------
 
-  --- @class ScrollPanelComponent : WaffleFlexComponent
-  --- @field ScrollChild WaffleFlexComponent Root for scrollable content.
+  --- @class ScrollPanelComponent : WaffleFlexComponent<FrameWidget>
+  --- @field ScrollChild WaffleFlexComponent<Frame> Root for scrollable content.
   Components.Root = Addon.Waffle:Flex({
     direction = "COLUMN",
     defaultFrameFactory = defaultFrameFactory,

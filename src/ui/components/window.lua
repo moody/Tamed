@@ -31,10 +31,10 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 function ComponentFactory:Window(options)
   local root
 
-  --- @class WindowComponent : WaffleFlexComponent
-  --- @field TitleRow WaffleFlexComponent
-  --- @field TitleText WaffleFlexComponent
-  --- @field CloseButton WaffleFlexComponent
+  --- @class WindowComponent : WaffleFlexComponent<FrameWidget>
+  --- @field TitleRow WaffleFlexComponent<FrameWidget>
+  --- @field TitleText WaffleFlexComponent<FontString>
+  --- @field CloseButton WaffleFlexComponent<WindowTitleButtonWidget>
   root = Addon.Waffle:Flex({
     width = options.width,
     height = options.height,
