@@ -7,7 +7,7 @@
   "level_range": "37-38",
   "zone_id": 16591,
   "ui_map_id": 2548,
-  "abilities": [{ "key": "cower", "rank": 4 }],
+  "abilities": [{ "key": "cower", "rank": 4 }, { "key": "dustcloud", "rank": 3 }],
   "coords": [
     [54.4, 57.6],
     [54.6, 58.0],

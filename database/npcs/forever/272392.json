@@ -7,7 +7,7 @@
   "level_range": "60",
   "zone_id": 493,
   "ui_map_id": 1450,
-  "abilities": [{ "key": "bite", "rank": 8 }],
+  "abilities": [{ "key": "bite", "rank": 8 }, { "key": "dustcloud", "rank": 5 }],
   "coords": [
     [30.8, 55.8],
     [31.0, 56.6],

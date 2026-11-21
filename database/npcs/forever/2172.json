@@ -8,7 +8,7 @@
   "classification": "Rare",
   "zone_id": 148,
   "ui_map_id": 1439,
-  "abilities": [{ "key": "bite", "rank": 3 }],
+  "abilities": [{ "key": "bite", "rank": 3 }, { "key": "dustcloud", "rank": 1 }],
   "coords": [
     [34.5, 86.9],
     [34.8, 87.6],

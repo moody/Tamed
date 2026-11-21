@@ -128,5 +128,38 @@ Addon:MergeTameableAbilities({
       "Owl",
       "Wind Serpent"
     }
+  },
+  ["dustcloud"] = {
+    ["name"] = "Dust Cloud",
+    ["learned_by"] = {
+      "Tallstrider"
+    },
+    ["ranks"] = {
+      {
+        ["rank"] = 1,
+        ["spell_id"] = 1265899,
+        ["pet_level"] = 12
+      },
+      {
+        ["rank"] = 2,
+        ["spell_id"] = 1265901,
+        ["pet_level"] = 24
+      },
+      {
+        ["rank"] = 3,
+        ["spell_id"] = 1265902,
+        ["pet_level"] = 36
+      },
+      {
+        ["rank"] = 4,
+        ["spell_id"] = 1265903,
+        ["pet_level"] = 48
+      },
+      {
+        ["rank"] = 5,
+        ["spell_id"] = 1265904,
+        ["pet_level"] = 60
+      }
+    }
   }
 })
