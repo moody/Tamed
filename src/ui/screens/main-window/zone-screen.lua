@@ -54,6 +54,9 @@ function ZoneScreen:Build()
   --- Level chosen with the slider, or `nil` to use the player's.
   local chosenLevel
 
+  --- `true` if only NPCs in the player's zone are listed.
+  local isZoneOnly = false
+
   -- ------------------------------------------------------
   -- Root Component
   -- ------------------------------------------------------
@@ -64,13 +67,15 @@ function ZoneScreen:Build()
     direction = "COLUMN",
     gap = Widgets:Padding(),
 
-    --- Refreshes the screen once a second while it is shown, if the player's map or level changed.
+    --- Once a second while shown, refreshes if the zone or level the screen depends on changed.
     --- @param parent Frame
     frameFactory = function(parent)
       local frame = CreateFrame("Frame", nil, parent)
 
       TickerManager:NewTicker(1, function()
-        if C_Map.GetBestMapForUnit("player") ~= shownMapId or UnitLevel("player") ~= shownPlayerLevel then
+        local isMapChanged = isZoneOnly and C_Map.GetBestMapForUnit("player") ~= shownMapId
+        local isLevelChanged = chosenLevel == nil and UnitLevel("player") ~= shownPlayerLevel
+        if isMapChanged or isLevelChanged then
           Components.Root:Refresh()
         end
       end):BindFrame(frame)
@@ -79,7 +84,7 @@ function ZoneScreen:Build()
     end,
   })
 
-  --- Shows the NPCs worth taming in the player's zone at the chosen level, or the player's.
+  --- Shows the NPCs worth taming for the level and the zone switch.
   function Components.Root:Refresh()
     -- Nothing to update before the screen is laid out. The ticker refreshes it once it is shown.
     if not Components.HeadingName:GetFrame() then return end
@@ -87,12 +92,17 @@ function ZoneScreen:Build()
     shownMapId, shownPlayerLevel = C_Map.GetBestMapForUnit("player"), UnitLevel("player")
     local level = chosenLevel or shownPlayerLevel
 
-    -- Without a map there is nothing to list.
-    local zoneTames = shownMapId and ZoneTames:Get({ level = level, uiMapId = shownMapId }) or {}
+    --- @type ZoneTame[]
+    local zoneTames = {}
+
+    -- Without a map there is nothing to list in the player's zone.
+    if shownMapId or not isZoneOnly then
+      zoneTames = ZoneTames:Get({ level = level, uiMapId = isZoneOnly and shownMapId or nil })
+    end
 
     Components.LevelSlider:SetValue(level)
 
-    Components.HeadingName:GetFrame():SetText(Colors.White(GetRealZoneText()))
+    Components.HeadingName:GetFrame():SetText(Colors.White(isZoneOnly and GetRealZoneText() or L.ALL_ZONES))
     Components.HeadingLevel:GetFrame():SetText(Colors.Grey(("%s %d"):format(L.LEVEL, level)))
 
     --- @type NpcListEntry[]
@@ -122,7 +132,7 @@ function ZoneScreen:Build()
   -- Heading Components
   -- ------------------------------------------------------
 
-  -- Heading: zone name, description, then the level and slider.
+  -- Heading: zone name or all zones, description, then the level slider and the zone switch.
   local heading = Components.Root:AddColumn({
     height = "AUTO",
     gap = Widgets:Padding(0.25),
@@ -194,6 +204,15 @@ function ZoneScreen:Build()
     onChange = function(level) Components.Root:SetLevel(level) end,
   }))
 
+  heading:AttachComponent(ComponentFactory:OptionRow({
+    labelText = L.CURRENT_ZONE_ONLY,
+    get = function() return isZoneOnly end,
+    set = function(value)
+      isZoneOnly = value
+      Components.Root:Refresh()
+    end,
+  }))
+
   -- ------------------------------------------------------
   -- NPCs Components
   -- ------------------------------------------------------
@@ -203,7 +222,7 @@ function ZoneScreen:Build()
     ComponentFactory:SectionTitle({ titleText = L.TAMEABLE_NPCS })
   )
 
-  -- NPC list, with each NPC's abilities under its name.
+  -- NPC list, with each NPC's family and abilities under its name.
   Components.NpcList = Components.Root:AttachComponent(ComponentFactory:NpcList({
     numCards = 6,
     emptyText = L.NO_TAMEABLE_NPCS,
@@ -211,6 +230,7 @@ function ZoneScreen:Build()
     columnLabels = {
       { justify = "LEFT", text = L.NAME },
       { justify = "CENTER", width = ComponentFactory.NPC_CARD_LEVEL_WIDTH, text = L.LEVEL },
+      { justify = "RIGHT", width = ComponentFactory.NPC_CARD_LOCATION_WIDTH, text = L.LOCATION },
     },
   }))
 

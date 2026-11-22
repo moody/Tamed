@@ -11,7 +11,7 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 
 --- @class OptionRowOptions
 --- @field labelText string
---- @field descriptionText string
+--- @field descriptionText? string
 --- @field get fun(): boolean
 --- @field set fun(value: boolean)
 
@@ -19,7 +19,7 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 -- ComponentFactory - OptionRow
 -- =============================================================================
 
---- Creates a full-width row with a checkbox, label, and description. Clicking
+--- Creates a full-width row with a checkbox, label, and optional description. Clicking
 --- anywhere on the row toggles the option.
 --- @param options OptionRowOptions
 --- @return WaffleFlexComponent<FrameWidget> root
@@ -84,7 +84,9 @@ function ComponentFactory:OptionRow(options)
   end
 
   addTextLine("GameFontNormal", Colors.White, options.labelText)
-  addTextLine("GameFontNormalSmall", Colors.Grey, options.descriptionText)
+  if options.descriptionText then
+    addTextLine("GameFontNormalSmall", Colors.Grey, options.descriptionText)
+  end
 
   return root
 end

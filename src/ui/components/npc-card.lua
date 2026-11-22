@@ -31,13 +31,13 @@ end
 -- =============================================================================
 
 --- @class NpcCardOptions
---- @field showAbilities? boolean Shows the family after the name and a line of abilities under it, with no location.
+--- @field showAbilities? boolean Shows the family after the name and a line of abilities under it.
 
 -- =============================================================================
 -- ComponentFactory - NpcCard
 -- =============================================================================
 
---- Creates a card showing an NPC's name and level, and its location or its family and abilities. Hovering
+--- Creates a card showing an NPC's name, level, and location. Hovering
 --- shows the NPC tooltip; clicking shows the NPC on the map, if it has a `ui_map_id`.
 --- @param options? NpcCardOptions
 --- @return NpcCardComponent card
@@ -177,21 +177,21 @@ function ComponentFactory:NpcCard(options)
   local function getNameAndFamily(n) return Colors.Green(n.name) .. Colors.White(" · " .. n.family) end
   --- Returns the text of the level line.
   local function getLevel(n) return Colors.White(n.level_range) end
+  --- Returns the text of the location line, dimmed if the NPC has no map.
+  local function getLocation(n) return (n.ui_map_id and Colors.LightGrey or Colors.DimGrey)(n.location) end
 
   if options.showAbilities then
-    -- Name and family, with the abilities under them, then level.
+    -- Name and family, with the abilities under them, then level and location.
     local nameColumn = info:AddColumn({ height = "AUTO", gap = Widgets:Padding(0.5) })
     addTextLine(nameColumn, "LEFT", nil, getNameAndFamily, "GameFontNormal")
     addTextLine(nameColumn, "LEFT", nil, function() return abilitiesText end, "GameFontNormalSmall")
     addTextLine(info, "CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, getLevel)
+    addTextLine(info, "RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, getLocation)
   else
     -- Name, level, and location.
     addTextLine(info, "LEFT", nil, getName)
     addTextLine(info, "CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, getLevel)
-    addTextLine(info, "RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, function(n)
-      local color = n.ui_map_id and Colors.LightGrey or Colors.DimGrey
-      return color(n.location)
-    end)
+    addTextLine(info, "RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, getLocation)
   end
 
   --- Sets the NPC shown, and the text of its abilities line if the card has one.
