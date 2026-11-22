@@ -1,6 +1,6 @@
 # Tamed
 
-Tamed helps Hunters in Classic WoW find the tameable pets that teach each rank of a pet ability, and shows where they spawn on the world map. It also lists the NPCs in your current zone with the highest ability ranks you can tame, at your level or a level you choose.
+Tamed helps Hunters in Classic WoW find the tameable pets that teach each rank of a pet ability, and shows where they spawn on the world map. Its Tame Finder lists the NPCs with the highest ability ranks you can tame, at your level or a level you choose, in any zone or only your current one.
 
 Supports Vanilla, The Burning Crusade, and WoW Forever.
 
