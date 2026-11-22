@@ -13,3 +13,4 @@ ignore:
   - CONTRIBUTING.md
   - database
   - HISTORY.md
+  - test

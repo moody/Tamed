@@ -28,6 +28,10 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 --- Map position as `{x, y}` percentages (0 to 100).
 --- @alias TameableNPCCoord [number, number]
 
+--- @class TameableNPCAbilityRank
+--- @field ability TameableAbility
+--- @field rank integer The displayed rank: its position among the ranks available on the running client.
+
 --- @class TameableNPC
 --- @field name string
 --- @field family string
@@ -39,6 +43,7 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 --- @field zone_id integer
 --- @field ui_map_id? integer
 --- @field abilities string[] Formatted display strings, not `{key, rank}` entries.
+--- @field ability_ranks TameableNPCAbilityRank[] The same abilities, sorted by ability name.
 --- @field coords TameableNPCCoord[]
 --- @field location string Resolved from `zone_id` via `C_Map.GetAreaInfo`.
 
@@ -113,7 +118,8 @@ EventManager:Once(E.Wow.PlayerLogin, function()
                   ability.name,
                   L.RANK,
                   rankIndex
-                )
+                ),
+                { ability = ability, rank = rankIndex }
               }
               rank.npc_ids[#rank.npc_ids + 1] = npc_id
               break
@@ -123,7 +129,11 @@ EventManager:Once(E.Wow.PlayerLogin, function()
       end
       table.sort(abilities, function(a, b) return a[1] < b[1] end)
       npc.abilities = {}
-      for _, v in ipairs(abilities) do npc.abilities[#npc.abilities + 1] = v[2] end
+      npc.ability_ranks = {}
+      for _, v in ipairs(abilities) do
+        npc.abilities[#npc.abilities + 1] = v[2]
+        npc.ability_ranks[#npc.ability_ranks + 1] = v[3]
+      end
     else
       TameableNPCs[npc_id] = nil
     end

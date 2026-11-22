@@ -24,6 +24,7 @@ src\locale.lua
 src\utils\colors.lua
 src\utils\ticker-manager.lua
 src\data.lua
+src\zone-tames.lua
 src\commands.lua
 src\store\state-manager.lua
 src\tooltips.lua
