@@ -169,9 +169,9 @@ function Sidebar:Build(options)
 
   -- Divider between the rows above and the abilities.
   root.ScrollChild:AddChild({
-    height = 1,
+    height = 2,
     marginTop = Widgets:Padding(),
-    marginBottom = Widgets:Padding(2),
+    marginBottom = Widgets:Padding(),
 
     --- @param parent Frame
     frameFactory = function(parent)
