@@ -339,7 +339,7 @@ function TameFinderScreen:Build()
   -- NPC list, with each NPC's family and abilities under its name.
   Components.NpcList = Components.Root:AttachComponent(ComponentFactory:NpcList({
     numCards = 6,
-    emptyText = L.NO_TAMEABLE_NPCS,
+    emptyText = L.NO_MATCHING_NPCS,
     cardOptions = { showAbilities = true },
     getAbilitiesText = function(entry) return formatAbilities(entry.npc, bestRanks) end,
     columnLabels = {
