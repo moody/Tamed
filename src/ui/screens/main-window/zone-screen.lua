@@ -49,9 +49,18 @@ function ZoneScreen:Build()
   local Components = {}
 
   local NUM_NPC_CARDS = 6
+  local LEVEL_TEXT_WIDTH = 70
+  local LEVEL_SLIDER_WIDTH = 200
+  local LEVEL_SLIDER_HEIGHT = 12
 
   --- The player's map and level when the screen was last refreshed.
-  local shownMapId, shownLevel
+  local shownMapId, shownPlayerLevel
+
+  --- Level chosen with the slider, or `nil` to use the player's.
+  local chosenLevel
+
+  --- `true` while `Refresh()` moves the slider, so the move is not taken as a choice.
+  local isSyncingSlider = false
 
   -- ------------------------------------------------------
   -- Root Component
@@ -69,7 +78,7 @@ function ZoneScreen:Build()
       local frame = CreateFrame("Frame", nil, parent)
 
       TickerManager:NewTicker(1, function()
-        if C_Map.GetBestMapForUnit("player") ~= shownMapId or UnitLevel("player") ~= shownLevel then
+        if C_Map.GetBestMapForUnit("player") ~= shownMapId or UnitLevel("player") ~= shownPlayerLevel then
           Components.Root:Refresh()
         end
       end):BindFrame(frame)
@@ -78,13 +87,18 @@ function ZoneScreen:Build()
     end,
   })
 
-  --- Shows the NPCs worth taming in the player's zone at the player's level.
+  --- Shows the NPCs worth taming in the player's zone at the chosen level, or the player's.
   function Components.Root:Refresh()
-    shownMapId, shownLevel = C_Map.GetBestMapForUnit("player"), UnitLevel("player")
-    local zoneTames = ZoneTames:Get(shownMapId, shownLevel)
+    shownMapId, shownPlayerLevel = C_Map.GetBestMapForUnit("player"), UnitLevel("player")
+    local level = chosenLevel or shownPlayerLevel
+    local zoneTames = ZoneTames:Get(shownMapId, level)
+
+    isSyncingSlider = true
+    Components.LevelSlider:GetFrame():SetValue(level)
+    isSyncingSlider = false
 
     Components.HeadingName:GetFrame():SetText(Colors.White(GetRealZoneText()))
-    Components.HeadingLevel:GetFrame():SetText(Colors.Grey(("%s %d"):format(L.LEVEL, shownLevel)))
+    Components.HeadingLevel:GetFrame():SetText(Colors.Grey(("%s %d"):format(L.LEVEL, level)))
 
     --- @type NpcListEntry[]
     local entries = {}
@@ -101,11 +115,19 @@ function ZoneScreen:Build()
     self:MarkDirty()
   end
 
+  --- Shows the NPCs worth taming at the given level, and keeps that level. Without a level, follows
+  --- the player's.
+  --- @param level? integer
+  function Components.Root:SetLevel(level)
+    chosenLevel = level
+    self:Refresh()
+  end
+
   -- ------------------------------------------------------
   -- Heading Components
   -- ------------------------------------------------------
 
-  -- Heading: zone name above the player's level.
+  -- Heading: zone name above the level and its slider.
   local heading = Components.Root:AddColumn({
     height = 48,
     justify = "CENTER",
@@ -129,7 +151,14 @@ function ZoneScreen:Build()
     end,
   })
 
-  Components.HeadingLevel = heading:AddChild({
+  local levelRow = heading:AddRow({
+    height = "AUTO",
+    align = "CENTER",
+    gap = Widgets:Padding(),
+  })
+
+  Components.HeadingLevel = levelRow:AddChild({
+    width = LEVEL_TEXT_WIDTH,
     height = "AUTO",
 
     --- @param parent Frame
@@ -143,6 +172,29 @@ function ZoneScreen:Build()
     onMeasure = function(fontString, width)
       fontString:SetSize(width, 0)
       return width, fontString:GetStringHeight()
+    end,
+  })
+
+  Components.LevelSlider = levelRow:AddChild({
+    width = LEVEL_SLIDER_WIDTH,
+    height = LEVEL_SLIDER_HEIGHT,
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local slider = Widgets:Slider({
+        parent = parent,
+        orientation = "HORIZONTAL",
+        width = LEVEL_SLIDER_WIDTH,
+        height = LEVEL_SLIDER_HEIGHT,
+        minValue = 1,
+        maxValue = Addon.MAX_LEVEL,
+      })
+      slider:SetBackdropColor(Colors.Black:GetRGBA(0.3))
+      slider:SetBackdropBorderColor(0, 0, 0, 0)
+      slider:SetScript("OnValueChanged", function(_, value)
+        if not isSyncingSlider then Components.Root:SetLevel(math.floor(value + 0.5)) end
+      end)
+      return slider
     end,
   })
 

@@ -122,7 +122,7 @@ EventManager:Once(E.DataLoaded, function()
     end,
     onSelectZone = function()
       showContentScreen(Components.ZoneScreen)
-      Components.ZoneScreen:Refresh()
+      Components.ZoneScreen:SetLevel()
     end,
     onSelectRank = function(ability, rank)
       showContentScreen(Components.RankScreen)

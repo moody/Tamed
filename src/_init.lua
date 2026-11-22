@@ -15,6 +15,9 @@ Addon.IS_VANILLA = WOW_PROJECT_ID == WOW_PROJECT_CLASSIC
 Addon.IS_TBC = WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC
 Addon.IS_FOREVER = WOW_PROJECT_ID == WOW_PROJECT_CAMELOT
 
+--- Highest level a player can reach on the running client.
+Addon.MAX_LEVEL = Addon.IS_TBC and 70 or 60
+
 -- ============================================================================
 -- Functions
 -- ============================================================================
