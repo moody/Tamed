@@ -117,10 +117,9 @@ function ZoneScreen:Build()
   -- Heading Components
   -- ------------------------------------------------------
 
-  -- Heading: zone name above the level and its slider.
+  -- Heading: zone name, description, then the level and slider.
   local heading = Components.Root:AddColumn({
-    height = 48,
-    justify = "CENTER",
+    height = "AUTO",
     gap = Widgets:Padding(0.25),
   })
 
@@ -132,6 +131,25 @@ function ZoneScreen:Build()
       local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalHuge")
       fontString:SetJustifyH("LEFT")
       fontString:SetWordWrap(false)
+      return fontString
+    end,
+
+    onMeasure = function(fontString, width)
+      fontString:SetSize(width, 0)
+      return width, fontString:GetStringHeight()
+    end,
+  })
+
+  -- What the screen shows, and how the slider changes it.
+  heading:AddChild({
+    height = "AUTO",
+    marginBottom = Widgets:Padding(),
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
+      fontString:SetJustifyH("LEFT")
+      fontString:SetText(Colors.Grey(L.CURRENT_ZONE_DESCRIPTION))
       return fontString
     end,
 
