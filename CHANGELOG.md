@@ -11,3 +11,4 @@
 ### Changed
 
 - Tamed opens on the Tame Finder screen instead of Options
+- On WoW Forever, every Owl NPC now shows as the Bird of Prey family, as the game names it there
