@@ -1,7 +1,10 @@
 local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local ComponentFactory = Addon:GetModule("ComponentFactory")
+local E = Addon:GetModule("Events")
+local EventManager = Addon:GetModule("EventManager")
 local L = Addon:GetModule("Locale")
+local TameableAbilities = Addon:GetModule("TameableAbilities")
 local TickerManager = Addon:GetModule("TickerManager")
 local Widgets = Addon:GetModule("Widgets")
 local ZoneTames = Addon:GetModule("ZoneTames")
@@ -57,6 +60,10 @@ function ZoneScreen:Build()
   --- `true` if only NPCs in the player's zone are listed.
   local isZoneOnly = false
 
+  --- Created once the data has loaded.
+  --- @type AbilityFilterComponent?
+  local abilityFilter
+
   -- ------------------------------------------------------
   -- Root Component
   -- ------------------------------------------------------
@@ -97,7 +104,11 @@ function ZoneScreen:Build()
 
     -- Without a map there is nothing to list in the player's zone.
     if shownMapId or not isZoneOnly then
-      zoneTames = ZoneTames:Get({ level = level, uiMapId = isZoneOnly and shownMapId or nil })
+      zoneTames = ZoneTames:Get({
+        level = level,
+        uiMapId = isZoneOnly and shownMapId or nil,
+        abilities = abilityFilter and abilityFilter:GetSelected(),
+      })
     end
 
     Components.LevelSlider:SetValue(level)
@@ -132,7 +143,7 @@ function ZoneScreen:Build()
   -- Heading Components
   -- ------------------------------------------------------
 
-  -- Heading: zone name or all zones, description, then the level slider and the zone switch.
+  -- Heading: zone name or all zones, description, then the level slider, the zone switch, and the ability filter.
   local heading = Components.Root:AddColumn({
     height = "AUTO",
     gap = Widgets:Padding(0.25),
@@ -212,6 +223,20 @@ function ZoneScreen:Build()
       Components.Root:Refresh()
     end,
   }))
+
+  -- Ability filter: one icon per ability.
+  EventManager:Once(E.DataLoaded, function()
+    local abilities = {}
+    for _, ability in pairs(TameableAbilities) do
+      abilities[#abilities + 1] = ability
+    end
+    table.sort(abilities, function(a, b) return a.name < b.name end)
+
+    abilityFilter = heading:AttachComponent(ComponentFactory:AbilityFilter({
+      abilities = abilities,
+      onChange = function() Components.Root:Refresh() end,
+    }))
+  end)
 
   -- ------------------------------------------------------
   -- NPCs Components
