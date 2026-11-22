@@ -18,6 +18,12 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 -- ComponentFactory - AbilityFilter
 -- =============================================================================
 
+--- Width and height of an ability icon.
+local ICON_SIZE = 32
+
+--- How many rows the icons are split into.
+local NUM_ROWS = 2
+
 --- Creates a labeled grid of ability icons that are selected by clicking. Hovering an icon shows the spell
 --- tooltip of its highest rank.
 --- @param options AbilityFilterOptions
@@ -137,18 +143,24 @@ function ComponentFactory:AbilityFilter(options)
   -- Icons Components
   -- ------------------------------------------------------
 
-  -- Icons, wrapping onto new lines.
-  local grid = root:AddRow({
+  -- Icons in rows of the same length, each spread across the full width.
+  local grid = root:AddColumn({
     height = "AUTO",
-    wrap = true,
     gap = Widgets:Padding(0.5),
-    lineGap = Widgets:Padding(0.5),
   })
 
-  for _, ability in ipairs(options.abilities) do
-    grid:AddChild({
-      width = 24,
-      height = 24,
+  local numColumns = math.ceil(#options.abilities / NUM_ROWS)
+
+  --- @type WaffleFlexComponent[]
+  local rows = {}
+  for i = 1, NUM_ROWS do
+    rows[i] = grid:AddRow({ height = "AUTO", justify = "SPACE_BETWEEN" })
+  end
+
+  for i, ability in ipairs(options.abilities) do
+    rows[math.ceil(i / numColumns)]:AddChild({
+      width = ICON_SIZE,
+      height = ICON_SIZE,
 
       --- @param parent Frame
       frameFactory = function(parent)
@@ -217,6 +229,20 @@ function ComponentFactory:AbilityFilter(options)
         refreshIcon()
 
         return frame
+      end,
+    })
+  end
+
+  -- Empty slots at the end of the last row keep its icons in line with the rows above.
+  for _ = #options.abilities + 1, NUM_ROWS * numColumns do
+    rows[NUM_ROWS]:AddChild({
+      width = ICON_SIZE,
+      height = ICON_SIZE,
+      visibility = "INVISIBLE",
+
+      --- @param parent Frame
+      frameFactory = function(parent)
+        return CreateFrame("Frame", nil, parent)
       end,
     })
   end
