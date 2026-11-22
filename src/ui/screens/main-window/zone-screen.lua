@@ -99,17 +99,27 @@ function ZoneScreen:Build()
     shownMapId, shownPlayerLevel = C_Map.GetBestMapForUnit("player"), UnitLevel("player")
     local level = chosenLevel or shownPlayerLevel
 
+    --- @type ZoneTamesFilters
+    local filters = {
+      level = level,
+      uiMapId = isZoneOnly and shownMapId or nil,
+      abilities = abilityFilter and abilityFilter:GetSelected(),
+    }
+
     --- @type ZoneTame[]
     local zoneTames = {}
 
+    --- Abilities that can still be added to the ability filter.
+    --- @type table<TameableAbility, boolean>
+    local abilities = {}
+
     -- Without a map there is nothing to list in the player's zone.
     if shownMapId or not isZoneOnly then
-      zoneTames = ZoneTames:Get({
-        level = level,
-        uiMapId = isZoneOnly and shownMapId or nil,
-        abilities = abilityFilter and abilityFilter:GetSelected(),
-      })
+      zoneTames = ZoneTames:Get(filters)
+      abilities = ZoneTames:GetAbilities(filters)
     end
+
+    if abilityFilter then abilityFilter:SetAvailable(abilities) end
 
     Components.LevelSlider:SetValue(level)
 

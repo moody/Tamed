@@ -294,3 +294,63 @@ do
 
   assert(Matchers:IsDeepEqual(getNames(zoneTames), { "Here" }))
 end
+
+-- ============================================================================
+-- Tests - ZoneTames:GetAbilities()
+-- ============================================================================
+
+-- Test: returns the abilities of the NPCs that can be tamed at the level.
+do
+  local claw = { name = "Claw" }
+  local dash = { name = "Dash" }
+  local ZoneTames = setupContext({
+    ["1"] = mockNpc("Low", 10, { { ability = claw, rank = 1 } }),
+    ["2"] = mockNpc("High", 14, { { ability = dash, rank = 1 } }),
+  })
+
+  local abilities = ZoneTames:GetAbilities({ level = 13 })
+
+  assert(Matchers:IsDeepEqual(abilities, { [claw] = true }))
+end
+
+-- Test: returns the abilities of the NPCs on the map.
+do
+  local claw = { name = "Claw" }
+  local dash = { name = "Dash" }
+  local ZoneTames = setupContext({
+    ["1"] = mockNpc("Here", 10, { { ability = claw, rank = 1 } }),
+    ["2"] = { name = "Other Map", min_level = 10, ui_map_id = OTHER_MAP_ID, abilities = { { ability = dash, rank = 1 } } },
+  })
+
+  local abilities = ZoneTames:GetAbilities({ level = HIGH_LEVEL, uiMapId = MAP_ID })
+
+  assert(Matchers:IsDeepEqual(abilities, { [claw] = true }))
+end
+
+-- Test: returns only the abilities of NPCs that teach every filtered ability, with the filtered ones.
+do
+  local claw = { name = "Claw" }
+  local dash = { name = "Dash" }
+  local bite = { name = "Bite" }
+  local cower = { name = "Cower" }
+  local ZoneTames = setupContext({
+    ["1"] = mockNpc("Claw Dash Bite", 10, { { ability = claw, rank = 1 }, { ability = dash, rank = 1 }, { ability = bite, rank = 1 } }),
+    ["2"] = mockNpc("Claw Cower", 10, { { ability = claw, rank = 1 }, { ability = cower, rank = 1 } }),
+  })
+
+  local abilities = ZoneTames:GetAbilities({ level = HIGH_LEVEL, abilities = { claw, dash } })
+
+  assert(Matchers:IsDeepEqual(abilities, { [claw] = true, [dash] = true, [bite] = true }))
+end
+
+-- Test: returns no abilities when no NPC matches.
+do
+  local claw = { name = "Claw" }
+  local ZoneTames = setupContext({
+    ["1"] = mockNpc("High", 14, { { ability = claw, rank = 1 } }),
+  })
+
+  local abilities = ZoneTames:GetAbilities({ level = 13 })
+
+  assert(next(abilities) == nil)
+end
