@@ -86,7 +86,9 @@ function ZoneScreen:Build()
 
     shownMapId, shownPlayerLevel = C_Map.GetBestMapForUnit("player"), UnitLevel("player")
     local level = chosenLevel or shownPlayerLevel
-    local zoneTames = ZoneTames:Get(shownMapId, level)
+
+    -- Without a map there is nothing to list.
+    local zoneTames = shownMapId and ZoneTames:Get({ level = level, uiMapId = shownMapId }) or {}
 
     Components.LevelSlider:SetValue(level)
 
