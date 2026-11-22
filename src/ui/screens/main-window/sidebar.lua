@@ -142,7 +142,7 @@ end
 
 --- @class SidebarOptions
 --- @field onSelectOptions fun() Called when the Options row is selected.
---- @field onSelectZone fun() Called when the Current Zone row is selected.
+--- @field onSelectTameFinder fun() Called when the Tame Finder row is selected.
 --- @field onSelectRank fun(ability: TameableAbility, rank: TameableAbilityRank) Called when a rank row is selected.
 
 --- Builds and returns a root component describing the Sidebar.
@@ -151,11 +151,11 @@ end
 function Sidebar:Build(options)
   local root = ComponentFactory:ScrollPanel()
 
-  local zoneRow = root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
-    labelText = L.CURRENT_ZONE,
+  local tameFinderRow = root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
+    labelText = L.TAME_FINDER,
     onClick = function(row)
       selectRow(row)
-      options.onSelectZone()
+      options.onSelectTameFinder()
     end,
   }))
 
@@ -181,9 +181,9 @@ function Sidebar:Build(options)
     end,
   })
 
-  -- Select Current Zone by default.
-  selectRow(zoneRow)
-  options.onSelectZone()
+  -- Select Tame Finder by default.
+  selectRow(tameFinderRow)
+  options.onSelectTameFinder()
 
   -- Ability rows, sorted by name.
   local abilities = {}

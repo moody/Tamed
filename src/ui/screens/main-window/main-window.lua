@@ -7,8 +7,8 @@ local EventManager = Addon:GetModule("EventManager")
 local OptionsScreen = Addon:GetModule("OptionsScreen")
 local RankScreen = Addon:GetModule("RankScreen")
 local Sidebar = Addon:GetModule("Sidebar")
+local TameFinderScreen = Addon:GetModule("TameFinderScreen")
 local Widgets = Addon:GetModule("Widgets")
-local ZoneScreen = Addon:GetModule("ZoneScreen")
 
 --- @class UI
 local UI = Addon:GetModule("UI")
@@ -120,9 +120,9 @@ EventManager:Once(E.DataLoaded, function()
     onSelectOptions = function()
       showContentScreen(Components.OptionsScreen)
     end,
-    onSelectZone = function()
-      showContentScreen(Components.ZoneScreen)
-      Components.ZoneScreen:SetLevel()
+    onSelectTameFinder = function()
+      showContentScreen(Components.TameFinderScreen)
+      Components.TameFinderScreen:SetLevel()
     end,
     onSelectRank = function(ability, rank)
       showContentScreen(Components.RankScreen)
@@ -144,7 +144,7 @@ Components.OptionsScreen = contentArea:AttachComponent(OptionsScreen:Build())
 
 Components.RankScreen = contentArea:AttachComponent(RankScreen:Build())
 
-Components.ZoneScreen = contentArea:AttachComponent(ZoneScreen:Build())
+Components.TameFinderScreen = contentArea:AttachComponent(TameFinderScreen:Build())
 
 -- ============================================================================
 -- UI

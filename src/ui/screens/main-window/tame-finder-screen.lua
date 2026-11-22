@@ -5,12 +5,12 @@ local E = Addon:GetModule("Events")
 local EventManager = Addon:GetModule("EventManager")
 local L = Addon:GetModule("Locale")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
+local TameFinder = Addon:GetModule("TameFinder")
 local TickerManager = Addon:GetModule("TickerManager")
 local Widgets = Addon:GetModule("Widgets")
-local ZoneTames = Addon:GetModule("ZoneTames")
 
---- @class ZoneScreen
-local ZoneScreen = Addon:GetModule("ZoneScreen")
+--- @class TameFinderScreen
+local TameFinderScreen = Addon:GetModule("TameFinderScreen")
 
 -- ============================================================================
 -- Local Functions
@@ -44,12 +44,12 @@ local function formatAbilities(npc, bestRanks)
 end
 
 -- ============================================================================
--- ZoneScreen
+-- TameFinderScreen
 -- ============================================================================
 
---- Builds and returns a root component describing the Zone Screen.
---- @return ZoneScreenComponent root
-function ZoneScreen:Build()
+--- Builds and returns a root component describing the Tame Finder Screen.
+--- @return TameFinderScreenComponent root
+function TameFinderScreen:Build()
   local Components = {}
 
   --- The player's map and level when the screen was last refreshed.
@@ -65,8 +65,8 @@ function ZoneScreen:Build()
   --- @type AbilityFilterComponent?
   local abilityFilter
 
-  --- The filters for `ZoneTames:Get()`, reused by every refresh.
-  --- @type ZoneTamesFilters
+  --- The filters for `TameFinder:Get()`, reused by every refresh.
+  --- @type TameFinderFilters
   local filters = { level = 1 }
 
   --- The highest rank of each ability among the NPCs listed.
@@ -74,7 +74,7 @@ function ZoneScreen:Build()
   local bestRanks = {}
 
   --- Stand-ins for a list with no NPCs, so a refresh creates no empty tables.
-  local noZoneTames, noBestRanks = {}, {}
+  local noResults, noBestRanks = {}, {}
 
   --- Refreshes the screen after a short delay, so a moving slider refreshes it at most every 0.1 seconds.
   local refreshTimer = TickerManager:NewTimer(0.1, function() Components.Root:Refresh() end)
@@ -95,7 +95,7 @@ function ZoneScreen:Build()
   -- Root Component
   -- ------------------------------------------------------
 
-  --- @class ZoneScreenComponent : WaffleFlexComponent
+  --- @class TameFinderScreenComponent : WaffleFlexComponent
   Components.Root = Addon.Waffle:Flex({
     visibility = "GONE",
     direction = "COLUMN",
@@ -130,12 +130,12 @@ function ZoneScreen:Build()
     filters.uiMapId = isZoneOnly and shownMapId or nil
     filters.abilities = abilityFilter and abilityFilter:GetSelected()
 
-    local zoneTames = noZoneTames
+    local results = noResults
     bestRanks = noBestRanks
 
     -- Without a map there is nothing to list in the player's zone.
     if shownMapId or not isZoneOnly then
-      zoneTames, bestRanks = ZoneTames:Get(filters)
+      results, bestRanks = TameFinder:Get(filters)
     end
 
     if abilityFilter then abilityFilter:SetBestRanks(bestRanks) end
@@ -144,10 +144,10 @@ function ZoneScreen:Build()
     showLevel(level)
 
     local npcTitle = L.TAMEABLE_NPCS
-    if #zoneTames > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #zoneTames) end
+    if #results > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #results) end
     Components.NpcHeading:SetTitleText(npcTitle)
 
-    Components.NpcList:SetEntries(zoneTames)
+    Components.NpcList:SetEntries(results)
 
     self:MarkDirty()
   end
@@ -197,7 +197,7 @@ function ZoneScreen:Build()
     frameFactory = function(parent)
       local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
       fontString:SetJustifyH("LEFT")
-      fontString:SetText(Colors.Grey(L.CURRENT_ZONE_DESCRIPTION))
+      fontString:SetText(Colors.Grey(L.TAME_FINDER_DESCRIPTION))
       return fontString
     end,
 

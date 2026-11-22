@@ -1,19 +1,19 @@
 local Addon = select(2, ...) ---@type Addon
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 
---- @class ZoneTames
-local ZoneTames = Addon:GetModule("ZoneTames")
+--- @class TameFinder
+local TameFinder = Addon:GetModule("TameFinder")
 
 -- ============================================================================
 -- LuaCATS Annotations
 -- ============================================================================
 
---- @class ZoneTame
+--- @class TameFinderResult
 --- @field npc TameableNPC
 --- @field leadAbility TameableAbility The highest ranked best ability, among the filtered ones if any. The first by name on a tie.
 --- @field leadRank integer The displayed rank of `leadAbility`.
 
---- @class ZoneTamesFilters
+--- @class TameFinderFilters
 --- @field level integer Only NPCs that can be tamed at this level.
 --- @field uiMapId? integer Only NPCs on this map. Without it, NPCs on any map or none.
 --- @field abilities? TameableAbility[] Only NPCs that teach every one of these. Only these count when finding the highest ranks.
@@ -24,8 +24,8 @@ local ZoneTames = Addon:GetModule("ZoneTames")
 
 --- Returns `true` if `a` is listed before `b`: higher lead rank, then lead ability name,
 --- then higher level, then name.
---- @param a ZoneTame
---- @param b ZoneTame
+--- @param a TameFinderResult
+--- @param b TameFinderResult
 local function isListedBefore(a, b)
   if a.leadRank ~= b.leadRank then
     return a.leadRank > b.leadRank
@@ -58,7 +58,7 @@ end
 
 --- Returns `true` if `npc` matches the filters.
 --- @param npc TameableNPC
---- @param filters ZoneTamesFilters
+--- @param filters TameFinderFilters
 --- @return boolean
 local function isMatch(npc, filters)
   return (
@@ -83,15 +83,15 @@ local function isCounted(ability, filteredAbilities)
 end
 
 -- ============================================================================
--- ZoneTames
+-- TameFinder
 -- ============================================================================
 
 --- Returns the NPCs worth taming: those that teach the highest rank of an ability among the NPCs
 --- matching the filters.
---- @param filters ZoneTamesFilters
---- @return ZoneTame[] zoneTames
+--- @param filters TameFinderFilters
+--- @return TameFinderResult[] results
 --- @return table<TameableAbility, integer> bestRanks Highest rank of each ability among those NPCs. A missing ability cannot be added to the filter.
-function ZoneTames:Get(filters)
+function TameFinder:Get(filters)
   --- @type table<TameableAbility, integer>
   local bestRanks = {}
 
@@ -105,8 +105,8 @@ function ZoneTames:Get(filters)
     end
   end
 
-  --- @type ZoneTame[]
-  local zoneTames = {}
+  --- @type TameFinderResult[]
+  local results = {}
 
   for _, npc in pairs(TameableNPCs) do
     if isMatch(npc, filters) then
@@ -121,12 +121,12 @@ function ZoneTames:Get(filters)
       end
 
       if leadAbility and leadRank then
-        zoneTames[#zoneTames + 1] = { npc = npc, leadAbility = leadAbility, leadRank = leadRank }
+        results[#results + 1] = { npc = npc, leadAbility = leadAbility, leadRank = leadRank }
       end
     end
   end
 
-  table.sort(zoneTames, isListedBefore)
+  table.sort(results, isListedBefore)
 
-  return zoneTames, bestRanks
+  return results, bestRanks
 end
