@@ -18,46 +18,9 @@ function RankScreen:Build()
   local Components = {}
 
   local NUM_NPC_CARDS = 9
-  local NPC_SLIDER_WIDTH = 6
 
   --- @type TameableAbilityRank?
   local currentRank
-
-  --- Ids of NPCs teaching `currentRank`, sorted by `min_level`, then name.
-  --- @type string[]
-  local currentNpcIds = {}
-
-  -- ------------------------------------------------------
-  -- Local Functions
-  -- ------------------------------------------------------
-
-  --- Fills the NPC cards from the scroll offset and updates the slider.
-  local function refreshNpcCards()
-    --- @type SliderWidget
-    local slider = Components.NpcSlider:GetFrame()
-    local offset = math.floor(slider:GetValue() + 0.5)
-
-    for i, card in ipairs(Components.NpcCards) do
-      local npc_id = currentNpcIds[i + offset]
-      local npc = npc_id and TameableNPCs[npc_id]
-      card:SetNpc(npc)
-      card:SetVisibility(npc and "VISIBLE" or "INVISIBLE")
-    end
-
-    -- An empty rank shows no surface, header, or slider, only the empty text.
-    local isEmpty = #currentNpcIds == 0
-    Components.NpcList:GetFrame():SetBackdropColor(Colors.White:GetRGBA(isEmpty and 0 or 0.04))
-    Components.NpcColumnLabels:SetVisibility(isEmpty and "GONE" or "VISIBLE")
-    Components.NpcCardColumn:SetVisibility(isEmpty and "GONE" or "VISIBLE")
-    Components.NpcEmptyText:SetVisibility(isEmpty and "VISIBLE" or "GONE")
-
-    -- The track keeps its space on every rank, so the right edge never shifts.
-    -- Only the thumb hides when the list cannot scroll.
-    local maxScroll = math.max(#currentNpcIds - NUM_NPC_CARDS, 0)
-    slider:SetMinMaxValues(0, maxScroll)
-    slider.texture:SetShown(maxScroll > 0)
-    Components.NpcSlider:SetVisibility(isEmpty and "INVISIBLE" or "VISIBLE")
-  end
 
   -- ------------------------------------------------------
   -- Root Component
@@ -97,25 +60,28 @@ function RankScreen:Build()
     end
     Components.LearnableByTile:SetText(learnedBy)
 
-    currentNpcIds = {}
+    --- NPCs teaching the rank, sorted by `min_level`, then name.
+    --- @type TameableNPC[]
+    local npcs = {}
     for _, npc_id in ipairs(rank.npc_ids) do
-      currentNpcIds[#currentNpcIds + 1] = npc_id
+      npcs[#npcs + 1] = TameableNPCs[npc_id]
     end
-    table.sort(currentNpcIds, function(a, b)
-      --- @type TameableNPC, TameableNPC
-      a, b = TameableNPCs[a], TameableNPCs[b]
+    table.sort(npcs, function(a, b)
       if a.min_level ~= b.min_level then
         return a.min_level < b.min_level
       end
       return a.name < b.name
     end)
 
+    --- @type NpcListEntry[]
+    local entries = {}
+    for i, npc in ipairs(npcs) do entries[i] = { npc = npc } end
+
     local npcTitle = L.TAMEABLE_NPCS
-    if #currentNpcIds > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #currentNpcIds) end
+    if #entries > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #entries) end
     Components.NpcHeading:SetTitleText(npcTitle)
 
-    Components.NpcSlider:GetFrame():SetValue(0)
-    refreshNpcCards()
+    Components.NpcList:SetEntries(entries)
 
     self:MarkDirty()
   end
@@ -253,112 +219,15 @@ function RankScreen:Build()
 
   -- NPC list: a header band above the cards and slider, on the same surface as
   -- the stat tiles.
-  Components.NpcList = Components.Root:AddColumn({
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local frame = Widgets:Frame({ parent = parent })
-      frame:SetBackdropColor(Colors.White:GetRGBA(0.04))
-      frame:SetBackdropBorderColor(0, 0, 0, 0)
-      frame:EnableMouseWheel(true)
-      frame:SetScript("OnMouseWheel", function(_, delta)
-        local slider = Components.NpcSlider:GetFrame()
-        if slider then slider:SetValue(slider:GetValue() - delta) end
-      end)
-      return frame
-    end,
-  })
-
-  -- Column labels, in a band of their own. Right padding lines them up with the card text.
-  Components.NpcColumnLabels = Components.NpcList:AddRow({
-    height = 24,
-    gap = Widgets:Padding(0.25),
-    paddingLeft = Widgets:Padding(),
-    paddingRight = Widgets:Padding() + Widgets:Padding(0.5) * 2 + NPC_SLIDER_WIDTH,
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local frame = Widgets:Frame({ parent = parent })
-      frame:SetBackdropColor(Colors.White:GetRGBA(0.06))
-      frame:SetBackdropBorderColor(0, 0, 0, 0)
-
-      local rule = frame:CreateTexture(nil, "BORDER")
-      rule:SetColorTexture(Colors.White:GetRGBA(0.1))
-      rule:SetHeight(1)
-      rule:SetPoint("BOTTOMLEFT")
-      rule:SetPoint("BOTTOMRIGHT")
-
-      return frame
-    end,
-  })
-
-  --- Adds a label to the column labels.
-  --- @param justify "LEFT" | "CENTER" | "RIGHT"
-  --- @param width? integer Without it, the label takes the width left over.
-  --- @param text string
-  local function addColumnLabel(justify, width, text)
-    Components.NpcColumnLabels:AddChild({
-      width = width,
-
-      --- @param parent Frame
-      frameFactory = function(parent)
-        local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
-        fontString:SetJustifyH(justify)
-        fontString:SetText(Colors.LightGrey(text))
-        return fontString
-      end,
-    })
-  end
-
-  addColumnLabel("LEFT", nil, L.NAME)
-  addColumnLabel("CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, L.LEVEL)
-  addColumnLabel("RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, L.LOCATION)
-
-  -- Cards and slider.
-  local npcBody = Components.NpcList:AddRow({
-    gap = Widgets:Padding(0.5),
-    paddingRight = Widgets:Padding(0.5),
-  })
-
-  -- Cards split this column's height evenly.
-  Components.NpcCardColumn = npcBody:AddColumn({})
-
-  -- Shown instead of the cards when the rank has no NPCs, under the heading's rule.
-  Components.NpcEmptyText = npcBody:AddChild({
-    visibility = "GONE",
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-      fontString:SetJustifyH("LEFT")
-      fontString:SetJustifyV("TOP")
-      fontString:SetText(Colors.Grey(L.NONE))
-      return fontString
-    end,
-  })
-
-  -- Margins keep the thumb, which overhangs the track by half its height, inside the body.
-  Components.NpcSlider = npcBody:AddChild({
-    width = NPC_SLIDER_WIDTH,
-    marginTop = NPC_SLIDER_WIDTH,
-    marginBottom = NPC_SLIDER_WIDTH,
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local slider = Widgets:Slider({ parent = parent, width = NPC_SLIDER_WIDTH })
-      slider:SetBackdropColor(Colors.Black:GetRGBA(0.3))
-      slider:SetBackdropBorderColor(0, 0, 0, 0)
-      slider:SetScript("OnValueChanged", refreshNpcCards)
-      return slider
-    end,
-  })
-
-  --- @type NpcCardComponent[]
-  Components.NpcCards = {}
-  for i = 1, NUM_NPC_CARDS do
-    local card = ComponentFactory:NpcCard()
-    card:SetVisibility("INVISIBLE")
-    Components.NpcCards[i] = Components.NpcCardColumn:AttachComponent(card)
-  end
+  Components.NpcList = Components.Root:AttachComponent(ComponentFactory:NpcList({
+    numCards = NUM_NPC_CARDS,
+    emptyText = L.NONE,
+    columnLabels = {
+      { justify = "LEFT", text = L.NAME },
+      { justify = "CENTER", width = ComponentFactory.NPC_CARD_LEVEL_WIDTH, text = L.LEVEL },
+      { justify = "RIGHT", width = ComponentFactory.NPC_CARD_LOCATION_WIDTH, text = L.LOCATION },
+    },
+  }))
 
   return Components.Root
 end
