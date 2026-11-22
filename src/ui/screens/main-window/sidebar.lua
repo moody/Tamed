@@ -151,7 +151,7 @@ end
 function Sidebar:Build(options)
   local root = ComponentFactory:ScrollPanel()
 
-  local optionsRow = root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
+  root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
     labelText = L.OPTIONS,
     onClick = function(row)
       selectRow(row)
@@ -159,7 +159,7 @@ function Sidebar:Build(options)
     end,
   }))
 
-  root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
+  local zoneRow = root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
     labelText = L.CURRENT_ZONE,
     onClick = function(row)
       selectRow(row)
@@ -181,9 +181,9 @@ function Sidebar:Build(options)
     end,
   })
 
-  -- Select Options by default.
-  selectRow(optionsRow)
-  options.onSelectOptions()
+  -- Select Current Zone by default.
+  selectRow(zoneRow)
+  options.onSelectZone()
 
   -- Ability rows, sorted by name.
   local abilities = {}

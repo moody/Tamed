@@ -81,6 +81,9 @@ function ZoneScreen:Build()
 
   --- Shows the NPCs worth taming in the player's zone at the chosen level, or the player's.
   function Components.Root:Refresh()
+    -- Nothing to update before the screen is laid out. The ticker refreshes it once it is shown.
+    if not Components.HeadingName:GetFrame() then return end
+
     shownMapId, shownPlayerLevel = C_Map.GetBestMapForUnit("player"), UnitLevel("player")
     local level = chosenLevel or shownPlayerLevel
     local zoneTames = ZoneTames:Get(shownMapId, level)
