@@ -4,9 +4,10 @@
 
 ### Added
 
-- A Current Zone screen listing the NPCs in your current zone that you can tame at your level and that teach the highest rank of an ability, with each NPC's family, level, and abilities. Clicking an NPC shows it on the map
-- A level slider on the Current Zone screen, with buttons and the mouse wheel to change the level by one, for seeing the list at another level
+- A Tame Finder screen listing the NPCs that teach the highest rank of each ability that can be tamed at a level you choose, in all zones or only your current zone. Each NPC shows its family, level, location, and abilities, and clicking one shows it on the map
+- A level slider on the Tame Finder screen, with buttons and the mouse wheel to change the level by one
+- An ability filter on the Tame Finder screen: select abilities to list only the NPCs that teach all of them
 
 ### Changed
 
-- Tamed opens on the Current Zone screen instead of Options
+- Tamed opens on the Tame Finder screen instead of Options
