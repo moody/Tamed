@@ -16,13 +16,15 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 -- ComponentFactory - SectionTitle
 -- =============================================================================
 
---- Creates a small white title with a thin rule underneath.
+--- Creates a small white title with a thin rule underneath. Anything added to it sits at the right end.
 --- @param options SectionTitleOptions
 --- @return SectionTitleComponent root
 function ComponentFactory:SectionTitle(options)
   --- @class SectionTitleComponent : WaffleFlexComponent<SectionTitleFrame>
   local root = Addon.Waffle:Flex({
     height = 24,
+    justify = "END",
+    align = "END",
 
     --- @param parent Frame
     frameFactory = function(parent)

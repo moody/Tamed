@@ -123,7 +123,6 @@ function ZoneScreen:Build()
 
     Components.LevelSlider:SetValue(level)
 
-    Components.HeadingName:GetFrame():SetText(Colors.White(isZoneOnly and GetRealZoneText() or L.ALL_ZONES))
     Components.HeadingLevel:GetFrame():SetText(Colors.Grey(("%s %d"):format(L.LEVEL, level)))
 
     --- @type NpcListEntry[]
@@ -153,7 +152,7 @@ function ZoneScreen:Build()
   -- Heading Components
   -- ------------------------------------------------------
 
-  -- Heading: zone name or all zones, description, then the level slider, the zone switch, and the ability filter.
+  -- Heading: title, description, then the level slider and the ability filter.
   local heading = Components.Root:AddColumn({
     height = "AUTO",
     gap = Widgets:Padding(0.25),
@@ -167,6 +166,7 @@ function ZoneScreen:Build()
       local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalHuge")
       fontString:SetJustifyH("LEFT")
       fontString:SetWordWrap(false)
+      fontString:SetText(Colors.White(L.TAME_FINDER))
       return fontString
     end,
 
@@ -225,15 +225,6 @@ function ZoneScreen:Build()
     onChange = function(level) Components.Root:SetLevel(level) end,
   }))
 
-  heading:AttachComponent(ComponentFactory:OptionRow({
-    labelText = L.CURRENT_ZONE_ONLY,
-    get = function() return isZoneOnly end,
-    set = function(value)
-      isZoneOnly = value
-      Components.Root:Refresh()
-    end,
-  }))
-
   -- Ability filter: one icon per ability.
   EventManager:Once(E.DataLoaded, function()
     local abilities = {}
@@ -252,10 +243,67 @@ function ZoneScreen:Build()
   -- NPCs Components
   -- ------------------------------------------------------
 
-  -- Tameable NPCs heading, with the NPC count.
+  -- Tameable NPCs heading, with the NPC count and the zone switch.
   Components.NpcHeading = Components.Root:AttachComponent(
     ComponentFactory:SectionTitle({ titleText = L.TAMEABLE_NPCS })
   )
+
+  --- Width and height of the zone switch's checkbox.
+  local ZONE_SWITCH_CHECK_BOX_SIZE = 14
+
+  --- Height of the zone switch, the same as a line of the title's text.
+  local ZONE_SWITCH_HEIGHT = 14
+
+  -- Zone switch: a label with a checkbox on its right, as wide as its text.
+  Components.NpcHeading:AddChild({
+    width = "AUTO",
+    height = ZONE_SWITCH_HEIGHT,
+    marginBottom = Widgets:Padding(0.5),
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      --- @class ZoneSwitchFrame : FrameWidget
+      --- @field label FontString
+      local frame = Widgets:Frame({ parent = parent, frameType = "Button" })
+      frame:SetBackdropColor(0, 0, 0, 0)
+      frame:SetBackdropBorderColor(0, 0, 0, 0)
+      frame:SetScript("OnEnter", function(self) self:SetBackdropColor(Colors.White:GetRGBA(0.1)) end)
+      frame:SetScript("OnLeave", function(self) self:SetBackdropColor(0, 0, 0, 0) end)
+
+      --- Sets whether only NPCs in the player's zone are listed.
+      --- @param value boolean
+      local function setZoneOnly(value)
+        isZoneOnly = value
+        Components.Root:Refresh()
+      end
+
+      frame:SetScript("OnClick", function() setZoneOnly(not isZoneOnly) end)
+
+      local checkBox = Widgets:CheckBox({
+        parent = frame,
+        width = ZONE_SWITCH_CHECK_BOX_SIZE,
+        height = ZONE_SWITCH_CHECK_BOX_SIZE,
+        get = function() return isZoneOnly end,
+        set = setZoneOnly,
+      })
+      checkBox:EnableMouse(false)
+      checkBox:SetPoint("RIGHT", -Widgets:Padding(0.5), 0)
+
+      frame.label = frame:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+      frame.label:SetPoint("RIGHT", checkBox, "LEFT", -Widgets:Padding(), 0)
+      frame.label:SetTextColor(Colors.White:GetRGB())
+      frame.label:SetText(L.CURRENT_ZONE_ONLY)
+
+      return frame
+    end,
+
+    --- @param frame ZoneSwitchFrame
+    onMeasure = function(frame)
+      -- Padding, checkbox, and gap: everything but the label.
+      local fixedWidth = Widgets:Padding(0.5) * 2 + ZONE_SWITCH_CHECK_BOX_SIZE + Widgets:Padding()
+      return fixedWidth + frame.label:GetStringWidth(), ZONE_SWITCH_HEIGHT
+    end,
+  })
 
   -- NPC list, with each NPC's family and abilities under its name.
   Components.NpcList = Components.Root:AttachComponent(ComponentFactory:NpcList({
