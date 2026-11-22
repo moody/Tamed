@@ -34,8 +34,8 @@ EventManager:Once(E.StoreCreated, function()
 
     -- Add lines.
     self:AddLine(Colors.Green(ADDON_NAME))
-    for _, ability in ipairs(npc.abilities) do
-      self:AddLine("  " .. ability, 1, 1, 1)
+    for _, abilityText in ipairs(npc.ability_texts) do
+      self:AddLine("  " .. abilityText, 1, 1, 1)
     end
   end
 

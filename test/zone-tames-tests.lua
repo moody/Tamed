@@ -29,10 +29,10 @@ end
 --- Returns an NPC on `MAP_ID` with the given name and minimum level, teaching `{ ability, rank }` entries.
 --- @param name string
 --- @param minLevel integer
---- @param abilityRanks { ability: table, rank: integer }[]
+--- @param abilities { ability: table, rank: integer }[]
 --- @return table
-local function mockNpc(name, minLevel, abilityRanks)
-  return { name = name, min_level = minLevel, ui_map_id = MAP_ID, ability_ranks = abilityRanks }
+local function mockNpc(name, minLevel, abilities)
+  return { name = name, min_level = minLevel, ui_map_id = MAP_ID, abilities = abilities }
 end
 
 --- Returns the names of the NPCs in `zoneTames`, in the order listed.
@@ -53,8 +53,8 @@ do
   local claw = { name = "Claw" }
   local ZoneTames = setupContext({
     ["1"] = mockNpc("Here", 10, { { ability = claw, rank = 1 } }),
-    ["2"] = { name = "Other Map", min_level = 10, ui_map_id = OTHER_MAP_ID, ability_ranks = { { ability = claw, rank = 1 } } },
-    ["3"] = { name = "No Map", min_level = 10, ability_ranks = { { ability = claw, rank = 1 } } },
+    ["2"] = { name = "Other Map", min_level = 10, ui_map_id = OTHER_MAP_ID, abilities = { { ability = claw, rank = 1 } } },
+    ["3"] = { name = "No Map", min_level = 10, abilities = { { ability = claw, rank = 1 } } },
   })
 
   assert(Matchers:IsDeepEqual(getNames(ZoneTames:Get(MAP_ID, HIGH_LEVEL)), { "Here" }))
@@ -64,7 +64,7 @@ end
 do
   local claw = { name = "Claw" }
   local ZoneTames = setupContext({
-    ["1"] = { name = "No Map", min_level = 10, ability_ranks = { { ability = claw, rank = 1 } } },
+    ["1"] = { name = "No Map", min_level = 10, abilities = { { ability = claw, rank = 1 } } },
   })
 
   assert(#ZoneTames:Get(nil, HIGH_LEVEL) == 0)

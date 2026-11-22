@@ -64,9 +64,9 @@ function ZoneTames:Get(uiMapId, level)
     for _, npc in pairs(TameableNPCs) do
       if npc.ui_map_id == uiMapId and npc.min_level <= level then
         npcs[#npcs + 1] = npc
-        for _, abilityRank in ipairs(npc.ability_ranks) do
-          if abilityRank.rank > (bestRanks[abilityRank.ability] or 0) then
-            bestRanks[abilityRank.ability] = abilityRank.rank
+        for _, npcAbility in ipairs(npc.abilities) do
+          if npcAbility.rank > (bestRanks[npcAbility.ability] or 0) then
+            bestRanks[npcAbility.ability] = npcAbility.rank
           end
         end
       end
@@ -76,12 +76,12 @@ function ZoneTames:Get(uiMapId, level)
       --- @type ZoneTame
       local zoneTame = { npc = npc, abilities = {} }
 
-      for _, abilityRank in ipairs(npc.ability_ranks) do
+      for _, npcAbility in ipairs(npc.abilities) do
         --- @type ZoneTameAbility
         local entry = {
-          ability = abilityRank.ability,
-          rank = abilityRank.rank,
-          isBest = abilityRank.rank == bestRanks[abilityRank.ability],
+          ability = npcAbility.ability,
+          rank = npcAbility.rank,
+          isBest = npcAbility.rank == bestRanks[npcAbility.ability],
         }
         zoneTame.abilities[#zoneTame.abilities + 1] = entry
 
