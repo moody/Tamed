@@ -141,7 +141,9 @@ function ComponentFactory:NpcCard(options)
     end,
   })
 
-  local info = card:AddRow({ height = "AUTO", gap = Widgets:Padding(0.25), align = "CENTER" })
+  -- Name, level, and location in a row, with the abilities line under them.
+  local body = card:AddColumn({ height = "AUTO", gap = Widgets:Padding(0.5) })
+  local info = body:AddRow({ height = "AUTO", gap = Widgets:Padding(0.25), align = "CENTER" })
 
   --- Adds a text line to `container`, filled in by `getText` for the current NPC.
   --- @param container WaffleFlexComponent
@@ -180,18 +182,12 @@ function ComponentFactory:NpcCard(options)
   --- Returns the text of the location line, dimmed if the NPC has no map.
   local function getLocation(n) return (n.ui_map_id and Colors.LightGrey or Colors.DimGrey)(n.location) end
 
+  addTextLine(info, "LEFT", nil, options.showAbilities and getNameAndFamily or getName)
+  addTextLine(info, "CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, getLevel)
+  addTextLine(info, "RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, getLocation)
+
   if options.showAbilities then
-    -- Name and family, with the abilities under them, then level and location.
-    local nameColumn = info:AddColumn({ height = "AUTO", gap = Widgets:Padding(0.5) })
-    addTextLine(nameColumn, "LEFT", nil, getNameAndFamily, "GameFontNormal")
-    addTextLine(nameColumn, "LEFT", nil, function() return abilitiesText end, "GameFontNormalSmall")
-    addTextLine(info, "CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, getLevel)
-    addTextLine(info, "RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, getLocation)
-  else
-    -- Name, level, and location.
-    addTextLine(info, "LEFT", nil, getName)
-    addTextLine(info, "CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, getLevel)
-    addTextLine(info, "RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, getLocation)
+    addTextLine(body, "LEFT", nil, function() return abilitiesText end, "GameFontNormalSmall")
   end
 
   --- Sets the NPC shown, and the text of its abilities line if the card has one.

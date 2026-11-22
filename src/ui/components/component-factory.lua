@@ -7,4 +7,4 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 ComponentFactory.NPC_CARD_LEVEL_WIDTH = 90
 
 --- Width of an NPC card's location column.
-ComponentFactory.NPC_CARD_LOCATION_WIDTH = 140
+ComponentFactory.NPC_CARD_LOCATION_WIDTH = 170
