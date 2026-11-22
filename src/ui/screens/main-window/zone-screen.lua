@@ -123,7 +123,7 @@ function ZoneScreen:Build()
 
     Components.LevelSlider:SetValue(level)
 
-    Components.HeadingLevel:GetFrame():SetText(Colors.Grey(("%s %d"):format(L.LEVEL, level)))
+    Components.HeadingLevel:GetFrame():SetText(Colors.White(L.LEVEL) .. " " .. Colors.Green(tostring(level)))
 
     --- @type NpcListEntry[]
     local entries = {}
@@ -152,7 +152,7 @@ function ZoneScreen:Build()
   -- Heading Components
   -- ------------------------------------------------------
 
-  -- Heading: title, description, then the level slider and the ability filter.
+  -- Heading: title, description, then a panel with the level slider and the ability filter.
   local heading = Components.Root:AddColumn({
     height = "AUTO",
     gap = Widgets:Padding(0.25),
@@ -195,7 +195,22 @@ function ZoneScreen:Build()
     end,
   })
 
-  local levelRow = heading:AddRow({
+  -- Panel behind the level slider and the ability filter.
+  local filters = heading:AddColumn({
+    height = "AUTO",
+    gap = Widgets:Padding(),
+    padding = Widgets:Padding(),
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local frame = Widgets:Frame({ parent = parent })
+      frame:SetBackdropColor(Colors.White:GetRGBA(0.04))
+      frame:SetBackdropBorderColor(0, 0, 0, 0)
+      return frame
+    end,
+  })
+
+  local levelRow = filters:AddRow({
     height = "AUTO",
     align = "CENTER",
     gap = Widgets:Padding(),
@@ -233,7 +248,7 @@ function ZoneScreen:Build()
     end
     table.sort(abilities, function(a, b) return a.name < b.name end)
 
-    abilityFilter = heading:AttachComponent(ComponentFactory:AbilityFilter({
+    abilityFilter = filters:AttachComponent(ComponentFactory:AbilityFilter({
       abilities = abilities,
       onChange = function() Components.Root:Refresh() end,
     }))
