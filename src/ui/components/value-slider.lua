@@ -45,6 +45,9 @@ function ComponentFactory:ValueSlider(options)
 
   local isSyncing = false
 
+  --- The last whole value the slider was at.
+  local currentValue
+
   --- Moves the slider by `delta`, stopping at its ends.
   --- @param delta integer
   local function step(delta)
@@ -172,7 +175,10 @@ function ComponentFactory:ValueSlider(options)
         step(delta)
       end)
       slider:SetScript("OnValueChanged", function(_, value)
-        if not isSyncing then options.onChange(math.floor(value + 0.5)) end
+        value = math.floor(value + 0.5)
+        local isChanged = value ~= currentValue
+        currentValue = value
+        if isChanged and not isSyncing then options.onChange(value) end
       end)
       refreshThumb()
 

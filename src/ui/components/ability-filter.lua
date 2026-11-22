@@ -32,6 +32,10 @@ function ComponentFactory:AbilityFilter(options)
   --- @type table<TameableAbility, boolean>
   local isSelected = {}
 
+  --- The selected abilities, in the order given.
+  --- @type TameableAbility[]
+  local selected = {}
+
   --- The highest rank of each ability that can be selected, or `nil` if any can.
   --- @type table<TameableAbility, integer>?
   local bestRanks
@@ -43,6 +47,11 @@ function ComponentFactory:AbilityFilter(options)
   -- ------------------------------------------------------
   -- Local Functions
   -- ------------------------------------------------------
+
+  --- Refreshes each icon.
+  local function refreshIcons()
+    for _, refreshIcon in ipairs(iconRefreshers) do refreshIcon() end
+  end
 
   --- Returns `true` if the ability is selected, or can be.
   --- @param ability TameableAbility
@@ -107,10 +116,16 @@ function ComponentFactory:AbilityFilter(options)
     end,
   })
 
-  --- Refreshes the header and each icon.
+  --- Refreshes the selected abilities, the header, and the icons after the selection changes.
   function root:Refresh()
+    selected = {}
     local names = {}
-    for _, ability in ipairs(self:GetSelected()) do names[#names + 1] = ability.name end
+    for _, ability in ipairs(options.abilities) do
+      if isSelected[ability] then
+        selected[#selected + 1] = ability
+        names[#names + 1] = ability.name
+      end
+    end
 
     local text = Colors.Grey(L.FILTER_BY_ABILITY)
     if #names > 0 then
@@ -119,16 +134,13 @@ function ComponentFactory:AbilityFilter(options)
     headerText:WhenFrameReady(function(fontString) fontString:SetText(text) end)
     clearButton:SetVisibility(#names > 0 and "VISIBLE" or "INVISIBLE")
 
-    for _, refreshIcon in ipairs(iconRefreshers) do refreshIcon() end
+    refreshIcons()
   end
 
-  --- Returns the selected abilities, in the order given.
+  --- Returns the selected abilities, in the order given. The same list is returned until the selection
+  --- changes.
   --- @return TameableAbility[]
   function root:GetSelected()
-    local selected = {}
-    for _, ability in ipairs(options.abilities) do
-      if isSelected[ability] then selected[#selected + 1] = ability end
-    end
     return selected
   end
 
@@ -137,7 +149,7 @@ function ComponentFactory:AbilityFilter(options)
   --- @param ranks? table<TameableAbility, integer>
   function root:SetBestRanks(ranks)
     bestRanks = ranks
-    self:Refresh()
+    refreshIcons()
   end
 
   -- ------------------------------------------------------

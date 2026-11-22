@@ -19,10 +19,10 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 --- @field columnLabels NpcListColumnLabel[] Labels above the cards, lined up with the card's columns.
 --- @field emptyText string Shown instead of the cards when there are no entries.
 --- @field cardOptions? NpcCardOptions
+--- @field getAbilitiesText? fun(entry: NpcListEntry): string Returns the text of an entry's abilities line.
 
 --- @class NpcListEntry
 --- @field npc TameableNPC
---- @field abilitiesText? string Text of the card's abilities line.
 
 -- =============================================================================
 -- ComponentFactory - NpcList
@@ -53,7 +53,11 @@ function ComponentFactory:NpcList(options)
 
     for i, card in ipairs(Components.Cards) do
       local entry = currentEntries[i + offset]
-      card:SetNpc(entry and entry.npc, entry and entry.abilitiesText)
+      if entry then
+        card:SetNpc(entry.npc, options.getAbilitiesText and options.getAbilitiesText(entry))
+      else
+        card:SetNpc()
+      end
       card:SetVisibility(entry and "VISIBLE" or "INVISIBLE")
     end
 
@@ -98,8 +102,15 @@ function ComponentFactory:NpcList(options)
   --- @param entries NpcListEntry[]
   function Components.Root:SetEntries(entries)
     currentEntries = entries
-    Components.Slider:GetFrame():SetValue(0)
-    refreshCards()
+
+    --- @type SliderWidget
+    local slider = Components.Slider:GetFrame()
+
+    -- Moving the slider refreshes the cards, so refresh them here only if it does not move.
+    local isScrolled = slider:GetValue() ~= 0
+    slider:SetValue(0)
+    if not isScrolled then refreshCards() end
+
     self:MarkDirty()
   end
 

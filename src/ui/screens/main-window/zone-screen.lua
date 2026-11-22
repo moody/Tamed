@@ -16,25 +16,26 @@ local ZoneScreen = Addon:GetModule("ZoneScreen")
 -- Local Functions
 -- ============================================================================
 
---- Returns the abilities line of an NPC's card: the zone's best abilities in
+--- Returns the abilities line of an NPC's card: the abilities at the highest ranks in `bestRanks` in
 --- white, the rest dimmed.
---- @param zoneTame ZoneTame
+--- @param npc TameableNPC
+--- @param bestRanks table<TameableAbility, integer>
 --- @return string
-local function formatAbilities(zoneTame)
+local function formatAbilities(npc, bestRanks)
   local parts = {}
 
-  for _, entry in ipairs(zoneTame.abilities) do
-    local ability = entry.ability
-    if entry.isBest then
+  for _, npcAbility in ipairs(npc.abilities) do
+    local ability = npcAbility.ability
+    if npcAbility.rank == bestRanks[ability] then
       parts[#parts + 1] = ("|T%s:0|t %s %s"):format(
         ability.icon,
         Colors.White(ability.name),
-        Colors.Grey(("(%s %d)"):format(L.RANK, entry.rank))
+        Colors.Grey(("(%s %d)"):format(L.RANK, npcAbility.rank))
       )
     else
       parts[#parts + 1] = ("|T%s:0|t %s"):format(
         ability.icon,
-        Colors.DimGrey(("%s (%s %d)"):format(ability.name, L.RANK, entry.rank))
+        Colors.DimGrey(("%s (%s %d)"):format(ability.name, L.RANK, npcAbility.rank))
       )
     end
   end
@@ -63,6 +64,32 @@ function ZoneScreen:Build()
   --- Created once the data has loaded.
   --- @type AbilityFilterComponent?
   local abilityFilter
+
+  --- The filters for `ZoneTames:Get()`, reused by every refresh.
+  --- @type ZoneTamesFilters
+  local filters = { level = 1 }
+
+  --- The highest rank of each ability among the NPCs listed.
+  --- @type table<TameableAbility, integer>
+  local bestRanks = {}
+
+  --- Stand-ins for a list with no NPCs, so a refresh creates no empty tables.
+  local noZoneTames, noBestRanks = {}, {}
+
+  --- Refreshes the screen after a short delay, so a moving slider refreshes it at most every 0.1 seconds.
+  local refreshTimer = TickerManager:NewTimer(0.1, function() Components.Root:Refresh() end)
+  refreshTimer:Cancel()
+
+  --- Starts the refresh timer unless it is already running.
+  local function refreshSoon()
+    if refreshTimer:IsCancelled() then refreshTimer:Restart() end
+  end
+
+  --- Shows the level next to the slider.
+  --- @param level integer
+  local function showLevel(level)
+    Components.HeadingLevel:GetFrame():SetText(Colors.White(L.LEVEL) .. " " .. Colors.Green(tostring(level)))
+  end
 
   -- ------------------------------------------------------
   -- Root Component
@@ -99,43 +126,28 @@ function ZoneScreen:Build()
     shownMapId, shownPlayerLevel = C_Map.GetBestMapForUnit("player"), UnitLevel("player")
     local level = chosenLevel or shownPlayerLevel
 
-    --- @type ZoneTamesFilters
-    local filters = {
-      level = level,
-      uiMapId = isZoneOnly and shownMapId or nil,
-      abilities = abilityFilter and abilityFilter:GetSelected(),
-    }
+    filters.level = level
+    filters.uiMapId = isZoneOnly and shownMapId or nil
+    filters.abilities = abilityFilter and abilityFilter:GetSelected()
 
-    --- @type ZoneTame[]
-    local zoneTames = {}
-
-    --- Highest rank of each ability that can still be added to the ability filter.
-    --- @type table<TameableAbility, integer>
-    local bestRanks = {}
+    local zoneTames = noZoneTames
+    bestRanks = noBestRanks
 
     -- Without a map there is nothing to list in the player's zone.
     if shownMapId or not isZoneOnly then
-      zoneTames = ZoneTames:Get(filters)
-      bestRanks = ZoneTames:GetBestRanks(filters)
+      zoneTames, bestRanks = ZoneTames:Get(filters)
     end
 
     if abilityFilter then abilityFilter:SetBestRanks(bestRanks) end
 
     Components.LevelSlider:SetValue(level)
-
-    Components.HeadingLevel:GetFrame():SetText(Colors.White(L.LEVEL) .. " " .. Colors.Green(tostring(level)))
-
-    --- @type NpcListEntry[]
-    local entries = {}
-    for i, zoneTame in ipairs(zoneTames) do
-      entries[i] = { npc = zoneTame.npc, abilitiesText = formatAbilities(zoneTame) }
-    end
+    showLevel(level)
 
     local npcTitle = L.TAMEABLE_NPCS
-    if #entries > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #entries) end
+    if #zoneTames > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #zoneTames) end
     Components.NpcHeading:SetTitleText(npcTitle)
 
-    Components.NpcList:SetEntries(entries)
+    Components.NpcList:SetEntries(zoneTames)
 
     self:MarkDirty()
   end
@@ -237,7 +249,11 @@ function ZoneScreen:Build()
   Components.LevelSlider = levelRow:AttachComponent(ComponentFactory:ValueSlider({
     minValue = 1,
     maxValue = Addon.MAX_LEVEL,
-    onChange = function(level) Components.Root:SetLevel(level) end,
+    onChange = function(level)
+      chosenLevel = level
+      showLevel(level)
+      refreshSoon()
+    end,
   }))
 
   -- Ability filter: one icon per ability.
@@ -325,6 +341,7 @@ function ZoneScreen:Build()
     numCards = 6,
     emptyText = L.NO_TAMEABLE_NPCS,
     cardOptions = { showAbilities = true },
+    getAbilitiesText = function(entry) return formatAbilities(entry.npc, bestRanks) end,
     columnLabels = {
       { justify = "LEFT", text = L.NAME },
       { justify = "CENTER", width = ComponentFactory.NPC_CARD_LEVEL_WIDTH, text = L.LEVEL },
