@@ -26,12 +26,12 @@ local function formatAbilities(zoneTame)
       parts[#parts + 1] = ("|T%s:0|t %s %s"):format(
         ability.icon,
         Colors.White(ability.name),
-        Colors.LightGrey(tostring(entry.rank))
+        Colors.Grey(("(%s %d)"):format(L.RANK, entry.rank))
       )
     else
       parts[#parts + 1] = ("|T%s:0|t %s"):format(
         ability.icon,
-        Colors.DimGrey(("%s %d"):format(ability.name, entry.rank))
+        Colors.DimGrey(("%s (%s %d)"):format(ability.name, L.RANK, entry.rank))
       )
     end
   end
@@ -96,7 +96,7 @@ function ZoneScreen:Build()
       entries[i] = { npc = zoneTame.npc, abilitiesText = formatAbilities(zoneTame) }
     end
 
-    local npcTitle = L.RECOMMENDED_TAMES
+    local npcTitle = L.TAMEABLE_NPCS
     if #entries > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #entries) end
     Components.NpcHeading:SetTitleText(npcTitle)
 
@@ -193,9 +193,9 @@ function ZoneScreen:Build()
   -- NPCs Components
   -- ------------------------------------------------------
 
-  -- Recommended tames heading, with the NPC count.
+  -- Tameable NPCs heading, with the NPC count.
   Components.NpcHeading = Components.Root:AttachComponent(
-    ComponentFactory:SectionTitle({ titleText = L.RECOMMENDED_TAMES })
+    ComponentFactory:SectionTitle({ titleText = L.TAMEABLE_NPCS })
   )
 
   -- NPC list, with each NPC's abilities under its name.

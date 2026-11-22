@@ -31,13 +31,13 @@ end
 -- =============================================================================
 
 --- @class NpcCardOptions
---- @field showAbilities? boolean Shows a line of abilities under the name, and no location.
+--- @field showAbilities? boolean Shows the family after the name and a line of abilities under it, with no location.
 
 -- =============================================================================
 -- ComponentFactory - NpcCard
 -- =============================================================================
 
---- Creates a card showing an NPC's name and level, and its location or abilities. Hovering
+--- Creates a card showing an NPC's name and level, and its location or its family and abilities. Hovering
 --- shows the NPC tooltip; clicking shows the NPC on the map, if it has a `ui_map_id`.
 --- @param options? NpcCardOptions
 --- @return NpcCardComponent card
@@ -50,7 +50,7 @@ function ComponentFactory:NpcCard(options)
   --- Text of the abilities line, when `options.showAbilities` is set.
   local abilitiesText = ""
 
-  --- Font of every text line, larger when the card has an abilities line.
+  --- Font of a text line that does not set its own.
   local textFont = options.showAbilities and "GameFontNormal" or "GameFontNormalSmall"
 
   --- @type { node: WaffleFlexComponent<FontString>, getText: fun(npc: TameableNPC): string }[]
@@ -148,14 +148,15 @@ function ComponentFactory:NpcCard(options)
   --- @param justify "LEFT" | "CENTER" | "RIGHT"
   --- @param columnWidth? integer Without it, the line takes the width left over.
   --- @param getText fun(npc: TameableNPC): string
-  local function addTextLine(container, justify, columnWidth, getText)
+  --- @param font? string Defaults to the card's text font.
+  local function addTextLine(container, justify, columnWidth, getText, font)
     local node = container:AddChild({
       width = columnWidth,
       height = "AUTO",
 
       --- @param parent Frame
       frameFactory = function(parent)
-        local fontString = parent:CreateFontString(nil, "ARTWORK", textFont)
+        local fontString = parent:CreateFontString(nil, "ARTWORK", font or textFont)
         fontString:SetJustifyH(justify)
         fontString:SetText(npc and getText(npc) or "")
         return fontString
@@ -172,14 +173,16 @@ function ComponentFactory:NpcCard(options)
 
   --- Returns the text of the name line.
   local function getName(n) return Colors.Green(n.name) end
+  --- Returns the text of the name line, with the NPC's family after the name.
+  local function getNameAndFamily(n) return Colors.Green(n.name) .. Colors.White(" · " .. n.family) end
   --- Returns the text of the level line.
   local function getLevel(n) return Colors.White(n.level_range) end
 
   if options.showAbilities then
-    -- Name, with the abilities under it, then level.
-    local nameColumn = info:AddColumn({ height = "AUTO", gap = Widgets:Padding(0.25) })
-    addTextLine(nameColumn, "LEFT", nil, getName)
-    addTextLine(nameColumn, "LEFT", nil, function() return abilitiesText end)
+    -- Name and family, with the abilities under them, then level.
+    local nameColumn = info:AddColumn({ height = "AUTO", gap = Widgets:Padding(0.5) })
+    addTextLine(nameColumn, "LEFT", nil, getNameAndFamily, "GameFontNormal")
+    addTextLine(nameColumn, "LEFT", nil, function() return abilitiesText end, "GameFontNormalSmall")
     addTextLine(info, "CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, getLevel)
   else
     -- Name, level, and location.
