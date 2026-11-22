@@ -142,6 +142,7 @@ end
 
 --- @class SidebarOptions
 --- @field onSelectOptions fun() Called when the Options row is selected.
+--- @field onSelectZone fun() Called when the Current Zone row is selected.
 --- @field onSelectRank fun(ability: TameableAbility, rank: TameableAbilityRank) Called when a rank row is selected.
 
 --- Builds and returns a root component describing the Sidebar.
@@ -152,12 +153,33 @@ function Sidebar:Build(options)
 
   local optionsRow = root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
     labelText = L.OPTIONS,
-    marginBottom = Widgets:Padding(2),
     onClick = function(row)
       selectRow(row)
       options.onSelectOptions()
     end,
   }))
+
+  root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
+    labelText = L.CURRENT_ZONE,
+    onClick = function(row)
+      selectRow(row)
+      options.onSelectZone()
+    end,
+  }))
+
+  -- Divider between the rows above and the abilities.
+  root.ScrollChild:AddChild({
+    height = 1,
+    marginTop = Widgets:Padding(),
+    marginBottom = Widgets:Padding(2),
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local rule = parent:CreateTexture(nil, "ARTWORK")
+      rule:SetColorTexture(Colors.White:GetRGBA(0.1))
+      return rule
+    end,
+  })
 
   -- Select Options by default.
   selectRow(optionsRow)

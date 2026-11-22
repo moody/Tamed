@@ -1,0 +1,170 @@
+local Addon = select(2, ...) ---@type Addon
+local Colors = Addon:GetModule("Colors")
+local ComponentFactory = Addon:GetModule("ComponentFactory")
+local L = Addon:GetModule("Locale")
+local TickerManager = Addon:GetModule("TickerManager")
+local Widgets = Addon:GetModule("Widgets")
+local ZoneTames = Addon:GetModule("ZoneTames")
+
+--- @class ZoneScreen
+local ZoneScreen = Addon:GetModule("ZoneScreen")
+
+-- ============================================================================
+-- Local Functions
+-- ============================================================================
+
+--- Returns the abilities line of an NPC's card: the zone's best abilities in
+--- white, the rest dimmed.
+--- @param zoneTame ZoneTame
+--- @return string
+local function formatAbilities(zoneTame)
+  local parts = {}
+
+  for _, entry in ipairs(zoneTame.abilities) do
+    local ability = entry.ability
+    if entry.isBest then
+      parts[#parts + 1] = ("|T%s:0|t %s %s"):format(
+        ability.icon,
+        Colors.White(ability.name),
+        Colors.LightGrey(tostring(entry.rank))
+      )
+    else
+      parts[#parts + 1] = ("|T%s:0|t %s"):format(
+        ability.icon,
+        Colors.DimGrey(("%s %d"):format(ability.name, entry.rank))
+      )
+    end
+  end
+
+  return table.concat(parts, Colors.Grey(" · "))
+end
+
+-- ============================================================================
+-- ZoneScreen
+-- ============================================================================
+
+--- Builds and returns a root component describing the Zone Screen.
+--- @return ZoneScreenComponent root
+function ZoneScreen:Build()
+  local Components = {}
+
+  local NUM_NPC_CARDS = 6
+
+  --- The player's map and level when the screen was last refreshed.
+  local shownMapId, shownLevel
+
+  -- ------------------------------------------------------
+  -- Root Component
+  -- ------------------------------------------------------
+
+  --- @class ZoneScreenComponent : WaffleFlexComponent
+  Components.Root = Addon.Waffle:Flex({
+    visibility = "GONE",
+    direction = "COLUMN",
+    gap = Widgets:Padding(),
+
+    --- Refreshes the screen once a second while it is shown, if the player's map or level changed.
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local frame = CreateFrame("Frame", nil, parent)
+
+      TickerManager:NewTicker(1, function()
+        if C_Map.GetBestMapForUnit("player") ~= shownMapId or UnitLevel("player") ~= shownLevel then
+          Components.Root:Refresh()
+        end
+      end):BindFrame(frame)
+
+      return frame
+    end,
+  })
+
+  --- Shows the NPCs worth taming in the player's zone at the player's level.
+  function Components.Root:Refresh()
+    shownMapId, shownLevel = C_Map.GetBestMapForUnit("player"), UnitLevel("player")
+    local zoneTames = ZoneTames:Get(shownMapId, shownLevel)
+
+    Components.HeadingName:GetFrame():SetText(Colors.White(GetRealZoneText()))
+    Components.HeadingLevel:GetFrame():SetText(Colors.Grey(("%s %d"):format(L.LEVEL, shownLevel)))
+
+    --- @type NpcListEntry[]
+    local entries = {}
+    for i, zoneTame in ipairs(zoneTames) do
+      entries[i] = { npc = zoneTame.npc, abilitiesText = formatAbilities(zoneTame) }
+    end
+
+    local npcTitle = L.RECOMMENDED_TAMES
+    if #entries > 0 then npcTitle = npcTitle .. Colors.Grey(" · " .. #entries) end
+    Components.NpcHeading:SetTitleText(npcTitle)
+
+    Components.NpcList:SetEntries(entries)
+
+    self:MarkDirty()
+  end
+
+  -- ------------------------------------------------------
+  -- Heading Components
+  -- ------------------------------------------------------
+
+  -- Heading: zone name above the player's level.
+  local heading = Components.Root:AddColumn({
+    height = 48,
+    justify = "CENTER",
+    gap = Widgets:Padding(0.25),
+  })
+
+  Components.HeadingName = heading:AddChild({
+    height = "AUTO",
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalHuge")
+      fontString:SetJustifyH("LEFT")
+      fontString:SetWordWrap(false)
+      return fontString
+    end,
+
+    onMeasure = function(fontString, width)
+      fontString:SetSize(width, 0)
+      return width, fontString:GetStringHeight()
+    end,
+  })
+
+  Components.HeadingLevel = heading:AddChild({
+    height = "AUTO",
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+      fontString:SetJustifyH("LEFT")
+      fontString:SetWordWrap(false)
+      return fontString
+    end,
+
+    onMeasure = function(fontString, width)
+      fontString:SetSize(width, 0)
+      return width, fontString:GetStringHeight()
+    end,
+  })
+
+  -- ------------------------------------------------------
+  -- NPCs Components
+  -- ------------------------------------------------------
+
+  -- Recommended tames heading, with the NPC count.
+  Components.NpcHeading = Components.Root:AttachComponent(
+    ComponentFactory:SectionTitle({ titleText = L.RECOMMENDED_TAMES })
+  )
+
+  -- NPC list, with each NPC's abilities under its name.
+  Components.NpcList = Components.Root:AttachComponent(ComponentFactory:NpcList({
+    numCards = NUM_NPC_CARDS,
+    emptyText = L.NO_TAMEABLE_NPCS,
+    cardOptions = { showAbilities = true },
+    columnLabels = {
+      { justify = "LEFT", text = L.NAME },
+      { justify = "CENTER", width = ComponentFactory.NPC_CARD_LEVEL_WIDTH, text = L.LEVEL },
+    },
+  }))
+
+  return Components.Root
+end

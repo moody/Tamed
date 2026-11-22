@@ -8,6 +8,7 @@ local OptionsScreen = Addon:GetModule("OptionsScreen")
 local RankScreen = Addon:GetModule("RankScreen")
 local Sidebar = Addon:GetModule("Sidebar")
 local Widgets = Addon:GetModule("Widgets")
+local ZoneScreen = Addon:GetModule("ZoneScreen")
 
 --- @class UI
 local UI = Addon:GetModule("UI")
@@ -119,6 +120,10 @@ EventManager:Once(E.DataLoaded, function()
     onSelectOptions = function()
       showContentScreen(Components.OptionsScreen)
     end,
+    onSelectZone = function()
+      showContentScreen(Components.ZoneScreen)
+      Components.ZoneScreen:Refresh()
+    end,
     onSelectRank = function(ability, rank)
       showContentScreen(Components.RankScreen)
       Components.RankScreen:SetRank(ability, rank)
@@ -138,6 +143,8 @@ local contentArea = mainScreenRow:AddColumn({
 Components.OptionsScreen = contentArea:AttachComponent(OptionsScreen:Build())
 
 Components.RankScreen = contentArea:AttachComponent(RankScreen:Build())
+
+Components.ZoneScreen = contentArea:AttachComponent(ZoneScreen:Build())
 
 -- ============================================================================
 -- UI

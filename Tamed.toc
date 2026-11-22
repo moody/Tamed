@@ -58,5 +58,6 @@ src\ui\minimap-icon.lua
 src\ui\pin-helper.lua
 src\ui\screens\main-window\options-screen.lua
 src\ui\screens\main-window\rank-screen.lua
+src\ui\screens\main-window\zone-screen.lua
 src\ui\screens\main-window\sidebar.lua
 src\ui\screens\main-window\main-window.lua
