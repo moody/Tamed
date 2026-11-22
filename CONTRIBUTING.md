@@ -134,7 +134,14 @@ Commit the changes in both `database/` and `src/data/`. CI regenerates `src/data
 - each NPC appears under that rank with the right name, level, and location;
 - its tooltip lists the right details;
 - clicking it opens the right map, with pins where the NPC spawns;
-- hovering the NPC in the world shows its abilities in the tooltip, if NPC tooltips are enabled.
+- hovering the NPC in the world shows its abilities in the tooltip, if NPC tooltips are enabled;
+- with the Tame Finder's level set to the NPC's level, the NPC is listed if it teaches the highest rank of one of its abilities.
+
+To run the automated tests after changing `src/`, run this from the repository root. It needs Python 3 and Lua 5.1 as `lua`:
+
+```sh
+python .github/scripts/run_tests.py
+```
 
 ## Submitting
 
