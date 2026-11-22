@@ -109,17 +109,17 @@ function ZoneScreen:Build()
     --- @type ZoneTame[]
     local zoneTames = {}
 
-    --- Abilities that can still be added to the ability filter.
-    --- @type table<TameableAbility, boolean>
-    local abilities = {}
+    --- Highest rank of each ability that can still be added to the ability filter.
+    --- @type table<TameableAbility, integer>
+    local bestRanks = {}
 
     -- Without a map there is nothing to list in the player's zone.
     if shownMapId or not isZoneOnly then
       zoneTames = ZoneTames:Get(filters)
-      abilities = ZoneTames:GetAbilities(filters)
+      bestRanks = ZoneTames:GetBestRanks(filters)
     end
 
-    if abilityFilter then abilityFilter:SetAvailable(abilities) end
+    if abilityFilter then abilityFilter:SetBestRanks(bestRanks) end
 
     Components.LevelSlider:SetValue(level)
 

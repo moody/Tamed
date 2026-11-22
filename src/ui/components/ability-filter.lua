@@ -32,9 +32,9 @@ function ComponentFactory:AbilityFilter(options)
   --- @type table<TameableAbility, boolean>
   local isSelected = {}
 
-  --- The abilities that can be selected, or `nil` if any can.
-  --- @type table<TameableAbility, boolean>?
-  local available
+  --- The highest rank of each ability that can be selected, or `nil` if any can.
+  --- @type table<TameableAbility, integer>?
+  local bestRanks
 
   --- Functions that refresh each icon.
   --- @type fun()[]
@@ -48,7 +48,7 @@ function ComponentFactory:AbilityFilter(options)
   --- @param ability TameableAbility
   --- @return boolean
   local function isEnabled(ability)
-    return isSelected[ability] == true or available == nil or available[ability] == true
+    return isSelected[ability] == true or bestRanks == nil or bestRanks[ability] ~= nil
   end
 
   -- ------------------------------------------------------
@@ -132,10 +132,11 @@ function ComponentFactory:AbilityFilter(options)
     return selected
   end
 
-  --- Sets the abilities that can be selected, or any if omitted. The rest are greyed out unless selected.
-  --- @param abilities? table<TameableAbility, boolean>
-  function root:SetAvailable(abilities)
-    available = abilities
+  --- Sets the highest rank of each ability that can be selected, or any if omitted. The rest are greyed
+  --- out unless selected.
+  --- @param ranks? table<TameableAbility, integer>
+  function root:SetBestRanks(ranks)
+    bestRanks = ranks
     self:Refresh()
   end
 
@@ -175,6 +176,19 @@ function ComponentFactory:AbilityFilter(options)
 
         local isHovered = false
 
+        --- Shows the spell tooltip of the highest rank that can be selected, or why the ability cannot be.
+        local function showTooltip()
+          GameTooltip:SetOwner(frame, "ANCHOR_TOP")
+          if isEnabled(ability) then
+            local rank = bestRanks and bestRanks[ability] or #ability.ranks
+            GameTooltip:SetHyperlink("spell:" .. ability.ranks[rank].spell_id)
+          else
+            GameTooltip:SetText(ability.name, 1, 1, 1)
+            GameTooltip:AddLine(Colors.Grey(L.NO_MATCHING_NPCS), 1, 1, 1, true)
+          end
+          GameTooltip:Show()
+        end
+
         --- Shows the icon full color with a green border if selected, greyed out if it cannot be selected,
         --- and slightly dimmed otherwise.
         local function refreshIcon()
@@ -197,6 +211,8 @@ function ComponentFactory:AbilityFilter(options)
             border = Colors.Green
           end
           frame:SetBackdropBorderColor(border:GetRGBA())
+
+          if isHovered then showTooltip() end
         end
 
         iconRefreshers[#iconRefreshers + 1] = refreshIcon
@@ -215,9 +231,6 @@ function ComponentFactory:AbilityFilter(options)
         frame:SetScript("OnEnter", function()
           isHovered = true
           refreshIcon()
-          GameTooltip:SetOwner(frame, "ANCHOR_TOP")
-          GameTooltip:SetHyperlink("spell:" .. ability.ranks[#ability.ranks].spell_id)
-          GameTooltip:Show()
         end)
 
         frame:SetScript("OnLeave", function()

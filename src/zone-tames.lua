@@ -79,6 +79,24 @@ local function findNpcs(filters)
   return npcs
 end
 
+--- Returns the highest rank of each ability among the NPCs.
+--- @param npcs TameableNPC[]
+--- @return table<TameableAbility, integer>
+local function findBestRanks(npcs)
+  --- @type table<TameableAbility, integer>
+  local bestRanks = {}
+
+  for _, npc in ipairs(npcs) do
+    for _, npcAbility in ipairs(npc.abilities) do
+      if npcAbility.rank > (bestRanks[npcAbility.ability] or 0) then
+        bestRanks[npcAbility.ability] = npcAbility.rank
+      end
+    end
+  end
+
+  return bestRanks
+end
+
 -- ============================================================================
 -- ZoneTames
 -- ============================================================================
@@ -96,18 +114,7 @@ function ZoneTames:Get(filters)
   for _, ability in ipairs(filteredAbilities) do isFiltered[ability] = true end
 
   local npcs = findNpcs(filters)
-
-  --- Highest rank of each ability among `npcs`.
-  --- @type table<TameableAbility, integer>
-  local bestRanks = {}
-
-  for _, npc in ipairs(npcs) do
-    for _, npcAbility in ipairs(npc.abilities) do
-      if npcAbility.rank > (bestRanks[npcAbility.ability] or 0) then
-        bestRanks[npcAbility.ability] = npcAbility.rank
-      end
-    end
-  end
+  local bestRanks = findBestRanks(npcs)
 
   --- @type ZoneTame[]
   local zoneTames = {}
@@ -144,19 +151,10 @@ function ZoneTames:Get(filters)
   return zoneTames
 end
 
---- Returns the abilities taught by the NPCs that match the filters, as a set. These are the abilities
---- that can be added to the filtered abilities and still match an NPC.
+--- Returns the highest rank of each ability among the NPCs that match the filters. An ability left out
+--- cannot be added to the filtered abilities and still match an NPC.
 --- @param filters ZoneTamesFilters
---- @return table<TameableAbility, boolean>
-function ZoneTames:GetAbilities(filters)
-  --- @type table<TameableAbility, boolean>
-  local abilities = {}
-
-  for _, npc in ipairs(findNpcs(filters)) do
-    for _, npcAbility in ipairs(npc.abilities) do
-      abilities[npcAbility.ability] = true
-    end
-  end
-
-  return abilities
+--- @return table<TameableAbility, integer>
+function ZoneTames:GetBestRanks(filters)
+  return findBestRanks(findNpcs(filters))
 end
