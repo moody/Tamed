@@ -27,15 +27,31 @@ local function showOnMap(npc)
 end
 
 -- =============================================================================
+-- LuaCATS Annotations
+-- =============================================================================
+
+--- @class NpcCardOptions
+--- @field showAbilities? boolean Shows a line of abilities under the name, and no location.
+
+-- =============================================================================
 -- ComponentFactory - NpcCard
 -- =============================================================================
 
---- Creates a card showing an NPC's name, level, and location. Hovering shows
---- the NPC tooltip; clicking shows the NPC on the map, if it has a `ui_map_id`.
+--- Creates a card showing an NPC's name and level, and its location or abilities. Hovering
+--- shows the NPC tooltip; clicking shows the NPC on the map, if it has a `ui_map_id`.
+--- @param options? NpcCardOptions
 --- @return NpcCardComponent card
-function ComponentFactory:NpcCard()
+function ComponentFactory:NpcCard(options)
+  options = options or {}
+
   --- @type TameableNPC?
   local npc
+
+  --- Text of the abilities line, when `options.showAbilities` is set.
+  local abilitiesText = ""
+
+  --- Font of every text line, larger when the card has an abilities line.
+  local textFont = options.showAbilities and "GameFontNormal" or "GameFontNormalSmall"
 
   --- @type { node: WaffleFlexComponent<FontString>, getText: fun(npc: TameableNPC): string }[]
   local textLines = {}
@@ -125,21 +141,21 @@ function ComponentFactory:NpcCard()
     end,
   })
 
-  -- Name, level, and location.
   local info = card:AddRow({ height = "AUTO", gap = Widgets:Padding(0.25), align = "CENTER" })
 
-  --- Adds a text line filled in by `getText` for the current NPC.
+  --- Adds a text line to `container`, filled in by `getText` for the current NPC.
+  --- @param container WaffleFlexComponent
   --- @param justify "LEFT" | "CENTER" | "RIGHT"
   --- @param columnWidth? integer Without it, the line takes the width left over.
   --- @param getText fun(npc: TameableNPC): string
-  local function addTextLine(justify, columnWidth, getText)
-    local node = info:AddChild({
+  local function addTextLine(container, justify, columnWidth, getText)
+    local node = container:AddChild({
       width = columnWidth,
       height = "AUTO",
 
       --- @param parent Frame
       frameFactory = function(parent)
-        local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
+        local fontString = parent:CreateFontString(nil, "ARTWORK", textFont)
         fontString:SetJustifyH(justify)
         fontString:SetText(npc and getText(npc) or "")
         return fontString
@@ -154,17 +170,33 @@ function ComponentFactory:NpcCard()
     textLines[#textLines + 1] = { node = node, getText = getText }
   end
 
-  addTextLine("LEFT", nil, function(n) return Colors.Green(n.name) end)
-  addTextLine("CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, function(n) return Colors.White(n.level_range) end)
-  addTextLine("RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, function(n)
-    local color = n.ui_map_id and Colors.LightGrey or Colors.DimGrey
-    return color(n.location)
-  end)
+  --- Returns the text of the name line.
+  local function getName(n) return Colors.Green(n.name) end
+  --- Returns the text of the level line.
+  local function getLevel(n) return Colors.White(n.level_range) end
 
-  --- Sets the NPC shown.
+  if options.showAbilities then
+    -- Name, with the abilities under it, then level.
+    local nameColumn = info:AddColumn({ height = "AUTO", gap = Widgets:Padding(0.25) })
+    addTextLine(nameColumn, "LEFT", nil, getName)
+    addTextLine(nameColumn, "LEFT", nil, function() return abilitiesText end)
+    addTextLine(info, "CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, getLevel)
+  else
+    -- Name, level, and location.
+    addTextLine(info, "LEFT", nil, getName)
+    addTextLine(info, "CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, getLevel)
+    addTextLine(info, "RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, function(n)
+      local color = n.ui_map_id and Colors.LightGrey or Colors.DimGrey
+      return color(n.location)
+    end)
+  end
+
+  --- Sets the NPC shown, and the text of its abilities line if the card has one.
   --- @param newNpc? TameableNPC
-  function card:SetNpc(newNpc)
+  --- @param newAbilitiesText? string
+  function card:SetNpc(newNpc, newAbilitiesText)
     npc = newNpc
+    abilitiesText = newAbilitiesText or ""
     if not npc then return end
 
     for _, line in ipairs(textLines) do
