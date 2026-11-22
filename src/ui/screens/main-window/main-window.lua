@@ -38,8 +38,8 @@ end
 
 Components.Root = ComponentFactory:Window({
   name = "MainWindow",
-  width = 720,
-  height = 540,
+  width = 800,
+  height = 600,
   titleText = "",
   frameStrata = "MEDIUM",
   refresh = function() Components.Root:Layout() end
