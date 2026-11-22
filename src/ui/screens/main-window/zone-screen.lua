@@ -48,19 +48,11 @@ end
 function ZoneScreen:Build()
   local Components = {}
 
-  local NUM_NPC_CARDS = 6
-  local LEVEL_TEXT_WIDTH = 70
-  local LEVEL_SLIDER_WIDTH = 200
-  local LEVEL_SLIDER_HEIGHT = 12
-
   --- The player's map and level when the screen was last refreshed.
   local shownMapId, shownPlayerLevel
 
   --- Level chosen with the slider, or `nil` to use the player's.
   local chosenLevel
-
-  --- `true` while `Refresh()` moves the slider, so the move is not taken as a choice.
-  local isSyncingSlider = false
 
   -- ------------------------------------------------------
   -- Root Component
@@ -93,9 +85,7 @@ function ZoneScreen:Build()
     local level = chosenLevel or shownPlayerLevel
     local zoneTames = ZoneTames:Get(shownMapId, level)
 
-    isSyncingSlider = true
-    Components.LevelSlider:GetFrame():SetValue(level)
-    isSyncingSlider = false
+    Components.LevelSlider:SetValue(level)
 
     Components.HeadingName:GetFrame():SetText(Colors.White(GetRealZoneText()))
     Components.HeadingLevel:GetFrame():SetText(Colors.Grey(("%s %d"):format(L.LEVEL, level)))
@@ -158,7 +148,7 @@ function ZoneScreen:Build()
   })
 
   Components.HeadingLevel = levelRow:AddChild({
-    width = LEVEL_TEXT_WIDTH,
+    width = 70,
     height = "AUTO",
 
     --- @param parent Frame
@@ -175,28 +165,11 @@ function ZoneScreen:Build()
     end,
   })
 
-  Components.LevelSlider = levelRow:AddChild({
-    width = LEVEL_SLIDER_WIDTH,
-    height = LEVEL_SLIDER_HEIGHT,
-
-    --- @param parent Frame
-    frameFactory = function(parent)
-      local slider = Widgets:Slider({
-        parent = parent,
-        orientation = "HORIZONTAL",
-        width = LEVEL_SLIDER_WIDTH,
-        height = LEVEL_SLIDER_HEIGHT,
-        minValue = 1,
-        maxValue = Addon.MAX_LEVEL,
-      })
-      slider:SetBackdropColor(Colors.Black:GetRGBA(0.3))
-      slider:SetBackdropBorderColor(0, 0, 0, 0)
-      slider:SetScript("OnValueChanged", function(_, value)
-        if not isSyncingSlider then Components.Root:SetLevel(math.floor(value + 0.5)) end
-      end)
-      return slider
-    end,
-  })
+  Components.LevelSlider = levelRow:AttachComponent(ComponentFactory:ValueSlider({
+    minValue = 1,
+    maxValue = Addon.MAX_LEVEL,
+    onChange = function(level) Components.Root:SetLevel(level) end,
+  }))
 
   -- ------------------------------------------------------
   -- NPCs Components
@@ -209,7 +182,7 @@ function ZoneScreen:Build()
 
   -- NPC list, with each NPC's abilities under its name.
   Components.NpcList = Components.Root:AttachComponent(ComponentFactory:NpcList({
-    numCards = NUM_NPC_CARDS,
+    numCards = 6,
     emptyText = L.NO_TAMEABLE_NPCS,
     cardOptions = { showAbilities = true },
     columnLabels = {
