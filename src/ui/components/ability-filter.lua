@@ -209,7 +209,7 @@ function ComponentFactory:AbilityFilter(options)
 
           local alpha = 0.85
           if not enabled then
-            alpha = 0.25
+            alpha = 0.3
           elseif selected then
             alpha = 1
           end
