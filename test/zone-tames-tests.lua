@@ -132,28 +132,6 @@ do
   assert(Matchers:IsDeepEqual(getNames(ZoneTames:Get({ level = HIGH_LEVEL, uiMapId = MAP_ID })), { "Bite 2", "Claw 1" }))
 end
 
--- Test: lists every ability of an NPC in order, with the best ones flagged.
-do
-  local claw = { name = "Claw" }
-  local bite = { name = "Bite" }
-  local ZoneTames = setupContext({
-    ["1"] = mockNpc("Mixed", 10, { { ability = bite, rank = 1 }, { ability = claw, rank = 3 } }),
-    ["2"] = mockNpc("Bite Leader", 10, { { ability = bite, rank = 2 } }),
-  })
-
-  local zoneTames = ZoneTames:Get({ level = HIGH_LEVEL, uiMapId = MAP_ID })
-  local mixed = zoneTames[1]
-
-  assert(mixed.npc.name == "Mixed")
-  assert(#mixed.abilities == 2)
-  assert(mixed.abilities[1].ability == bite)
-  assert(mixed.abilities[1].rank == 1)
-  assert(mixed.abilities[1].isBest == false)
-  assert(mixed.abilities[2].ability == claw)
-  assert(mixed.abilities[2].rank == 3)
-  assert(mixed.abilities[2].isBest == true)
-end
-
 -- Test: the lead ability is the best ability with the highest rank.
 do
   local claw = { name = "Claw" }
@@ -165,8 +143,8 @@ do
 
   local zoneTames = ZoneTames:Get({ level = HIGH_LEVEL, uiMapId = MAP_ID })
 
-  assert(zoneTames[1].lead.ability == claw)
-  assert(zoneTames[1].lead.rank == 3)
+  assert(zoneTames[1].leadAbility == claw)
+  assert(zoneTames[1].leadRank == 3)
 end
 
 -- Test: the lead ability is the first by name when the best ranks are tied.
@@ -179,7 +157,7 @@ do
 
   local zoneTames = ZoneTames:Get({ level = HIGH_LEVEL, uiMapId = MAP_ID })
 
-  assert(zoneTames[1].lead.ability == bite)
+  assert(zoneTames[1].leadAbility == bite)
 end
 
 -- Test: sorts by lead rank, then lead ability name, then level, then name.
@@ -279,7 +257,7 @@ do
 
   local zoneTames = ZoneTames:Get({ level = HIGH_LEVEL, abilities = { claw } })
 
-  assert(zoneTames[1].lead.ability == claw)
+  assert(zoneTames[1].leadAbility == claw)
 end
 
 -- Test: filters by ability within the map filter.
@@ -296,7 +274,7 @@ do
 end
 
 -- ============================================================================
--- Tests - ZoneTames:GetBestRanks()
+-- Tests - ZoneTames:Get() best ranks
 -- ============================================================================
 
 -- Test: returns the ranks of the NPCs that can be tamed at the level.
@@ -308,7 +286,7 @@ do
     ["2"] = mockNpc("High", 14, { { ability = dash, rank = 1 } }),
   })
 
-  local bestRanks = ZoneTames:GetBestRanks({ level = 13 })
+  local _, bestRanks = ZoneTames:Get({ level = 13 })
 
   assert(Matchers:IsDeepEqual(bestRanks, { [claw] = 1 }))
 end
@@ -322,7 +300,7 @@ do
     ["3"] = mockNpc("Rank 5 Above Level", 20, { { ability = claw, rank = 5 } }),
   })
 
-  local bestRanks = ZoneTames:GetBestRanks({ level = 13 })
+  local _, bestRanks = ZoneTames:Get({ level = 13 })
 
   assert(Matchers:IsDeepEqual(bestRanks, { [claw] = 3 }))
 end
@@ -336,7 +314,7 @@ do
     ["2"] = { name = "Other Map", min_level = 10, ui_map_id = OTHER_MAP_ID, abilities = { { ability = dash, rank = 1 } } },
   })
 
-  local bestRanks = ZoneTames:GetBestRanks({ level = HIGH_LEVEL, uiMapId = MAP_ID })
+  local _, bestRanks = ZoneTames:Get({ level = HIGH_LEVEL, uiMapId = MAP_ID })
 
   assert(Matchers:IsDeepEqual(bestRanks, { [claw] = 1 }))
 end
@@ -352,7 +330,7 @@ do
     ["2"] = mockNpc("Claw Cower", 10, { { ability = claw, rank = 1 }, { ability = cower, rank = 1 } }),
   })
 
-  local bestRanks = ZoneTames:GetBestRanks({ level = HIGH_LEVEL, abilities = { claw, dash } })
+  local _, bestRanks = ZoneTames:Get({ level = HIGH_LEVEL, abilities = { claw, dash } })
 
   assert(Matchers:IsDeepEqual(bestRanks, { [claw] = 1, [dash] = 1, [bite] = 1 }))
 end
@@ -364,7 +342,7 @@ do
     ["1"] = mockNpc("High", 14, { { ability = claw, rank = 1 } }),
   })
 
-  local bestRanks = ZoneTames:GetBestRanks({ level = 13 })
+  local _, bestRanks = ZoneTames:Get({ level = 13 })
 
   assert(next(bestRanks) == nil)
 end
