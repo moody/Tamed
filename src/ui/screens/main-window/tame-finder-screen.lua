@@ -4,6 +4,7 @@ local ComponentFactory = Addon:GetModule("ComponentFactory")
 local E = Addon:GetModule("Events")
 local EventManager = Addon:GetModule("EventManager")
 local L = Addon:GetModule("Locale")
+local NpcText = Addon:GetModule("NpcText")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
 local TameFinder = Addon:GetModule("TameFinder")
 local TickerManager = Addon:GetModule("TickerManager")
@@ -25,19 +26,7 @@ local function formatAbilities(npc, bestRanks)
   local parts = {}
 
   for _, npcAbility in ipairs(npc.abilities) do
-    local ability = npcAbility.ability
-    if npcAbility.rank == bestRanks[ability] then
-      parts[#parts + 1] = ("|T%s:0|t %s %s"):format(
-        ability.icon,
-        Colors.White(ability.name),
-        Colors.Grey(("(%s %d)"):format(L.RANK, npcAbility.rank))
-      )
-    else
-      parts[#parts + 1] = ("|T%s:0|t %s"):format(
-        ability.icon,
-        Colors.DimGrey(("%s (%s %d)"):format(ability.name, L.RANK, npcAbility.rank))
-      )
-    end
+    parts[#parts + 1] = NpcText:Ability(npcAbility, npcAbility.rank ~= bestRanks[npcAbility.ability])
   end
 
   return table.concat(parts, Colors.Grey(" · "))

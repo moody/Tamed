@@ -1,8 +1,6 @@
 local Addon = select(2, ...) ---@type Addon
-local Colors = Addon:GetModule("Colors")
 local E = Addon:GetModule("Events")
 local EventManager = Addon:GetModule("EventManager")
-local L = Addon:GetModule("Locale")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 
@@ -37,13 +35,12 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 --- @field family string
 --- @field type string
 --- @field diet string[]
---- @field level_range string Includes `classification`, if any, once resolved.
+--- @field level_range string A level or a range, such as `12-14`.
 --- @field min_level integer First number in `level_range`.
 --- @field classification? string
 --- @field zone_id integer
 --- @field ui_map_id? integer
 --- @field abilities TameableNPCAbility[] Sorted by ability name. Resolved from `{key, rank}` entries.
---- @field ability_texts string[] Display strings for `abilities`, in the same order.
 --- @field coords TameableNPCCoord[]
 --- @field location string Resolved from `zone_id` via `C_Map.GetAreaInfo`.
 
@@ -93,14 +90,6 @@ EventManager:Once(E.Wow.PlayerLogin, function()
     npc.min_level = tonumber(npc.level_range:match("%d+"))
 
     if npc.location then
-      -- Add `classification` to `level_range`.
-      if npc.classification then
-        npc.level_range = ("%s (%s)"):format(
-          npc.level_range,
-          Colors.Gold(npc.classification)
-        )
-      end
-
       -- Resolve npc's ability/rank references, and record npc_id on the
       -- matching rank. Displayed rank number is the
       -- rank's position among those still available on this client, not its
@@ -120,15 +109,6 @@ EventManager:Once(E.Wow.PlayerLogin, function()
       end
       table.sort(resolved, function(a, b) return a.ability.name < b.ability.name end)
       npc.abilities = resolved
-      npc.ability_texts = {}
-      for i, npcAbility in ipairs(resolved) do
-        npc.ability_texts[i] = ("|T%s:0|t %s |cFF9D9D9D(%s %s)|r"):format(
-          npcAbility.ability.icon,
-          npcAbility.ability.name,
-          L.RANK,
-          npcAbility.rank
-        )
-      end
     else
       TameableNPCs[npc_id] = nil
     end

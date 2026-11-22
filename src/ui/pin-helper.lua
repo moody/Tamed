@@ -3,6 +3,7 @@ local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local HBDPins = Addon:GetLibrary("HBDPins")
 local L = Addon:GetModule("Locale")
+local NpcText = Addon:GetModule("NpcText")
 
 --- @class PinHelper
 local PinHelper = Addon:GetModule("PinHelper")
@@ -22,8 +23,8 @@ local function onEnter(self)
   -- Show tooltip
   GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
   GameTooltip:SetText(Colors.Green(self.npc.name))
-  GameTooltip:AddDoubleLine(L.LEVEL, self.npc.level_range, nil, nil, nil, 1, 1, 1)
-  GameTooltip:AddDoubleLine(L.ABILITIES, table.concat(self.npc.ability_texts, ", "), nil, nil, nil, 1, 1, 1)
+  GameTooltip:AddDoubleLine(L.LEVEL, NpcText:Level(self.npc), nil, nil, nil, 1, 1, 1)
+  GameTooltip:AddDoubleLine(L.ABILITIES, NpcText:Abilities(self.npc), nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.FAMILY, self.npc.family, nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.DIET, table.concat(self.npc.diet, ", "), nil, nil, nil, 1, 1, 1)
   GameTooltip:AddDoubleLine(L.TYPE, self.npc.type, nil, nil, nil, 1, 1, 1)

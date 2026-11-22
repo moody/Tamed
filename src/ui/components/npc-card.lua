@@ -2,6 +2,7 @@ local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local HBDPins = Addon:GetLibrary("HBDPins")
 local L = Addon:GetModule("Locale")
+local NpcText = Addon:GetModule("NpcText")
 local PinHelper = Addon:GetModule("PinHelper")
 local Widgets = Addon:GetModule("Widgets")
 
@@ -78,8 +79,8 @@ function ComponentFactory:NpcCard(options)
     if npc then
       GameTooltip:SetOwner(frame, "ANCHOR_TOP")
       GameTooltip:SetText(Colors.Green(npc.name))
-      GameTooltip:AddDoubleLine(L.LEVEL, Colors.White(npc.level_range))
-      GameTooltip:AddDoubleLine(L.ABILITIES, Colors.White(table.concat(npc.ability_texts, ", ")))
+      GameTooltip:AddDoubleLine(L.LEVEL, Colors.White(NpcText:Level(npc)))
+      GameTooltip:AddDoubleLine(L.ABILITIES, Colors.White(NpcText:Abilities(npc)))
       GameTooltip:AddDoubleLine(L.FAMILY, Colors.White(npc.family))
       GameTooltip:AddDoubleLine(L.DIET, Colors.White(table.concat(npc.diet, ", ")))
       GameTooltip:AddDoubleLine(L.TYPE, Colors.White(npc.type))
@@ -178,7 +179,7 @@ function ComponentFactory:NpcCard(options)
   --- Returns the text of the name line, with the NPC's family after the name.
   local function getNameAndFamily(n) return Colors.Green(n.name) .. Colors.White(" · " .. n.family) end
   --- Returns the text of the level line.
-  local function getLevel(n) return Colors.White(n.level_range) end
+  local function getLevel(n) return Colors.White(NpcText:Level(n)) end
   --- Returns the text of the location line, dimmed if the NPC has no map.
   local function getLocation(n) return (n.ui_map_id and Colors.LightGrey or Colors.DimGrey)(n.location) end
 

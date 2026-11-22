@@ -3,6 +3,7 @@ local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local E = Addon:GetModule("Events")
 local EventManager = Addon:GetModule("EventManager")
+local NpcText = Addon:GetModule("NpcText")
 local StateManager = Addon:GetModule("StateManager")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 
@@ -34,8 +35,8 @@ EventManager:Once(E.StoreCreated, function()
 
     -- Add lines.
     self:AddLine(Colors.Green(ADDON_NAME))
-    for _, abilityText in ipairs(npc.ability_texts) do
-      self:AddLine("  " .. abilityText, 1, 1, 1)
+    for _, npcAbility in ipairs(npc.abilities) do
+      self:AddLine("  " .. NpcText:Ability(npcAbility), 1, 1, 1)
     end
   end
 
