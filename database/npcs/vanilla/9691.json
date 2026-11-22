@@ -1,9 +1,7 @@
 {
   "npc_id": 9691,
   "name": "Venomtip Scorpid",
-  "family": "Scorpid",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "scorpid",
   "level_range": "52-53",
   "zone_id": 46,
   "ui_map_id": 1428,

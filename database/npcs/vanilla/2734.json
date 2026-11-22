@@ -1,9 +1,7 @@
 {
   "npc_id": 2734,
   "name": "Ridge Stalker Patriarch",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "40-41",
   "zone_id": 3,
   "ui_map_id": 1418,

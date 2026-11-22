@@ -1,9 +1,7 @@
 {
   "npc_id": 21956,
   "name": "Rema <The Den Mother>",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "66",
   "zone_id": 3522,
   "ui_map_id": 1949,

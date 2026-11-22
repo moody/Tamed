@@ -1,9 +1,7 @@
 {
   "npc_id": 1112,
   "name": "Leech Widow",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "24",
   "classification": "Rare",
   "zone_id": 11,

@@ -1,9 +1,7 @@
 {
   "npc_id": 16349,
   "name": "Ghostclaw Ravager",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "16-17",
   "zone_id": 3433,
   "ui_map_id": 1942,

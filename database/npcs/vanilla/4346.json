@@ -1,9 +1,7 @@
 {
   "npc_id": 4346,
   "name": "Noxious Flayer",
-  "family": "Wind Serpent",
-  "type": "Ferocity",
-  "diet": ["Fish", "Cheese", "Bread"],
+  "family": "windserpent",
   "level_range": "35-36",
   "zone_id": 15,
   "ui_map_id": 1445,

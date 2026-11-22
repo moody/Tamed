@@ -1,9 +1,7 @@
 {
   "npc_id": 3127,
   "name": "Venomtail Scorpid",
-  "family": "Scorpid",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "scorpid",
   "level_range": "9-10",
   "zone_id": 14,
   "ui_map_id": 1411,

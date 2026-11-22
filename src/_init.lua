@@ -62,37 +62,38 @@ function Addon:GetAsset(fileName)
   return ("Interface\\AddOns\\%s\\assets\\%s"):format(ADDON_NAME, fileName)
 end
 
-do -- Addon:MergeTameableNPCs()
-  local TameableNPCs = Addon:GetModule("TameableNPCs")
-
-  -- Merges patches (npc_id -> a full or partial record) into the TameableNPCs
-  -- module, creating it on the first call. A patch's own fields overwrite the
-  -- target's wholesale, not recursively; an npc_id with no existing record is
-  -- inserted as-is.
-  function Addon:MergeTameableNPCs(patches)
-    for npc_id, patch in pairs(patches) do
-      local npc = TameableNPCs[npc_id]
-      if npc then
-        for k, v in pairs(patch) do npc[k] = v end
+do -- Addon:MergeTameableFamilies(), Addon:MergeTameableNPCs(), Addon:MergeTameableAbilities()
+  --- Merges patches (key -> a full or partial record) into `target`. A patch's own fields overwrite the
+  --- record's wholesale, not recursively; a key with no existing record is inserted as-is.
+  --- @param target table<string, table>
+  --- @param patches table<string, table>
+  local function mergePatches(target, patches)
+    for key, patch in pairs(patches) do
+      local record = target[key]
+      if record then
+        for k, v in pairs(patch) do record[k] = v end
       else
-        TameableNPCs[npc_id] = patch
+        target[key] = patch
       end
     end
   end
-end
 
-do -- Addon:MergeTameableAbilities()
+  local TameableFamilies = Addon:GetModule("TameableFamilies")
+  local TameableNPCs = Addon:GetModule("TameableNPCs")
   local TameableAbilities = Addon:GetModule("TameableAbilities")
 
-  -- Same as MergeTameableNPCs, for the TameableAbilities module.
+  -- Merges patches (family key -> a full or partial record) into the TameableFamilies module.
+  function Addon:MergeTameableFamilies(patches)
+    mergePatches(TameableFamilies, patches)
+  end
+
+  -- Same as MergeTameableFamilies, for npc_id and the TameableNPCs module.
+  function Addon:MergeTameableNPCs(patches)
+    mergePatches(TameableNPCs, patches)
+  end
+
+  -- Same as MergeTameableFamilies, for ability key and the TameableAbilities module.
   function Addon:MergeTameableAbilities(patches)
-    for key, patch in pairs(patches) do
-      local ability = TameableAbilities[key]
-      if ability then
-        for k, v in pairs(patch) do ability[k] = v end
-      else
-        TameableAbilities[key] = patch
-      end
-    end
+    mergePatches(TameableAbilities, patches)
   end
 end

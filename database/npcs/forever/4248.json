@@ -1,9 +1,7 @@
 {
   "npc_id": 4248,
   "name": "Pesterhide Hyena",
-  "family": "Hyena",
-  "type": "Cunning",
-  "diet": ["Meat", "Fruit"],
+  "family": "hyena",
   "level_range": "26-27",
   "zone_id": 400,
   "ui_map_id": 1441,

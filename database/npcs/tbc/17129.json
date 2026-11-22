@@ -1,9 +1,7 @@
 {
   "npc_id": 17129,
   "name": "Greater Windroc",
-  "family": "Owl",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "birdofprey",
   "level_range": "66-67",
   "zone_id": 3518,
   "ui_map_id": 1951,

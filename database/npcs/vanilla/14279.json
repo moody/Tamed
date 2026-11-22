@@ -1,9 +1,7 @@
 {
   "npc_id": 14279,
   "name": "Creepthess",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "24",
   "classification": "Rare",
   "zone_id": 267,

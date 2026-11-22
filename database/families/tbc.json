@@ -1,0 +1,25 @@
+{
+  "dragonhawk": {
+    "name": "Dragonhawk",
+    "type": "Ferocity",
+    "diet": ["Meat", "Fish", "Fruit"]
+  },
+  "netherray": {
+    "name": "Nether Ray"
+  },
+  "ravager": {
+    "name": "Ravager",
+    "type": "Ferocity",
+    "diet": ["Meat"]
+  },
+  "serpent": {
+    "name": "Serpent",
+    "type": "Ferocity",
+    "diet": ["Meat", "Fish"]
+  },
+  "warpstalker": {
+    "name": "Warp Stalker",
+    "type": "Ferocity",
+    "diet": ["Fish", "Fruit"]
+  }
+}

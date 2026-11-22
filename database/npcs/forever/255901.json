@@ -1,9 +1,7 @@
 {
   "npc_id": 255901,
   "name": "Sand Crawler",
-  "family": "Crab",
-  "type": "Tenacity",
-  "diet": ["Fish", "Bread", "Fungus", "Fruit"],
+  "family": "crab",
   "level_range": "36-37",
   "zone_id": 16591,
   "ui_map_id": 2548,

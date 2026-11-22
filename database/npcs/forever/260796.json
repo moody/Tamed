@@ -1,9 +1,7 @@
 {
   "npc_id": 260796,
   "name": "Marsh Crocolisk",
-  "family": "Crocolisk",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "crocolisk",
   "level_range": "26",
   "zone_id": 16732,
   "abilities": [{ "key": "dismember", "rank": 2 }],

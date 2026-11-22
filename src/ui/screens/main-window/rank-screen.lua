@@ -56,7 +56,9 @@ function RankScreen:Build()
 
     local learnedBy = L.ALL_PET_FAMILIES
     if #ability.learned_by > 0 then
-      learnedBy = table.concat(ability.learned_by, Colors.Grey(" · "))
+      local names = {}
+      for i, family in ipairs(ability.learned_by) do names[i] = family.name end
+      learnedBy = table.concat(names, Colors.Grey(" · "))
     end
     Components.LearnableByTile:SetText(learnedBy)
 

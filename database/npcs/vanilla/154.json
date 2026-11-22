@@ -1,9 +1,7 @@
 {
   "npc_id": 154,
   "name": "Greater Fleshripper",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "16-17",
   "zone_id": 40,
   "ui_map_id": 1436,

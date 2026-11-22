@@ -1,9 +1,7 @@
 {
   "npc_id": 16348,
   "name": "Ghostclaw Lynx",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "13-16",
   "zone_id": 3433,
   "ui_map_id": 1942,

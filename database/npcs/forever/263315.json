@@ -1,9 +1,7 @@
 {
   "npc_id": 263315,
   "name": "Ombassa",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "41",
   "classification": "Elite",
   "zone_id": 16591,

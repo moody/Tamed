@@ -1,9 +1,7 @@
 {
   "npc_id": 268530,
   "name": "Bloodtalon Matriarch",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "9",
   "zone_id": 14,
   "ui_map_id": 1411,

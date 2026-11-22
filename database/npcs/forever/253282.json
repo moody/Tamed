@@ -1,9 +1,7 @@
 {
   "npc_id": 253282,
   "name": "Shriekling Fledgling",
-  "family": "Bird of Prey",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "birdofprey",
   "level_range": "8-9",
   "zone_id": 16593,
   "ui_map_id": 2521,

@@ -1,9 +1,7 @@
 {
   "npc_id": 263348,
   "name": "Roving Tallstrider",
-  "family": "Tallstrider",
-  "type": "Ferocity",
-  "diet": ["Cheese", "Fungus", "Fruit"],
+  "family": "tallstrider",
   "level_range": "37-38",
   "zone_id": 16591,
   "ui_map_id": 2548,

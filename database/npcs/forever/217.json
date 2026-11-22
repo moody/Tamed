@@ -1,9 +1,7 @@
 {
   "npc_id": 217,
   "name": "Venom Web Spider",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "19-20",
   "zone_id": 10,
   "ui_map_id": 1431,

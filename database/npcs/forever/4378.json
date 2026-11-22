@@ -1,9 +1,7 @@
 {
   "npc_id": 4378,
   "name": "Darkmist Recluse",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "36-37",
   "zone_id": 15,
   "ui_map_id": 1445,

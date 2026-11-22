@@ -1,9 +1,7 @@
 {
   "npc_id": 10644,
   "name": "Mist Howler",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "22",
   "classification": "Rare",
   "zone_id": 331,

@@ -1,9 +1,7 @@
 {
   "npc_id": 4263,
   "name": "Deepmoss Hatchling",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "14",
   "zone_id": 406,
   "ui_map_id": 1442,

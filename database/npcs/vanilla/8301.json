@@ -1,9 +1,7 @@
 {
   "npc_id": 8301,
   "name": "Clack the Reaver",
-  "family": "Scorpid",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "scorpid",
   "level_range": "53",
   "classification": "Rare",
   "zone_id": 4,

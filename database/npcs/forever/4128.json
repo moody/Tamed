@@ -1,9 +1,7 @@
 {
   "npc_id": 4128,
   "name": "Hecklefang Stalker",
-  "family": "Hyena",
-  "type": "Cunning",
-  "diet": ["Meat", "Fruit"],
+  "family": "hyena",
   "level_range": "22-23",
   "zone_id": 17,
   "ui_map_id": 1413,

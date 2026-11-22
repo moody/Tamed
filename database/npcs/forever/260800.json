@@ -1,9 +1,7 @@
 {
   "npc_id": 260800,
   "name": "Thicket Lurker",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "27",
   "classification": "Elite",
   "zone_id": 16732,

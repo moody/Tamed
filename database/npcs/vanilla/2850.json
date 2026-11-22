@@ -1,9 +1,7 @@
 {
   "npc_id": 2850,
   "name": "Broken Tooth",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "37",
   "classification": "Rare",
   "zone_id": 3,

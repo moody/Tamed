@@ -14,7 +14,7 @@
   },
   "charge": {
     "name": "Charge",
-    "learned_by": ["Boar"],
+    "learned_by": ["boar"],
     "ranks": [
       { "rank": 1, "spell_id": 7371, "pet_level": 1, "training_cost": 5 },
       { "rank": 2, "spell_id": 26177, "pet_level": 12, "training_cost": 9 },
@@ -26,14 +26,14 @@
   },
   "shellshield": {
     "name": "Shell Shield",
-    "learned_by": ["Turtle"],
+    "learned_by": ["turtle"],
     "ranks": [
       { "rank": 1, "spell_id": 26064, "pet_level": 20, "training_cost": 15 }
     ]
   },
   "screech": {
     "name": "Screech",
-    "learned_by": ["Bat", "Carrion Bird", "Owl"],
+    "learned_by": ["bat", "carrionbird", "birdofprey"],
     "ranks": [
       { "rank": 1, "spell_id": 24423, "pet_level": 8, "training_cost": 10 },
       { "rank": 2, "spell_id": 24577, "pet_level": 24, "training_cost": 15 },
@@ -45,20 +45,20 @@
   "bite": {
     "name": "Bite",
     "learned_by": [
-      "Bat",
-      "Bear",
-      "Boar",
-      "Carrion Bird",
-      "Cat",
-      "Crocolisk",
-      "Gorilla",
-      "Hyena",
-      "Raptor",
-      "Spider",
-      "Tallstrider",
-      "Turtle",
-      "Wind Serpent",
-      "Wolf"
+      "bat",
+      "bear",
+      "boar",
+      "carrionbird",
+      "cat",
+      "crocolisk",
+      "gorilla",
+      "hyena",
+      "raptor",
+      "spider",
+      "tallstrider",
+      "turtle",
+      "windserpent",
+      "wolf"
     ],
     "ranks": [
       { "rank": 1, "spell_id": 17253, "pet_level": 1, "training_cost": 1 },
@@ -74,7 +74,7 @@
   },
   "lightningbreath": {
     "name": "Lightning Breath",
-    "learned_by": ["Wind Serpent"],
+    "learned_by": ["windserpent"],
     "ranks": [
       { "rank": 1, "spell_id": 24844, "pet_level": 1, "training_cost": 1 },
       { "rank": 2, "spell_id": 25008, "pet_level": 12, "training_cost": 5 },
@@ -86,7 +86,7 @@
   },
   "scorpidpoison": {
     "name": "Scorpid Poison",
-    "learned_by": ["Scorpid"],
+    "learned_by": ["scorpid"],
     "ranks": [
       { "rank": 1, "spell_id": 24640, "pet_level": 8, "training_cost": 10 },
       { "rank": 2, "spell_id": 24583, "pet_level": 24, "training_cost": 15 },
@@ -97,7 +97,7 @@
   },
   "thunderstomp": {
     "name": "Thunderstomp",
-    "learned_by": ["Gorilla"],
+    "learned_by": ["gorilla"],
     "ranks": [
       { "rank": 1, "spell_id": 26090, "pet_level": 30, "training_cost": 15 },
       { "rank": 2, "spell_id": 26187, "pet_level": 40, "training_cost": 20 },
@@ -106,7 +106,7 @@
   },
   "prowl": {
     "name": "Prowl",
-    "learned_by": ["Cat"],
+    "learned_by": ["cat"],
     "ranks": [
       { "rank": 1, "spell_id": 24450, "pet_level": 30, "training_cost": 15 },
       { "rank": 2, "spell_id": 24452, "pet_level": 40, "training_cost": 20 },
@@ -115,7 +115,7 @@
   },
   "dash": {
     "name": "Dash",
-    "learned_by": ["Boar", "Cat", "Hyena", "Raptor", "Tallstrider", "Wolf"],
+    "learned_by": ["boar", "cat", "hyena", "raptor", "tallstrider", "wolf"],
     "ranks": [
       { "rank": 1, "spell_id": 23099, "pet_level": 30, "training_cost": 15 },
       { "rank": 2, "spell_id": 23109, "pet_level": 40, "training_cost": 20 },
@@ -125,13 +125,13 @@
   "claw": {
     "name": "Claw",
     "learned_by": [
-      "Bear",
-      "Carrion Bird",
-      "Cat",
-      "Crab",
-      "Owl",
-      "Raptor",
-      "Scorpid"
+      "bear",
+      "carrionbird",
+      "cat",
+      "crab",
+      "birdofprey",
+      "raptor",
+      "scorpid"
     ],
     "ranks": [
       { "rank": 1, "spell_id": 16827, "pet_level": 1, "training_cost": 1 },
@@ -147,7 +147,7 @@
   },
   "furioushowl": {
     "name": "Furious Howl",
-    "learned_by": ["Wolf"],
+    "learned_by": ["wolf"],
     "ranks": [
       { "rank": 1, "spell_id": 24604, "pet_level": 10, "training_cost": 10 },
       { "rank": 2, "spell_id": 24605, "pet_level": 24, "training_cost": 15 },
@@ -157,7 +157,7 @@
   },
   "dive": {
     "name": "Dive",
-    "learned_by": ["Bat", "Carrion Bird", "Owl", "Wind Serpent"],
+    "learned_by": ["bat", "carrionbird", "birdofprey", "windserpent"],
     "ranks": [
       { "rank": 1, "spell_id": 23145, "pet_level": 30, "training_cost": 15 },
       { "rank": 2, "spell_id": 23147, "pet_level": 40, "training_cost": 20 },

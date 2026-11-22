@@ -1,9 +1,7 @@
 {
   "npc_id": 4411,
   "name": "Darkfang Lurker",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "36-37",
   "zone_id": 15,
   "ui_map_id": 1445,

@@ -1,9 +1,7 @@
 {
   "npc_id": 7268,
   "name": "Sandfury Guardian",
-  "family": "Serpent",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "serpent",
   "level_range": "45",
   "classification": "Elite",
   "zone_id": 1176,

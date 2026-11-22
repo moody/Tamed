@@ -1,9 +1,7 @@
 {
   "npc_id": 21864,
   "name": "Scorchshell Pincer",
-  "family": "Scorpid",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "scorpid",
   "level_range": "68-69",
   "zone_id": 3520,
   "ui_map_id": 1948,

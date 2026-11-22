@@ -1,9 +1,7 @@
 {
   "npc_id": 5823,
   "name": "Death Flayer",
-  "family": "Scorpid",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "scorpid",
   "level_range": "11",
   "classification": "Rare",
   "zone_id": 14,

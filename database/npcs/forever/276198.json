@@ -1,9 +1,7 @@
 {
   "npc_id": 276198,
   "name": "Shal'ma",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "9",
   "classification": "Rare",
   "zone_id": 14,

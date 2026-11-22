@@ -1,9 +1,7 @@
 {
   "npc_id": 1150,
   "name": "River Crocolisk",
-  "family": "Crocolisk",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "crocolisk",
   "level_range": "30-31",
   "zone_id": 33,
   "ui_map_id": 1434,

@@ -1,9 +1,7 @@
 {
   "npc_id": 2000,
   "name": "Webwood Silkspinner",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "8-9",
   "zone_id": 141,
   "ui_map_id": 1438,

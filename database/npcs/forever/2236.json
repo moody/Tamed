@@ -1,9 +1,7 @@
 {
   "npc_id": 2236,
   "name": "Raging Reef Crawler",
-  "family": "Crab",
-  "type": "Tenacity",
-  "diet": ["Fish", "Bread", "Fungus", "Fruit"],
+  "family": "crab",
   "level_range": "20-21",
   "zone_id": 148,
   "ui_map_id": 1439,

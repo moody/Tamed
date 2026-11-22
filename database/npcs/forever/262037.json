@@ -1,9 +1,7 @@
 {
   "npc_id": 262037,
   "name": "Roosting Duskbat",
-  "family": "Bat",
-  "type": "Ferocity",
-  "diet": ["Fungus", "Fruit"],
+  "family": "bat",
   "level_range": "37-38",
   "zone_id": 16591,
   "ui_map_id": 2548,

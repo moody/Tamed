@@ -1,9 +1,7 @@
 {
   "npc_id": 250937,
   "name": "Ursera Scavenger",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "4",
   "zone_id": 16593,
   "ui_map_id": 2521,

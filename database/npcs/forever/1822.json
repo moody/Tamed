@@ -1,9 +1,7 @@
 {
   "npc_id": 1822,
   "name": "Venom Mist Lurker",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "50-51",
   "zone_id": 28,
   "ui_map_id": 1422,

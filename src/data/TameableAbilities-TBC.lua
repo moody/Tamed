@@ -4,64 +4,64 @@ if not Addon.IS_TBC then return end
 Addon:MergeTameableAbilities({
   ["bite"] = {
     ["learned_by"] = {
-      "Bat",
-      "Bear",
-      "Boar",
-      "Carrion Bird",
-      "Cat",
-      "Crocolisk",
-      "Dragonhawk",
-      "Gorilla",
-      "Hyena",
-      "Nether Ray",
-      "Raptor",
-      "Ravager",
-      "Serpent",
-      "Spider",
-      "Tallstrider",
-      "Turtle",
-      "Warp Stalker",
-      "Wind Serpent",
-      "Wolf"
+      "bat",
+      "bear",
+      "boar",
+      "carrionbird",
+      "cat",
+      "crocolisk",
+      "dragonhawk",
+      "gorilla",
+      "hyena",
+      "netherray",
+      "raptor",
+      "ravager",
+      "serpent",
+      "spider",
+      "tallstrider",
+      "turtle",
+      "warpstalker",
+      "windserpent",
+      "wolf"
     }
   },
   ["claw"] = {
     ["learned_by"] = {
-      "Bear",
-      "Carrion Bird",
-      "Cat",
-      "Crab",
-      "Owl",
-      "Raptor",
-      "Scorpid",
-      "Warp Stalker"
+      "bear",
+      "carrionbird",
+      "cat",
+      "crab",
+      "birdofprey",
+      "raptor",
+      "scorpid",
+      "warpstalker"
     }
   },
   ["dash"] = {
     ["learned_by"] = {
-      "Boar",
-      "Cat",
-      "Hyena",
-      "Raptor",
-      "Ravager",
-      "Tallstrider",
-      "Wolf"
+      "boar",
+      "cat",
+      "hyena",
+      "raptor",
+      "ravager",
+      "tallstrider",
+      "wolf"
     }
   },
   ["dive"] = {
     ["learned_by"] = {
-      "Bat",
-      "Carrion Bird",
-      "Dragonhawk",
-      "Nether Ray",
-      "Owl",
-      "Wind Serpent"
+      "bat",
+      "carrionbird",
+      "dragonhawk",
+      "netherray",
+      "birdofprey",
+      "windserpent"
     }
   },
   ["firebreath"] = {
     ["name"] = "Fire Breath",
     ["learned_by"] = {
-      "Dragonhawk"
+      "dragonhawk"
     },
     ["ranks"] = {
       {
@@ -81,8 +81,8 @@ Addon:MergeTameableAbilities({
   ["gore"] = {
     ["name"] = "Gore",
     ["learned_by"] = {
-      "Boar",
-      "Ravager"
+      "boar",
+      "ravager"
     },
     ["ranks"] = {
       {
@@ -144,7 +144,7 @@ Addon:MergeTameableAbilities({
   ["poisonspit"] = {
     ["name"] = "Poison Spit",
     ["learned_by"] = {
-      "Serpent"
+      "serpent"
     },
     ["ranks"] = {
       {
@@ -170,7 +170,7 @@ Addon:MergeTameableAbilities({
   ["warp"] = {
     ["name"] = "Warp",
     ["learned_by"] = {
-      "Warp Stalker"
+      "warpstalker"
     },
     ["ranks"] = {
       {

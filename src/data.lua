@@ -2,6 +2,7 @@ local Addon = select(2, ...) ---@type Addon
 local E = Addon:GetModule("Events")
 local EventManager = Addon:GetModule("EventManager")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
+local TameableFamilies = Addon:GetModule("TameableFamilies")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 
 -- ============================================================================
@@ -18,7 +19,7 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 --- @class TameableAbility
 --- @field name string Resolved from `spell_id` via `GetSpellInfo`.
 --- @field icon integer Resolved from `spell_id` via `GetSpellInfo`.
---- @field learned_by string[] Pet family names; empty means every family.
+--- @field learned_by TameableFamily[] Resolved from family keys; empty means every family.
 --- @field ranks TameableAbilityRank[] Ranks available on the running client.
 
 --- @class TameableAbilities : table<string, TameableAbility>
@@ -32,9 +33,7 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 
 --- @class TameableNPC
 --- @field name string
---- @field family string
---- @field type string
---- @field diet string[]
+--- @field family TameableFamily Resolved from a family key.
 --- @field level_range string A level or a range, such as `12-14`.
 --- @field min_level integer First number in `level_range`.
 --- @field classification? string
@@ -45,6 +44,13 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 --- @field location string Resolved from `zone_id` via `C_Map.GetAreaInfo`.
 
 --- @class TameableNPCs : table<string, TameableNPC>
+
+--- @class TameableFamily
+--- @field name string
+--- @field type string `Cunning`, `Ferocity`, or `Tenacity`.
+--- @field diet string[]
+
+--- @class TameableFamilies : table<string, TameableFamily>
 
 -- ============================================================================
 -- PlayerLogin
@@ -57,6 +63,11 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 EventManager:Once(E.Wow.PlayerLogin, function()
   -- Update TameableAbilities with in-game data.
   for key, ability in pairs(TameableAbilities) do
+    -- Resolve the families that can learn it from keys.
+    for i, familyKey in ipairs(ability.learned_by) do
+      ability.learned_by[i] = TameableFamilies[familyKey]
+    end
+
     -- Remove unavailable ranks.
     for i = #ability.ranks, 1, -1 do
       local rank = ability.ranks[i]
@@ -90,6 +101,8 @@ EventManager:Once(E.Wow.PlayerLogin, function()
     npc.min_level = tonumber(npc.level_range:match("%d+"))
 
     if npc.location then
+      npc.family = TameableFamilies[npc.family]
+
       -- Resolve npc's ability/rank references, and record npc_id on the
       -- matching rank. Displayed rank number is the
       -- rank's position among those still available on this client, not its

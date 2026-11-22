@@ -1,9 +1,7 @@
 {
   "npc_id": 5762,
   "name": "Deviate Moccasin",
-  "family": "Serpent",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "serpent",
   "level_range": "19",
   "classification": "Elite",
   "zone_id": 718,

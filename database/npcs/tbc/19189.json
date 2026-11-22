@@ -1,9 +1,7 @@
 {
   "npc_id": 19189,
   "name": "Quillfang Skitterer",
-  "family": "Ravager",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "ravager",
   "level_range": "61-62",
   "zone_id": 3483,
   "ui_map_id": 1944,

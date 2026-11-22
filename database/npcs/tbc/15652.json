@@ -1,9 +1,7 @@
 {
   "npc_id": 15652,
   "name": "Elder Springpaw",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "8-9",
   "zone_id": 3430,
   "ui_map_id": 1941,

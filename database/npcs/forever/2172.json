@@ -1,9 +1,7 @@
 {
   "npc_id": 2172,
   "name": "Strider Clutchmother",
-  "family": "Tallstrider",
-  "type": "Ferocity",
-  "diet": ["Cheese", "Fungus", "Fruit"],
+  "family": "tallstrider",
   "level_range": "20",
   "classification": "Rare",
   "zone_id": 148,

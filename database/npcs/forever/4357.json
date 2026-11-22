@@ -1,9 +1,7 @@
 {
   "npc_id": 4357,
   "name": "Bloodfen Lashtail",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "40-41",
   "zone_id": 15,
   "ui_map_id": 1445,

@@ -4,20 +4,20 @@ Addon:MergeTameableAbilities({
   ["bite"] = {
     ["name"] = "Bite",
     ["learned_by"] = {
-      "Bat",
-      "Bear",
-      "Boar",
-      "Carrion Bird",
-      "Cat",
-      "Crocolisk",
-      "Gorilla",
-      "Hyena",
-      "Raptor",
-      "Spider",
-      "Tallstrider",
-      "Turtle",
-      "Wind Serpent",
-      "Wolf"
+      "bat",
+      "bear",
+      "boar",
+      "carrionbird",
+      "cat",
+      "crocolisk",
+      "gorilla",
+      "hyena",
+      "raptor",
+      "spider",
+      "tallstrider",
+      "turtle",
+      "windserpent",
+      "wolf"
     },
     ["ranks"] = {
       {
@@ -79,7 +79,7 @@ Addon:MergeTameableAbilities({
   ["charge"] = {
     ["name"] = "Charge",
     ["learned_by"] = {
-      "Boar"
+      "boar"
     },
     ["ranks"] = {
       {
@@ -123,13 +123,13 @@ Addon:MergeTameableAbilities({
   ["claw"] = {
     ["name"] = "Claw",
     ["learned_by"] = {
-      "Bear",
-      "Carrion Bird",
-      "Cat",
-      "Crab",
-      "Owl",
-      "Raptor",
-      "Scorpid"
+      "bear",
+      "carrionbird",
+      "cat",
+      "crab",
+      "birdofprey",
+      "raptor",
+      "scorpid"
     },
     ["ranks"] = {
       {
@@ -239,12 +239,12 @@ Addon:MergeTameableAbilities({
   ["dash"] = {
     ["name"] = "Dash",
     ["learned_by"] = {
-      "Boar",
-      "Cat",
-      "Hyena",
-      "Raptor",
-      "Tallstrider",
-      "Wolf"
+      "boar",
+      "cat",
+      "hyena",
+      "raptor",
+      "tallstrider",
+      "wolf"
     },
     ["ranks"] = {
       {
@@ -270,10 +270,10 @@ Addon:MergeTameableAbilities({
   ["dive"] = {
     ["name"] = "Dive",
     ["learned_by"] = {
-      "Bat",
-      "Carrion Bird",
-      "Owl",
-      "Wind Serpent"
+      "bat",
+      "carrionbird",
+      "birdofprey",
+      "windserpent"
     },
     ["ranks"] = {
       {
@@ -299,7 +299,7 @@ Addon:MergeTameableAbilities({
   ["furioushowl"] = {
     ["name"] = "Furious Howl",
     ["learned_by"] = {
-      "Wolf"
+      "wolf"
     },
     ["ranks"] = {
       {
@@ -331,7 +331,7 @@ Addon:MergeTameableAbilities({
   ["lightningbreath"] = {
     ["name"] = "Lightning Breath",
     ["learned_by"] = {
-      "Wind Serpent"
+      "windserpent"
     },
     ["ranks"] = {
       {
@@ -375,7 +375,7 @@ Addon:MergeTameableAbilities({
   ["prowl"] = {
     ["name"] = "Prowl",
     ["learned_by"] = {
-      "Cat"
+      "cat"
     },
     ["ranks"] = {
       {
@@ -401,7 +401,7 @@ Addon:MergeTameableAbilities({
   ["scorpidpoison"] = {
     ["name"] = "Scorpid Poison",
     ["learned_by"] = {
-      "Scorpid"
+      "scorpid"
     },
     ["ranks"] = {
       {
@@ -439,9 +439,9 @@ Addon:MergeTameableAbilities({
   ["screech"] = {
     ["name"] = "Screech",
     ["learned_by"] = {
-      "Bat",
-      "Carrion Bird",
-      "Owl"
+      "bat",
+      "carrionbird",
+      "birdofprey"
     },
     ["ranks"] = {
       {
@@ -479,7 +479,7 @@ Addon:MergeTameableAbilities({
   ["shellshield"] = {
     ["name"] = "Shell Shield",
     ["learned_by"] = {
-      "Turtle"
+      "turtle"
     },
     ["ranks"] = {
       {
@@ -493,7 +493,7 @@ Addon:MergeTameableAbilities({
   ["thunderstomp"] = {
     ["name"] = "Thunderstomp",
     ["learned_by"] = {
-      "Gorilla"
+      "gorilla"
     },
     ["ranks"] = {
       {

@@ -1,9 +1,7 @@
 {
   "npc_id": 249493,
   "name": "Nightsaber Guardian",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "57-59",
   "zone_id": 616,
   "ui_map_id": 2482,

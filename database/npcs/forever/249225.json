@@ -1,9 +1,7 @@
 {
   "npc_id": 249225,
   "name": "Ghostfang Alpha",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "56-57",
   "zone_id": 616,
   "ui_map_id": 2482,

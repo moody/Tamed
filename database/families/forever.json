@@ -1,0 +1,10 @@
+{
+  "birdofprey": {
+    "name": "Bird of Prey"
+  },
+  "fox": {
+    "name": "Fox",
+    "type": "Ferocity",
+    "diet": ["Meat"]
+  }
+}

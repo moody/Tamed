@@ -1,9 +1,7 @@
 {
   "npc_id": 1132,
   "name": "Timber",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "10",
   "classification": "Rare",
   "zone_id": 1,

@@ -1,9 +1,7 @@
 {
   "npc_id": 259054,
   "name": "Wildplains Patriarch",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "38-39",
   "zone_id": 16591,
   "ui_map_id": 2548,

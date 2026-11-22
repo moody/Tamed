@@ -1,9 +1,7 @@
 {
   "npc_id": 10359,
   "name": "Sri'Skulk",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "13",
   "classification": "Rare",
   "zone_id": 85,

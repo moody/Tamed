@@ -1,9 +1,7 @@
 {
   "npc_id": 21123,
   "name": "Felsworn Scalewing",
-  "family": "Wind Serpent",
-  "type": "Ferocity",
-  "diet": ["Fish", "Cheese", "Bread"],
+  "family": "windserpent",
   "level_range": "66-67",
   "zone_id": 3522,
   "ui_map_id": 1949,

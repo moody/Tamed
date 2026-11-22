@@ -1,9 +1,7 @@
 {
   "npc_id": 1023,
   "name": "Mottled Razormaw",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "26-27",
   "zone_id": 11,
   "ui_map_id": 1437,

@@ -1,9 +1,7 @@
 {
   "npc_id": 1189,
   "name": "Black Bear Patriarch",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "16-17",
   "zone_id": 38,
   "ui_map_id": 1432,

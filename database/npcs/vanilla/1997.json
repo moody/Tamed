@@ -1,9 +1,7 @@
 {
   "npc_id": 1997,
   "name": "Strigid Hunter",
-  "family": "Owl",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "birdofprey",
   "level_range": "8-9",
   "zone_id": 141,
   "ui_map_id": 1438,

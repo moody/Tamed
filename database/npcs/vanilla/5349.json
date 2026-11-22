@@ -1,9 +1,7 @@
 {
   "npc_id": 5349,
   "name": "Arash-ethis",
-  "family": "Wind Serpent",
-  "type": "Ferocity",
-  "diet": ["Fish", "Cheese", "Bread"],
+  "family": "windserpent",
   "level_range": "49",
   "classification": "Rare",
   "zone_id": 357,

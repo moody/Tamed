@@ -1,9 +1,7 @@
 {
   "npc_id": 14268,
   "name": "Lord Condar",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "15-16",
   "classification": "Rare",
   "zone_id": 38,

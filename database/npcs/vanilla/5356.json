@@ -1,9 +1,7 @@
 {
   "npc_id": 5356,
   "name": "Snarler",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "42",
   "classification": "Rare",
   "zone_id": 357,

@@ -1,9 +1,7 @@
 {
   "npc_id": 2476,
   "name": "Large Loch Crocolisk",
-  "family": "Crocolisk",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "crocolisk",
   "level_range": "22",
   "classification": "Rare",
   "zone_id": 38,

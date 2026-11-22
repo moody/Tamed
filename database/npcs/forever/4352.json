@@ -1,9 +1,7 @@
 {
   "npc_id": 4352,
   "name": "Bloodfen Screecher",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "36-37",
   "zone_id": 15,
   "ui_map_id": 1445,

@@ -1,9 +1,7 @@
 {
   "npc_id": 270664,
   "name": "Venomweb Spitter",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "37-38",
   "zone_id": 16591,
   "ui_map_id": 2548,

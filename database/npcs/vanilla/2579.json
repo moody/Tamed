@@ -1,9 +1,7 @@
 {
   "npc_id": 2579,
   "name": "Mesa Buzzard",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "34-35",
   "zone_id": 45,
   "ui_map_id": 1417,

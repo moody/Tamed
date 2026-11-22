@@ -1,9 +1,7 @@
 {
   "npc_id": 263343,
   "name": "Low Plains Buzzard",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "37-38",
   "zone_id": 16591,
   "ui_map_id": 2548,

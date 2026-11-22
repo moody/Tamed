@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+import re
 import sys
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -11,6 +12,10 @@ DATA_DIR = REPO_ROOT / "src" / "data"
 FLAVORS = ["Vanilla", "TBC", "Forever"]
 
 VALID_DIETS = {"Bread", "Cheese", "Fish", "Fruit", "Fungus", "Meat"}
+VALID_TYPES = {"Cunning", "Ferocity", "Tenacity"}
+
+# Family keys are lowercase letters only.
+FAMILY_KEY_PATTERN = re.compile(r"^[a-z]+$")
 
 # Order fields land in the generated file. npc_id is excluded, it's the
 # table key, not a field. Abilities before coords so they aren't buried
@@ -18,8 +23,6 @@ VALID_DIETS = {"Bread", "Cheese", "Fish", "Fruit", "Fungus", "Meat"}
 NPC_FIELD_ORDER = [
     "name",
     "family",
-    "type",
-    "diet",
     "level_range",
     "classification",
     "zone_id",
@@ -85,17 +88,15 @@ def validateDiet(diet, fileLabel):
             )
 
 
-# Reorders npc's fields to NPC_FIELD_ORDER, validating diet and coords along
-# the way. Exits with an error on any unrecognized field.
+# Reorders npc's fields to NPC_FIELD_ORDER, validating coords along the way.
+# Exits with an error on any unrecognized field.
 def orderNpcFields(npc, fileLabel):
     ordered = {}
     for field in NPC_FIELD_ORDER:
         if field not in npc:
             continue
         value = npc[field]
-        if field == "diet":
-            validateDiet(value, fileLabel)
-        elif field == "coords":
+        if field == "coords":
             validateCoords(value, fileLabel)
         ordered[field] = value
 
@@ -120,6 +121,33 @@ def loadNpcs(flavorDir):
             sys.exit(f"duplicate npc_id {npcId} ({fileLabel})")
         npcs[npcId] = orderNpcFields(npc, fileLabel)
     return npcs
+
+
+# Loads path's families, keyed by family key, sorted for deterministic output.
+# A missing file loads as no families.
+def loadFamilies(path):
+    if not path.exists():
+        return {}
+    fileLabel = f"{path.parent.name}/{path.name}"
+    families = json.loads(path.read_text(encoding="utf-8"))
+    ordered = {}
+    for key in sorted(families):
+        family = families[key]
+        if not FAMILY_KEY_PATTERN.match(key):
+            sys.exit(f"invalid family key {key!r} in {fileLabel} (lowercase letters only)")
+        unknown = set(family) - {"name", "type", "diet"}
+        if unknown:
+            sys.exit(f"unknown field(s) {unknown} on family '{key}' ({fileLabel})")
+        if "type" in family and family["type"] not in VALID_TYPES:
+            sys.exit(
+                f"invalid type {family['type']!r} on family '{key}' ({fileLabel}) (valid: {sorted(VALID_TYPES)})"
+            )
+        if "diet" in family:
+            validateDiet(family["diet"], f"{fileLabel} family '{key}'")
+        ordered[key] = {
+            field: family[field] for field in ("name", "type", "diet") if field in family
+        }
+    return ordered
 
 
 # Loads path's abilities, keyed by ability key, sorted for deterministic output.
@@ -148,6 +176,39 @@ def writeLua(path, lines):
     path.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
+# Returns base with each record in patches merged in: a field in a patch replaces
+# the base's field as a whole, and a record not in base is added as it is. This
+# is how a flavor's files are applied over Vanilla's when the addon runs.
+def mergePatches(base, patches):
+    merged = {key: dict(record) for key, record in base.items()}
+    for key, patch in patches.items():
+        merged[key] = {**merged.get(key, {}), **patch}
+    return merged
+
+
+# Exits with an error if an NPC has an unknown family, or a family with no type
+# or diet. families is every family known on the flavor.
+def validateNpcFamilies(npcs, families, flavor):
+    for npcId, npc in npcs.items():
+        key = npc.get("family")
+        if key is None:
+            continue
+        family = families.get(key)
+        if family is None:
+            sys.exit(f"unknown family {key!r} on NPC {npcId} ({flavor})")
+        for field in ("type", "diet"):
+            if field not in family:
+                sys.exit(f"family {key!r} used by NPC {npcId} has no {field} ({flavor})")
+
+
+# Exits with an error if an ability's learned_by has an unknown family.
+def validateLearnedBy(abilities, families, flavor):
+    for key, ability in abilities.items():
+        for familyKey in ability.get("learned_by", []):
+            if familyKey not in families:
+                sys.exit(f"unknown family {familyKey!r} in learned_by of ability '{key}' ({flavor})")
+
+
 # Builds one generated Lua file's lines: a header noting it's generated,
 # then the merge call, guarded unless flavor is Vanilla.
 def flavorLines(flavor, mergeCall, tableText):
@@ -161,20 +222,43 @@ def flavorLines(flavor, mergeCall, tableText):
     return lines
 
 
-# Generate NPCs and abilities for each flavor.
+# Load every flavor first, since checking one needs Vanilla's data.
+data = {}
+for flavor in FLAVORS:
+    data[flavor] = {
+        "npcs": loadNpcs(DATABASE_DIR / "npcs" / flavor.lower()),
+        "abilities": loadAbilities(DATABASE_DIR / "abilities" / f"{flavor.lower()}.json"),
+        "families": loadFamilies(DATABASE_DIR / "families" / f"{flavor.lower()}.json"),
+    }
+
+# Generate families, NPCs, and abilities for each flavor.
 for flavor in FLAVORS:
     print(f"Generating {flavor}...", end=" ")
 
-    npcs = loadNpcs(DATABASE_DIR / "npcs" / flavor.lower())
+    flavorData = data[flavor]
+
+    # What the addon sees on this flavor: Vanilla's data with the flavor's own applied over it.
+    seen = {
+        kind: flavorData[kind] if flavor == "Vanilla" else mergePatches(data["Vanilla"][kind], flavorData[kind])
+        for kind in ("npcs", "abilities", "families")
+    }
+    validateNpcFamilies(seen["npcs"], seen["families"], flavor)
+    validateLearnedBy(seen["abilities"], seen["families"], flavor)
+
+    writeLua(
+        DATA_DIR / f"TameableFamilies-{flavor}.lua",
+        flavorLines(flavor, "MergeTameableFamilies", luaSerialize(flavorData["families"], 0)),
+    )
     writeLua(
         DATA_DIR / f"TameableNPCs-{flavor}.lua",
-        flavorLines(flavor, "MergeTameableNPCs", luaSerialize(npcs, 0)),
+        flavorLines(flavor, "MergeTameableNPCs", luaSerialize(flavorData["npcs"], 0)),
     )
-
-    abilities = loadAbilities(DATABASE_DIR / "abilities" / f"{flavor.lower()}.json")
     writeLua(
         DATA_DIR / f"TameableAbilities-{flavor}.lua",
-        flavorLines(flavor, "MergeTameableAbilities", luaSerialize(abilities, 0)),
+        flavorLines(flavor, "MergeTameableAbilities", luaSerialize(flavorData["abilities"], 0)),
     )
 
-    print(f"{len(npcs)} NPCs, {len(abilities)} abilities.")
+    print(
+        f"{len(flavorData['families'])} families, {len(flavorData['npcs'])} NPCs, "
+        f"{len(flavorData['abilities'])} abilities."
+    )

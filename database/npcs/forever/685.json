@@ -1,9 +1,7 @@
 {
   "npc_id": 685,
   "name": "Stranglethorn Raptor",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "33-34",
   "zone_id": 33,
   "ui_map_id": 1434,

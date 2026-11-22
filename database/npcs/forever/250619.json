@@ -1,9 +1,7 @@
 {
   "npc_id": 250619,
   "name": "Broodwidow",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "16",
   "classification": "Elite",
   "zone_id": 16611,

@@ -1,9 +1,7 @@
 {
   "npc_id": 5352,
   "name": "Old Grizzlegut",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "43",
   "classification": "Rare",
   "zone_id": 357,

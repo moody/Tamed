@@ -1,9 +1,7 @@
 {
   "npc_id": 1188,
   "name": "Grizzled Black Bear",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "13-14",
   "zone_id": 38,
   "ui_map_id": 1432,

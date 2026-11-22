@@ -1,9 +1,7 @@
 {
   "npc_id": 250873,
   "name": "Juvenile Vuldren",
-  "family": "Fox",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "fox",
   "level_range": "1",
   "zone_id": 16593,
   "ui_map_id": 2521,

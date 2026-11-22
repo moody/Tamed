@@ -1,9 +1,7 @@
 {
   "npc_id": 251199,
   "name": "Head Scratcher",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "60",
   "classification": "Elite",
   "zone_id": 616,

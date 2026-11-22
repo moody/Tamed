@@ -1,9 +1,7 @@
 {
   "npc_id": 3631,
   "name": "Deviate Stinglash",
-  "family": "Wind Serpent",
-  "type": "Ferocity",
-  "diet": ["Fish", "Cheese", "Bread"],
+  "family": "windserpent",
   "level_range": "16-17",
   "zone_id": 718,
   "abilities": [{ "key": "lightningbreath", "rank": 2 }],

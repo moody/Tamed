@@ -1,9 +1,7 @@
 {
   "npc_id": 266851,
   "name": "Ukorsbane",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "8",
   "classification": "Elite",
   "zone_id": 14,

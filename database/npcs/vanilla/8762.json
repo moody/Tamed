@@ -1,9 +1,7 @@
 {
   "npc_id": 8762,
   "name": "Timberweb Recluse",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "47-48",
   "zone_id": 16,
   "ui_map_id": 1447,

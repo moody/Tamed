@@ -1,9 +1,7 @@
 {
   "npc_id": 684,
   "name": "Shadowmaw Panther",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "37-38",
   "zone_id": 33,
   "ui_map_id": 1434,

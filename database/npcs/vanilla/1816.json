@@ -1,9 +1,7 @@
 {
   "npc_id": 1816,
   "name": "Diseased Grizzly",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "55-56",
   "zone_id": 28,
   "ui_map_id": 1422,

@@ -1,9 +1,7 @@
 {
   "npc_id": 3868,
   "name": "Blood Seeker",
-  "family": "Bat",
-  "type": "Ferocity",
-  "diet": ["Fungus", "Fruit"],
+  "family": "bat",
   "level_range": "23-24",
   "classification": "Elite",
   "zone_id": 209,

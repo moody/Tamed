@@ -81,9 +81,9 @@ function ComponentFactory:NpcCard(options)
       GameTooltip:SetText(Colors.Green(npc.name))
       GameTooltip:AddDoubleLine(L.LEVEL, Colors.White(NpcText:Level(npc)))
       GameTooltip:AddDoubleLine(L.ABILITIES, Colors.White(NpcText:Abilities(npc)))
-      GameTooltip:AddDoubleLine(L.FAMILY, Colors.White(npc.family))
-      GameTooltip:AddDoubleLine(L.DIET, Colors.White(table.concat(npc.diet, ", ")))
-      GameTooltip:AddDoubleLine(L.TYPE, Colors.White(npc.type))
+      GameTooltip:AddDoubleLine(L.FAMILY, Colors.White(npc.family.name))
+      GameTooltip:AddDoubleLine(L.DIET, Colors.White(table.concat(npc.family.diet, ", ")))
+      GameTooltip:AddDoubleLine(L.TYPE, Colors.White(npc.family.type))
       GameTooltip:AddDoubleLine(L.LOCATION, Colors.White(npc.location))
       GameTooltip:AddLine(" ")
       if npc.ui_map_id then
@@ -177,7 +177,7 @@ function ComponentFactory:NpcCard(options)
   --- Returns the text of the name line.
   local function getName(n) return Colors.Green(n.name) end
   --- Returns the text of the name line, with the NPC's family after the name.
-  local function getNameAndFamily(n) return Colors.Green(n.name) .. Colors.White(" · " .. n.family) end
+  local function getNameAndFamily(n) return Colors.Green(n.name) .. Colors.White(" · " .. n.family.name) end
   --- Returns the text of the level line.
   local function getLevel(n) return Colors.White(NpcText:Level(n)) end
   --- Returns the text of the location line, dimmed if the NPC has no map.
