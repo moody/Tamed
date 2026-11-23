@@ -1,9 +1,7 @@
 {
   "npc_id": 10357,
   "name": "Ressan the Needler",
-  "family": "Bat",
-  "type": "Ferocity",
-  "diet": ["Fungus", "Fruit"],
+  "family": "bat",
   "level_range": "11-12",
   "classification": "Rare",
   "zone_id": 85,

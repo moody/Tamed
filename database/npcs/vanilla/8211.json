@@ -1,9 +1,7 @@
 {
   "npc_id": 8211,
   "name": "Old Cliff Jumper",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "42",
   "classification": "Rare",
   "zone_id": 47,

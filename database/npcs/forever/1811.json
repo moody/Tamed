@@ -1,9 +1,7 @@
 {
   "npc_id": 1811,
   "name": "Plaguewing Vulture",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "56-58",
   "zone_id": 28,
   "ui_map_id": 1422,

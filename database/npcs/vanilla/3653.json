@@ -1,9 +1,7 @@
 {
   "npc_id": 3653,
   "name": "Kresh",
-  "family": "Turtle",
-  "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit"],
+  "family": "turtle",
   "level_range": "20",
   "classification": "Elite",
   "zone_id": 718,

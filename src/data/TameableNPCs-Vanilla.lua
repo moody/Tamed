@@ -3,11 +3,7 @@ local _, Addon = ...
 Addon:MergeTameableNPCs({
   ["30"] = {
     ["name"] = "Forest Spider",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "5-6",
     ["zone_id"] = 12,
     ["ui_map_id"] = 1429,
@@ -49,16 +45,7 @@ Addon:MergeTameableNPCs({
   },
   ["113"] = {
     ["name"] = "Stonetusk Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "5-6",
     ["zone_id"] = 12,
     ["ui_map_id"] = 1429,
@@ -89,11 +76,7 @@ Addon:MergeTameableNPCs({
   },
   ["118"] = {
     ["name"] = "Prowler",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "9-10",
     ["zone_id"] = 12,
     ["ui_map_id"] = 1429,
@@ -181,16 +164,7 @@ Addon:MergeTameableNPCs({
   },
   ["119"] = {
     ["name"] = "Longsnout",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "10-11",
     ["zone_id"] = 12,
     ["ui_map_id"] = 1429,
@@ -210,12 +184,7 @@ Addon:MergeTameableNPCs({
   },
   ["154"] = {
     ["name"] = "Greater Fleshripper",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "16-17",
     ["zone_id"] = 40,
     ["ui_map_id"] = 1436,
@@ -253,16 +222,7 @@ Addon:MergeTameableNPCs({
   },
   ["157"] = {
     ["name"] = "Goretusk",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "14-15",
     ["zone_id"] = 40,
     ["ui_map_id"] = 1436,
@@ -354,16 +314,7 @@ Addon:MergeTameableNPCs({
   },
   ["330"] = {
     ["name"] = "Princess",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "9",
     ["zone_id"] = 12,
     ["ui_map_id"] = 1429,
@@ -379,16 +330,7 @@ Addon:MergeTameableNPCs({
   },
   ["345"] = {
     ["name"] = "Bellygrub",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "24",
     ["zone_id"] = 44,
     ["ui_map_id"] = 1433,
@@ -413,16 +355,7 @@ Addon:MergeTameableNPCs({
   },
   ["390"] = {
     ["name"] = "Porcine Entourage",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "7",
     ["zone_id"] = 12,
     ["ui_map_id"] = 1429,
@@ -438,11 +371,7 @@ Addon:MergeTameableNPCs({
   },
   ["442"] = {
     ["name"] = "Tarantula",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "15-16",
     ["zone_id"] = 44,
     ["ui_map_id"] = 1433,
@@ -513,16 +442,7 @@ Addon:MergeTameableNPCs({
   },
   ["454"] = {
     ["name"] = "Young Goretusk",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "12-13",
     ["zone_id"] = 40,
     ["ui_map_id"] = 1436,
@@ -595,11 +515,7 @@ Addon:MergeTameableNPCs({
   },
   ["505"] = {
     ["name"] = "Greater Tarantula",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "19-20",
     ["zone_id"] = 44,
     ["ui_map_id"] = 1433,
@@ -641,11 +557,7 @@ Addon:MergeTameableNPCs({
   },
   ["521"] = {
     ["name"] = "Lupos",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "23",
     ["classification"] = "Rare",
     ["zone_id"] = 10,
@@ -704,16 +616,7 @@ Addon:MergeTameableNPCs({
   },
   ["524"] = {
     ["name"] = "Rockhide Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "7-8",
     ["zone_id"] = 12,
     ["ui_map_id"] = 1429,
@@ -801,16 +704,7 @@ Addon:MergeTameableNPCs({
   },
   ["547"] = {
     ["name"] = "Great Goretusk",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "16-17",
     ["zone_id"] = 44,
     ["ui_map_id"] = 1433,
@@ -889,11 +783,7 @@ Addon:MergeTameableNPCs({
   },
   ["569"] = {
     ["name"] = "Green Recluse",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "21-22",
     ["zone_id"] = 10,
     ["ui_map_id"] = 1431,
@@ -955,11 +845,7 @@ Addon:MergeTameableNPCs({
   },
   ["574"] = {
     ["name"] = "Naraxis",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "27",
     ["classification"] = "Rare",
     ["zone_id"] = 10,
@@ -976,11 +862,7 @@ Addon:MergeTameableNPCs({
   },
   ["616"] = {
     ["name"] = "Chatter",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "23",
     ["classification"] = "Rare",
     ["zone_id"] = 44,
@@ -1028,11 +910,7 @@ Addon:MergeTameableNPCs({
   },
   ["628"] = {
     ["name"] = "Black Ravager",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "24-25",
     ["zone_id"] = 10,
     ["ui_map_id"] = 1431,
@@ -1078,12 +956,7 @@ Addon:MergeTameableNPCs({
   },
   ["681"] = {
     ["name"] = "Young Stranglethorn Tiger",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "30-31",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -1117,12 +990,7 @@ Addon:MergeTameableNPCs({
   },
   ["682"] = {
     ["name"] = "Stranglethorn Tiger",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "32-33",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -1156,12 +1024,7 @@ Addon:MergeTameableNPCs({
   },
   ["683"] = {
     ["name"] = "Young Panther",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "30-31",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -1190,12 +1053,7 @@ Addon:MergeTameableNPCs({
   },
   ["684"] = {
     ["name"] = "Shadowmaw Panther",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "37-38",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -1239,16 +1097,7 @@ Addon:MergeTameableNPCs({
   },
   ["708"] = {
     ["name"] = "Small Crag Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "3",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -1275,12 +1124,7 @@ Addon:MergeTameableNPCs({
   },
   ["728"] = {
     ["name"] = "Bhag'thera",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "40",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -1298,12 +1142,7 @@ Addon:MergeTameableNPCs({
   },
   ["729"] = {
     ["name"] = "Sin'Dall",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "37",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -1319,12 +1158,7 @@ Addon:MergeTameableNPCs({
   },
   ["731"] = {
     ["name"] = "King Bangalash",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "43",
     ["classification"] = "Elite",
     ["zone_id"] = 33,
@@ -1346,12 +1180,7 @@ Addon:MergeTameableNPCs({
   },
   ["736"] = {
     ["name"] = "Panther",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "32-33",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -1376,12 +1205,7 @@ Addon:MergeTameableNPCs({
   },
   ["767"] = {
     ["name"] = "Swamp Jaguar",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "36-37",
     ["zone_id"] = 8,
     ["ui_map_id"] = 1435,
@@ -1446,12 +1270,7 @@ Addon:MergeTameableNPCs({
   },
   ["768"] = {
     ["name"] = "Shadow Panther",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "39-40",
     ["zone_id"] = 8,
     ["ui_map_id"] = 1435,
@@ -1513,11 +1332,7 @@ Addon:MergeTameableNPCs({
   },
   ["769"] = {
     ["name"] = "Deathstrike Tarantula",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "40-41",
     ["zone_id"] = 8,
     ["ui_map_id"] = 1435,
@@ -1682,16 +1497,7 @@ Addon:MergeTameableNPCs({
   },
   ["822"] = {
     ["name"] = "Young Forest Bear",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "8-9",
     ["zone_id"] = 12,
     ["ui_map_id"] = 1429,
@@ -1751,11 +1557,7 @@ Addon:MergeTameableNPCs({
   },
   ["833"] = {
     ["name"] = "Coyote Packleader",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "11-12",
     ["zone_id"] = 40,
     ["ui_map_id"] = 1436,
@@ -1845,11 +1647,7 @@ Addon:MergeTameableNPCs({
   },
   ["834"] = {
     ["name"] = "Coyote",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "10-11",
     ["zone_id"] = 40,
     ["ui_map_id"] = 1436,
@@ -1933,14 +1731,7 @@ Addon:MergeTameableNPCs({
   },
   ["922"] = {
     ["name"] = "Silt Crawler",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "40-41",
     ["zone_id"] = 8,
     ["ui_map_id"] = 1435,
@@ -1992,12 +1783,7 @@ Addon:MergeTameableNPCs({
   },
   ["976"] = {
     ["name"] = "Kurzen War Tiger",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "32-33",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -2013,12 +1799,7 @@ Addon:MergeTameableNPCs({
   },
   ["1087"] = {
     ["name"] = "Sawtooth Snapper",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "41-42",
     ["zone_id"] = 8,
     ["ui_map_id"] = 1435,
@@ -2175,14 +1956,7 @@ Addon:MergeTameableNPCs({
   },
   ["1088"] = {
     ["name"] = "Monstrous Crawler",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "43-44",
     ["zone_id"] = 8,
     ["ui_map_id"] = 1435,
@@ -2261,12 +2035,7 @@ Addon:MergeTameableNPCs({
   },
   ["1108"] = {
     ["name"] = "Mistvale Gorilla",
-    ["family"] = "Gorilla",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "gorilla",
     ["level_range"] = "32-33",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -2284,11 +2053,7 @@ Addon:MergeTameableNPCs({
   },
   ["1112"] = {
     ["name"] = "Leech Widow",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "24",
     ["classification"] = "Rare",
     ["zone_id"] = 11,
@@ -2307,12 +2072,7 @@ Addon:MergeTameableNPCs({
   },
   ["1114"] = {
     ["name"] = "Jungle Thunderer",
-    ["family"] = "Gorilla",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "gorilla",
     ["level_range"] = "37-38",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -2341,16 +2101,7 @@ Addon:MergeTameableNPCs({
   },
   ["1125"] = {
     ["name"] = "Crag Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "5-6",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -2399,16 +2150,7 @@ Addon:MergeTameableNPCs({
   },
   ["1126"] = {
     ["name"] = "Large Crag Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "6-7",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -2465,16 +2207,7 @@ Addon:MergeTameableNPCs({
   },
   ["1127"] = {
     ["name"] = "Elder Crag Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "7-8",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -2526,16 +2259,7 @@ Addon:MergeTameableNPCs({
   },
   ["1130"] = {
     ["name"] = "Bjarn",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "12",
     ["classification"] = "Rare",
     ["zone_id"] = 1,
@@ -2570,11 +2294,7 @@ Addon:MergeTameableNPCs({
   },
   ["1131"] = {
     ["name"] = "Winter Wolf",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "7-8",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -2606,11 +2326,7 @@ Addon:MergeTameableNPCs({
   },
   ["1132"] = {
     ["name"] = "Timber",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "10",
     ["classification"] = "Rare",
     ["zone_id"] = 1,
@@ -2642,11 +2358,7 @@ Addon:MergeTameableNPCs({
   },
   ["1133"] = {
     ["name"] = "Starving Winter Wolf",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "8-9",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -2674,11 +2386,7 @@ Addon:MergeTameableNPCs({
   },
   ["1138"] = {
     ["name"] = "Snow Tracker Wolf",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "6-7",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -2700,11 +2408,7 @@ Addon:MergeTameableNPCs({
   },
   ["1185"] = {
     ["name"] = "Wood Lurker",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "17-18",
     ["zone_id"] = 38,
     ["ui_map_id"] = 1432,
@@ -2783,16 +2487,7 @@ Addon:MergeTameableNPCs({
   },
   ["1189"] = {
     ["name"] = "Black Bear Patriarch",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "16-17",
     ["zone_id"] = 38,
     ["ui_map_id"] = 1432,
@@ -2825,16 +2520,7 @@ Addon:MergeTameableNPCs({
   },
   ["1190"] = {
     ["name"] = "Mountain Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "10-11",
     ["zone_id"] = 38,
     ["ui_map_id"] = 1432,
@@ -2891,16 +2577,7 @@ Addon:MergeTameableNPCs({
   },
   ["1191"] = {
     ["name"] = "Mangy Mountain Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "14-15",
     ["zone_id"] = 38,
     ["ui_map_id"] = 1432,
@@ -2959,16 +2636,7 @@ Addon:MergeTameableNPCs({
   },
   ["1192"] = {
     ["name"] = "Elder Mountain Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "16-17",
     ["zone_id"] = 38,
     ["ui_map_id"] = 1432,
@@ -3044,11 +2712,7 @@ Addon:MergeTameableNPCs({
   },
   ["1195"] = {
     ["name"] = "Forest Lurker",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "10-11",
     ["zone_id"] = 38,
     ["ui_map_id"] = 1432,
@@ -3129,16 +2793,7 @@ Addon:MergeTameableNPCs({
   },
   ["1196"] = {
     ["name"] = "Ice Claw Bear",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "7-8",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -3188,12 +2843,7 @@ Addon:MergeTameableNPCs({
   },
   ["1199"] = {
     ["name"] = "Juvenile Snow Leopard",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "5-6",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -3220,14 +2870,7 @@ Addon:MergeTameableNPCs({
   },
   ["1216"] = {
     ["name"] = "Shore Crawler",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "17-18",
     ["zone_id"] = 40,
     ["ui_map_id"] = 1436,
@@ -3253,16 +2896,7 @@ Addon:MergeTameableNPCs({
   },
   ["1225"] = {
     ["name"] = "Ol' Sooty",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "20",
     ["zone_id"] = 38,
     ["ui_map_id"] = 1432,
@@ -3280,11 +2914,7 @@ Addon:MergeTameableNPCs({
   },
   ["1258"] = {
     ["name"] = "Black Ravager Mastiff",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "25-26",
     ["zone_id"] = 10,
     ["ui_map_id"] = 1431,
@@ -3373,11 +3003,7 @@ Addon:MergeTameableNPCs({
   },
   ["1505"] = {
     ["name"] = "Night Web Spider",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "3-4",
     ["zone_id"] = 85,
     ["ui_map_id"] = 1420,
@@ -3395,11 +3021,7 @@ Addon:MergeTameableNPCs({
   },
   ["1509"] = {
     ["name"] = "Ragged Scavenger",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "2-3",
     ["zone_id"] = 85,
     ["ui_map_id"] = 1420,
@@ -3423,12 +3045,7 @@ Addon:MergeTameableNPCs({
   },
   ["1553"] = {
     ["name"] = "Greater Duskbat",
-    ["family"] = "Bat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bat",
     ["level_range"] = "6-7",
     ["zone_id"] = 85,
     ["ui_map_id"] = 1420,
@@ -3533,11 +3150,7 @@ Addon:MergeTameableNPCs({
   },
   ["1555"] = {
     ["name"] = "Vicious Night Web Spider",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "9-10",
     ["zone_id"] = 85,
     ["ui_map_id"] = 1420,
@@ -3567,12 +3180,7 @@ Addon:MergeTameableNPCs({
   },
   ["1557"] = {
     ["name"] = "Elder Mistvale Gorilla",
-    ["family"] = "Gorilla",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "gorilla",
     ["level_range"] = "40-41",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -3599,11 +3207,7 @@ Addon:MergeTameableNPCs({
   },
   ["1688"] = {
     ["name"] = "Night Web Matriarch",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "5",
     ["zone_id"] = 85,
     ["ui_map_id"] = 1420,
@@ -3619,16 +3223,7 @@ Addon:MergeTameableNPCs({
   },
   ["1689"] = {
     ["name"] = "Scarred Crag Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "9-10",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -3662,12 +3257,7 @@ Addon:MergeTameableNPCs({
   },
   ["1693"] = {
     ["name"] = "Loch Crocolisk",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "14-15",
     ["zone_id"] = 38,
     ["ui_map_id"] = 1432,
@@ -3715,12 +3305,7 @@ Addon:MergeTameableNPCs({
   },
   ["1713"] = {
     ["name"] = "Elder Shadowmaw Panther",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "42-43",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -3745,11 +3330,7 @@ Addon:MergeTameableNPCs({
   },
   ["1765"] = {
     ["name"] = "Worg",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "10-11",
     ["zone_id"] = 130,
     ["ui_map_id"] = 1421,
@@ -3782,16 +3363,7 @@ Addon:MergeTameableNPCs({
   },
   ["1778"] = {
     ["name"] = "Ferocious Grizzled Bear",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "11-12",
     ["zone_id"] = 130,
     ["ui_map_id"] = 1421,
@@ -3843,12 +3415,7 @@ Addon:MergeTameableNPCs({
   },
   ["1809"] = {
     ["name"] = "Carrion Vulture",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "50-52",
     ["zone_id"] = 28,
     ["ui_map_id"] = 1422,
@@ -3898,16 +3465,7 @@ Addon:MergeTameableNPCs({
   },
   ["1816"] = {
     ["name"] = "Diseased Grizzly",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "55-56",
     ["zone_id"] = 28,
     ["ui_map_id"] = 1422,
@@ -3967,11 +3525,7 @@ Addon:MergeTameableNPCs({
   },
   ["1817"] = {
     ["name"] = "Diseased Wolf",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "53-54",
     ["zone_id"] = 28,
     ["ui_map_id"] = 1422,
@@ -4031,11 +3585,7 @@ Addon:MergeTameableNPCs({
   },
   ["1824"] = {
     ["name"] = "Plague Lurker",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "54-55",
     ["zone_id"] = 28,
     ["ui_map_id"] = 1422,
@@ -4085,11 +3635,7 @@ Addon:MergeTameableNPCs({
   },
   ["1922"] = {
     ["name"] = "Gray Forest Wolf",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "7-8",
     ["zone_id"] = 12,
     ["ui_map_id"] = 1429,
@@ -4139,11 +3685,7 @@ Addon:MergeTameableNPCs({
   },
   ["1923"] = {
     ["name"] = "Bloodsnout Worg",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "16-17",
     ["zone_id"] = 130,
     ["ui_map_id"] = 1421,
@@ -4175,16 +3717,7 @@ Addon:MergeTameableNPCs({
   },
   ["1961"] = {
     ["name"] = "Mangeclaw",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "11",
     ["zone_id"] = 1,
     ["ui_map_id"] = 1426,
@@ -4200,16 +3733,7 @@ Addon:MergeTameableNPCs({
   },
   ["1984"] = {
     ["name"] = "Young Thistle Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "1-2",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -4233,16 +3757,7 @@ Addon:MergeTameableNPCs({
   },
   ["1985"] = {
     ["name"] = "Thistle Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "2-3",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -4274,11 +3789,7 @@ Addon:MergeTameableNPCs({
   },
   ["1994"] = {
     ["name"] = "Githyiss the Vile",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "5",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -4294,11 +3805,7 @@ Addon:MergeTameableNPCs({
   },
   ["1995"] = {
     ["name"] = "Strigid Owl",
-    ["family"] = "Owl",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "birdofprey",
     ["level_range"] = "5-6",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -4341,11 +3848,7 @@ Addon:MergeTameableNPCs({
   },
   ["1997"] = {
     ["name"] = "Strigid Hunter",
-    ["family"] = "Owl",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "birdofprey",
     ["level_range"] = "8-9",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -4373,11 +3876,7 @@ Addon:MergeTameableNPCs({
   },
   ["1999"] = {
     ["name"] = "Webwood Venomfang",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "7-8",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -4418,11 +3917,7 @@ Addon:MergeTameableNPCs({
   },
   ["2000"] = {
     ["name"] = "Webwood Silkspinner",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "8-9",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -4456,11 +3951,7 @@ Addon:MergeTameableNPCs({
   },
   ["2001"] = {
     ["name"] = "Giant Webwood Spider",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "10-11",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -4489,12 +3980,7 @@ Addon:MergeTameableNPCs({
   },
   ["2042"] = {
     ["name"] = "Nightsaber",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "5-6",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -4534,12 +4020,7 @@ Addon:MergeTameableNPCs({
   },
   ["2070"] = {
     ["name"] = "Moonstalker Runt",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "10-17",
     ["zone_id"] = 148,
     ["ui_map_id"] = 1439,
@@ -4617,12 +4098,7 @@ Addon:MergeTameableNPCs({
   },
   ["2089"] = {
     ["name"] = "Giant Wetlands Crocolisk",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "25-26",
     ["zone_id"] = 11,
     ["ui_map_id"] = 1437,
@@ -4652,16 +4128,7 @@ Addon:MergeTameableNPCs({
   },
   ["2163"] = {
     ["name"] = "Thistle Bear",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "11-12",
     ["zone_id"] = 148,
     ["ui_map_id"] = 1439,
@@ -4726,14 +4193,7 @@ Addon:MergeTameableNPCs({
   },
   ["2232"] = {
     ["name"] = "Tide Crawler",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "12-14",
     ["zone_id"] = 148,
     ["ui_map_id"] = 1439,
@@ -4757,12 +4217,7 @@ Addon:MergeTameableNPCs({
   },
   ["2237"] = {
     ["name"] = "Moonstalker Sire",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "17-18",
     ["zone_id"] = 148,
     ["ui_map_id"] = 1439,
@@ -4819,13 +4274,7 @@ Addon:MergeTameableNPCs({
   },
   ["2321"] = {
     ["name"] = "Foreststrider Fledgling",
-    ["family"] = "Tallstrider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Cheese",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "tallstrider",
     ["level_range"] = "11-13",
     ["zone_id"] = 148,
     ["ui_map_id"] = 1439,
@@ -4902,13 +4351,7 @@ Addon:MergeTameableNPCs({
   },
   ["2323"] = {
     ["name"] = "Giant Foreststrider",
-    ["family"] = "Tallstrider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Cheese",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "tallstrider",
     ["level_range"] = "17-19",
     ["zone_id"] = 148,
     ["ui_map_id"] = 1439,
@@ -4951,11 +4394,7 @@ Addon:MergeTameableNPCs({
   },
   ["2348"] = {
     ["name"] = "Elder Moss Creeper",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "26-27",
     ["zone_id"] = 267,
     ["ui_map_id"] = 1424,
@@ -4973,11 +4412,7 @@ Addon:MergeTameableNPCs({
   },
   ["2349"] = {
     ["name"] = "Giant Moss Creeper",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "24-25",
     ["zone_id"] = 267,
     ["ui_map_id"] = 1424,
@@ -5107,11 +4542,7 @@ Addon:MergeTameableNPCs({
   },
   ["2350"] = {
     ["name"] = "Forest Moss Creeper",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "20-21",
     ["zone_id"] = 267,
     ["ui_map_id"] = 1424,
@@ -5171,16 +4602,7 @@ Addon:MergeTameableNPCs({
   },
   ["2351"] = {
     ["name"] = "Gray Bear",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "21-22",
     ["zone_id"] = 267,
     ["ui_map_id"] = 1424,
@@ -5258,12 +4680,7 @@ Addon:MergeTameableNPCs({
   },
   ["2384"] = {
     ["name"] = "Starving Mountain Lion",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "23-24",
     ["zone_id"] = 267,
     ["ui_map_id"] = 1424,
@@ -5328,12 +4745,7 @@ Addon:MergeTameableNPCs({
   },
   ["2385"] = {
     ["name"] = "Feral Mountain Lion",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "27-28",
     ["zone_id"] = 267,
     ["ui_map_id"] = 1424,
@@ -5356,12 +4768,7 @@ Addon:MergeTameableNPCs({
   },
   ["2406"] = {
     ["name"] = "Mountain Lion",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "32-33",
     ["zone_id"] = 36,
     ["ui_map_id"] = 1416,
@@ -5390,13 +4797,7 @@ Addon:MergeTameableNPCs({
   },
   ["2408"] = {
     ["name"] = "Snapjaw",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "30-31",
     ["zone_id"] = 267,
     ["ui_map_id"] = 1424,
@@ -5437,12 +4838,7 @@ Addon:MergeTameableNPCs({
   },
   ["2476"] = {
     ["name"] = "Large Loch Crocolisk",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "22",
     ["classification"] = "Rare",
     ["zone_id"] = 38,
@@ -5487,13 +4883,7 @@ Addon:MergeTameableNPCs({
   },
   ["2505"] = {
     ["name"] = "Saltwater Snapjaw",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "49-50",
     ["zone_id"] = 47,
     ["ui_map_id"] = 1425,
@@ -5532,12 +4922,7 @@ Addon:MergeTameableNPCs({
   },
   ["2522"] = {
     ["name"] = "Jaguero Stalker",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "41",
     ["zone_id"] = 33,
     ["ui_map_id"] = 1434,
@@ -5563,11 +4948,7 @@ Addon:MergeTameableNPCs({
   },
   ["2563"] = {
     ["name"] = "Plains Creeper",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "32-33",
     ["zone_id"] = 45,
     ["ui_map_id"] = 1417,
@@ -5704,11 +5085,7 @@ Addon:MergeTameableNPCs({
   },
   ["2565"] = {
     ["name"] = "Giant Plains Creeper",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "35-36",
     ["zone_id"] = 45,
     ["ui_map_id"] = 1417,
@@ -5725,12 +5102,7 @@ Addon:MergeTameableNPCs({
   },
   ["2578"] = {
     ["name"] = "Young Mesa Buzzard",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "31-32",
     ["zone_id"] = 45,
     ["ui_map_id"] = 1417,
@@ -5926,12 +5298,7 @@ Addon:MergeTameableNPCs({
   },
   ["2579"] = {
     ["name"] = "Mesa Buzzard",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "34-35",
     ["zone_id"] = 45,
     ["ui_map_id"] = 1417,
@@ -6094,11 +5461,7 @@ Addon:MergeTameableNPCs({
   },
   ["2681"] = {
     ["name"] = "Vilebranch Raiding Wolf",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "50-51",
     ["zone_id"] = 47,
     ["ui_map_id"] = 1425,
@@ -6123,11 +5486,7 @@ Addon:MergeTameableNPCs({
   },
   ["2727"] = {
     ["name"] = "Crag Coyote",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "35-36",
     ["zone_id"] = 3,
     ["ui_map_id"] = 1418,
@@ -6196,11 +5555,7 @@ Addon:MergeTameableNPCs({
   },
   ["2728"] = {
     ["name"] = "Feral Crag Coyote",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "37-38",
     ["zone_id"] = 3,
     ["ui_map_id"] = 1418,
@@ -6275,11 +5630,7 @@ Addon:MergeTameableNPCs({
   },
   ["2729"] = {
     ["name"] = "Elder Crag Coyote",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "39-40",
     ["zone_id"] = 3,
     ["ui_map_id"] = 1418,
@@ -6430,11 +5781,7 @@ Addon:MergeTameableNPCs({
   },
   ["2730"] = {
     ["name"] = "Rabid Crag Coyote",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "42-43",
     ["zone_id"] = 3,
     ["ui_map_id"] = 1418,
@@ -6458,12 +5805,7 @@ Addon:MergeTameableNPCs({
   },
   ["2731"] = {
     ["name"] = "Ridge Stalker",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "36-37",
     ["zone_id"] = 3,
     ["ui_map_id"] = 1418,
@@ -6522,12 +5864,7 @@ Addon:MergeTameableNPCs({
   },
   ["2732"] = {
     ["name"] = "Ridge Huntress",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "38-39",
     ["zone_id"] = 3,
     ["ui_map_id"] = 1418,
@@ -6603,12 +5940,7 @@ Addon:MergeTameableNPCs({
   },
   ["2734"] = {
     ["name"] = "Ridge Stalker Patriarch",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "40-41",
     ["zone_id"] = 3,
     ["ui_map_id"] = 1418,
@@ -6692,11 +6024,7 @@ Addon:MergeTameableNPCs({
   },
   ["2753"] = {
     ["name"] = "Barnabus",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "38",
     ["classification"] = "Rare",
     ["zone_id"] = 3,
@@ -6738,12 +6066,7 @@ Addon:MergeTameableNPCs({
   },
   ["2850"] = {
     ["name"] = "Broken Tooth",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "37",
     ["classification"] = "Rare",
     ["zone_id"] = 3,
@@ -6796,11 +6119,7 @@ Addon:MergeTameableNPCs({
   },
   ["2924"] = {
     ["name"] = "Silvermane Wolf",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "43-44",
     ["zone_id"] = 47,
     ["ui_map_id"] = 1425,
@@ -6854,11 +6173,7 @@ Addon:MergeTameableNPCs({
   },
   ["2925"] = {
     ["name"] = "Silvermane Howler",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "45-46",
     ["zone_id"] = 47,
     ["ui_map_id"] = 1425,
@@ -6926,11 +6241,7 @@ Addon:MergeTameableNPCs({
   },
   ["2926"] = {
     ["name"] = "Silvermane Stalker",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "47-48",
     ["zone_id"] = 47,
     ["ui_map_id"] = 1425,
@@ -7003,12 +6314,7 @@ Addon:MergeTameableNPCs({
   },
   ["2931"] = {
     ["name"] = "Zaricotl",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "55",
     ["classification"] = "Rare Elite",
     ["zone_id"] = 3,
@@ -7166,16 +6472,7 @@ Addon:MergeTameableNPCs({
   },
   ["2954"] = {
     ["name"] = "Bristleback Battleboar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "4-5",
     ["zone_id"] = 215,
     ["ui_map_id"] = 1412,
@@ -7202,13 +6499,7 @@ Addon:MergeTameableNPCs({
   },
   ["2957"] = {
     ["name"] = "Elder Plainstrider",
-    ["family"] = "Tallstrider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Cheese",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "tallstrider",
     ["level_range"] = "8-9",
     ["zone_id"] = 215,
     ["ui_map_id"] = 1412,
@@ -7271,11 +6562,7 @@ Addon:MergeTameableNPCs({
   },
   ["2958"] = {
     ["name"] = "Prairie Wolf",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "5-6",
     ["zone_id"] = 215,
     ["ui_map_id"] = 1412,
@@ -7364,11 +6651,7 @@ Addon:MergeTameableNPCs({
   },
   ["2959"] = {
     ["name"] = "Prairie Stalker",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "7-8",
     ["zone_id"] = 215,
     ["ui_map_id"] = 1412,
@@ -7508,11 +6791,7 @@ Addon:MergeTameableNPCs({
   },
   ["2960"] = {
     ["name"] = "Prairie Wolf Alpha",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "9-10",
     ["zone_id"] = 215,
     ["ui_map_id"] = 1412,
@@ -7636,16 +6915,7 @@ Addon:MergeTameableNPCs({
   },
   ["2966"] = {
     ["name"] = "Battleboar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "3-4",
     ["zone_id"] = 215,
     ["ui_map_id"] = 1412,
@@ -7680,12 +6950,7 @@ Addon:MergeTameableNPCs({
   },
   ["3035"] = {
     ["name"] = "Flatland Cougar",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "7-8",
     ["zone_id"] = 215,
     ["ui_map_id"] = 1412,
@@ -7822,13 +7087,7 @@ Addon:MergeTameableNPCs({
   },
   ["3068"] = {
     ["name"] = "Mazzranache",
-    ["family"] = "Tallstrider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Cheese",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "tallstrider",
     ["level_range"] = "9",
     ["classification"] = "Rare",
     ["zone_id"] = 215,
@@ -7873,16 +7132,7 @@ Addon:MergeTameableNPCs({
   },
   ["3098"] = {
     ["name"] = "Mottled Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "1-2",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -7912,16 +7162,7 @@ Addon:MergeTameableNPCs({
   },
   ["3099"] = {
     ["name"] = "Dire Mottled Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "6-7",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8032,16 +7273,7 @@ Addon:MergeTameableNPCs({
   },
   ["3100"] = {
     ["name"] = "Elder Mottled Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "8-9",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8128,14 +7360,7 @@ Addon:MergeTameableNPCs({
   },
   ["3106"] = {
     ["name"] = "Pygmy Surf Crawler",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "5-6",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8179,14 +7404,7 @@ Addon:MergeTameableNPCs({
   },
   ["3108"] = {
     ["name"] = "Encrusted Surf Crawler",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "9-10",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8210,12 +7428,7 @@ Addon:MergeTameableNPCs({
   },
   ["3110"] = {
     ["name"] = "Dreadmaw Crocolisk",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "9-11",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8249,12 +7462,7 @@ Addon:MergeTameableNPCs({
   },
   ["3121"] = {
     ["name"] = "Durotar Tiger",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "7-8",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8292,11 +7500,7 @@ Addon:MergeTameableNPCs({
   },
   ["3124"] = {
     ["name"] = "Scorpid Worker",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "3",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8325,11 +7529,7 @@ Addon:MergeTameableNPCs({
   },
   ["3127"] = {
     ["name"] = "Venomtail Scorpid",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "9-10",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8379,16 +7579,7 @@ Addon:MergeTameableNPCs({
   },
   ["3225"] = {
     ["name"] = "Corrupted Mottled Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "10-11",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8417,11 +7608,7 @@ Addon:MergeTameableNPCs({
   },
   ["3226"] = {
     ["name"] = "Corrupted Scorpid",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "10-11",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8448,12 +7635,7 @@ Addon:MergeTameableNPCs({
   },
   ["3241"] = {
     ["name"] = "Savannah Patriarch",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "15-16",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8473,13 +7655,7 @@ Addon:MergeTameableNPCs({
   },
   ["3245"] = {
     ["name"] = "Ornery Plainstrider",
-    ["family"] = "Tallstrider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Cheese",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "tallstrider",
     ["level_range"] = "16-17",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8537,13 +7713,7 @@ Addon:MergeTameableNPCs({
   },
   ["3246"] = {
     ["name"] = "Fleeting Plainstrider",
-    ["family"] = "Tallstrider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Cheese",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "tallstrider",
     ["level_range"] = "12-13",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8619,13 +7789,7 @@ Addon:MergeTameableNPCs({
   },
   ["3247"] = {
     ["name"] = "Thunderhawk Hatchling",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "18-20",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8656,13 +7820,7 @@ Addon:MergeTameableNPCs({
   },
   ["3249"] = {
     ["name"] = "Greater Thunderhawk",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "23-24",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8691,11 +7849,7 @@ Addon:MergeTameableNPCs({
   },
   ["3250"] = {
     ["name"] = "Silithid Creeper",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "20-21",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8718,11 +7872,7 @@ Addon:MergeTameableNPCs({
   },
   ["3252"] = {
     ["name"] = "Silithid Swarmer",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "21-22",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8744,11 +7894,7 @@ Addon:MergeTameableNPCs({
   },
   ["3281"] = {
     ["name"] = "Sarkoth",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "4",
     ["zone_id"] = 14,
     ["ui_map_id"] = 1411,
@@ -8764,13 +7910,7 @@ Addon:MergeTameableNPCs({
   },
   ["3424"] = {
     ["name"] = "Thunderhawk Cloudscraper",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "20-22",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8794,13 +7934,7 @@ Addon:MergeTameableNPCs({
   },
   ["3461"] = {
     ["name"] = "Oasis Snapjaw",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "15-16",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8821,13 +7955,7 @@ Addon:MergeTameableNPCs({
   },
   ["3472"] = {
     ["name"] = "Washte Pawne",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "25",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -8846,12 +7974,7 @@ Addon:MergeTameableNPCs({
   },
   ["3581"] = {
     ["name"] = "Sewer Beast",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "50",
     ["classification"] = "Rare",
     ["zone_id"] = 1519,
@@ -8954,12 +8077,7 @@ Addon:MergeTameableNPCs({
   },
   ["3619"] = {
     ["name"] = "Ghost Saber",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "19-20",
     ["zone_id"] = 148,
     ["ui_map_id"] = 1439,
@@ -8988,13 +8106,7 @@ Addon:MergeTameableNPCs({
   },
   ["3630"] = {
     ["name"] = "Deviate Coiler",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "15-16",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,
@@ -9014,13 +8126,7 @@ Addon:MergeTameableNPCs({
   },
   ["3631"] = {
     ["name"] = "Deviate Stinglash",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "16-17",
     ["zone_id"] = 718,
     ["abilities"] = {
@@ -9033,13 +8139,7 @@ Addon:MergeTameableNPCs({
   },
   ["3653"] = {
     ["name"] = "Kresh",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "20",
     ["classification"] = "Elite",
     ["zone_id"] = 718,
@@ -9057,16 +8157,7 @@ Addon:MergeTameableNPCs({
   },
   ["3809"] = {
     ["name"] = "Ashenvale Bear",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "21-22",
     ["zone_id"] = 331,
     ["ui_map_id"] = 1440,
@@ -9152,16 +8243,7 @@ Addon:MergeTameableNPCs({
   },
   ["3810"] = {
     ["name"] = "Elder Ashenvale Bear",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "25-26",
     ["zone_id"] = 331,
     ["ui_map_id"] = 1440,
@@ -9201,14 +8283,7 @@ Addon:MergeTameableNPCs({
   },
   ["3812"] = {
     ["name"] = "Clattering Crawler",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "19-20",
     ["zone_id"] = 331,
     ["ui_map_id"] = 1440,
@@ -9243,11 +8318,7 @@ Addon:MergeTameableNPCs({
   },
   ["3821"] = {
     ["name"] = "Wildthorn Lurker",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "28-29",
     ["zone_id"] = 331,
     ["ui_map_id"] = 1440,
@@ -9286,11 +8357,7 @@ Addon:MergeTameableNPCs({
   },
   ["3823"] = {
     ["name"] = "Ghostpaw Runner",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "19-20",
     ["zone_id"] = 331,
     ["ui_map_id"] = 1440,
@@ -9381,11 +8448,7 @@ Addon:MergeTameableNPCs({
   },
   ["3825"] = {
     ["name"] = "Ghostpaw Alpha",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "27-28",
     ["zone_id"] = 331,
     ["ui_map_id"] = 1440,
@@ -9422,11 +8485,7 @@ Addon:MergeTameableNPCs({
   },
   ["4005"] = {
     ["name"] = "Deepmoss Creeper",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "16-17",
     ["zone_id"] = 406,
     ["ui_map_id"] = 1442,
@@ -9451,11 +8510,7 @@ Addon:MergeTameableNPCs({
   },
   ["4006"] = {
     ["name"] = "Deepmoss Webspinner",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "19-20",
     ["zone_id"] = 406,
     ["ui_map_id"] = 1442,
@@ -9482,12 +8537,7 @@ Addon:MergeTameableNPCs({
   },
   ["4067"] = {
     ["name"] = "Twilight Runner",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "23-24",
     ["zone_id"] = 406,
     ["ui_map_id"] = 1442,
@@ -9520,13 +8570,7 @@ Addon:MergeTameableNPCs({
   },
   ["4117"] = {
     ["name"] = "Cloud Serpent",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "25-26",
     ["zone_id"] = 400,
     ["ui_map_id"] = 1441,
@@ -9553,13 +8597,7 @@ Addon:MergeTameableNPCs({
   },
   ["4118"] = {
     ["name"] = "Venomous Cloud Serpent",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "26-28",
     ["zone_id"] = 400,
     ["ui_map_id"] = 1441,
@@ -9603,13 +8641,7 @@ Addon:MergeTameableNPCs({
   },
   ["4119"] = {
     ["name"] = "Elder Cloud Serpent",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "27-29",
     ["zone_id"] = 400,
     ["ui_map_id"] = 1441,
@@ -9638,12 +8670,7 @@ Addon:MergeTameableNPCs({
   },
   ["4126"] = {
     ["name"] = "Crag Stalker",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "25-26",
     ["zone_id"] = 400,
     ["ui_map_id"] = 1441,
@@ -9680,11 +8707,7 @@ Addon:MergeTameableNPCs({
   },
   ["4139"] = {
     ["name"] = "Scorpid Terror",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "33-34",
     ["zone_id"] = 400,
     ["ui_map_id"] = 1441,
@@ -9736,11 +8759,7 @@ Addon:MergeTameableNPCs({
   },
   ["4140"] = {
     ["name"] = "Scorpid Reaver",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "31-32",
     ["zone_id"] = 400,
     ["ui_map_id"] = 1441,
@@ -9810,13 +8829,7 @@ Addon:MergeTameableNPCs({
   },
   ["4143"] = {
     ["name"] = "Sparkleshell Snapper",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "34-35",
     ["zone_id"] = 400,
     ["ui_map_id"] = 1441,
@@ -9873,12 +8886,7 @@ Addon:MergeTameableNPCs({
   },
   ["4158"] = {
     ["name"] = "Salt Flats Vulture",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "32-34",
     ["zone_id"] = 400,
     ["ui_map_id"] = 1441,
@@ -9976,12 +8984,7 @@ Addon:MergeTameableNPCs({
   },
   ["4304"] = {
     ["name"] = "Scarlet Tracking Hound",
-    ["family"] = "Hyena",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fruit"
-    },
+    ["family"] = "hyena",
     ["level_range"] = "33",
     ["classification"] = "Elite",
     ["zone_id"] = 796,
@@ -9995,12 +8998,7 @@ Addon:MergeTameableNPCs({
   },
   ["4341"] = {
     ["name"] = "Drywallow Crocolisk",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "35-36",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -10017,12 +9015,7 @@ Addon:MergeTameableNPCs({
   },
   ["4343"] = {
     ["name"] = "Drywallow Snapper",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "37-38",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -10090,12 +9083,7 @@ Addon:MergeTameableNPCs({
   },
   ["4344"] = {
     ["name"] = "Mottled Drywallow Crocolisk",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "38-39",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -10168,12 +9156,7 @@ Addon:MergeTameableNPCs({
   },
   ["4345"] = {
     ["name"] = "Drywallow Daggermaw",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "39-40",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -10220,13 +9203,7 @@ Addon:MergeTameableNPCs({
   },
   ["4346"] = {
     ["name"] = "Noxious Flayer",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "35-36",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -10267,13 +9244,7 @@ Addon:MergeTameableNPCs({
   },
   ["4347"] = {
     ["name"] = "Noxious Reaver",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "37-38",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -10312,13 +9283,7 @@ Addon:MergeTameableNPCs({
   },
   ["4348"] = {
     ["name"] = "Noxious Shredder",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "38-39",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -10378,11 +9343,7 @@ Addon:MergeTameableNPCs({
   },
   ["4412"] = {
     ["name"] = "Darkfang Creeper",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "37-38",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -10448,12 +9409,7 @@ Addon:MergeTameableNPCs({
   },
   ["4425"] = {
     ["name"] = "Blind Hunter",
-    ["family"] = "Bat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bat",
     ["level_range"] = "27",
     ["classification"] = "Rare Elite",
     ["zone_id"] = 491,
@@ -10471,16 +9427,7 @@ Addon:MergeTameableNPCs({
   },
   ["4511"] = {
     ["name"] = "Agam'ar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "24-25",
     ["classification"] = "Elite",
     ["zone_id"] = 491,
@@ -10494,16 +9441,7 @@ Addon:MergeTameableNPCs({
   },
   ["4512"] = {
     ["name"] = "Rotting Agam'ar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "26",
     ["classification"] = "Elite",
     ["zone_id"] = 491,
@@ -10517,16 +9455,7 @@ Addon:MergeTameableNPCs({
   },
   ["4514"] = {
     ["name"] = "Raging Agam'ar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "25",
     ["classification"] = "Elite",
     ["zone_id"] = 491,
@@ -10540,12 +9469,7 @@ Addon:MergeTameableNPCs({
   },
   ["4538"] = {
     ["name"] = "Kraul Bat",
-    ["family"] = "Bat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bat",
     ["level_range"] = "26",
     ["classification"] = "Elite",
     ["zone_id"] = 491,
@@ -10559,12 +9483,7 @@ Addon:MergeTameableNPCs({
   },
   ["4539"] = {
     ["name"] = "Greater Kraul Bat",
-    ["family"] = "Bat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bat",
     ["level_range"] = "26",
     ["classification"] = "Elite",
     ["zone_id"] = 491,
@@ -10578,12 +9497,7 @@ Addon:MergeTameableNPCs({
   },
   ["4662"] = {
     ["name"] = "Magram Bonepaw",
-    ["family"] = "Hyena",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fruit"
-    },
+    ["family"] = "hyena",
     ["level_range"] = "37-38",
     ["zone_id"] = 405,
     ["ui_map_id"] = 1443,
@@ -10642,12 +9556,7 @@ Addon:MergeTameableNPCs({
   },
   ["4688"] = {
     ["name"] = "Bonepaw Hyena",
-    ["family"] = "Hyena",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fruit"
-    },
+    ["family"] = "hyena",
     ["level_range"] = "33-35",
     ["zone_id"] = 405,
     ["ui_map_id"] = 1443,
@@ -10737,12 +9646,7 @@ Addon:MergeTameableNPCs({
   },
   ["4693"] = {
     ["name"] = "Dread Flyer",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "36-37",
     ["zone_id"] = 405,
     ["ui_map_id"] = 1443,
@@ -10925,12 +9829,7 @@ Addon:MergeTameableNPCs({
   },
   ["4694"] = {
     ["name"] = "Dread Ripper",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "39-40",
     ["zone_id"] = 405,
     ["ui_map_id"] = 1443,
@@ -11012,11 +9911,7 @@ Addon:MergeTameableNPCs({
   },
   ["4696"] = {
     ["name"] = "Scorpashi Snapper",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "30-31",
     ["zone_id"] = 405,
     ["ui_map_id"] = 1443,
@@ -11135,11 +10030,7 @@ Addon:MergeTameableNPCs({
   },
   ["4697"] = {
     ["name"] = "Scorpashi Lasher",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "34-35",
     ["zone_id"] = 405,
     ["ui_map_id"] = 1443,
@@ -11221,11 +10112,7 @@ Addon:MergeTameableNPCs({
   },
   ["4699"] = {
     ["name"] = "Scorpashi Venomlash",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "38-39",
     ["zone_id"] = 405,
     ["ui_map_id"] = 1443,
@@ -11285,14 +10172,7 @@ Addon:MergeTameableNPCs({
   },
   ["4821"] = {
     ["name"] = "Skittering Crustacean",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "22",
     ["classification"] = "Elite",
     ["zone_id"] = 719,
@@ -11306,14 +10186,7 @@ Addon:MergeTameableNPCs({
   },
   ["4822"] = {
     ["name"] = "Snapping Crustacean",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "22-23",
     ["classification"] = "Elite",
     ["zone_id"] = 719,
@@ -11327,14 +10200,7 @@ Addon:MergeTameableNPCs({
   },
   ["4823"] = {
     ["name"] = "Barbed Crustacean",
-    ["family"] = "Crab",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "crab",
     ["level_range"] = "23",
     ["classification"] = "Elite",
     ["zone_id"] = 719,
@@ -11348,13 +10214,7 @@ Addon:MergeTameableNPCs({
   },
   ["4824"] = {
     ["name"] = "Aku'mai Fisher",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "22-23",
     ["classification"] = "Elite",
     ["zone_id"] = 719,
@@ -11372,13 +10232,7 @@ Addon:MergeTameableNPCs({
   },
   ["4825"] = {
     ["name"] = "Aku'mai Snapjaw",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "23",
     ["classification"] = "Elite",
     ["zone_id"] = 719,
@@ -11396,12 +10250,7 @@ Addon:MergeTameableNPCs({
   },
   ["4841"] = {
     ["name"] = "Deadmire",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "41",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -11444,12 +10293,7 @@ Addon:MergeTameableNPCs({
   },
   ["4861"] = {
     ["name"] = "Shrike Bat",
-    ["family"] = "Bat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bat",
     ["level_range"] = "37-38",
     ["classification"] = "Elite",
     ["zone_id"] = 1337,
@@ -11471,13 +10315,7 @@ Addon:MergeTameableNPCs({
   },
   ["4887"] = {
     ["name"] = "Ghamoo-ra",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "23",
     ["classification"] = "Elite",
     ["zone_id"] = 719,
@@ -11495,11 +10333,7 @@ Addon:MergeTameableNPCs({
   },
   ["4950"] = {
     ["name"] = "Spot",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "35",
     ["zone_id"] = 15,
     ["ui_map_id"] = 1445,
@@ -11515,12 +10349,7 @@ Addon:MergeTameableNPCs({
   },
   ["5053"] = {
     ["name"] = "Deviate Crocolisk",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "18-19",
     ["zone_id"] = 718,
     ["abilities"] = {
@@ -11533,13 +10362,7 @@ Addon:MergeTameableNPCs({
   },
   ["5056"] = {
     ["name"] = "Deviate Dreadfang",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "19",
     ["classification"] = "Elite",
     ["zone_id"] = 718,
@@ -11553,12 +10376,7 @@ Addon:MergeTameableNPCs({
   },
   ["5262"] = {
     ["name"] = "Groddoc Thunderer",
-    ["family"] = "Gorilla",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "gorilla",
     ["level_range"] = "49-50",
     ["zone_id"] = 357,
     ["ui_map_id"] = 1444,
@@ -11593,16 +10411,7 @@ Addon:MergeTameableNPCs({
   },
   ["5268"] = {
     ["name"] = "Ironfur Bear",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "41-42",
     ["zone_id"] = 357,
     ["ui_map_id"] = 1444,
@@ -11650,16 +10459,7 @@ Addon:MergeTameableNPCs({
   },
   ["5274"] = {
     ["name"] = "Ironfur Patriarch",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "48-49",
     ["zone_id"] = 357,
     ["ui_map_id"] = 1444,
@@ -11695,11 +10495,7 @@ Addon:MergeTameableNPCs({
   },
   ["5286"] = {
     ["name"] = "Longtooth Runner",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "40-41",
     ["zone_id"] = 357,
     ["ui_map_id"] = 1444,
@@ -11763,11 +10559,7 @@ Addon:MergeTameableNPCs({
   },
   ["5287"] = {
     ["name"] = "Longtooth Howler",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "43-44",
     ["zone_id"] = 357,
     ["ui_map_id"] = 1444,
@@ -11799,13 +10591,7 @@ Addon:MergeTameableNPCs({
   },
   ["5291"] = {
     ["name"] = "Hakkari Frostwing",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "48-49",
     ["classification"] = "Elite",
     ["zone_id"] = 1477,
@@ -11819,13 +10605,7 @@ Addon:MergeTameableNPCs({
   },
   ["5307"] = {
     ["name"] = "Vale Screecher",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "41-43",
     ["zone_id"] = 357,
     ["ui_map_id"] = 1444,
@@ -11855,13 +10635,7 @@ Addon:MergeTameableNPCs({
   },
   ["5308"] = {
     ["name"] = "Rogue Vale Screecher",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "44-46",
     ["zone_id"] = 357,
     ["ui_map_id"] = 1444,
@@ -11901,13 +10675,7 @@ Addon:MergeTameableNPCs({
   },
   ["5349"] = {
     ["name"] = "Arash-ethis",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "49",
     ["classification"] = "Rare",
     ["zone_id"] = 357,
@@ -11930,16 +10698,7 @@ Addon:MergeTameableNPCs({
   },
   ["5352"] = {
     ["name"] = "Old Grizzlegut",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "43",
     ["classification"] = "Rare",
     ["zone_id"] = 357,
@@ -11963,11 +10722,7 @@ Addon:MergeTameableNPCs({
   },
   ["5356"] = {
     ["name"] = "Snarler",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "42",
     ["classification"] = "Rare",
     ["zone_id"] = 357,
@@ -11997,11 +10752,7 @@ Addon:MergeTameableNPCs({
   },
   ["5422"] = {
     ["name"] = "Scorpid Hunter",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "40-41",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -12061,11 +10812,7 @@ Addon:MergeTameableNPCs({
   },
   ["5423"] = {
     ["name"] = "Scorpid Tail Lasher",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "43-44",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -12100,11 +10847,7 @@ Addon:MergeTameableNPCs({
   },
   ["5424"] = {
     ["name"] = "Scorpid Dunestalker",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "46-47",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -12133,12 +10876,7 @@ Addon:MergeTameableNPCs({
   },
   ["5425"] = {
     ["name"] = "Starving Blisterpaw",
-    ["family"] = "Hyena",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fruit"
-    },
+    ["family"] = "hyena",
     ["level_range"] = "41-42",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -12208,12 +10946,7 @@ Addon:MergeTameableNPCs({
   },
   ["5426"] = {
     ["name"] = "Blisterpaw Hyena",
-    ["family"] = "Hyena",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fruit"
-    },
+    ["family"] = "hyena",
     ["level_range"] = "44-45",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -12251,12 +10984,7 @@ Addon:MergeTameableNPCs({
   },
   ["5427"] = {
     ["name"] = "Rabid Blisterpaw",
-    ["family"] = "Hyena",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fruit"
-    },
+    ["family"] = "hyena",
     ["level_range"] = "47-48",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -12364,12 +11092,7 @@ Addon:MergeTameableNPCs({
   },
   ["5428"] = {
     ["name"] = "Roc",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "41-43",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -12395,12 +11118,7 @@ Addon:MergeTameableNPCs({
   },
   ["5429"] = {
     ["name"] = "Fire Roc",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "43-45",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -12430,12 +11148,7 @@ Addon:MergeTameableNPCs({
   },
   ["5430"] = {
     ["name"] = "Searing Roc",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "47-49",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -12515,13 +11228,7 @@ Addon:MergeTameableNPCs({
   },
   ["5708"] = {
     ["name"] = "Spawn of Hakkar",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "49",
     ["classification"] = "Elite",
     ["zone_id"] = 1477,
@@ -12539,13 +11246,7 @@ Addon:MergeTameableNPCs({
   },
   ["5756"] = {
     ["name"] = "Deviate Venomwing",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "19",
     ["classification"] = "Elite",
     ["zone_id"] = 718,
@@ -12559,11 +11260,7 @@ Addon:MergeTameableNPCs({
   },
   ["5823"] = {
     ["name"] = "Death Flayer",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "11",
     ["classification"] = "Rare",
     ["zone_id"] = 14,
@@ -12594,11 +11291,7 @@ Addon:MergeTameableNPCs({
   },
   ["5937"] = {
     ["name"] = "Vile Sting",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "35",
     ["classification"] = "Rare Elite",
     ["zone_id"] = 400,
@@ -12641,11 +11334,7 @@ Addon:MergeTameableNPCs({
   },
   ["5988"] = {
     ["name"] = "Scorpok Stinger",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "46-47",
     ["zone_id"] = 4,
     ["ui_map_id"] = 1419,
@@ -12685,16 +11374,7 @@ Addon:MergeTameableNPCs({
   },
   ["5992"] = {
     ["name"] = "Ashmane Boar",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "48-49",
     ["zone_id"] = 4,
     ["ui_map_id"] = 1419,
@@ -12724,12 +11404,7 @@ Addon:MergeTameableNPCs({
   },
   ["6013"] = {
     ["name"] = "Wayward Buzzard",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "35-37",
     ["zone_id"] = 3,
     ["ui_map_id"] = 1418,
@@ -12751,12 +11426,7 @@ Addon:MergeTameableNPCs({
   },
   ["6516"] = {
     ["name"] = "Un'Goro Thunderer",
-    ["family"] = "Gorilla",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "gorilla",
     ["level_range"] = "52-53",
     ["zone_id"] = 490,
     ["ui_map_id"] = 1449,
@@ -12778,12 +11448,7 @@ Addon:MergeTameableNPCs({
   },
   ["6585"] = {
     ["name"] = "Uhk'loc",
-    ["family"] = "Gorilla",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "gorilla",
     ["level_range"] = "52-53",
     ["classification"] = "Rare",
     ["zone_id"] = 490,
@@ -12800,16 +11465,7 @@ Addon:MergeTameableNPCs({
   },
   ["6788"] = {
     ["name"] = "Den Mother",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "18-19",
     ["zone_id"] = 148,
     ["ui_map_id"] = 1439,
@@ -12825,11 +11481,7 @@ Addon:MergeTameableNPCs({
   },
   ["7022"] = {
     ["name"] = "Venomlash Scorpid",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "37-38",
     ["classification"] = "Elite",
     ["zone_id"] = 1337,
@@ -12843,11 +11495,7 @@ Addon:MergeTameableNPCs({
   },
   ["7055"] = {
     ["name"] = "Blackrock Worg",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "54-55",
     ["zone_id"] = 46,
     ["ui_map_id"] = 1428,
@@ -12867,11 +11515,7 @@ Addon:MergeTameableNPCs({
   },
   ["7078"] = {
     ["name"] = "Cleft Scorpid",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "36",
     ["zone_id"] = 1337,
     ["abilities"] = {
@@ -12884,11 +11528,7 @@ Addon:MergeTameableNPCs({
   },
   ["7097"] = {
     ["name"] = "Ironbeak Owl",
-    ["family"] = "Owl",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "birdofprey",
     ["level_range"] = "48-49",
     ["zone_id"] = 361,
     ["ui_map_id"] = 1448,
@@ -12918,11 +11558,7 @@ Addon:MergeTameableNPCs({
   },
   ["7098"] = {
     ["name"] = "Ironbeak Screecher",
-    ["family"] = "Owl",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "birdofprey",
     ["level_range"] = "52-53",
     ["zone_id"] = 361,
     ["ui_map_id"] = 1448,
@@ -12941,11 +11577,7 @@ Addon:MergeTameableNPCs({
   },
   ["7099"] = {
     ["name"] = "Ironbeak Hunter",
-    ["family"] = "Owl",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "birdofprey",
     ["level_range"] = "50-51",
     ["zone_id"] = 361,
     ["ui_map_id"] = 1448,
@@ -12974,11 +11606,7 @@ Addon:MergeTameableNPCs({
   },
   ["7319"] = {
     ["name"] = "Lady Sathrah",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "12",
     ["zone_id"] = 141,
     ["ui_map_id"] = 1438,
@@ -12997,11 +11625,7 @@ Addon:MergeTameableNPCs({
   },
   ["7405"] = {
     ["name"] = "Deadly Cleft Scorpid",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "37-38",
     ["zone_id"] = 1337,
     ["abilities"] = {
@@ -13014,12 +11638,7 @@ Addon:MergeTameableNPCs({
   },
   ["7430"] = {
     ["name"] = "Frostsaber Cub",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "55-56",
     ["zone_id"] = 618,
     ["ui_map_id"] = 1452,
@@ -13044,12 +11663,7 @@ Addon:MergeTameableNPCs({
   },
   ["7432"] = {
     ["name"] = "Frostsaber Stalker",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "59-60",
     ["zone_id"] = 618,
     ["ui_map_id"] = 1452,
@@ -13086,12 +11700,7 @@ Addon:MergeTameableNPCs({
   },
   ["7433"] = {
     ["name"] = "Frostsaber Huntress",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "58-59",
     ["zone_id"] = 618,
     ["ui_map_id"] = 1452,
@@ -13121,16 +11730,7 @@ Addon:MergeTameableNPCs({
   },
   ["7444"] = {
     ["name"] = "Shardtooth Bear",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "53-54",
     ["zone_id"] = 618,
     ["ui_map_id"] = 1452,
@@ -13170,16 +11770,7 @@ Addon:MergeTameableNPCs({
   },
   ["7445"] = {
     ["name"] = "Elder Shardtooth",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "57-58",
     ["zone_id"] = 618,
     ["ui_map_id"] = 1452,
@@ -13219,11 +11810,7 @@ Addon:MergeTameableNPCs({
   },
   ["7455"] = {
     ["name"] = "Winterspring Owl",
-    ["family"] = "Owl",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "birdofprey",
     ["level_range"] = "54-56",
     ["zone_id"] = 618,
     ["ui_map_id"] = 1452,
@@ -13278,11 +11865,7 @@ Addon:MergeTameableNPCs({
   },
   ["7456"] = {
     ["name"] = "Winterspring Screecher",
-    ["family"] = "Owl",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "birdofprey",
     ["level_range"] = "57-59",
     ["zone_id"] = 618,
     ["ui_map_id"] = 1452,
@@ -13331,11 +11914,7 @@ Addon:MergeTameableNPCs({
   },
   ["7803"] = {
     ["name"] = "Scorpid Duneburrower",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "46-47",
     ["zone_id"] = 440,
     ["ui_map_id"] = 1446,
@@ -13351,12 +11930,7 @@ Addon:MergeTameableNPCs({
   },
   ["8207"] = {
     ["name"] = "Greater Firebird",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "46",
     ["classification"] = "Rare",
     ["zone_id"] = 440,
@@ -13386,12 +11960,7 @@ Addon:MergeTameableNPCs({
   },
   ["8208"] = {
     ["name"] = "Murderous Blisterpaw",
-    ["family"] = "Hyena",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fruit"
-    },
+    ["family"] = "hyena",
     ["level_range"] = "43",
     ["classification"] = "Rare",
     ["zone_id"] = 440,
@@ -13414,11 +11983,7 @@ Addon:MergeTameableNPCs({
   },
   ["8211"] = {
     ["name"] = "Old Cliff Jumper",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "42",
     ["classification"] = "Rare",
     ["zone_id"] = 47,
@@ -13449,13 +12014,7 @@ Addon:MergeTameableNPCs({
   },
   ["8213"] = {
     ["name"] = "Ironback",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "51",
     ["classification"] = "Rare",
     ["zone_id"] = 47,
@@ -13497,11 +12056,7 @@ Addon:MergeTameableNPCs({
   },
   ["8277"] = {
     ["name"] = "Rekk'tilac",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "48",
     ["classification"] = "Rare",
     ["zone_id"] = 51,
@@ -13542,12 +12097,7 @@ Addon:MergeTameableNPCs({
   },
   ["8299"] = {
     ["name"] = "Spiteflayer",
-    ["family"] = "Carrion Bird",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "carrionbird",
     ["level_range"] = "52",
     ["classification"] = "Rare",
     ["zone_id"] = 4,
@@ -13583,12 +12133,7 @@ Addon:MergeTameableNPCs({
   },
   ["8300"] = {
     ["name"] = "Ravage",
-    ["family"] = "Hyena",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fruit"
-    },
+    ["family"] = "hyena",
     ["level_range"] = "51",
     ["classification"] = "Rare",
     ["zone_id"] = 4,
@@ -13615,11 +12160,7 @@ Addon:MergeTameableNPCs({
   },
   ["8301"] = {
     ["name"] = "Clack the Reaver",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "53",
     ["classification"] = "Rare",
     ["zone_id"] = 4,
@@ -13660,16 +12201,7 @@ Addon:MergeTameableNPCs({
   },
   ["8303"] = {
     ["name"] = "Grunter",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "50",
     ["classification"] = "Rare",
     ["zone_id"] = 4,
@@ -13705,13 +12237,7 @@ Addon:MergeTameableNPCs({
   },
   ["8336"] = {
     ["name"] = "Hakkari Sapper",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "48-49",
     ["classification"] = "Elite",
     ["zone_id"] = 1477,
@@ -13725,12 +12251,7 @@ Addon:MergeTameableNPCs({
   },
   ["8600"] = {
     ["name"] = "Plaguebat",
-    ["family"] = "Bat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bat",
     ["level_range"] = "53-55",
     ["zone_id"] = 139,
     ["ui_map_id"] = 1423,
@@ -13871,12 +12392,7 @@ Addon:MergeTameableNPCs({
   },
   ["8601"] = {
     ["name"] = "Noxious Plaguebat",
-    ["family"] = "Bat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bat",
     ["level_range"] = "54-56",
     ["zone_id"] = 139,
     ["ui_map_id"] = 1423,
@@ -13932,12 +12448,7 @@ Addon:MergeTameableNPCs({
   },
   ["8602"] = {
     ["name"] = "Monstrous Plaguebat",
-    ["family"] = "Bat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bat",
     ["level_range"] = "56-58",
     ["zone_id"] = 139,
     ["ui_map_id"] = 1423,
@@ -13977,11 +12488,7 @@ Addon:MergeTameableNPCs({
   },
   ["8762"] = {
     ["name"] = "Timberweb Recluse",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "47-48",
     ["zone_id"] = 16,
     ["ui_map_id"] = 1447,
@@ -14024,11 +12531,7 @@ Addon:MergeTameableNPCs({
   },
   ["8926"] = {
     ["name"] = "Deep Stinger",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "50-51",
     ["zone_id"] = 1584,
     ["abilities"] = {
@@ -14041,12 +12544,7 @@ Addon:MergeTameableNPCs({
   },
   ["8927"] = {
     ["name"] = "Dark Screecher",
-    ["family"] = "Bat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bat",
     ["level_range"] = "50-51",
     ["zone_id"] = 1584,
     ["abilities"] = {
@@ -14067,11 +12565,7 @@ Addon:MergeTameableNPCs({
   },
   ["8933"] = {
     ["name"] = "Cave Creeper",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "50-51",
     ["zone_id"] = 1584,
     ["abilities"] = {
@@ -14084,16 +12578,7 @@ Addon:MergeTameableNPCs({
   },
   ["8958"] = {
     ["name"] = "Angerclaw Mauler",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "49-50",
     ["zone_id"] = 361,
     ["ui_map_id"] = 1448,
@@ -14136,11 +12621,7 @@ Addon:MergeTameableNPCs({
   },
   ["8959"] = {
     ["name"] = "Felpaw Wolf",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "47-48",
     ["zone_id"] = 361,
     ["ui_map_id"] = 1448,
@@ -14187,11 +12668,7 @@ Addon:MergeTameableNPCs({
   },
   ["8961"] = {
     ["name"] = "Felpaw Ravager",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "51-52",
     ["zone_id"] = 361,
     ["ui_map_id"] = 1448,
@@ -14233,11 +12710,7 @@ Addon:MergeTameableNPCs({
   },
   ["9416"] = {
     ["name"] = "Scarshield Worg <Scarshield Legion>",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "53-54",
     ["zone_id"] = 1583,
     ["abilities"] = {
@@ -14250,12 +12723,7 @@ Addon:MergeTameableNPCs({
   },
   ["9622"] = {
     ["name"] = "U'cha",
-    ["family"] = "Gorilla",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "gorilla",
     ["level_range"] = "55",
     ["zone_id"] = 490,
     ["ui_map_id"] = 1449,
@@ -14272,11 +12740,7 @@ Addon:MergeTameableNPCs({
   },
   ["9691"] = {
     ["name"] = "Venomtip Scorpid",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "52-53",
     ["zone_id"] = 46,
     ["ui_map_id"] = 1428,
@@ -14334,11 +12798,7 @@ Addon:MergeTameableNPCs({
   },
   ["9695"] = {
     ["name"] = "Deathlash Scorpid",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "54-55",
     ["zone_id"] = 46,
     ["ui_map_id"] = 1428,
@@ -14421,11 +12881,7 @@ Addon:MergeTameableNPCs({
   },
   ["9696"] = {
     ["name"] = "Bloodaxe Worg <Scarshield Legion>",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "56-57",
     ["zone_id"] = 1583,
     ["abilities"] = {
@@ -14446,11 +12902,7 @@ Addon:MergeTameableNPCs({
   },
   ["9698"] = {
     ["name"] = "Firetail Scorpid",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "56-57",
     ["zone_id"] = 46,
     ["ui_map_id"] = 1428,
@@ -14496,12 +12948,7 @@ Addon:MergeTameableNPCs({
   },
   ["10200"] = {
     ["name"] = "Rak'shiri",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "57",
     ["classification"] = "Rare",
     ["zone_id"] = 618,
@@ -14536,11 +12983,7 @@ Addon:MergeTameableNPCs({
   },
   ["10644"] = {
     ["name"] = "Mist Howler",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "22",
     ["classification"] = "Rare",
     ["zone_id"] = 331,
@@ -14568,13 +13011,7 @@ Addon:MergeTameableNPCs({
   },
   ["11357"] = {
     ["name"] = "Son of Hakkar",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "60",
     ["classification"] = "Elite",
     ["zone_id"] = 1977,
@@ -14588,13 +13025,7 @@ Addon:MergeTameableNPCs({
   },
   ["11359"] = {
     ["name"] = "Soulflayer",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "61",
     ["classification"] = "Elite",
     ["zone_id"] = 1977,
@@ -14608,12 +13039,7 @@ Addon:MergeTameableNPCs({
   },
   ["11365"] = {
     ["name"] = "Zulian Panther",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "60",
     ["classification"] = "Elite",
     ["zone_id"] = 1977,
@@ -14627,11 +13053,7 @@ Addon:MergeTameableNPCs({
   },
   ["11370"] = {
     ["name"] = "Razzashi Broodwidow",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "56-61",
     ["classification"] = "Elite",
     ["zone_id"] = 1977,
@@ -14645,11 +13067,7 @@ Addon:MergeTameableNPCs({
   },
   ["11735"] = {
     ["name"] = "Stonelash Scorpid",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "54-55",
     ["zone_id"] = 1377,
     ["ui_map_id"] = 1451,
@@ -14772,11 +13190,7 @@ Addon:MergeTameableNPCs({
   },
   ["11736"] = {
     ["name"] = "Stonelash Pincer",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "56",
     ["zone_id"] = 1377,
     ["ui_map_id"] = 1451,
@@ -14911,11 +13325,7 @@ Addon:MergeTameableNPCs({
   },
   ["11737"] = {
     ["name"] = "Stonelash Flayer",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "57-58",
     ["zone_id"] = 1377,
     ["ui_map_id"] = 1451,
@@ -15029,11 +13439,7 @@ Addon:MergeTameableNPCs({
   },
   ["11921"] = {
     ["name"] = "Besseleth",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "21",
     ["zone_id"] = 406,
     ["ui_map_id"] = 1442,
@@ -15052,13 +13458,7 @@ Addon:MergeTameableNPCs({
   },
   ["13599"] = {
     ["name"] = "Stolid Snapjaw",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "45-46",
     ["zone_id"] = 2100,
     ["abilities"] = {
@@ -15071,13 +13471,7 @@ Addon:MergeTameableNPCs({
   },
   ["14223"] = {
     ["name"] = "Cranky Benj",
-    ["family"] = "Turtle",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Fish",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "turtle",
     ["level_range"] = "32",
     ["classification"] = "Rare",
     ["zone_id"] = 36,
@@ -15116,12 +13510,7 @@ Addon:MergeTameableNPCs({
   },
   ["14233"] = {
     ["name"] = "Ripscale",
-    ["family"] = "Crocolisk",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "crocolisk",
     ["level_range"] = "37",
     ["classification"] = "Rare",
     ["zone_id"] = 15,
@@ -15150,11 +13539,7 @@ Addon:MergeTameableNPCs({
   },
   ["14266"] = {
     ["name"] = "Shanda the Spinner",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "19",
     ["classification"] = "Rare",
     ["zone_id"] = 38,
@@ -15175,11 +13560,7 @@ Addon:MergeTameableNPCs({
   },
   ["14279"] = {
     ["name"] = "Creepthess",
-    ["family"] = "Spider",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "spider",
     ["level_range"] = "24",
     ["classification"] = "Rare",
     ["zone_id"] = 267,
@@ -15219,11 +13600,7 @@ Addon:MergeTameableNPCs({
   },
   ["14339"] = {
     ["name"] = "Death Howl",
-    ["family"] = "Wolf",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "wolf",
     ["level_range"] = "49",
     ["classification"] = "Rare",
     ["zone_id"] = 361,
@@ -15246,11 +13623,7 @@ Addon:MergeTameableNPCs({
   },
   ["14343"] = {
     ["name"] = "Olm the Wise",
-    ["family"] = "Owl",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "birdofprey",
     ["level_range"] = "52",
     ["classification"] = "Rare",
     ["zone_id"] = 361,
@@ -15277,16 +13650,7 @@ Addon:MergeTameableNPCs({
   },
   ["14344"] = {
     ["name"] = "Mongress",
-    ["family"] = "Bear",
-    ["type"] = "Tenacity",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "bear",
     ["level_range"] = "50",
     ["classification"] = "Rare",
     ["zone_id"] = 361,
@@ -15307,11 +13671,7 @@ Addon:MergeTameableNPCs({
   },
   ["14476"] = {
     ["name"] = "Krellack",
-    ["family"] = "Scorpid",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat"
-    },
+    ["family"] = "scorpid",
     ["level_range"] = "56",
     ["classification"] = "Rare",
     ["zone_id"] = 1377,
@@ -15353,12 +13713,7 @@ Addon:MergeTameableNPCs({
   },
   ["15067"] = {
     ["name"] = "Zulian Stalker",
-    ["family"] = "Cat",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Meat",
-      "Fish"
-    },
+    ["family"] = "cat",
     ["level_range"] = "61",
     ["classification"] = "Elite",
     ["zone_id"] = 1977,
@@ -15376,16 +13731,7 @@ Addon:MergeTameableNPCs({
   },
   ["16117"] = {
     ["name"] = "Plagued Swine",
-    ["family"] = "Boar",
-    ["type"] = "Cunning",
-    ["diet"] = {
-      "Meat",
-      "Fish",
-      "Cheese",
-      "Bread",
-      "Fungus",
-      "Fruit"
-    },
+    ["family"] = "boar",
     ["level_range"] = "60",
     ["zone_id"] = 139,
     ["ui_map_id"] = 1423,
@@ -15411,13 +13757,7 @@ Addon:MergeTameableNPCs({
   },
   ["20797"] = {
     ["name"] = "Deviate Coiler Hatchling",
-    ["family"] = "Wind Serpent",
-    ["type"] = "Ferocity",
-    ["diet"] = {
-      "Fish",
-      "Cheese",
-      "Bread"
-    },
+    ["family"] = "windserpent",
     ["level_range"] = "11",
     ["zone_id"] = 17,
     ["ui_map_id"] = 1413,

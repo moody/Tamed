@@ -1,9 +1,7 @@
 {
   "npc_id": 272391,
   "name": "Moonstrider",
-  "family": "Tallstrider",
-  "type": "Ferocity",
-  "diet": ["Cheese", "Fungus", "Fruit"],
+  "family": "tallstrider",
   "level_range": "56-57",
   "zone_id": 493,
   "ui_map_id": 1450,

@@ -14,7 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - name: Install Lua 5.1
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lua5.1
       - name: Regenerate Data
         run: python3 .github/scripts/generate.py
       - name: Git Diff on Data
         run: git diff --exit-code src/data/
+      - name: Run Tests
+        if: ${{ !cancelled() }}
+        run: python3 .github/scripts/run_tests.py

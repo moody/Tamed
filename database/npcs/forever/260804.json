@@ -1,9 +1,7 @@
 {
   "npc_id": 260804,
   "name": "Highland Lurker",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "28-29",
   "classification": "Elite",
   "zone_id": 11,

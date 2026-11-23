@@ -1,9 +1,7 @@
 {
   "npc_id": 2070,
   "name": "Moonstalker Runt",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "10-17",
   "zone_id": 148,
   "ui_map_id": 1439,

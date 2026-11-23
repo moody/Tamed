@@ -1,9 +1,7 @@
 {
   "npc_id": 18155,
   "name": "Bloodfalcon",
-  "family": "Dragonhawk",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish", "Fruit"],
+  "family": "dragonhawk",
   "level_range": "69-70",
   "classification": "Elite",
   "zone_id": 3847,

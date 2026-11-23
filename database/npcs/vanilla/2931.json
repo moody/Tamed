@@ -1,9 +1,7 @@
 {
   "npc_id": 2931,
   "name": "Zaricotl",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "55",
   "classification": "Rare Elite",
   "zone_id": 3,

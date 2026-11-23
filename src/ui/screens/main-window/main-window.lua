@@ -7,6 +7,7 @@ local EventManager = Addon:GetModule("EventManager")
 local OptionsScreen = Addon:GetModule("OptionsScreen")
 local RankScreen = Addon:GetModule("RankScreen")
 local Sidebar = Addon:GetModule("Sidebar")
+local TameFinderScreen = Addon:GetModule("TameFinderScreen")
 local Widgets = Addon:GetModule("Widgets")
 
 --- @class UI
@@ -37,8 +38,8 @@ end
 
 Components.Root = ComponentFactory:Window({
   name = "MainWindow",
-  width = 720,
-  height = 540,
+  width = 800,
+  height = 600,
   titleText = "",
   frameStrata = "MEDIUM",
   refresh = function() Components.Root:Layout() end
@@ -119,6 +120,10 @@ EventManager:Once(E.DataLoaded, function()
     onSelectOptions = function()
       showContentScreen(Components.OptionsScreen)
     end,
+    onSelectTameFinder = function()
+      showContentScreen(Components.TameFinderScreen)
+      Components.TameFinderScreen:SetLevel()
+    end,
     onSelectRank = function(ability, rank)
       showContentScreen(Components.RankScreen)
       Components.RankScreen:SetRank(ability, rank)
@@ -138,6 +143,8 @@ local contentArea = mainScreenRow:AddColumn({
 Components.OptionsScreen = contentArea:AttachComponent(OptionsScreen:Build())
 
 Components.RankScreen = contentArea:AttachComponent(RankScreen:Build())
+
+Components.TameFinderScreen = contentArea:AttachComponent(TameFinderScreen:Build())
 
 -- ============================================================================
 -- UI

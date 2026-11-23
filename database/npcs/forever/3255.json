@@ -1,9 +1,7 @@
 {
   "npc_id": 3255,
   "name": "Sunscale Screecher",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "13-15",
   "zone_id": 17,
   "ui_map_id": 1413,

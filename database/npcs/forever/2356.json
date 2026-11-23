@@ -1,9 +1,7 @@
 {
   "npc_id": 2356,
   "name": "Elder Gray Bear",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "25-26",
   "zone_id": 267,
   "ui_map_id": 1424,

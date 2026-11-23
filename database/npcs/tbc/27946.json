@@ -1,9 +1,7 @@
 {
   "npc_id": 27946,
   "name": "Silvermoon Dragonhawk",
-  "family": "Dragonhawk",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish", "Fruit"],
+  "family": "dragonhawk",
   "level_range": "65",
   "classification": "Elite",
   "zone_id": 3430,

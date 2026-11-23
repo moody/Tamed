@@ -1,9 +1,7 @@
 {
   "npc_id": 251115,
   "name": "Urs'anah",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "5",
   "zone_id": 16593,
   "ui_map_id": 2521,

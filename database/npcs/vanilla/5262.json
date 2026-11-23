@@ -1,9 +1,7 @@
 {
   "npc_id": 5262,
   "name": "Groddoc Thunderer",
-  "family": "Gorilla",
-  "type": "Ferocity",
-  "diet": ["Fungus", "Fruit"],
+  "family": "gorilla",
   "level_range": "49-50",
   "zone_id": 357,
   "ui_map_id": 1444,

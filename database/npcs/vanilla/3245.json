@@ -1,9 +1,7 @@
 {
   "npc_id": 3245,
   "name": "Ornery Plainstrider",
-  "family": "Tallstrider",
-  "type": "Ferocity",
-  "diet": ["Cheese", "Fungus", "Fruit"],
+  "family": "tallstrider",
   "level_range": "16-17",
   "zone_id": 17,
   "ui_map_id": 1413,

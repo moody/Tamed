@@ -1,9 +1,7 @@
 {
   "npc_id": 6585,
   "name": "Uhk'loc",
-  "family": "Gorilla",
-  "type": "Ferocity",
-  "diet": ["Fungus", "Fruit"],
+  "family": "gorilla",
   "level_range": "52-53",
   "classification": "Rare",
   "zone_id": 490,

@@ -1,9 +1,7 @@
 {
   "npc_id": 1195,
   "name": "Forest Lurker",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "10-11",
   "zone_id": 38,
   "ui_map_id": 1432,

@@ -1,9 +1,7 @@
 {
   "npc_id": 276111,
   "name": "Ghostfang",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "10",
   "classification": "Rare",
   "zone_id": 1,

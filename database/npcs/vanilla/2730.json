@@ -1,9 +1,7 @@
 {
   "npc_id": 2730,
   "name": "Rabid Crag Coyote",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "42-43",
   "zone_id": 3,
   "ui_map_id": 1418,

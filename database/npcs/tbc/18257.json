@@ -1,9 +1,7 @@
 {
   "npc_id": 18257,
   "name": "Gutripper",
-  "family": "Owl",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "birdofprey",
   "level_range": "67",
   "classification": "Elite",
   "zone_id": 3518,

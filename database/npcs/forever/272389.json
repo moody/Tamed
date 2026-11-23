@@ -1,9 +1,7 @@
 {
   "npc_id": 272389,
   "name": "Marsh Owl",
-  "family": "Bird of Prey",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "birdofprey",
   "level_range": "34-36",
   "zone_id": 36,
   "ui_map_id": 1416,

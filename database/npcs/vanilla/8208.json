@@ -1,9 +1,7 @@
 {
   "npc_id": 8208,
   "name": "Murderous Blisterpaw",
-  "family": "Hyena",
-  "type": "Cunning",
-  "diet": ["Meat", "Fruit"],
+  "family": "hyena",
   "level_range": "43",
   "classification": "Rare",
   "zone_id": 440,

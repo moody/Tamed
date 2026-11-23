@@ -1,9 +1,7 @@
 {
   "npc_id": 4356,
   "name": "Bloodfen Razormaw",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "39-40",
   "zone_id": 15,
   "ui_map_id": 1445,

@@ -1,9 +1,7 @@
 {
   "npc_id": 8299,
   "name": "Spiteflayer",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "52",
   "classification": "Rare",
   "zone_id": 4,

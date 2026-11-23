@@ -1,6 +1,6 @@
 # Contributing
 
-Tamed's pet abilities and tameable NPCs live in `database/` as hand-editable JSON. The Lua files in `src/data/` are generated from it; do not edit them by hand.
+Tamed's pet families, abilities, and tameable NPCs live in `database/` as hand-editable JSON. The Lua files in `src/data/` are generated from it; do not edit them by hand.
 
 To report wrong or missing data without editing it yourself, open an issue with the NPC or ability, what is wrong, and where the correct information came from.
 
@@ -24,6 +24,10 @@ database/
 │   ├── vanilla.json   # every ability
 │   ├── tbc.json       # TBC differences only
 │   └── forever.json   # Forever differences only
+├── families/
+│   ├── vanilla.json   # every family
+│   ├── tbc.json       # TBC differences only
+│   └── forever.json   # Forever differences only
 └── npcs/
     ├── vanilla/       # every NPC, one file per NPC
     │   └── 10200.json
@@ -35,7 +39,7 @@ database/
 Each folder or file is a flavor: `vanilla`, `tbc`, or `forever`. `vanilla` holds the full data set. `tbc` and `forever` hold only what differs on those clients:
 
 - **A record new to the flavor** is written in full.
-- **A record that exists in `vanilla`** is written as a patch: its key (`npc_id`, or the ability's key) plus only the fields that change. Each field in a patch replaces the Vanilla field as a whole, so a patched `coords` or `ranks` list must be complete.
+- **A record that exists in `vanilla`** is written as a patch: its key (`npc_id`, or the ability's or family's key) plus only the fields that change. Each field in a patch replaces the Vanilla field as a whole, so a patched `coords` or `ranks` list must be complete.
 
 ## NPCs
 
@@ -45,9 +49,7 @@ Each NPC is one file, `database/npcs/<flavor>/<npc_id>.json`. A patch can leave 
 {
   "npc_id": 10200,
   "name": "Rak'shiri",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "57",
   "classification": "Rare",
   "zone_id": 618,
@@ -64,9 +66,7 @@ Each NPC is one file, `database/npcs/<flavor>/<npc_id>.json`. A patch can leave 
 | ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `npc_id`         | Yes      | The NPC's creature ID, also used as the file name. Shown in the NPC's Wowhead URL (`npc=10200`), or in game by targeting it and running `/dump (select(6, strsplit("-", UnitGUID("target"))))`. |
 | `name`           | Yes      | As shown in game.                                                                                                                                                                               |
-| `family`         | Yes      | As shown in game.                                                                                                                                                                               |
-| `type`           | Yes      | `Ferocity`, `Cunning`, or `Tenacity`.                                                                                                                                                           |
-| `diet`           | Yes      | Any of `Bread`, `Cheese`, `Fish`, `Fruit`, `Fungus`, `Meat`.                                                                                                                                    |
+| `family`         | Yes      | A family key from `database/families/`. The family sets the NPC's type and diet.                                                                                                                |
 | `level_range`    | Yes      | A single level (`"57"`) or a range (`"24-25"`). NPCs are sorted by the first number.                                                                                                            |
 | `classification` | No       | `Elite`, `Rare`, or `Rare Elite`.                                                                                                                                                               |
 | `zone_id`        | Yes      | The zone's area ID, shown in its Wowhead URL (`zone=618`). An NPC whose `zone_id` the client does not recognize is not shown. Check it in game with `/dump C_Map.GetAreaInfo(618)`.             |
@@ -82,6 +82,26 @@ To record the map and a spawn point while standing at it, run:
 
 It prints the map ID (`ui_map_id`) followed by the position, ready to paste into `coords`. The printed map ID must match the NPC's `ui_map_id`; inside a subzone it can differ.
 
+## Families
+
+Families are keyed by a lowercase ID, letters only, in `database/families/<flavor>.json`. A patch can leave out any required field.
+
+```json
+{
+  "cat": {
+    "name": "Cat",
+    "type": "Ferocity",
+    "diet": ["Meat", "Fish"]
+  }
+}
+```
+
+| Field  | Required | Description                                                                                                            |
+| ------ | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `name` | Yes      | As shown in game on that flavor. A patch can rename a family for one flavor (Owl on Vanilla, Bird of Prey on Forever). |
+| `type` | Yes      | `Ferocity`, `Cunning`, or `Tenacity`. Only a family that an NPC uses needs it.                                         |
+| `diet` | Yes      | Any of `Bread`, `Cheese`, `Fish`, `Fruit`, `Fungus`, `Meat`. Only a family that an NPC uses needs it.                  |
+
 ## Abilities
 
 Abilities are keyed by a short lowercase ID in `database/abilities/<flavor>.json`. A patch can leave out any required field.
@@ -90,7 +110,7 @@ Abilities are keyed by a short lowercase ID in `database/abilities/<flavor>.json
 {
   "charge": {
     "name": "Charge",
-    "learned_by": ["Boar"],
+    "learned_by": ["boar"],
     "ranks": [
       { "rank": 1, "spell_id": 7371, "pet_level": 1, "training_cost": 5 },
       { "rank": 2, "spell_id": 26177, "pet_level": 12, "training_cost": 9 }
@@ -99,11 +119,11 @@ Abilities are keyed by a short lowercase ID in `database/abilities/<flavor>.json
 }
 ```
 
-| Field        | Required | Description                                                   |
-| ------------ | -------- | ------------------------------------------------------------- |
-| `name`       | Yes      | For readability. The name shown in game comes from the spell. |
-| `learned_by` | Yes      | The pet families that can learn it. `[]` means every family.  |
-| `ranks`      | Yes      | The ability's ranks, each with the fields below.              |
+| Field        | Required | Description                                                              |
+| ------------ | -------- | ------------------------------------------------------------------------ |
+| `name`       | Yes      | For readability. The name shown in game comes from the spell.            |
+| `learned_by` | Yes      | The keys of the pet families that can learn it. `[]` means every family. |
+| `ranks`      | Yes      | The ability's ranks, each with the fields below.                         |
 
 | Rank field      | Required | Description                                                   |
 | --------------- | -------- | ------------------------------------------------------------- |
@@ -122,7 +142,7 @@ After editing, regenerate `src/data/` from the repository root. It needs Python 
 python3 .github/scripts/generate.py
 ```
 
-The script exits with an error on an unknown field, a duplicate `npc_id`, or an unknown `diet` value.
+The script exits with an error on an unknown field, a duplicate `npc_id`, an unknown `diet` or `type` value, or a family key that no family has.
 
 Commit the changes in both `database/` and `src/data/`. CI regenerates `src/data/` and fails if it differs from what was committed.
 
@@ -134,7 +154,14 @@ Commit the changes in both `database/` and `src/data/`. CI regenerates `src/data
 - each NPC appears under that rank with the right name, level, and location;
 - its tooltip lists the right details;
 - clicking it opens the right map, with pins where the NPC spawns;
-- hovering the NPC in the world shows its abilities in the tooltip, if NPC tooltips are enabled.
+- hovering the NPC in the world shows its abilities in the tooltip, if NPC tooltips are enabled;
+- with the Tame Finder's level set to the NPC's level, the NPC is listed if it teaches the highest rank of one of its abilities.
+
+To run the automated tests after changing `src/`, run this from the repository root. It needs Python 3 and Lua 5.1 as `lua`:
+
+```sh
+python .github/scripts/run_tests.py
+```
 
 ## Submitting
 

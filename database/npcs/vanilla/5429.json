@@ -1,9 +1,7 @@
 {
   "npc_id": 5429,
   "name": "Fire Roc",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "43-45",
   "zone_id": 440,
   "ui_map_id": 1446,

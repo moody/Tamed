@@ -1,9 +1,7 @@
 {
   "npc_id": 255887,
   "name": "Slydris",
-  "family": "Fox",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "fox",
   "level_range": "6",
   "classification": "Rare Elite",
   "zone_id": 16593,

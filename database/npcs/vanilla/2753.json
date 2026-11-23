@@ -1,9 +1,7 @@
 {
   "npc_id": 2753,
   "name": "Barnabus",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "38",
   "classification": "Rare",
   "zone_id": 3,

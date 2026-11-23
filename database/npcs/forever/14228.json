@@ -1,9 +1,7 @@
 {
   "npc_id": 14228,
   "name": "Giggler",
-  "family": "Hyena",
-  "type": "Cunning",
-  "diet": ["Meat", "Fruit"],
+  "family": "hyena",
   "level_range": "34",
   "classification": "Rare",
   "zone_id": 405,

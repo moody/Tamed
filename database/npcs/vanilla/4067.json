@@ -1,9 +1,7 @@
 {
   "npc_id": 4067,
   "name": "Twilight Runner",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "23-24",
   "zone_id": 406,
   "ui_map_id": 1442,

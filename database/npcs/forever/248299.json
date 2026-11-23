@@ -1,9 +1,7 @@
 {
   "npc_id": 248299,
   "name": "Elmpaw",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "12",
   "classification": "Elite",
   "zone_id": 12,

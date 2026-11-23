@@ -1,9 +1,7 @@
 {
   "npc_id": 17527,
   "name": "Enraged Ravager",
-  "family": "Ravager",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "ravager",
   "level_range": "16-17",
   "zone_id": 3525,
   "ui_map_id": 1950,

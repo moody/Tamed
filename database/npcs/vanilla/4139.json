@@ -1,9 +1,7 @@
 {
   "npc_id": 4139,
   "name": "Scorpid Terror",
-  "family": "Scorpid",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "scorpid",
   "level_range": "33-34",
   "zone_id": 400,
   "ui_map_id": 1441,

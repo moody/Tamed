@@ -1,9 +1,7 @@
 {
   "npc_id": 2323,
   "name": "Giant Foreststrider",
-  "family": "Tallstrider",
-  "type": "Ferocity",
-  "diet": ["Cheese", "Fungus", "Fruit"],
+  "family": "tallstrider",
   "level_range": "17-19",
   "zone_id": 148,
   "ui_map_id": 1439,

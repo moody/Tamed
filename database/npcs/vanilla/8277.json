@@ -1,9 +1,7 @@
 {
   "npc_id": 8277,
   "name": "Rekk'tilac",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "48",
   "classification": "Rare",
   "zone_id": 51,

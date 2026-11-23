@@ -1,9 +1,7 @@
 {
   "npc_id": 471,
   "name": "Mother Fang",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "7-10",
   "classification": "Elite",
   "zone_id": 12,

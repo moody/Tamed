@@ -1,9 +1,7 @@
 {
   "npc_id": 4348,
   "name": "Noxious Shredder",
-  "family": "Wind Serpent",
-  "type": "Ferocity",
-  "diet": ["Fish", "Cheese", "Bread"],
+  "family": "windserpent",
   "level_range": "38-39",
   "zone_id": 15,
   "ui_map_id": 1445,

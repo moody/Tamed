@@ -1,9 +1,7 @@
 {
   "npc_id": 256040,
   "name": "Deep Widow",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "15-16",
   "classification": "Elite",
   "zone_id": 16611,

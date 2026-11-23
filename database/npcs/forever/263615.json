@@ -1,9 +1,7 @@
 {
   "npc_id": 263615,
   "name": "Krek the Noxious",
-  "family": "Turtle",
-  "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit"],
+  "family": "turtle",
   "level_range": "42",
   "classification": "Elite",
   "zone_id": 16591,

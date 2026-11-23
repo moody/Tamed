@@ -1,9 +1,7 @@
 {
   "npc_id": 250484,
   "name": "Spider",
-  "family": "Spider",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "spider",
   "level_range": "15-16",
   "classification": "Elite",
   "zone_id": 16611,

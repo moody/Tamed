@@ -1,9 +1,7 @@
 {
   "npc_id": 276101,
   "name": "Nightscreech",
-  "family": "Bird of Prey",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "birdofprey",
   "level_range": "10",
   "classification": "Rare",
   "zone_id": 141,

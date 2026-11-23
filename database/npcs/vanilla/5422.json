@@ -1,9 +1,7 @@
 {
   "npc_id": 5422,
   "name": "Scorpid Hunter",
-  "family": "Scorpid",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "scorpid",
   "level_range": "40-41",
   "zone_id": 440,
   "ui_map_id": 1446,

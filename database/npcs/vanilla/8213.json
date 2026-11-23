@@ -1,9 +1,7 @@
 {
   "npc_id": 8213,
   "name": "Ironback",
-  "family": "Turtle",
-  "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit"],
+  "family": "turtle",
   "level_range": "51",
   "classification": "Rare",
   "zone_id": 47,

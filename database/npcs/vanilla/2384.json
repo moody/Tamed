@@ -1,9 +1,7 @@
 {
   "npc_id": 2384,
   "name": "Starving Mountain Lion",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "23-24",
   "zone_id": 267,
   "ui_map_id": 1424,

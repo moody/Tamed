@@ -1,9 +1,7 @@
 {
   "npc_id": 3461,
   "name": "Oasis Snapjaw",
-  "family": "Turtle",
-  "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit"],
+  "family": "turtle",
   "level_range": "15-16",
   "zone_id": 17,
   "ui_map_id": 1413,

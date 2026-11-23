@@ -1,9 +1,7 @@
 {
   "npc_id": 1713,
   "name": "Elder Shadowmaw Panther",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "42-43",
   "zone_id": 33,
   "ui_map_id": 1434,

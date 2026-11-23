@@ -1,9 +1,7 @@
 {
   "npc_id": 263380,
   "name": "Ghostmaw",
-  "family": "Crocolisk",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "crocolisk",
   "level_range": "42",
   "classification": "Elite",
   "zone_id": 16591,

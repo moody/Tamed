@@ -1,9 +1,7 @@
 {
   "npc_id": 118,
   "name": "Prowler",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "9-10",
   "zone_id": 12,
   "ui_map_id": 1429,

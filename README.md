@@ -7,6 +7,14 @@ Supports Vanilla, The Burning Crusade, and WoW Forever.
 ![Tamed](/.github/images/Tamed.png?raw=true)
 ![Pins](/.github/images/Pins.png?raw=true)
 
+## Features
+
+- **Tame Finder** — lists the NPCs that teach the highest rank of each ability you can tame, at your level or a level you choose. It shows NPCs in every zone or only your current zone, and can be filtered by ability to list only the NPCs that teach all of the abilities you select.
+- **Ability ranks** — every pet ability and its ranks, with the pet level, training cost, and families that can learn each rank, and the NPCs that teach it.
+- **Map pins** — clicking an NPC opens the world map and pins where it spawns.
+- **NPC tooltips** — the abilities an NPC teaches are added to its tooltip. This can be turned off in Options.
+- **Minimap icon** — left-click toggles Tamed and right-click clears the map pins. This can be turned off in Options.
+
 ## Commands
 
 ### Toggle

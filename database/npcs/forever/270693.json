@@ -1,9 +1,7 @@
 {
   "npc_id": 270693,
   "name": "Daggerfang",
-  "family": "Crocolisk",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "crocolisk",
   "level_range": "15",
   "zone_id": 38,
   "ui_map_id": 1432,

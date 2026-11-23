@@ -1,9 +1,7 @@
 {
   "npc_id": 2561,
   "name": "Highland Fleshstalker",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "36-37",
   "zone_id": 45,
   "ui_map_id": 1417,

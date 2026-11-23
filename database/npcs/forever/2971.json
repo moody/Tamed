@@ -1,9 +1,7 @@
 {
   "npc_id": 2971,
   "name": "Taloned Swoop",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "8-10",
   "zone_id": 215,
   "ui_map_id": 1412,

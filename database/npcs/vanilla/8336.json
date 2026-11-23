@@ -1,9 +1,7 @@
 {
   "npc_id": 8336,
   "name": "Hakkari Sapper",
-  "family": "Wind Serpent",
-  "type": "Ferocity",
-  "diet": ["Fish", "Cheese", "Bread"],
+  "family": "windserpent",
   "level_range": "48-49",
   "classification": "Elite",
   "zone_id": 1477,

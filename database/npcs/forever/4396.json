@@ -1,9 +1,7 @@
 {
   "npc_id": 4396,
   "name": "Mudrock Tortoise",
-  "family": "Turtle",
-  "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit"],
+  "family": "turtle",
   "level_range": "36-37",
   "zone_id": 15,
   "ui_map_id": 1445,

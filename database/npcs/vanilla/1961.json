@@ -1,9 +1,7 @@
 {
   "npc_id": 1961,
   "name": "Mangeclaw",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "11",
   "zone_id": 1,
   "ui_map_id": 1426,

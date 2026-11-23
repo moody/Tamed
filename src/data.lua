@@ -1,9 +1,8 @@
 local Addon = select(2, ...) ---@type Addon
-local Colors = Addon:GetModule("Colors")
 local E = Addon:GetModule("Events")
 local EventManager = Addon:GetModule("EventManager")
-local L = Addon:GetModule("Locale")
 local TameableAbilities = Addon:GetModule("TameableAbilities")
+local TameableFamilies = Addon:GetModule("TameableFamilies")
 local TameableNPCs = Addon:GetModule("TameableNPCs")
 
 -- ============================================================================
@@ -20,7 +19,7 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 --- @class TameableAbility
 --- @field name string Resolved from `spell_id` via `GetSpellInfo`.
 --- @field icon integer Resolved from `spell_id` via `GetSpellInfo`.
---- @field learned_by string[] Pet family names; empty means every family.
+--- @field learned_by TameableFamily[] Resolved from family keys; empty means every family.
 --- @field ranks TameableAbilityRank[] Ranks available on the running client.
 
 --- @class TameableAbilities : table<string, TameableAbility>
@@ -28,21 +27,30 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 --- Map position as `{x, y}` percentages (0 to 100).
 --- @alias TameableNPCCoord [number, number]
 
+--- @class TameableNPCAbility
+--- @field ability TameableAbility
+--- @field rank integer The displayed rank: its position among the ranks available on the running client.
+
 --- @class TameableNPC
 --- @field name string
---- @field family string
---- @field type string
---- @field diet string[]
---- @field level_range string Includes `classification`, if any, once resolved.
+--- @field family TameableFamily Resolved from a family key.
+--- @field level_range string A level or a range, such as `12-14`.
 --- @field min_level integer First number in `level_range`.
 --- @field classification? string
 --- @field zone_id integer
 --- @field ui_map_id? integer
---- @field abilities string[] Formatted display strings, not `{key, rank}` entries.
+--- @field abilities TameableNPCAbility[] Sorted by ability name. Resolved from `{key, rank}` entries.
 --- @field coords TameableNPCCoord[]
 --- @field location string Resolved from `zone_id` via `C_Map.GetAreaInfo`.
 
 --- @class TameableNPCs : table<string, TameableNPC>
+
+--- @class TameableFamily
+--- @field name string
+--- @field type string `Cunning`, `Ferocity`, or `Tenacity`.
+--- @field diet string[]
+
+--- @class TameableFamilies : table<string, TameableFamily>
 
 -- ============================================================================
 -- PlayerLogin
@@ -55,6 +63,11 @@ local TameableNPCs = Addon:GetModule("TameableNPCs")
 EventManager:Once(E.Wow.PlayerLogin, function()
   -- Update TameableAbilities with in-game data.
   for key, ability in pairs(TameableAbilities) do
+    -- Resolve the families that can learn it from keys.
+    for i, familyKey in ipairs(ability.learned_by) do
+      ability.learned_by[i] = TameableFamilies[familyKey]
+    end
+
     -- Remove unavailable ranks.
     for i = #ability.ranks, 1, -1 do
       local rank = ability.ranks[i]
@@ -88,42 +101,27 @@ EventManager:Once(E.Wow.PlayerLogin, function()
     npc.min_level = tonumber(npc.level_range:match("%d+"))
 
     if npc.location then
-      -- Add `classification` to `level_range`.
-      if npc.classification then
-        npc.level_range = ("%s (%s)"):format(
-          npc.level_range,
-          Colors.Gold(npc.classification)
-        )
-      end
+      npc.family = TameableFamilies[npc.family]
 
-      -- Resolve npc's ability/rank references into display strings, and
-      -- record npc_id on the matching rank. Displayed rank number is the
+      -- Resolve npc's ability/rank references, and record npc_id on the
+      -- matching rank. Displayed rank number is the
       -- rank's position among those still available on this client, not its
       -- original number: removing an earlier rank shifts the rest.
-      local abilities = {}
+      local resolved = {}
       for _, entry in ipairs(npc.abilities) do
         local ability = TameableAbilities[entry.key]
         if ability then
           for rankIndex, rank in ipairs(ability.ranks) do
             if rank.rank == entry.rank then
-              abilities[#abilities + 1] = {
-                ability.name,
-                ("|T%s:0|t %s |cFF9D9D9D(%s %s)|r"):format(
-                  ability.icon,
-                  ability.name,
-                  L.RANK,
-                  rankIndex
-                )
-              }
+              resolved[#resolved + 1] = { ability = ability, rank = rankIndex }
               rank.npc_ids[#rank.npc_ids + 1] = npc_id
               break
             end
           end
         end
       end
-      table.sort(abilities, function(a, b) return a[1] < b[1] end)
-      npc.abilities = {}
-      for _, v in ipairs(abilities) do npc.abilities[#npc.abilities + 1] = v[2] end
+      table.sort(resolved, function(a, b) return a.ability.name < b.ability.name end)
+      npc.abilities = resolved
     else
       TameableNPCs[npc_id] = nil
     end

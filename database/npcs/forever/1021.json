@@ -1,9 +1,7 @@
 {
   "npc_id": 1021,
   "name": "Mottled Screecher",
-  "family": "Raptor",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "raptor",
   "level_range": "24-25",
   "zone_id": 11,
   "ui_map_id": 1437,

@@ -1,9 +1,7 @@
 {
   "npc_id": 274300,
   "name": "Coldrasp",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "12",
   "classification": "Rare",
   "zone_id": 85,

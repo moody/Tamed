@@ -2,6 +2,7 @@ local Addon = select(2, ...) ---@type Addon
 local Colors = Addon:GetModule("Colors")
 local HBDPins = Addon:GetLibrary("HBDPins")
 local L = Addon:GetModule("Locale")
+local NpcText = Addon:GetModule("NpcText")
 local PinHelper = Addon:GetModule("PinHelper")
 local Widgets = Addon:GetModule("Widgets")
 
@@ -27,15 +28,31 @@ local function showOnMap(npc)
 end
 
 -- =============================================================================
+-- LuaCATS Annotations
+-- =============================================================================
+
+--- @class NpcCardOptions
+--- @field showAbilities? boolean Shows the family after the name and a line of abilities under it.
+
+-- =============================================================================
 -- ComponentFactory - NpcCard
 -- =============================================================================
 
---- Creates a card showing an NPC's name, level, and location. Hovering shows
---- the NPC tooltip; clicking shows the NPC on the map, if it has a `ui_map_id`.
+--- Creates a card showing an NPC's name, level, and location. Hovering
+--- shows the NPC tooltip; clicking shows the NPC on the map, if it has a `ui_map_id`.
+--- @param options? NpcCardOptions
 --- @return NpcCardComponent card
-function ComponentFactory:NpcCard()
+function ComponentFactory:NpcCard(options)
+  options = options or {}
+
   --- @type TameableNPC?
   local npc
+
+  --- Text of the abilities line, when `options.showAbilities` is set.
+  local abilitiesText = ""
+
+  --- Font of a text line that does not set its own.
+  local textFont = options.showAbilities and "GameFontNormal" or "GameFontNormalSmall"
 
   --- @type { node: WaffleFlexComponent<FontString>, getText: fun(npc: TameableNPC): string }[]
   local textLines = {}
@@ -62,11 +79,11 @@ function ComponentFactory:NpcCard()
     if npc then
       GameTooltip:SetOwner(frame, "ANCHOR_TOP")
       GameTooltip:SetText(Colors.Green(npc.name))
-      GameTooltip:AddDoubleLine(L.LEVEL, Colors.White(npc.level_range))
-      GameTooltip:AddDoubleLine(L.ABILITIES, Colors.White(table.concat(npc.abilities, ", ")))
-      GameTooltip:AddDoubleLine(L.FAMILY, Colors.White(npc.family))
-      GameTooltip:AddDoubleLine(L.DIET, Colors.White(table.concat(npc.diet, ", ")))
-      GameTooltip:AddDoubleLine(L.TYPE, Colors.White(npc.type))
+      GameTooltip:AddDoubleLine(L.LEVEL, Colors.White(NpcText:Level(npc)))
+      GameTooltip:AddDoubleLine(L.ABILITIES, Colors.White(NpcText:Abilities(npc)))
+      GameTooltip:AddDoubleLine(L.FAMILY, Colors.White(npc.family.name))
+      GameTooltip:AddDoubleLine(L.DIET, Colors.White(table.concat(npc.family.diet, ", ")))
+      GameTooltip:AddDoubleLine(L.TYPE, Colors.White(npc.family.type))
       GameTooltip:AddDoubleLine(L.LOCATION, Colors.White(npc.location))
       GameTooltip:AddLine(" ")
       if npc.ui_map_id then
@@ -125,21 +142,24 @@ function ComponentFactory:NpcCard()
     end,
   })
 
-  -- Name, level, and location.
-  local info = card:AddRow({ height = "AUTO", gap = Widgets:Padding(0.25), align = "CENTER" })
+  -- Name, level, and location in a row, with the abilities line under them.
+  local body = card:AddColumn({ height = "AUTO", gap = Widgets:Padding(0.5) })
+  local info = body:AddRow({ height = "AUTO", gap = Widgets:Padding(0.25), align = "CENTER" })
 
-  --- Adds a text line filled in by `getText` for the current NPC.
+  --- Adds a text line to `container`, filled in by `getText` for the current NPC.
+  --- @param container WaffleFlexComponent
   --- @param justify "LEFT" | "CENTER" | "RIGHT"
   --- @param columnWidth? integer Without it, the line takes the width left over.
   --- @param getText fun(npc: TameableNPC): string
-  local function addTextLine(justify, columnWidth, getText)
-    local node = info:AddChild({
+  --- @param font? string Defaults to the card's text font.
+  local function addTextLine(container, justify, columnWidth, getText, font)
+    local node = container:AddChild({
       width = columnWidth,
       height = "AUTO",
 
       --- @param parent Frame
       frameFactory = function(parent)
-        local fontString = parent:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
+        local fontString = parent:CreateFontString(nil, "ARTWORK", font or textFont)
         fontString:SetJustifyH(justify)
         fontString:SetText(npc and getText(npc) or "")
         return fontString
@@ -154,17 +174,29 @@ function ComponentFactory:NpcCard()
     textLines[#textLines + 1] = { node = node, getText = getText }
   end
 
-  addTextLine("LEFT", nil, function(n) return Colors.Green(n.name) end)
-  addTextLine("CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, function(n) return Colors.White(n.level_range) end)
-  addTextLine("RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, function(n)
-    local color = n.ui_map_id and Colors.LightGrey or Colors.DimGrey
-    return color(n.location)
-  end)
+  --- Returns the text of the name line.
+  local function getName(n) return Colors.Green(n.name) end
+  --- Returns the text of the name line, with the NPC's family after the name.
+  local function getNameAndFamily(n) return Colors.Green(n.name) .. Colors.White(" · " .. n.family.name) end
+  --- Returns the text of the level line.
+  local function getLevel(n) return Colors.White(NpcText:Level(n)) end
+  --- Returns the text of the location line, dimmed if the NPC has no map.
+  local function getLocation(n) return (n.ui_map_id and Colors.LightGrey or Colors.DimGrey)(n.location) end
 
-  --- Sets the NPC shown.
+  addTextLine(info, "LEFT", nil, options.showAbilities and getNameAndFamily or getName)
+  addTextLine(info, "CENTER", ComponentFactory.NPC_CARD_LEVEL_WIDTH, getLevel)
+  addTextLine(info, "RIGHT", ComponentFactory.NPC_CARD_LOCATION_WIDTH, getLocation)
+
+  if options.showAbilities then
+    addTextLine(body, "LEFT", nil, function() return abilitiesText end, "GameFontNormalSmall")
+  end
+
+  --- Sets the NPC shown, and the text of its abilities line if the card has one.
   --- @param newNpc? TameableNPC
-  function card:SetNpc(newNpc)
+  --- @param newAbilitiesText? string
+  function card:SetNpc(newNpc, newAbilitiesText)
     npc = newNpc
+    abilitiesText = newAbilitiesText or ""
     if not npc then return end
 
     for _, line in ipairs(textLines) do

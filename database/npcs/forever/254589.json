@@ -1,9 +1,7 @@
 {
   "npc_id": 254589,
   "name": "Vulgara the Insatiable",
-  "family": "Fox",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "fox",
   "level_range": "8",
   "classification": "Elite",
   "zone_id": 16593,

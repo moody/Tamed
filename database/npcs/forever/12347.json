@@ -1,9 +1,7 @@
 {
   "npc_id": 12347,
   "name": "Enraged Reef Crawler",
-  "family": "Crab",
-  "type": "Tenacity",
-  "diet": ["Fish", "Bread", "Fungus", "Fruit"],
+  "family": "crab",
   "level_range": "30-32",
   "zone_id": 405,
   "ui_map_id": 1443,

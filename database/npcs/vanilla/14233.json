@@ -1,9 +1,7 @@
 {
   "npc_id": 14233,
   "name": "Ripscale",
-  "family": "Crocolisk",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "crocolisk",
   "level_range": "37",
   "classification": "Rare",
   "zone_id": 15,

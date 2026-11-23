@@ -142,6 +142,7 @@ end
 
 --- @class SidebarOptions
 --- @field onSelectOptions fun() Called when the Options row is selected.
+--- @field onSelectTameFinder fun() Called when the Tame Finder row is selected.
 --- @field onSelectRank fun(ability: TameableAbility, rank: TameableAbilityRank) Called when a rank row is selected.
 
 --- Builds and returns a root component describing the Sidebar.
@@ -150,18 +151,39 @@ end
 function Sidebar:Build(options)
   local root = ComponentFactory:ScrollPanel()
 
-  local optionsRow = root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
+  local tameFinderRow = root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
+    labelText = L.TAME_FINDER,
+    onClick = function(row)
+      selectRow(row)
+      options.onSelectTameFinder()
+    end,
+  }))
+
+  root.ScrollChild:AttachComponent(ComponentFactory:SelectableRow({
     labelText = L.OPTIONS,
-    marginBottom = Widgets:Padding(2),
     onClick = function(row)
       selectRow(row)
       options.onSelectOptions()
     end,
   }))
 
-  -- Select Options by default.
-  selectRow(optionsRow)
-  options.onSelectOptions()
+  -- Divider between the rows above and the abilities.
+  root.ScrollChild:AddChild({
+    height = 2,
+    marginTop = Widgets:Padding(),
+    marginBottom = Widgets:Padding(),
+
+    --- @param parent Frame
+    frameFactory = function(parent)
+      local rule = parent:CreateTexture(nil, "ARTWORK")
+      rule:SetColorTexture(Colors.White:GetRGBA(0.1))
+      return rule
+    end,
+  })
+
+  -- Select Tame Finder by default.
+  selectRow(tameFinderRow)
+  options.onSelectTameFinder()
 
   -- Ability rows, sorted by name.
   local abilities = {}

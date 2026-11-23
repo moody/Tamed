@@ -1,9 +1,7 @@
 {
   "npc_id": 21022,
   "name": "Grovestalker Lynx",
-  "family": "Cat",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "cat",
   "level_range": "65-66",
   "zone_id": 3522,
   "ui_map_id": 1949,

@@ -1,9 +1,7 @@
 {
   "npc_id": 263935,
   "name": "Old Rusthowl",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "57-58",
   "classification": "Rare Elite",
   "zone_id": 616,

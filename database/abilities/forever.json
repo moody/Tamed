@@ -1,21 +1,21 @@
 {
   "bite": {
     "learned_by": [
-      "Bat",
-      "Bear",
-      "Boar",
-      "Carrion Bird",
-      "Cat",
-      "Crocolisk",
-      "Fox",
-      "Gorilla",
-      "Hyena",
-      "Raptor",
-      "Spider",
-      "Tallstrider",
-      "Turtle",
-      "Wind Serpent",
-      "Wolf"
+      "bat",
+      "bear",
+      "boar",
+      "carrionbird",
+      "cat",
+      "crocolisk",
+      "fox",
+      "gorilla",
+      "hyena",
+      "raptor",
+      "spider",
+      "tallstrider",
+      "turtle",
+      "windserpent",
+      "wolf"
     ]
   },
   "charge": {
@@ -60,28 +60,28 @@
   },
   "claw": {
     "learned_by": [
-      "Bear",
-      "Bird of Prey",
-      "Carrion Bird",
-      "Cat",
-      "Crab",
-      "Crocolisk",
-      "Raptor",
-      "Scorpid"
+      "bear",
+      "birdofprey",
+      "carrionbird",
+      "cat",
+      "crab",
+      "crocolisk",
+      "raptor",
+      "scorpid"
     ]
   },
   "cower": {
     "learned_by": [
-      "Bat",
-      "Bird of Prey",
-      "Cat",
-      "Tallstrider"
+      "bat",
+      "birdofprey",
+      "cat",
+      "tallstrider"
     ]
   },
   "dismember": {
     "name": "Dismember",
     "learned_by": [
-      "Crocolisk"
+      "crocolisk"
     ],
     "ranks": [
       {
@@ -118,16 +118,16 @@
   },
   "dive": {
     "learned_by": [
-      "Bat",
-      "Bird of Prey",
-      "Carrion Bird",
-      "Wind Serpent"
+      "bat",
+      "birdofprey",
+      "carrionbird",
+      "windserpent"
     ]
   },
   "dustcloud": {
     "name": "Dust Cloud",
     "learned_by": [
-      "Tallstrider"
+      "tallstrider"
     ],
     "ranks": [
       {
@@ -160,7 +160,7 @@
   "mine": {
     "name": "Mine!",
     "learned_by": [
-      "Bird of Prey"
+      "birdofprey"
     ],
     "ranks": [
       {
@@ -193,7 +193,7 @@
   "pinch": {
     "name": "Pinch",
     "learned_by": [
-      "Crab"
+      "crab"
     ],
     "ranks": [
       {
@@ -226,7 +226,7 @@
   "savagerend": {
     "name": "Savage Rend",
     "learned_by": [
-      "Raptor"
+      "raptor"
     ],
     "ranks": [
       {
@@ -259,7 +259,7 @@
   "sonicblast": {
     "name": "Sonic Blast",
     "learned_by": [
-      "Bat"
+      "bat"
     ],
     "ranks": [
       {
@@ -297,7 +297,7 @@
   "swipe": {
     "name": "Swipe",
     "learned_by": [
-      "Bear"
+      "bear"
     ],
     "ranks": [
       {
@@ -330,7 +330,7 @@
   "tendonrip": {
     "name": "Tendon Rip",
     "learned_by": [
-      "Hyena"
+      "hyena"
     ],
     "ranks": [
       {
@@ -363,7 +363,7 @@
   "trickstersdance": {
     "name": "Trickster's Dance",
     "learned_by": [
-      "Fox"
+      "fox"
     ],
     "ranks": [
       {
@@ -377,7 +377,7 @@
   "web": {
     "name": "Web",
     "learned_by": [
-      "Spider"
+      "spider"
     ],
     "ranks": [
       {
@@ -409,27 +409,27 @@
   },
   "dash": {
     "learned_by": [
-      "Bear",
-      "Boar",
-      "Cat",
-      "Crab",
-      "Crocolisk",
-      "Fox",
-      "Gorilla",
-      "Hyena",
-      "Raptor",
-      "Scorpid",
-      "Spider",
-      "Tallstrider",
-      "Turtle",
-      "Wolf"
+      "bear",
+      "boar",
+      "cat",
+      "crab",
+      "crocolisk",
+      "fox",
+      "gorilla",
+      "hyena",
+      "raptor",
+      "scorpid",
+      "spider",
+      "tallstrider",
+      "turtle",
+      "wolf"
     ]
   },
   "screech": {
     "learned_by": [
-      "Bat",
-      "Bird of Prey",
-      "Carrion Bird"
+      "bat",
+      "birdofprey",
+      "carrionbird"
     ]
   }
 }

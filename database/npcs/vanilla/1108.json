@@ -1,9 +1,7 @@
 {
   "npc_id": 1108,
   "name": "Mistvale Gorilla",
-  "family": "Gorilla",
-  "type": "Ferocity",
-  "diet": ["Fungus", "Fruit"],
+  "family": "gorilla",
   "level_range": "32-33",
   "zone_id": 33,
   "ui_map_id": 1434,

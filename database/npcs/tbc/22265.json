@@ -1,9 +1,7 @@
 {
   "npc_id": 22265,
   "name": "Shadowwing Owl",
-  "family": "Owl",
-  "type": "Cunning",
-  "diet": ["Meat"],
+  "family": "birdofprey",
   "level_range": "66-67",
   "zone_id": 3520,
   "ui_map_id": 1948,

@@ -1,9 +1,7 @@
 {
   "npc_id": 1114,
   "name": "Jungle Thunderer",
-  "family": "Gorilla",
-  "type": "Ferocity",
-  "diet": ["Fungus", "Fruit"],
+  "family": "gorilla",
   "level_range": "37-38",
   "zone_id": 33,
   "ui_map_id": 1434,

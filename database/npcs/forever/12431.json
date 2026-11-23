@@ -1,9 +1,7 @@
 {
   "npc_id": 12431,
   "name": "Gorefang",
-  "family": "Wolf",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "wolf",
   "level_range": "13",
   "classification": "Rare",
   "zone_id": 130,

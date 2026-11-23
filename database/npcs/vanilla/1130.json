@@ -1,9 +1,7 @@
 {
   "npc_id": 1130,
   "name": "Bjarn",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "12",
   "classification": "Rare",
   "zone_id": 1,

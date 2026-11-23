@@ -1,9 +1,7 @@
 {
   "npc_id": 4725,
   "name": "Crazed Sandstrider",
-  "family": "Tallstrider",
-  "type": "Ferocity",
-  "diet": ["Cheese", "Fungus", "Fruit"],
+  "family": "tallstrider",
   "level_range": "37-39",
   "zone_id": 405,
   "ui_map_id": 1443,

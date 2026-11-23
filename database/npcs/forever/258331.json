@@ -1,9 +1,7 @@
 {
   "npc_id": 258331,
   "name": "Young Paletusk",
-  "family": "Boar",
-  "type": "Cunning",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "boar",
   "level_range": "36-37",
   "zone_id": 16591,
   "ui_map_id": 2548,

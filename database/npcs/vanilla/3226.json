@@ -1,9 +1,7 @@
 {
   "npc_id": 3226,
   "name": "Corrupted Scorpid",
-  "family": "Scorpid",
-  "type": "Ferocity",
-  "diet": ["Meat"],
+  "family": "scorpid",
   "level_range": "10-11",
   "zone_id": 14,
   "ui_map_id": 1411,

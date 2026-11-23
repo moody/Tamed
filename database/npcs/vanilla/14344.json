@@ -1,9 +1,7 @@
 {
   "npc_id": 14344,
   "name": "Mongress",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "50",
   "classification": "Rare",
   "zone_id": 361,

@@ -1,9 +1,7 @@
 {
   "npc_id": 276189,
   "name": "Matriarch Bristlefur",
-  "family": "Bear",
-  "type": "Tenacity",
-  "diet": ["Meat", "Fish", "Cheese", "Bread", "Fungus", "Fruit"],
+  "family": "bear",
   "level_range": "10",
   "classification": "Rare",
   "zone_id": 12,

@@ -1,9 +1,7 @@
 {
   "npc_id": 4400,
   "name": "Mudrock Snapjaw",
-  "family": "Turtle",
-  "type": "Tenacity",
-  "diet": ["Fish", "Fungus", "Fruit"],
+  "family": "turtle",
   "level_range": "41-42",
   "zone_id": 15,
   "ui_map_id": 1445,

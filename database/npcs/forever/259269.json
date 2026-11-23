@@ -1,9 +1,7 @@
 {
   "npc_id": 259269,
   "name": "High Plains Buzzard",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "38-39",
   "zone_id": 16591,
   "ui_map_id": 2548,

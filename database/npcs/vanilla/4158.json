@@ -1,9 +1,7 @@
 {
   "npc_id": 4158,
   "name": "Salt Flats Vulture",
-  "family": "Carrion Bird",
-  "type": "Ferocity",
-  "diet": ["Meat", "Fish"],
+  "family": "carrionbird",
   "level_range": "32-34",
   "zone_id": 400,
   "ui_map_id": 1441,
