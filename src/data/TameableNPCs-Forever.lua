@@ -6842,20 +6842,6 @@ Addon:MergeTameableNPCs({
     },
     ["coords"] = {}
   },
-  ["250619"] = {
-    ["name"] = "Broodwidow",
-    ["family"] = "spider",
-    ["level_range"] = "16",
-    ["classification"] = "Elite",
-    ["zone_id"] = 16611,
-    ["abilities"] = {
-      {
-        ["key"] = "dash",
-        ["rank"] = 3
-      }
-    },
-    ["coords"] = {}
-  },
   ["250868"] = {
     ["name"] = "Vuldren",
     ["family"] = "fox",
